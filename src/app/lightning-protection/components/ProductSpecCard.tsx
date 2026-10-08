@@ -3,8 +3,6 @@ import Link from 'next/link';
 import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
 import ScrollReveal from '@/app/components/ScrollReveal';
-import JsonLd from '@/components/JsonLd';
-import { productSchema } from '@/lib/structured-data';
 
 interface Spec {
   label: string;
@@ -22,10 +20,6 @@ interface ProductSpecCardProps {
   specs: Spec[];
   note?: string;
   className?: string;
-  /** Optional short description used only for the Product JSON-LD (not shown in the UI). */
-  schemaDescription?: string;
-  /** Optional brand name for the Product JSON-LD, e.g. "TOPBAS". */
-  schemaBrand?: string;
 }
 
 export default function ProductSpecCard({
@@ -39,8 +33,6 @@ export default function ProductSpecCard({
   specs,
   note,
   className = '',
-  schemaDescription,
-  schemaBrand,
 }: ProductSpecCardProps) {
   return (
     <div className={`grid grid-cols-1 lg:grid-cols-5 gap-10 items-start ${className}`}>
@@ -108,16 +100,6 @@ export default function ProductSpecCard({
           </a>
         </div>
       </ScrollReveal>
-
-      <JsonLd
-        data={productSchema({
-          name: productLine,
-          description: schemaDescription || `${productLine} — ${tagline}. ${specsSubtitle}.`,
-          image: imageSrc,
-          brand: schemaBrand,
-          specs,
-        })}
-      />
     </div>
   );
 }
