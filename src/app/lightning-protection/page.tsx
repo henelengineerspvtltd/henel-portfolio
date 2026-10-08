@@ -12,12 +12,27 @@ import LightningServices from './components/LightningServices';
 import TopbasSection from './components/TopbasSection';
 import LightningGallery from './components/LightningGallery';
 import HomeCTA from '@/app/components/HomeCTA';
-import { serviceSchema } from '@/lib/structured-data';
+import { serviceSchema, webPageSchema, LIGHTNING_SERVICE_OFFERS } from '@/lib/structured-data';
+import { lightningPageFaqs } from '@/lib/faqs';
 
 export const metadata: Metadata = {
-  title: 'Lightning Protection Systems, ESE Arresters & Earthing in Tamil Nadu',
+  title: 'ESE Lightning Arrester, Earthing & Surge Protection Supplier in Tamil Nadu, India',
   description:
-    'Henel Engineers supplies and installs complete lightning protection systems in Tamil Nadu — ESE lightning arresters, earthing, and surge protection devices (SPD). TOPBAS authorised supplier. Call +91 94432 82312 or +91 94436 92711.',
+    'Henel Engineers supplies and installs complete lightning protection systems in Tamil Nadu, India — TOPBAS SIRIUS & UMBRAECO ESE lightning arresters (up to 107 m radius), copper bonded & GI earth rods, earthing compound and Type 1+2 surge protection devices. Call +91 94432 82312.',
+  keywords: [
+    'ESE lightning arrester',
+    'TOPBAS SIRIUS ESE lightning arrester',
+    'UMBRAECO ESE lightning arrester',
+    'NF C 17-102 lightning arrester',
+    'lightning protection system Tamil Nadu',
+    'lightning arrester installation Kanyakumari',
+    'copper bonded earth rod',
+    'GI earth rod',
+    'CARBOMAXX earthing compound',
+    'FRP earth pit cover',
+    'Type 1 + 2 surge protection device',
+    'earthing contractor Tamil Nadu',
+  ],
   alternates: {
     canonical: '/lightning-protection',
   },
@@ -44,33 +59,6 @@ export const metadata: Metadata = {
   },
 };
 
-const faqItems = [
-  {
-    question: 'What is an ESE lightning arrester?',
-    answer:
-      'An Early Streamer Emission (ESE) lightning arrester is a non-electronic air terminal designed to trigger an earlier upward streamer than a conventional lightning rod, giving it a wider zone of protection. Henel Engineers supplies and installs ESE lightning arresters, including the TOPBAS SIRIUS and UMBRAECO models.',
-  },
-  {
-    question: 'Is Henel Engineers an authorised TOPBAS supplier?',
-    answer:
-      'Yes. Henel Engineers is an authorised supplier of TOPBAS lightning protection products, which are imported from Turkey, including ESE lightning arresters, surge protection devices and earthing accessories.',
-  },
-  {
-    question: 'What does a complete lightning protection system include?',
-    answer:
-      'A complete lightning protection system typically includes an ESE air terminal or lightning rod, down conductors, an earthing system, surge protection devices, and test joints and accessories — designed to the applicable standards with site-specific risk assessment and zone-of-protection calculations.',
-  },
-  {
-    question: 'Which areas does Henel Engineers serve for lightning protection?',
-    answer:
-      'Henel Engineers supplies and installs lightning protection systems for industrial, commercial and infrastructure projects across Tamil Nadu.',
-  },
-  {
-    question: 'How do I get a quote for a lightning protection system?',
-    answer:
-      'Call +91 94432 82312 or +91 94436 92711, message us on WhatsApp, or use the contact form to share your requirement and request a quote.',
-  },
-];
 
 export default function LightningProtectionPage() {
   return (
@@ -101,7 +89,13 @@ export default function LightningProtectionPage() {
         <FAQSection
           heading="Lightning Protection FAQs"
           subheading="Common questions about ESE lightning arresters, earthing and surge protection in Tamil Nadu."
-          items={faqItems}
+          items={lightningPageFaqs}
+          footer={
+            <Link href="/faq#lightning-protection" className="btn-outline-dark inline-flex">
+              More Lightning Protection &amp; Earthing FAQs
+              <Icon name="ArrowRightIcon" size={16} variant="outline" />
+            </Link>
+          }
         />
 
         <HomeCTA />
@@ -109,14 +103,24 @@ export default function LightningProtectionPage() {
       <Footer />
 
       <JsonLd
-        data={serviceSchema({
+        data={[serviceSchema({
           name: 'Lightning Protection & Earthing Services',
           serviceType: 'Lightning Protection System Installation',
           description:
             'Supply, design and installation of ESE lightning arresters, earthing systems and surge protection devices for industrial, commercial and infrastructure projects in Tamil Nadu.',
           areaServed: ['Tamil Nadu'],
           url: '/lightning-protection',
-        })}
+          offers: LIGHTNING_SERVICE_OFFERS,
+          image: '/assets/images/lightning-protection/hero-storm.jpg',
+        }),
+        webPageSchema({
+          path: '/lightning-protection',
+          name: 'Lightning Protection & Lightning Arrester Services in Tamil Nadu',
+          description:
+            'ESE lightning arresters, earthing systems and surge protection devices supplied and installed across Tamil Nadu by an authorised TOPBAS supplier.',
+          image: '/assets/images/lightning-protection/hero-storm.jpg',
+          about: ['ESE lightning arrester', 'Lightning protection system', 'Earthing', 'Surge protection device'],
+        })]}
       />
     </>
   );
