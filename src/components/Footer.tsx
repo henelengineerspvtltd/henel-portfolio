@@ -7,6 +7,7 @@ const quickLinks = [
   { label: 'Wind Energy', href: '/windmill' },
   { label: 'About Us', href: '/#about' },
   { label: 'Products & Services', href: '/#products' },
+  { label: 'FAQ', href: '/faq' },
   { label: 'Contact Us', href: '/contact' },
 ];
 

@@ -7,10 +7,12 @@ import JsonLd from '@/components/JsonLd';
 import ContactForm from './components/ContactForm';
 import ContactInfo from './components/ContactInfo';
 import ScrollReveal from '@/app/components/ScrollReveal';
-import { localBusinessSchema } from '@/lib/structured-data';
+import FAQSection from '@/components/FAQSection';
+import { localBusinessSchema, webPageSchema } from '@/lib/structured-data';
+import { contactFaqs } from '@/lib/faqs';
 
 export const metadata: Metadata = {
-  title: 'Contact Us — Lightning Protection & Windmill Maintenance, Tamil Nadu',
+  title: 'Contact Us — Lightning Arrester & Windmill Maintenance Quotes, Tamil Nadu',
   description:
     'Contact Henel Engineers Pvt. Ltd. for lightning protection systems, ESE arresters, earthing solutions, surge protection, and windmill operation & maintenance in Tamil Nadu and Karnataka. Call +91 94432 82312 or +91 94436 92711.',
   alternates: {
@@ -117,10 +119,27 @@ export default function ContactPage() {
             </div>
           </div>
         </section>
+
+        <FAQSection
+          heading="Contact FAQs"
+          subheading="How to reach Henel Engineers and where we work."
+          items={contactFaqs}
+        />
       </main>
       <Footer />
 
-      <JsonLd data={localBusinessSchema()} />
+      <JsonLd
+        data={[
+          localBusinessSchema(),
+          webPageSchema({
+            path: '/contact',
+            type: 'ContactPage',
+            name: 'Contact Henel Engineers Pvt. Ltd.',
+            description:
+              'Phone, WhatsApp, email, office addresses and quote request form for lightning protection and windmill maintenance in Tamil Nadu and Karnataka.',
+          }),
+        ]}
+      />
     </>
   );
 }
