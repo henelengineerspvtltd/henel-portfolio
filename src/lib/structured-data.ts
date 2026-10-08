@@ -341,39 +341,3 @@ export function webPageSchema(opts: {
     },
   };
 }
-
-export interface ProductSpecItem {
-  label: string;
-  value: string;
-}
-
-/** Product schema — used for TOPBAS and other physical products with published specs. */
-export function productSchema(opts: {
-  name: string;
-  description: string;
-  image?: string;
-  brand?: string;
-  specs?: ProductSpecItem[];
-}) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Product',
-    name: opts.name,
-    description: opts.description,
-    ...(opts.image ? { image: `${SITE_URL}${opts.image}` } : {}),
-    ...(opts.brand ? { brand: { '@type': 'Brand', name: opts.brand } } : {}),
-    ...(opts.specs
-      ? {
-          additionalProperty: opts.specs.map((s) => ({
-            '@type': 'PropertyValue',
-            name: s.label,
-            value: s.value,
-          })),
-        }
-      : {}),
-    manufacturer: opts.brand ? { '@type': 'Organization', name: opts.brand } : undefined,
-    // Note: no `offers` block — price and live stock availability are not
-    // published on the site, so they are intentionally omitted rather than
-    // asserted.
-  };
-}

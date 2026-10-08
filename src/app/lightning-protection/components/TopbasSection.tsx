@@ -4,8 +4,6 @@ import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
 import ScrollReveal from '@/app/components/ScrollReveal';
 import ProductSpecCard from './ProductSpecCard';
-import JsonLd from '@/components/JsonLd';
-import { productSchema } from '@/lib/structured-data';
 
 const specs = [
 { label: 'Technology', value: 'Non-electronic Early Streamer Emission (ESE)' },
@@ -128,17 +126,6 @@ export default function TopbasSection() {
           </ScrollReveal>
         </div>
 
-        <JsonLd
-          data={productSchema({
-            name: 'TOPBAS SIRIUS ESE Lightning Arrester',
-            description:
-              'Non-electronic Early Streamer Emission (ESE) lightning arrester, imported from Turkey, with a protection radius of up to 107 m (5 m mast, Level IV).',
-            image: '/assets/images/sirius-ese-lightning-arrester.webp',
-            brand: 'TOPBAS',
-            specs,
-          })}
-        />
-
         {/* UMBRAECO ESE Lightning Arrester Product */}
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
           {/* Product image */}
@@ -204,17 +191,6 @@ export default function TopbasSection() {
             </div>
           </ScrollReveal>
         </div>
-
-        <JsonLd
-          data={productSchema({
-            name: 'UMBRAECO ESE Lightning Arrester',
-            description:
-              'Non-electronic Early Streamer Emission (ESE) lightning arrester, CE certified, with a protection radius of up to 51 m (Level IV) and no battery or external power source required.',
-            image: '/assets/images/lyra-ese-lightning-arrester.webp',
-            brand: 'TOPBAS',
-            specs: umbraEcoFeatures,
-          })}
-        />
 
         {/* Surge Protection Devices (SPD) Subheading */}
         <ScrollReveal className="mt-16 mb-10">
@@ -289,17 +265,6 @@ export default function TopbasSection() {
           </ScrollReveal>
         </div>
 
-        <JsonLd
-          data={productSchema({
-            name: 'TOPBAS Surge Protection Device (SPD)',
-            description:
-              'Type 1 + 2 (Class B + C) three-phase surge protection device for electrical panels and sensitive equipment.',
-            image: '/assets/images/type-1-2-spd.webp',
-            brand: 'TOPBAS',
-            specs: spdSpecs,
-          })}
-        />
-
         {/* Earth Rods Subheading */}
         <ScrollReveal className="mt-4 mb-10">
           <h3 className="text-xl font-800 text-foreground border-b border-border pb-3">
@@ -357,7 +322,6 @@ export default function TopbasSection() {
           productLine="Earthing Compound"
           tagline="TOPBAS Earthing Compound"
           specsSubtitle="CARBOMAXX Earthing Compound"
-          schemaBrand="TOPBAS"
           specs={[
             { label: 'Physical State', value: 'Powder' },
             { label: 'Brand', value: 'TOPBAS' },
