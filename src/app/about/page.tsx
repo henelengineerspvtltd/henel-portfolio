@@ -2,6 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Header from '@/components/Header';
+import HenelLogo from '@/components/HenelLogo';
 import Footer from '@/components/Footer';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import JsonLd from '@/components/JsonLd';
@@ -104,17 +105,41 @@ export default function AboutPage() {
       <Header />
       <main>
         {/* Hero */}
-        <section className="pt-28 pb-16 bg-primary" aria-label="About page header">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <Breadcrumbs items={[{ name: 'About Us', href: '/about' }]} light className="mb-6" />
-            <ScrollReveal>
-              <span className="inline-block text-xs font-800 uppercase tracking-widest text-primary-foreground/50 mb-3">About the Company</span>
-              <h1 className="text-4xl sm:text-5xl font-800 text-primary-foreground mb-4 leading-tight">Engineering Experience Since 1999</h1>
-              <p className="text-base text-primary-foreground/65 leading-relaxed max-w-2xl">
-                Henel Engineers Pvt. Ltd. is an engineering company from Kanyakumari District, Tamil Nadu, working in lightning
-                protection, wind energy and solar energy.
+        <section className="relative min-h-[60vh] flex items-center overflow-hidden pt-20" aria-label="About page header">
+          <div className="absolute inset-0 z-0">
+            <AppImage
+              src="/assets/images/windmill/hero-green-hills.jpg"
+              alt="Wind turbines on green rolling hills under a blue sky"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-center"
+            />
+            <div
+              className="absolute inset-0"
+              style={{ background: 'linear-gradient(to right, rgba(10,22,40,0.92) 0%, rgba(10,22,40,0.75) 55%, rgba(10,22,40,0.35) 100%)' }}
+            />
+          </div>
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16">
+            <Breadcrumbs items={[{ name: 'About Us', href: '/about' }]} light className="mb-8" />
+            <div className="max-w-3xl">
+              <div className="flex items-center gap-4 mb-6">
+                <span className="inline-flex bg-white rounded-lg px-3 py-2">
+                  <HenelLogo size={40} />
+                </span>
+                <span className="text-xs font-800 uppercase tracking-widest text-white/70">
+                  About Us · Est. 1999 · Kanyakumari, Tamil Nadu
+                </span>
+              </div>
+              <h1 className="text-4xl sm:text-6xl font-800 text-white mb-5 leading-tight">Henel Engineers Pvt. Ltd.</h1>
+              <p className="text-lg sm:text-xl font-500 text-white/85 mb-4">
+                Lightning Protection · Wind Energy · Solar Energy
               </p>
-            </ScrollReveal>
+              <p className="text-base text-white/70 leading-relaxed max-w-2xl">
+                An engineering company from Kanyakumari District, Tamil Nadu, delivering reliable engineering services since
+                1999.
+              </p>
+            </div>
           </div>
         </section>
 
