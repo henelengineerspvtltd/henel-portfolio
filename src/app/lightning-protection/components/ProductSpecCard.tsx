@@ -20,6 +20,8 @@ interface ProductSpecCardProps {
   specs: Spec[];
   note?: string;
   className?: string;
+  /** Link to the product's own page. */
+  detailsHref?: string;
 }
 
 export default function ProductSpecCard({
@@ -33,6 +35,7 @@ export default function ProductSpecCard({
   specs,
   note,
   className = '',
+  detailsHref,
 }: ProductSpecCardProps) {
   return (
     <div className={`grid grid-cols-1 lg:grid-cols-5 gap-10 items-start ${className}`}>
@@ -90,6 +93,11 @@ export default function ProductSpecCard({
             Request a Quote
             <Icon name="ArrowRightIcon" size={16} variant="outline" />
           </Link>
+          {detailsHref && (
+            <Link href={detailsHref} className="btn-outline-dark">
+              View Full Details
+            </Link>
+          )}
           <a href="tel:+919443282312" className="contact-info-link">
             <Icon name="PhoneIcon" size={16} variant="solid" style={{ color: '#CC0000' }} />
             +91 94432 82312

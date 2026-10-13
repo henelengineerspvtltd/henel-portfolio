@@ -12,8 +12,6 @@ import LightningServices from './components/LightningServices';
 import TopbasSection from './components/TopbasSection';
 import LightningGallery from './components/LightningGallery';
 import HomeCTA from '@/app/components/HomeCTA';
-import ServiceLinks from '@/components/ServiceLinks';
-import { lightningLandingPages, getLandingPage } from '@/lib/landing-pages';
 import { serviceSchema, webPageSchema, LIGHTNING_SERVICE_OFFERS } from '@/lib/structured-data';
 import { lightningPageFaqs } from '@/lib/faqs';
 
@@ -74,12 +72,6 @@ export default function LightningProtectionPage() {
         <LightningServices />
         <TopbasSection />
         <LightningGallery />
-
-        <ServiceLinks
-          heading="Explore Our Lightning Protection Services"
-          pages={[...lightningLandingPages, getLandingPage('solar-lightning-protection-earthing')!]}
-          color="#CC0000"
-        />
 
         {/* Cross-link to Wind Energy division */}
         <section className="py-14 bg-background border-t border-border" aria-label="Related service">

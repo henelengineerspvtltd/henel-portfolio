@@ -9,14 +9,11 @@ import FAQSection from '@/components/FAQSection';
 import Icon from '@/components/ui/AppIcon';
 import WindmillHero from './components/WindmillHero';
 import WindmillExperience from './components/WindmillExperience';
-import WindmillServices from './components/WindmillServices';
 import WindmillCapabilities from './components/WindmillCapabilities';
 import WindmillGallery from './components/WindmillGallery';
 import WindmillCoverage from './components/WindmillCoverage';
 import WindmillWhyChooseUs from './components/WindmillWhyChooseUs';
 import WindmillFinalCTA from './components/WindmillFinalCTA';
-import ServiceLinks from '@/components/ServiceLinks';
-import { windLandingPages, getLandingPage } from '@/lib/landing-pages';
 import { serviceSchema, webPageSchema, WINDMILL_SERVICE_OFFERS } from '@/lib/structured-data';
 import { windmillPageFaqs } from '@/lib/faqs';
 
@@ -76,17 +73,10 @@ export default function WindmillPage() {
           <Breadcrumbs items={[{ name: 'Windmill Maintenance', href: '/windmill' }]} />
         </div>
         <WindmillExperience />
-        <WindmillServices />
         <WindmillCapabilities />
         <WindmillGallery />
         <WindmillCoverage />
         <WindmillWhyChooseUs />
-
-        <ServiceLinks
-          heading="Explore Our Windmill Services"
-          pages={[...windLandingPages, getLandingPage('renewable-energy-services')!]}
-          color="#2D7A2D"
-        />
 
         {/* Cross-link to Lightning Protection division */}
         <section className="py-14 bg-background border-t border-border" aria-label="Related service">

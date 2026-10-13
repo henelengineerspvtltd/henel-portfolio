@@ -7,6 +7,7 @@
 import { SITE_URL, COMPANY_CIN } from './structured-data';
 import { faqCategories } from './faqs';
 import { landingPages } from './landing-pages';
+import { products, productHref } from './products';
 
 const u = (path: string) => `${SITE_URL}${path}`;
 
@@ -41,6 +42,10 @@ Key facts:
 
 ${landingPages.map((p) => `- [${p.h1}](${u(`/${p.slug}`)}): ${p.metaDescription}`).join('\n')}
 
+## Product pages
+
+${products.map((p) => `- [${p.name}](${u(productHref(p.slug))}): ${p.metaDescription}`).join('\n')}
+
 ## Products (Lightning Protection & Earthing)
 
 - TOPBAS SIRIUS ESE Lightning Arrester: non-electronic ESE, ΔT 60 μs, 304L stainless steel, protection radius up to 107 m (5 m mast, Level IV), 200 kA tested (10/350 μs), NF C 17-102 · UNE 21186 · TS EN 62561
@@ -74,5 +79,14 @@ export function llmsFull() {
         p.faqs.map((f) => `### ${f.question}\n\n${f.answer}\n`).join('\n')
     )
     .join('\n');
-  return `${llmsSummary()}\n---\n\n# Frequently Asked Questions — Henel Engineers Pvt. Ltd.\n\n${faqText}\n${serviceFaqText}`;
+  const productText = products
+    .map(
+      (p) =>
+        `## ${p.name} (${u(productHref(p.slug))})\n\n${p.summary}\n\n` +
+        p.specs.map((s) => `- ${s.label}: ${s.value}`).join('\n') +
+        '\n\n' +
+        p.faqs.map((f) => `### ${f.question}\n\n${f.answer}\n`).join('\n')
+    )
+    .join('\n');
+  return `${llmsSummary()}\n---\n\n# Frequently Asked Questions — Henel Engineers Pvt. Ltd.\n\n${faqText}\n${serviceFaqText}\n---\n\n# Products\n\n${productText}`;
 }

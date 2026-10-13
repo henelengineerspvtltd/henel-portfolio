@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { SITE_URL } from '@/lib/structured-data';
 import { landingPages } from '@/lib/landing-pages';
+import { products, productHref } from '@/lib/products';
 
 const img = (path: string) => `${SITE_URL}${path}`;
 
@@ -63,6 +64,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
+    ...products.map((p) => ({
+      url: `${SITE_URL}${productHref(p.slug)}`,
+      lastModified,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+      images: [img(p.image)],
+    })),
     ...landingPages.map((p) => ({
       url: `${SITE_URL}/${p.slug}`,
       lastModified,
