@@ -46,7 +46,7 @@ export default function HomePage() {
         <TopbasProductHighlight />
         <FAQSection
           heading="Frequently Asked Questions"
-          subheading="Quick answers about Henel Engineers, lightning protection and windmill maintenance."
+          subheading="Quick answers about Henel Engineers, lightning protection, solar energy and windmill maintenance."
           items={homeFaqs}
           footer={
             <Link href="/faq" className="btn-outline-dark inline-flex">
