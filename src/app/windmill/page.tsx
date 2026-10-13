@@ -15,11 +15,13 @@ import WindmillGallery from './components/WindmillGallery';
 import WindmillCoverage from './components/WindmillCoverage';
 import WindmillWhyChooseUs from './components/WindmillWhyChooseUs';
 import WindmillFinalCTA from './components/WindmillFinalCTA';
+import ServiceLinks from '@/components/ServiceLinks';
+import { windLandingPages, getLandingPage } from '@/lib/landing-pages';
 import { serviceSchema, webPageSchema, WINDMILL_SERVICE_OFFERS } from '@/lib/structured-data';
 import { windmillPageFaqs } from '@/lib/faqs';
 
 export const metadata: Metadata = {
-  title: 'Windmill & Wind Turbine O&M Services in Tamil Nadu & Karnataka, India',
+  title: 'Windmill & Wind Turbine Maintenance, TN & Karnataka',
   description:
     'Henel Engineers provides windmill operation and maintenance, gearbox repair, blade patching, generator rewinding, hydraulic servicing, erection and 24x7 breakdown support across Tamil Nadu & Karnataka. Call +91 94432 82312 or +91 94436 92711.',
   keywords: [
@@ -79,6 +81,12 @@ export default function WindmillPage() {
         <WindmillGallery />
         <WindmillCoverage />
         <WindmillWhyChooseUs />
+
+        <ServiceLinks
+          heading="Explore Our Windmill Services"
+          pages={[...windLandingPages, getLandingPage('renewable-energy-services')!]}
+          color="#2D7A2D"
+        />
 
         {/* Cross-link to Lightning Protection division */}
         <section className="py-14 bg-background border-t border-border" aria-label="Related service">

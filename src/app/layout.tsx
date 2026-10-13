@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: 'Henel Engineers Pvt. Ltd. | Lightning Protection & Windmill Maintenance, Tamil Nadu, India',
-    template: '%s | Henel Engineers Pvt. Ltd.',
+    template: '%s | Henel Engineers',
   },
   description:
     'Henel Engineers Pvt. Ltd., est. 1999, supplies and installs lightning protection systems, ESE lightning arresters, earthing and surge protection, and provides windmill operation & maintenance services across Tamil Nadu and Karnataka, India. TOPBAS authorised supplier. Call +91 94432 82312.',

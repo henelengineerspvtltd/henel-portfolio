@@ -1,12 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
 import HenelLogo from './HenelLogo';
+import { landingPages } from '@/lib/landing-pages';
 
 const quickLinks = [
   { label: 'Lightning Protection', href: '/lightning-protection' },
   { label: 'Wind Energy', href: '/windmill' },
   { label: 'About Us', href: '/#about' },
   { label: 'Products & Services', href: '/#products' },
+  { label: 'All Services', href: '/services' },
   { label: 'FAQ', href: '/faq' },
   { label: 'Contact Us', href: '/contact' },
 ];
@@ -15,7 +17,7 @@ export default function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground border-t border-secondary/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 items-start">
           {/* Brand */}
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-4" aria-label="Henel Engineers home">
@@ -50,6 +52,33 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h3 className="text-xs font-800 uppercase tracking-widest text-primary-foreground/40 mb-5">
+              Services
+            </h3>
+            <ul className="space-y-3">
+              {landingPages.map((p) => (
+                <li key={p.slug}>
+                  <Link
+                    href={`/${p.slug}`}
+                    className="text-sm font-500 text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+                  >
+                    {p.navLabel}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link
+                  href="/services"
+                  className="text-sm font-700 text-primary-foreground hover:underline"
+                >
+                  All Services →
+                </Link>
+              </li>
             </ul>
           </div>
 

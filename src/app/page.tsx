@@ -20,7 +20,7 @@ const description =
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Henel Engineers | ESE Lightning Arrester, Earthing & Windmill Maintenance — Tamil Nadu, India',
+    absolute: 'Henel Engineers | Lightning Arrester, Earthing & Windmill Services',
   },
   description,
   alternates: {

@@ -12,7 +12,7 @@ import { localBusinessSchema, webPageSchema } from '@/lib/structured-data';
 import { contactFaqs } from '@/lib/faqs';
 
 export const metadata: Metadata = {
-  title: 'Contact Us — Lightning Arrester & Windmill Maintenance Quotes, Tamil Nadu',
+  title: 'Contact Us — Lightning Arrester & Windmill Quotes',
   description:
     'Contact Henel Engineers Pvt. Ltd. for lightning protection systems, ESE arresters, earthing solutions, surge protection, and windmill operation & maintenance in Tamil Nadu and Karnataka. Call +91 94432 82312 or +91 94436 92711.',
   alternates: {

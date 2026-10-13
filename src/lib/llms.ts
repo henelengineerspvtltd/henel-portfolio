@@ -6,6 +6,7 @@
 
 import { SITE_URL, COMPANY_CIN } from './structured-data';
 import { faqCategories } from './faqs';
+import { landingPages } from './landing-pages';
 
 const u = (path: string) => `${SITE_URL}${path}`;
 
@@ -34,6 +35,11 @@ Key facts:
 - [Windmill Maintenance](${u('/windmill')}): Wind turbine operation & maintenance, gearbox repair, blade patching, generator rewinding, hydraulic servicing, PCB repair, erection, spare parts, security, 24x7 breakdown support
 - [FAQ](${u('/faq')}): Answers about the company, lightning protection, earthing, surge protection and windmill maintenance
 - [Contact](${u('/contact')}): Phone, WhatsApp, email, office addresses, directors and quote request form
+- [All Services](${u('/services')}): Index of every service page
+
+## Service pages
+
+${landingPages.map((p) => `- [${p.h1}](${u(`/${p.slug}`)}): ${p.metaDescription}`).join('\n')}
 
 ## Products (Lightning Protection & Earthing)
 
@@ -61,5 +67,12 @@ export function llmsFull() {
         cat.items.map((f) => `### ${f.question}\n\n${f.answer}\n`).join('\n')
     )
     .join('\n');
-  return `${llmsSummary()}\n---\n\n# Frequently Asked Questions — Henel Engineers Pvt. Ltd.\n\n${faqText}`;
+  const serviceFaqText = landingPages
+    .map(
+      (p) =>
+        `## ${p.h1} (${u(`/${p.slug}`)})\n\n` +
+        p.faqs.map((f) => `### ${f.question}\n\n${f.answer}\n`).join('\n')
+    )
+    .join('\n');
+  return `${llmsSummary()}\n---\n\n# Frequently Asked Questions — Henel Engineers Pvt. Ltd.\n\n${faqText}\n${serviceFaqText}`;
 }

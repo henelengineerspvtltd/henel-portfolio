@@ -12,11 +12,13 @@ import LightningServices from './components/LightningServices';
 import TopbasSection from './components/TopbasSection';
 import LightningGallery from './components/LightningGallery';
 import HomeCTA from '@/app/components/HomeCTA';
+import ServiceLinks from '@/components/ServiceLinks';
+import { lightningLandingPages, getLandingPage } from '@/lib/landing-pages';
 import { serviceSchema, webPageSchema, LIGHTNING_SERVICE_OFFERS } from '@/lib/structured-data';
 import { lightningPageFaqs } from '@/lib/faqs';
 
 export const metadata: Metadata = {
-  title: 'ESE Lightning Arrester, Earthing & Surge Protection Supplier in Tamil Nadu, India',
+  title: 'Lightning Protection & ESE Lightning Arresters, Tamil Nadu',
   description:
     'Henel Engineers supplies and installs complete lightning protection systems in Tamil Nadu, India — TOPBAS SIRIUS & UMBRAECO ESE lightning arresters (up to 107 m radius), copper bonded & GI earth rods, earthing compound and Type 1+2 surge protection devices. Call +91 94432 82312.',
   keywords: [
@@ -72,6 +74,12 @@ export default function LightningProtectionPage() {
         <LightningServices />
         <TopbasSection />
         <LightningGallery />
+
+        <ServiceLinks
+          heading="Explore Our Lightning Protection Services"
+          pages={[...lightningLandingPages, getLandingPage('solar-lightning-protection-earthing')!]}
+          color="#CC0000"
+        />
 
         {/* Cross-link to Wind Energy division */}
         <section className="py-14 bg-background border-t border-border" aria-label="Related service">

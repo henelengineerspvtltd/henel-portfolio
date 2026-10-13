@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { SITE_URL } from '@/lib/structured-data';
+import { landingPages } from '@/lib/landing-pages';
 
 const img = (path: string) => `${SITE_URL}${path}`;
 
@@ -56,6 +57,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
         img('/assets/images/windmill/tn-karnataka-coverage-map.png'),
       ],
     },
+    {
+      url: `${SITE_URL}/services`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    ...landingPages.map((p) => ({
+      url: `${SITE_URL}/${p.slug}`,
+      lastModified,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+      images: [img(p.heroImage), ...(p.productImage ? [img(p.productImage.src)] : [])],
+    })),
     {
       url: `${SITE_URL}/faq`,
       lastModified,
