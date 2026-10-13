@@ -4,6 +4,9 @@ import { imageHosts } from './image-hosts.config.mjs';
 const nextConfig = {
   poweredByHeader: false,
   compress: true,
+  async redirects() {
+    return [{ source: '/services', destination: '/products-and-services', permanent: true }];
+  },
   async headers() {
     return [
       {
@@ -30,7 +33,8 @@ const nextConfig = {
   },
   images: {
     remotePatterns: imageHosts,
-    formats: ['image/avif', 'image/webp'],
+    // WebP only: AVIF is smaller but much slower to generate on first request.
+    formats: ['image/webp'],
     minimumCacheTTL: 2592000,
     qualities: [75, 85, 100],
   },

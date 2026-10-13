@@ -67,6 +67,10 @@ const KNOWS_ABOUT = [
   'Wind turbine PCB repair',
   'Windmill erection and installation',
   'Windmill spare parts',
+  'Solar panel installation',
+  'Rooftop solar',
+  'Solar power plant installation',
+  'Solar panel maintenance',
 ];
 
 export const LIGHTNING_SERVICE_OFFERS = [
@@ -76,6 +80,13 @@ export const LIGHTNING_SERVICE_OFFERS = [
   'LPS Design & Engineering',
   'Lightning Protection Supply & Installation',
   'Industrial & Building Lightning Protection',
+];
+
+export const SOLAR_SERVICE_OFFERS = [
+  'Rooftop Solar Panel Installation',
+  'Commercial & Industrial Solar Installation',
+  'Solar Panel Maintenance & Service',
+  'Solar Lightning Protection & Earthing',
 ];
 
 export const WINDMILL_SERVICE_OFFERS = [
@@ -140,7 +151,7 @@ export function organizationSchema() {
     email: COMPANY_EMAIL,
     telephone: COMPANY_PHONE_1,
     description:
-      'Henel Engineers Pvt. Ltd. supplies and installs lightning protection systems, ESE arresters, earthing solutions and surge protection, and provides windmill operation and maintenance services across Tamil Nadu and Karnataka.',
+      'Henel Engineers Pvt. Ltd. supplies and installs lightning protection systems, ESE arresters, earthing solutions and surge protection, installs and services solar panel systems, and provides windmill operation and maintenance services across Tamil Nadu and Karnataka.',
     address: [REGISTERED_OFFICE, BRANCH_OFFICE],
     areaServed: AREA_SERVED,
     knowsAbout: KNOWS_ABOUT,
@@ -164,6 +175,7 @@ export function organizationSchema() {
       itemListElement: [
         offerCatalog('Lightning Protection & Earthing', LIGHTNING_SERVICE_OFFERS, '/lightning-protection'),
         offerCatalog('Windmill Operation & Maintenance', WINDMILL_SERVICE_OFFERS, '/windmill'),
+        offerCatalog('Solar Energy', SOLAR_SERVICE_OFFERS, '/solar-panel-installation'),
       ],
     },
     contactPoint: [
@@ -208,7 +220,7 @@ export function localBusinessSchema() {
     name: COMPANY_NAME,
     alternateName: 'Henel Engineers',
     description:
-      'Lightning protection systems, ESE lightning arresters, earthing, surge protection and windmill operation & maintenance services in Tamil Nadu and Karnataka. Est. 1999.',
+      'Lightning protection systems, ESE lightning arresters, earthing, surge protection, solar panel installation and windmill operation & maintenance services in Tamil Nadu and Karnataka. Est. 1999.',
     image: `${SITE_URL}/assets/images/henel-logo.png`,
     logo: `${SITE_URL}/assets/images/henel-logo.png`,
     url: SITE_URL,

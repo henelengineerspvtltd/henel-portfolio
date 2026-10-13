@@ -72,7 +72,8 @@ export default async function ProductPage({ params }: Params) {
             />
 
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
-              <ScrollReveal className="lg:col-span-2">
+              {/* Image stays in view while the specs scroll past (desktop). */}
+              <ScrollReveal className="lg:col-span-2 lg:sticky lg:top-28 self-start">
                 <div className="relative aspect-square rounded-xl overflow-hidden bg-muted border border-border">
                   <AppImage
                     src={product.image}
@@ -129,38 +130,34 @@ export default async function ProductPage({ params }: Params) {
                     +91 94436 92711
                   </a>
                 </div>
+
+                {/* Typical uses + installation service (in this column so the image stays alongside) */}
+                <div className="mt-12 pt-10 border-t border-border">
+                  <h2 className="text-xl font-800 text-foreground mb-5">Typical applications</h2>
+                  <ul className="space-y-2.5">
+                    {product.uses.map((u) => (
+                      <li key={u} className="flex items-start gap-3">
+                        <Icon name="CheckCircleIcon" size={18} variant="solid" className="flex-shrink-0 mt-0.5" style={{ color: '#CC0000' }} />
+                        <span className="text-sm text-foreground">{u}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                {service && (
+                  <div className="mt-10 pt-10 border-t border-border">
+                    <h2 className="text-xl font-800 text-foreground mb-5">Supply &amp; installation</h2>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-5">
+                      Henel Engineers supplies this product and installs it as part of a complete lightning protection and
+                      earthing system across Tamil Nadu — from site assessment and design to installation.
+                    </p>
+                    <Link href={`/${service.slug}`} className="btn-outline-dark inline-flex">
+                      {service.h1}
+                      <Icon name="ArrowRightIcon" size={16} variant="outline" />
+                    </Link>
+                  </div>
+                )}
               </ScrollReveal>
             </div>
-          </div>
-        </section>
-
-        {/* Typical uses + installation service */}
-        <section className="py-14 bg-card border-t border-border" aria-label="Typical applications">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-10">
-            <ScrollReveal>
-              <h2 className="text-xl font-800 text-foreground mb-5">Typical applications</h2>
-              <ul className="space-y-2.5">
-                {product.uses.map((u) => (
-                  <li key={u} className="flex items-start gap-3">
-                    <Icon name="CheckCircleIcon" size={18} variant="solid" className="flex-shrink-0 mt-0.5" style={{ color: '#CC0000' }} />
-                    <span className="text-sm text-foreground">{u}</span>
-                  </li>
-                ))}
-              </ul>
-            </ScrollReveal>
-            {service && (
-              <ScrollReveal delay={1}>
-                <h2 className="text-xl font-800 text-foreground mb-5">Supply &amp; installation</h2>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-5">
-                  Henel Engineers supplies this product and installs it as part of a complete lightning protection and
-                  earthing system across Tamil Nadu — from site assessment and design to installation.
-                </p>
-                <Link href={`/${service.slug}`} className="btn-outline-dark inline-flex">
-                  {service.h1}
-                  <Icon name="ArrowRightIcon" size={16} variant="outline" />
-                </Link>
-              </ScrollReveal>
-            )}
           </div>
         </section>
 

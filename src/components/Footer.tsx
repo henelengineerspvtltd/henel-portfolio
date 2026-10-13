@@ -5,9 +5,9 @@ import HenelLogo from './HenelLogo';
 const quickLinks = [
   { label: 'Lightning Protection', href: '/lightning-protection' },
   { label: 'Wind Energy', href: '/windmill' },
-  { label: 'About Us', href: '/#about' },
-  { label: 'Products & Services', href: '/#products' },
-  { label: 'All Services', href: '/services' },
+  { label: 'Solar Energy', href: '/solar-panel-installation' },
+  { label: 'About Us', href: '/about' },
+  { label: 'Products & Services', href: '/products-and-services' },
   { label: 'FAQ', href: '/faq' },
   { label: 'Contact Us', href: '/contact' },
 ];

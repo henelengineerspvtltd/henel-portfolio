@@ -16,7 +16,7 @@ import { homeFaqs } from '@/lib/faqs';
 import { localBusinessSchema, webPageSchema } from '@/lib/structured-data';
 
 const description =
-  'Henel Engineers Pvt. Ltd., est. 1999, provides lightning protection systems, ESE lightning arresters, earthing & surge protection, and windmill operation & maintenance in Tamil Nadu and Karnataka, India. TOPBAS authorised supplier. Call +91 94432 82312 or +91 94436 92711.';
+  'Henel Engineers Pvt. Ltd., est. 1999, provides lightning protection systems, ESE lightning arresters, earthing & surge protection, solar panel installation, and windmill operation & maintenance in Tamil Nadu and Karnataka, India. TOPBAS authorised supplier. Call +91 94432 82312 or +91 94436 92711.';
 
 export const metadata: Metadata = {
   title: {

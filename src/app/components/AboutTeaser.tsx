@@ -94,7 +94,7 @@ export default function AboutTeaser() {
             </ScrollReveal>
 
             <ScrollReveal delay={2}>
-              <Link href="/contact" className="btn-outline-dark self-start">
+              <Link href="/about" className="btn-outline-dark self-start">
                 Learn More About Us
                 <Icon name="ArrowRightIcon" size={16} variant="outline" />
               </Link>

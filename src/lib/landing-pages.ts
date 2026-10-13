@@ -12,7 +12,7 @@
 
 import type { FaqItem } from './structured-data';
 
-export type Division = 'lightning' | 'wind' | 'renewable';
+export type Division = 'lightning' | 'wind' | 'solar' | 'renewable';
 
 export interface ContentSection {
   heading: string;
@@ -53,6 +53,20 @@ export interface LandingPage {
 
 const LP_AREAS = ['Tamil Nadu'];
 const WIND_AREAS = ['Tamil Nadu', 'Karnataka'];
+const SOLAR_AREAS = ['Tamil Nadu'];
+
+/** Free-licence Unsplash stock photos used until Henel's own solar project photos are available. */
+const unsplash = (id: string) => `https://images.unsplash.com/photo-${id}`;
+export const SOLAR_IMAGES = {
+  field: unsplash('1509391366360-2e959784a276'),
+  installer: unsplash('1624397640148-949b1732bb0a'),
+  technician: unsplash('1668097613572-40b7c11c8727'),
+  hardHat: unsplash('1648135327756-b606e2eb8caa'),
+  house: unsplash('1655300256335-beef51a914fe'),
+  industrialRoof: unsplash('1745187946672-2c1d8cf26a2b'),
+  closeUp: unsplash('1707247111552-aaf74241058b'),
+  wiring: unsplash('1559302504-64aae6ca6b6d'),
+};
 
 const QUOTE_ANSWER =
   'Call +91 94432 82312 or +91 94436 92711, chat on WhatsApp at +91 94432 82312, email henelkkla@gmail.com, or use the quote request form on the contact page.';
@@ -500,7 +514,7 @@ export const landingPages: LandingPage[] = [
   },
   {
     slug: 'solar-lightning-protection-earthing',
-    division: 'renewable',
+    division: 'solar',
     navLabel: 'Solar Lightning Protection & Earthing',
     metaTitle: 'Solar Earthing & Lightning Arrester for Solar Panels',
     metaDescription:
@@ -588,7 +602,7 @@ export const landingPages: LandingPage[] = [
       },
       { question: 'How do I get a quote for solar lightning protection?', answer: QUOTE_ANSWER },
     ],
-    related: ['ese-lightning-arrester', 'earthing-system', 'surge-protection-device', 'renewable-energy-services'],
+    related: ['rooftop-solar-installation', 'solar-panel-maintenance', 'ese-lightning-arrester', 'earthing-system'],
     areaServed: LP_AREAS,
     serviceType: 'Solar Lightning Protection and Earthing',
   },
@@ -614,7 +628,7 @@ export const landingPages: LandingPage[] = [
     eyebrow: 'Renewable Energy',
     h1: 'Renewable Energy Engineering Services',
     intro:
-      'From its base in Kanyakumari District — home to some of India’s most active wind energy infrastructure — Henel Engineers Pvt. Ltd. keeps renewable energy assets productive and protected: wind turbine operation & maintenance across Tamil Nadu and Karnataka, and lightning protection and earthing for solar installations.',
+      'From its base in Kanyakumari District — home to some of India’s most active wind energy infrastructure — Henel Engineers Pvt. Ltd. keeps renewable energy assets productive and protected: wind turbine operation & maintenance across Tamil Nadu and Karnataka, and solar panel installation, maintenance, lightning protection and earthing.',
     heroImage: '/assets/images/windmill/hero-green-hills.jpg',
     heroAlt: 'Wind turbines on green rolling hills under a blue sky',
     highlights: [
@@ -628,8 +642,9 @@ export const landingPages: LandingPage[] = [
       'Comprehensive Maintenance Contracts (CMC)',
       'Gearbox, blade, generator & hydraulic repairs',
       'Windmill erection & spare parts',
+      'Rooftop & commercial solar installation',
+      'Solar panel maintenance & service',
       'Solar lightning protection & earthing',
-      'Surge protection for renewable assets',
     ],
     sections: [
       {
@@ -647,9 +662,9 @@ export const landingPages: LandingPage[] = [
         ],
       },
       {
-        heading: 'Solar: lightning protection & earthing',
+        heading: 'Solar: installation, maintenance & protection',
         paragraphs: [
-          'Our lightning protection division protects solar installations with ESE and conventional lightning arresters, earthing systems and surge protection devices — the same engineering we have delivered for industrial and commercial buildings across Tamil Nadu since 1999.',
+          'Henel Engineers installs and services rooftop and commercial solar panel systems across Tamil Nadu. Our lightning protection division protects solar installations with ESE and conventional lightning arresters, earthing systems and surge protection devices — the same engineering we have delivered for industrial and commercial buildings across Tamil Nadu since 1999.',
         ],
       },
       {
@@ -677,7 +692,7 @@ export const landingPages: LandingPage[] = [
       },
       { question: 'How do I contact Henel Engineers?', answer: QUOTE_ANSWER },
     ],
-    related: ['windmill-maintenance-contract', 'solar-lightning-protection-earthing', 'wind-turbine-blade-repair', 'wind-turbine-gearbox-repair'],
+    related: ['rooftop-solar-installation', 'windmill-maintenance-contract', 'commercial-solar-power-plant', 'solar-panel-maintenance'],
     areaServed: WIND_AREAS,
     serviceType: 'Renewable Energy Engineering Services',
   },
@@ -1224,6 +1239,284 @@ export const landingPages: LandingPage[] = [
     areaServed: WIND_AREAS,
     serviceType: 'Wind Turbine Erection and Installation',
   },
+  // ───────────────────────────── Solar energy ─────────────────────────────
+  {
+    slug: 'rooftop-solar-installation',
+    division: 'solar',
+    navLabel: 'Rooftop Solar Installation',
+    metaTitle: 'Rooftop Solar Panel Installation for Homes & Businesses',
+    metaDescription:
+      'Rooftop solar panel installation for homes, shops, offices and factories in Tamil Nadu — site survey, system design, installation and commissioning, with lightning protection and earthing from an engineering company established in 1999. Call +91 94432 82312.',
+    keywords: [
+      'rooftop solar installation',
+      'solar panel installation for home',
+      'home solar system',
+      'solar power system for home',
+      'residential solar installation',
+      'rooftop solar Tamil Nadu',
+      'solar panel installation Kanyakumari',
+      'solar panel installation Nagercoil',
+      'solar installers near me',
+      'solar panel fitting',
+      'rooftop solar company',
+      'PM Surya Ghar rooftop solar',
+    ],
+    eyebrow: 'Solar Energy Division',
+    h1: 'Rooftop Solar Panel Installation',
+    intro:
+      'Henel Engineers Pvt. Ltd. installs rooftop solar panel systems for homes, shops, offices and factories across Tamil Nadu — from site survey and system design to installation and commissioning — backed by more than 25 years of engineering experience in power, lightning protection and earthing.',
+    heroImage: SOLAR_IMAGES.installer,
+    heroAlt: 'Installer placing a solar panel on a house roof under a clear blue sky (representative image)',
+    highlights: [
+      { value: 'Since 1999', label: 'Engineering experience' },
+      { value: 'Survey → Commission', label: 'End-to-end installation' },
+      { value: 'Built-in', label: 'Lightning protection & earthing' },
+      { value: 'After-sales', label: 'Maintenance & servicing' },
+    ],
+    offers: [
+      'Site survey & shadow assessment',
+      'System sizing & design',
+      'Panel mounting structure installation',
+      'Solar panel & inverter installation',
+      'Earthing & lightning protection',
+      'Commissioning & handover',
+      'Maintenance & servicing',
+    ],
+    sections: [
+      {
+        heading: 'Why go solar on your rooftop?',
+        paragraphs: [
+          'A rooftop solar system turns unused roof space into a source of electricity for your home or business. Tamil Nadu receives abundant sunshine for much of the year, which makes rooftop solar a practical way to reduce electricity bills and dependence on the grid while producing clean, renewable energy.',
+        ],
+      },
+      {
+        heading: 'How we install your rooftop solar system',
+        paragraphs: ['Every installation follows a clear, engineered process:'],
+        bullets: [
+          'Site survey — roof condition, orientation, available area and shading',
+          'System design — sizing the system to your electricity use and roof space',
+          'Mounting structure — secure installation on RCC, sheet or tiled roofs',
+          'Panel and inverter installation with safe, neat cabling',
+          'Earthing and lightning protection for the array and equipment',
+          'Testing, commissioning and handover, with guidance on monitoring',
+        ],
+      },
+      {
+        heading: 'Choosing the right type of solar system',
+        paragraphs: [
+          'An on-grid (grid-tied) system feeds the grid and is the most common choice where supply is reliable. An off-grid system works with batteries and suits locations without a dependable grid connection. A hybrid system combines grid connection with battery backup. We assess your site and needs and recommend the configuration that fits.',
+        ],
+      },
+      {
+        heading: 'Protection built in — from lightning protection specialists',
+        paragraphs: [
+          'Solar panels are usually the most exposed part of a building. Unlike many installers, Henel Engineers has a dedicated lightning protection division and is an authorised TOPBAS supplier, so every rooftop system can be designed with proper earthing, lightning protection and surge protection from day one.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: 'Does Henel Engineers install solar panels?',
+        answer:
+          'Yes. Henel Engineers installs rooftop solar panel systems for homes, shops, offices and factories in Tamil Nadu, from site survey and design through installation, commissioning and ongoing servicing.',
+      },
+      {
+        question: 'How much roof space does a solar system need?',
+        answer:
+          'It depends on the system size and the panels used. During the site survey we measure the shade-free roof area and size the system to fit your roof and electricity use.',
+      },
+      {
+        question: 'Is there a government subsidy for rooftop solar in India?',
+        answer:
+          'Central government schemes such as PM Surya Ghar: Muft Bijli Yojana provide financial assistance for eligible residential rooftop solar systems. Eligibility and amounts can change, so check the official scheme portal for current details.',
+      },
+      {
+        question: 'Do solar panels need lightning protection?',
+        answer:
+          'Rooftop solar panels are often the most exposed part of a building, so lightning protection, earthing and surge protection are strongly recommended. Henel Engineers designs these into its solar installations.',
+      },
+      { question: 'How do I get a rooftop solar quote?', answer: QUOTE_ANSWER },
+    ],
+    related: ['solar-panel-maintenance', 'commercial-solar-power-plant', 'solar-lightning-protection-earthing', 'renewable-energy-services'],
+    areaServed: SOLAR_AREAS,
+    serviceType: 'Rooftop Solar Panel Installation',
+  },
+  {
+    slug: 'commercial-solar-power-plant',
+    division: 'solar',
+    navLabel: 'Commercial & Industrial Solar',
+    metaTitle: 'Commercial & Industrial Solar Power Plant Installation',
+    metaDescription:
+      'Solar power plant installation for factories, warehouses, commercial buildings and open land in Tamil Nadu — design, structures, panels, inverters, earthing and lightning protection by Henel Engineers, est. 1999. Call +91 94432 82312.',
+    keywords: [
+      'commercial solar installation',
+      'industrial solar installation',
+      'solar power plant installation',
+      'solar plant for factory',
+      'ground mounted solar plant',
+      'commercial rooftop solar',
+      'solar EPC Tamil Nadu',
+      'solar power plant Tamil Nadu',
+      'solar installation company',
+      'solar for warehouse',
+    ],
+    eyebrow: 'Solar Energy Division',
+    h1: 'Commercial & Industrial Solar Installation',
+    intro:
+      'Henel Engineers Pvt. Ltd. installs solar power systems for factories, warehouses, commercial buildings and open land across Tamil Nadu — engineered for high output, safe operation and long life, with earthing and lightning protection designed in.',
+    heroImage: SOLAR_IMAGES.industrialRoof,
+    heroAlt: 'Rows of solar panels installed on a large industrial sheet roof (representative image)',
+    highlights: [
+      { value: 'Rooftop & ground', label: 'Mounted solar systems' },
+      { value: 'Since 1999', label: 'Industrial engineering' },
+      { value: 'TOPBAS', label: 'Authorised lightning protection' },
+      { value: '30+', label: 'Active O&M contracts (wind)' },
+    ],
+    offers: [
+      'Feasibility & site assessment',
+      'Plant design & layout',
+      'Rooftop and ground-mounted structures',
+      'Panel, inverter & cabling installation',
+      'Plant earthing & lightning protection',
+      'Surge protection',
+      'Operation & maintenance',
+    ],
+    sections: [
+      {
+        heading: 'Solar for businesses and industry',
+        paragraphs: [
+          'Factories, warehouses and commercial buildings often have large roofs and high daytime power use — an excellent match for solar. A well-designed solar plant can reduce operating costs and help businesses meet sustainability goals.',
+        ],
+      },
+      {
+        heading: 'Engineering that comes from industrial experience',
+        paragraphs: [
+          'Henel Engineers has worked with industrial and commercial clients since 1999, and our wind energy division manages 30+ active Comprehensive Maintenance Contracts for power-generating assets. We bring the same discipline — careful design, safe installation and responsive maintenance — to commercial and industrial solar.',
+        ],
+        bullets: [
+          'Rooftop systems on RCC and metal sheet roofs',
+          'Ground-mounted solar on open land',
+          'Plant-level earthing, lightning protection and surge protection',
+          'Operation & maintenance after commissioning',
+        ],
+      },
+      {
+        heading: 'Protecting a large solar investment',
+        paragraphs: [
+          'Large solar plants cover a wide area and connect to sensitive inverters and electronics. Our lightning protection division designs air terminals, earthing and surge protection for the whole plant, so a single storm does not undo years of savings.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: 'Does Henel Engineers install commercial and industrial solar plants?',
+        answer:
+          'Yes. Henel Engineers installs rooftop and ground-mounted solar power systems for factories, warehouses, commercial buildings and open land in Tamil Nadu.',
+      },
+      {
+        question: 'Can solar be installed on a metal sheet roof?',
+        answer:
+          'Yes. Solar panels can be mounted on metal sheet roofs with suitable mounting structures. We assess the roof condition and structure during the site survey.',
+      },
+      {
+        question: 'Do you provide maintenance after installation?',
+        answer:
+          'Yes. Henel Engineers provides solar panel maintenance and servicing, including cleaning, inspection and troubleshooting, to keep the plant performing.',
+      },
+      { question: 'How do I get a commercial solar quote?', answer: QUOTE_ANSWER },
+    ],
+    related: ['rooftop-solar-installation', 'solar-panel-maintenance', 'solar-lightning-protection-earthing', 'surge-protection-device'],
+    areaServed: SOLAR_AREAS,
+    serviceType: 'Commercial and Industrial Solar Installation',
+  },
+  {
+    slug: 'solar-panel-maintenance',
+    division: 'solar',
+    navLabel: 'Solar Panel Maintenance & Service',
+    metaTitle: 'Solar Panel Maintenance, Cleaning & Service',
+    metaDescription:
+      'Solar panel cleaning, inspection, maintenance, troubleshooting and repair for home, commercial and industrial solar systems in Tamil Nadu. Keep your solar plant at peak output with Henel Engineers. Call +91 94432 82312.',
+    keywords: [
+      'solar panel maintenance',
+      'solar panel cleaning',
+      'solar panel service',
+      'solar panel repair',
+      'solar O&M services',
+      'solar plant maintenance',
+      'solar system troubleshooting',
+      'solar panel cleaning near me',
+      'solar AMC',
+      'solar panel service Tamil Nadu',
+    ],
+    eyebrow: 'Solar Energy Division',
+    h1: 'Solar Panel Maintenance & Service',
+    intro:
+      'Dust, bird droppings, loose connections and weather all reduce what a solar system produces. Henel Engineers Pvt. Ltd. keeps home, commercial and industrial solar systems in Tamil Nadu performing with cleaning, inspection, maintenance and troubleshooting.',
+    heroImage: SOLAR_IMAGES.hardHat,
+    heroAlt: 'White safety helmet resting on blue solar panels during maintenance (representative image)',
+    highlights: [
+      { value: 'Cleaning', label: 'Restore lost output' },
+      { value: 'Inspection', label: 'Panels, cabling & structures' },
+      { value: 'Earthing', label: 'Testing & upkeep' },
+      { value: '25+ yrs', label: 'O&M experience in energy' },
+    ],
+    offers: [
+      'Solar panel cleaning',
+      'Visual & electrical inspection',
+      'Cable, connector & junction checks',
+      'Mounting structure inspection',
+      'Earthing & lightning protection checks',
+      'Troubleshooting & repair',
+      'Maintenance contracts',
+    ],
+    sections: [
+      {
+        heading: 'Why solar panels need regular maintenance',
+        paragraphs: [
+          'Solar panels have no moving parts, but they are not maintenance-free. Dust and dirt block sunlight and cut generation, especially in dry, dusty conditions. Loose or corroded connections, damaged cables and faulty earthing can reduce output or create safety risks. Regular maintenance protects both performance and your investment.',
+        ],
+      },
+      {
+        heading: 'What our solar maintenance includes',
+        paragraphs: [],
+        bullets: [
+          'Panel cleaning to restore generation',
+          'Visual inspection for cracks, hot spots and damage',
+          'Checks on cables, connectors and junction boxes',
+          'Mounting structure and fastener inspection',
+          'Earthing, lightning protection and surge protection checks',
+          'Troubleshooting when generation drops',
+        ],
+      },
+      {
+        heading: 'Maintenance experience from the energy sector',
+        paragraphs: [
+          'Henel Engineers has more than 25 years of operation and maintenance experience in the wind energy sector, with 30+ active maintenance contracts. We bring the same preventive approach to solar: find problems early, fix them quickly and keep the system generating.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: 'How often should solar panels be cleaned?',
+        answer:
+          'It depends on local dust, pollution and rainfall. In dusty conditions panels may need cleaning frequently; after rain, less often. A drop in generation is a common sign that cleaning is due.',
+      },
+      {
+        question: 'Why has my solar generation dropped?',
+        answer:
+          'Common causes include dirty panels, new shading, loose or damaged connections, and equipment faults. Henel Engineers inspects and troubleshoots solar systems to find and fix the cause.',
+      },
+      {
+        question: 'Do you service solar systems installed by other companies?',
+        answer:
+          'Contact Henel Engineers with details of your system and we will advise on inspection and maintenance.',
+      },
+      { question: 'How do I book solar panel maintenance?', answer: QUOTE_ANSWER },
+    ],
+    related: ['rooftop-solar-installation', 'commercial-solar-power-plant', 'solar-lightning-protection-earthing', 'earthing-system'],
+    areaServed: SOLAR_AREAS,
+    serviceType: 'Solar Panel Maintenance and Service',
+  },
 ];
 
 export function getLandingPage(slug: string) {
@@ -1232,4 +1525,6 @@ export function getLandingPage(slug: string) {
 
 export const lightningLandingPages = landingPages.filter((p) => p.division === 'lightning');
 export const windLandingPages = landingPages.filter((p) => p.division === 'wind');
+const SOLAR_ORDER = ['rooftop-solar-installation', 'commercial-solar-power-plant', 'solar-panel-maintenance', 'solar-lightning-protection-earthing'];
+export const solarLandingPages = SOLAR_ORDER.map((slug) => landingPages.find((p) => p.slug === slug)!).filter(Boolean);
 export const renewableLandingPages = landingPages.filter((p) => p.division === 'renewable');

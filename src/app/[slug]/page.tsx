@@ -63,12 +63,19 @@ const THEME: Record<Division, { color: string; tint: string; label: string; btn:
     btn: 'btn-green',
     parent: { name: 'Windmill Maintenance', href: '/windmill' },
   },
+  solar: {
+    color: '#B45309',
+    tint: 'rgba(180,83,9,0.1)',
+    label: 'section-label-solar',
+    btn: 'btn-solar',
+    parent: { name: 'Solar Energy', href: '/solar-panel-installation' },
+  },
   renewable: {
     color: '#2D7A2D',
     tint: 'rgba(45,122,45,0.1)',
     label: 'section-label-green',
     btn: 'btn-green',
-    parent: { name: 'Services', href: '/services' },
+    parent: { name: 'Products & Services', href: '/products-and-services' },
   },
 };
 
@@ -239,15 +246,15 @@ export default async function LandingPageRoute({ params }: Params) {
               })}
             </div>
             <div className="text-center mt-10">
-              <Link href="/services" className="btn-outline-dark inline-flex">
-                View All Services
+              <Link href="/products-and-services" className="btn-outline-dark inline-flex">
+                View All Products &amp; Services
                 <Icon name="ArrowRightIcon" size={16} variant="outline" />
               </Link>
             </div>
           </div>
         </section>
 
-        {page.division === 'lightning' ? <HomeCTA /> : <WindmillFinalCTA />}
+        {page.division === 'wind' ? <WindmillFinalCTA /> : <HomeCTA />}
       </main>
       <Footer />
 

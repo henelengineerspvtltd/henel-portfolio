@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: '%s | Henel Engineers',
   },
   description:
-    'Henel Engineers Pvt. Ltd., est. 1999, supplies and installs lightning protection systems, ESE lightning arresters, earthing and surge protection, and provides windmill operation & maintenance services across Tamil Nadu and Karnataka, India. TOPBAS authorised supplier. Call +91 94432 82312.',
+    'Henel Engineers Pvt. Ltd., est. 1999, supplies and installs lightning protection systems, ESE lightning arresters, earthing and surge protection, installs and services solar panel systems, and provides windmill operation & maintenance services across Tamil Nadu and Karnataka, India. TOPBAS authorised supplier. Call +91 94432 82312.',
   keywords: [
     // Brand
     'Henel Engineers',
@@ -66,6 +66,16 @@ export const metadata: Metadata = {
     'surge protection device',
     'surge protection device Tamil Nadu',
     'Type 1 + 2 SPD',
+    // Solar energy
+    'solar panel installation',
+    'solar panel installation Tamil Nadu',
+    'rooftop solar installation',
+    'solar installation company',
+    'solar power plant installation',
+    'solar panel maintenance',
+    'solar panel cleaning',
+    'solar company Kanyakumari',
+    'renewable energy company Tamil Nadu',
     // Wind energy
     'windmill maintenance',
     'windmill maintenance Tamil Nadu',
@@ -167,8 +177,10 @@ export default function RootLayout({
           </>
         )}
 
-        <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fhenelengin8645back.builtwithrocket.new&_be=https%3A%2F%2Fappanalytics.rocket.new&_v=0.1.20" />
-        <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.2" /></body>
+        {/* Site-builder scripts: loaded after the page is idle so they never delay first paint. */}
+        <Script type="module" strategy="lazyOnload" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fhenelengin8645back.builtwithrocket.new&_be=https%3A%2F%2Fappanalytics.rocket.new&_v=0.1.20" />
+        <Script type="module" strategy="lazyOnload" src="https://static.rocket.new/rocket-shot.js?v=0.0.2" />
+      </body>
     </html>
   );
 }

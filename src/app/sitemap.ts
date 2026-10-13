@@ -1,9 +1,9 @@
 import { MetadataRoute } from 'next';
 import { SITE_URL } from '@/lib/structured-data';
-import { landingPages } from '@/lib/landing-pages';
+import { landingPages, SOLAR_IMAGES } from '@/lib/landing-pages';
 import { products, productHref } from '@/lib/products';
 
-const img = (path: string) => `${SITE_URL}${path}`;
+const img = (path: string) => (path.startsWith('http') ? path : `${SITE_URL}${path}`);
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
@@ -59,10 +59,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ],
     },
     {
-      url: `${SITE_URL}/services`,
+      url: `${SITE_URL}/products-and-services`,
       lastModified,
       changeFrequency: 'monthly',
       priority: 0.9,
+    },
+    {
+      url: `${SITE_URL}/solar-panel-installation`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+      images: Object.values(SOLAR_IMAGES),
+    },
+    {
+      url: `${SITE_URL}/about`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+      images: [img('/assets/images/director-rajesh.jpg'), img('/assets/images/director-raajadhas.jpg')],
     },
     ...products.map((p) => ({
       url: `${SITE_URL}${productHref(p.slug)}`,
