@@ -5,8 +5,10 @@ import HenelLogo from './HenelLogo';
 const quickLinks = [
   { label: 'Lightning Protection', href: '/lightning-protection' },
   { label: 'Wind Energy', href: '/windmill' },
-  { label: 'About Us', href: '/#about' },
-  { label: 'Products & Services', href: '/#products' },
+  { label: 'Solar Energy', href: '/solar-panel-installation' },
+  { label: 'About Us', href: '/about' },
+  { label: 'Products & Services', href: '/products-and-services' },
+  { label: 'Service Areas (All India)', href: '/service-areas' },
   { label: 'FAQ', href: '/faq' },
   { label: 'Contact Us', href: '/contact' },
 ];
@@ -30,7 +32,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-sm text-primary-foreground/60 leading-relaxed max-w-xs mt-4">
-              Engineering Solutions in Lightning Protection &amp; Wind Energy. Serving industrial and commercial clients since 1999.
+              Engineering Solutions in Lightning Protection &amp; Wind Energy. Serving industrial, commercial and residential clients across India since 1999.
             </p>
           </div>
 

@@ -12,16 +12,16 @@ import { localBusinessSchema, webPageSchema } from '@/lib/structured-data';
 import { contactFaqs } from '@/lib/faqs';
 
 export const metadata: Metadata = {
-  title: 'Contact Us — Lightning Arrester & Windmill Maintenance Quotes, Tamil Nadu',
+  title: 'Contact Us — Lightning Arrester & Windmill Quotes',
   description:
-    'Contact Henel Engineers Pvt. Ltd. for lightning protection systems, ESE arresters, earthing solutions, surge protection, and windmill operation & maintenance in Tamil Nadu and Karnataka. Call +91 94432 82312 or +91 94436 92711.',
+    'Contact Henel Engineers Pvt. Ltd. for lightning protection systems, ESE arresters, earthing solutions, surge protection, and windmill operation & maintenance across India. Call +91 94432 82312 or +91 94436 92711.',
   alternates: {
     canonical: '/contact',
   },
   openGraph: {
     title: 'Contact Henel Engineers Pvt. Ltd. — Lightning Protection & Windmill Maintenance',
     description:
-      'Reach our team for lightning protection systems, ESE air terminals, earthing solutions, or windmill operation and maintenance services in Tamil Nadu and Karnataka.',
+      'Reach our team for lightning protection systems, ESE air terminals, earthing solutions, or windmill operation and maintenance services across India.',
     url: '/contact',
   },
 };
@@ -43,7 +43,7 @@ export default function ContactPage() {
                 Let's Discuss Your Project
               </h1>
               <p className="text-base text-primary-foreground/65 leading-relaxed max-w-xl">
-                Reach our team for enquiries about lightning protection systems, ESE air terminals, earthing solutions, surge protection, or windmill operation and maintenance services across Tamil Nadu and Karnataka.
+                Reach our team for enquiries about lightning protection systems, ESE air terminals, earthing solutions, surge protection, or windmill operation and maintenance services across India.
               </p>
             </ScrollReveal>
           </div>
@@ -136,7 +136,7 @@ export default function ContactPage() {
             type: 'ContactPage',
             name: 'Contact Henel Engineers Pvt. Ltd.',
             description:
-              'Phone, WhatsApp, email, office addresses and quote request form for lightning protection and windmill maintenance in Tamil Nadu and Karnataka.',
+              'Phone, WhatsApp, email, office addresses and quote request form for lightning protection and windmill maintenance across India.',
           }),
         ]}
       />

@@ -25,7 +25,7 @@ export const companyFaqs: FaqItem[] = [
   {
     question: 'What does Henel Engineers Pvt. Ltd. do?',
     answer:
-      'Henel Engineers Pvt. Ltd. is an engineering company with two divisions: lightning protection (supply and installation of ESE lightning arresters, earthing systems and surge protection devices) and wind energy (windmill operation & maintenance, gearbox repair, blade repair, generator rewinding, erection and 24x7 breakdown support).',
+      'Henel Engineers Pvt. Ltd. is an engineering company working in lightning protection (supply and installation of ESE lightning arresters, earthing systems and surge protection devices), wind energy (windmill operation & maintenance, gearbox repair, blade repair, generator rewinding, erection and 24x7 breakdown support) and solar energy (solar panel installation, maintenance and servicing).',
   },
   {
     question: 'When and where was Henel Engineers founded?',
@@ -45,7 +45,7 @@ export const companyFaqs: FaqItem[] = [
   {
     question: 'Which regions does Henel Engineers serve?',
     answer:
-      'Henel Engineers supplies and installs lightning protection systems across Tamil Nadu, and provides windmill (WTG) operation, maintenance and breakdown services across Tamil Nadu and Karnataka.',
+      'Henel Engineers is based in Kanyakumari District, Tamil Nadu, and serves clients anywhere in India — lightning arresters, earthing and surge protection, solar panel installation and maintenance, and windmill (WTG) operation, maintenance and breakdown services.',
   },
   {
     question: 'Who are the directors of Henel Engineers?',
@@ -112,7 +112,7 @@ export const lightningFaqs: FaqItem[] = [
   {
     question: 'Which areas does Henel Engineers serve for lightning protection?',
     answer:
-      'Henel Engineers supplies and installs lightning protection systems for industrial, commercial and infrastructure projects across Tamil Nadu.',
+      'Henel Engineers supplies and installs lightning protection systems for industrial, commercial and infrastructure projects across India.',
   },
   {
     question: 'How do I get a quote for a lightning protection system?',
@@ -173,7 +173,7 @@ export const windmillFaqs: FaqItem[] = [
   {
     question: 'Which regions does Henel Engineers cover for wind turbine maintenance?',
     answer:
-      'Henel Engineers provides WTG operation, maintenance and breakdown services across Tamil Nadu and Karnataka.',
+      'Henel Engineers provides WTG operation, maintenance and breakdown services across India.',
   },
   {
     question: 'Does Henel Engineers offer 24x7 breakdown support for wind turbines?',
@@ -183,7 +183,7 @@ export const windmillFaqs: FaqItem[] = [
   {
     question: 'How much experience does Henel Engineers have in wind energy?',
     answer:
-      'Henel Engineers has more than 25 years of experience in the wind energy sector and currently manages 30+ active Comprehensive Maintenance Contracts (CMC) across Tamil Nadu and Karnataka.',
+      'Henel Engineers has more than 25 years of experience in the wind energy sector and currently manages 30+ active Comprehensive Maintenance Contracts (CMC) across India.',
   },
   {
     question: 'What is a Comprehensive Maintenance Contract (CMC) for a windmill?',
@@ -237,6 +237,39 @@ export const windmillFaqs: FaqItem[] = [
   },
 ];
 
+export const solarFaqs: FaqItem[] = [
+  {
+    question: 'Does Henel Engineers install solar panels?',
+    answer:
+      'Yes. Henel Engineers installs rooftop and commercial solar panel systems in India — from site survey and design through installation and commissioning — and provides solar panel maintenance and servicing.',
+  },
+  {
+    question: 'What is the difference between on-grid, off-grid and hybrid solar systems?',
+    answer:
+      'An on-grid (grid-tied) system is connected to the electricity grid and has no batteries. An off-grid system stores energy in batteries and works without a grid connection. A hybrid system combines grid connection with battery backup. The best choice depends on grid reliability, backup needs and budget.',
+  },
+  {
+    question: 'Is there a government subsidy for rooftop solar in India?',
+    answer:
+      'Central government schemes such as PM Surya Ghar: Muft Bijli Yojana provide financial assistance for eligible residential rooftop solar systems. Eligibility and amounts can change, so check the official scheme portal for current details.',
+  },
+  {
+    question: 'How often should solar panels be cleaned and maintained?',
+    answer:
+      'It depends on local dust and rainfall; dusty sites need more frequent cleaning. Regular inspection of panels, cables, connections, structures and earthing keeps a solar system safe and productive. Henel Engineers provides solar cleaning, inspection and troubleshooting.',
+  },
+  {
+    question: 'Do solar panels need lightning protection and earthing?',
+    answer:
+      'Yes. Solar panels are usually the most exposed part of a building and are wired to sensitive inverters. Earthing, lightning protection and surge protection protect the system — Henel Engineers designs these in, drawing on its lightning protection division.',
+  },
+  {
+    question: 'Why choose Henel Engineers for solar?',
+    answer:
+      'Henel Engineers has been an engineering company since 1999, is an authorised TOPBAS lightning protection supplier, and has more than 25 years of operation and maintenance experience in wind energy — so solar systems are installed with proper protection and backed by maintenance.',
+  },
+];
+
 export const faqCategories: FaqCategory[] = [
   {
     id: 'company',
@@ -255,6 +288,12 @@ export const faqCategories: FaqCategory[] = [
     title: 'Earthing & Surge Protection',
     description: 'Earth rods, earthing compound, earth pit covers and surge protection devices (SPD).',
     items: earthingFaqs,
+  },
+  {
+    id: 'solar-energy',
+    title: 'Solar Panel Installation & Maintenance',
+    description: 'Rooftop and commercial solar installation, system types, subsidy, maintenance and protection.',
+    items: solarFaqs,
   },
   {
     id: 'windmill-maintenance',

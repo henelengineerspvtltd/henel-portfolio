@@ -6,13 +6,16 @@
 
 import { SITE_URL, COMPANY_CIN } from './structured-data';
 import { faqCategories } from './faqs';
+import { landingPages } from './landing-pages';
+import { products, productHref } from './products';
+import { regions } from './service-areas';
 
 const u = (path: string) => `${SITE_URL}${path}`;
 
 export function llmsSummary() {
   return `# Henel Engineers Pvt. Ltd.
 
-> Henel Engineers Pvt. Ltd. (est. 17 August 1999, Aralvaimozhi, Kanyakumari District, Tamil Nadu, India) is an engineering company with two divisions: (1) Lightning Protection — supply, design and installation of ESE lightning arresters, conventional lightning arresters, earthing systems and surge protection devices across Tamil Nadu; authorised supplier of TOPBAS lightning protection products imported from Turkey. (2) Wind Energy — windmill / wind turbine (WTG) operation & maintenance, gearbox repair, blade repair, generator & transformer rewinding, hydraulic and PCB servicing, erection, spare parts and 24x7 breakdown support across Tamil Nadu and Karnataka.
+> Henel Engineers Pvt. Ltd. (est. 17 August 1999, Aralvaimozhi, Kanyakumari District, Tamil Nadu, India) is an engineering company with three divisions: (1) Lightning Protection — supply, design and installation of ESE lightning arresters, conventional lightning arresters, earthing systems and surge protection devices across India; authorised supplier of TOPBAS lightning protection products imported from Turkey. (2) Wind Energy — windmill / wind turbine (WTG) operation & maintenance, gearbox repair, blade repair, generator & transformer rewinding, hydraulic and PCB servicing, erection, spare parts and 24x7 breakdown support across India. (3) Solar Energy — rooftop and commercial solar panel installation, solar panel maintenance and servicing, with earthing and lightning protection, in India.
 
 Key facts:
 - Legal name: Henel Engineers Pvt. Ltd. (CIN ${COMPANY_CIN}, RoC-Chennai)
@@ -23,8 +26,8 @@ Key facts:
 - Phone: +91 94432 82312, +91 94436 92711
 - WhatsApp: +91 94432 82312
 - Email: henelkkla@gmail.com
-- Lightning protection service area: Tamil Nadu
-- Windmill maintenance service area: Tamil Nadu and Karnataka
+- Service area: anywhere in India (all services — lightning protection, earthing, SPD, solar, windmill O&M)
+- Based in: Kanyakumari District, Tamil Nadu (home wind belt: Tamil Nadu & Karnataka)
 - Wind energy: 30+ active Comprehensive Maintenance Contracts (CMC), 7+ WTG makes supported, 24x7 breakdown support
 
 ## Pages
@@ -34,6 +37,18 @@ Key facts:
 - [Windmill Maintenance](${u('/windmill')}): Wind turbine operation & maintenance, gearbox repair, blade patching, generator rewinding, hydraulic servicing, PCB repair, erection, spare parts, security, 24x7 breakdown support
 - [FAQ](${u('/faq')}): Answers about the company, lightning protection, earthing, surge protection and windmill maintenance
 - [Contact](${u('/contact')}): Phone, WhatsApp, email, office addresses, directors and quote request form
+- [About Us](${u('/about')}): Company history, divisions, values, directors and registration details
+- [Solar Energy](${u('/solar-panel-installation')}): Solar panel installation and services — rooftop, commercial & industrial, maintenance and protection
+- [Products & Services](${u('/products-and-services')}): Index of every product and service page
+- [Service Areas](${u('/service-areas')}): Pan-India service — states and major cities served
+
+## Service pages
+
+${landingPages.map((p) => `- [${p.h1}](${u(`/${p.slug}`)}): ${p.metaDescription}`).join('\n')}
+
+## Product pages
+
+${products.map((p) => `- [${p.name}](${u(productHref(p.slug))}): ${p.metaDescription}`).join('\n')}
 
 ## Products (Lightning Protection & Earthing)
 
@@ -45,6 +60,10 @@ Key facts:
 - CARBOMAXX Earthing Compound (TOPBAS): powder, 10 kg and 25 kg bags, made in India
 - Copper Bonded Conventional Lightning Arrester: copper, 100 kA, 5 m protection radius, made in India
 - Earth Pit Cover: 6-inch black polyplastic; FRP Earth Pit Cover: 10-inch, corrosion resistant
+
+## Service areas (anywhere in India)
+
+${regions.map((r) => `- ${r.name}: ${r.states.map((st) => `${st.state} (${st.cities.join(', ')})`).join('; ')}`).join('\n')}
 
 ## Optional
 
@@ -61,5 +80,21 @@ export function llmsFull() {
         cat.items.map((f) => `### ${f.question}\n\n${f.answer}\n`).join('\n')
     )
     .join('\n');
-  return `${llmsSummary()}\n---\n\n# Frequently Asked Questions — Henel Engineers Pvt. Ltd.\n\n${faqText}`;
+  const serviceFaqText = landingPages
+    .map(
+      (p) =>
+        `## ${p.h1} (${u(`/${p.slug}`)})\n\n` +
+        p.faqs.map((f) => `### ${f.question}\n\n${f.answer}\n`).join('\n')
+    )
+    .join('\n');
+  const productText = products
+    .map(
+      (p) =>
+        `## ${p.name} (${u(productHref(p.slug))})\n\n${p.summary}\n\n` +
+        p.specs.map((s) => `- ${s.label}: ${s.value}`).join('\n') +
+        '\n\n' +
+        p.faqs.map((f) => `### ${f.question}\n\n${f.answer}\n`).join('\n')
+    )
+    .join('\n');
+  return `${llmsSummary()}\n---\n\n# Frequently Asked Questions — Henel Engineers Pvt. Ltd.\n\n${faqText}\n${serviceFaqText}\n---\n\n# Products\n\n${productText}`;
 }

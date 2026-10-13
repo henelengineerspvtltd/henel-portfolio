@@ -35,10 +35,10 @@ export default function LightningHero() {
             </span>
           </div>
           <h1 className="text-3xl md:text-5xl font-800 text-white mb-4 leading-tight">
-            Lightning Protection & Lightning Arrester Services in TamilNadu
+            Lightning Protection & Lightning Arrester Services Across India
           </h1>
           <p className="text-lg text-white/75 leading-relaxed mb-8">
-            Henel Engineers supplies and installs comprehensive lightning protection systems — from ESE air terminals to full earthing networks — for industrial, commercial, and infrastructure projects across Tamil Nadu.
+            Henel Engineers supplies and installs comprehensive lightning protection systems — from ESE air terminals to full earthing networks — for industrial, commercial, and infrastructure projects across India.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/contact" className="btn-primary">

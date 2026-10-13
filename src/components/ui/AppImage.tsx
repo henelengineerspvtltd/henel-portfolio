@@ -1,7 +1,22 @@
 'use client';
 
 import React, { useState, useCallback, useMemo, memo } from 'react';
-import Image from 'next/image';
+import Image, { type ImageLoader } from 'next/image';
+
+/**
+ * Unsplash serves resized WebP/AVIF itself (imgix CDN), so ask it for the exact width
+ * instead of routing multi-MB originals through the Next.js optimizer, which can time out.
+ */
+const unsplashLoader: ImageLoader = ({ src, width, quality }) => {
+  const url = new URL(src);
+  url.searchParams.set('w', String(width));
+  url.searchParams.set('q', String(quality || 75));
+  url.searchParams.set('auto', 'format');
+  url.searchParams.set('fit', 'max');
+  return url.toString();
+};
+
+const isUnsplash = (src: unknown) => typeof src === 'string' && src.startsWith('https://images.unsplash.com/');
 
 interface AppImageProps {
     src: string;
@@ -29,7 +44,7 @@ const AppImage = memo(function AppImage({
     height,
     className = '',
     priority = false,
-    quality = 85,
+    quality = 75,
     placeholder = 'empty',
     blurDataURL,
     fill = false,
@@ -44,8 +59,9 @@ const AppImage = memo(function AppImage({
     const [isLoading, setIsLoading] = useState(true);
     const [hasError, setHasError] = useState(false);
 
-    const isExternalUrl = useMemo(() => typeof imageSrc === 'string' && imageSrc.startsWith('http'), [imageSrc]);
-    const resolvedUnoptimized = unoptimized || isExternalUrl;
+    // External hosts are allowed in next.config (image-hosts.config.mjs), so they can be
+    // resized and converted to WebP too. Serving them unoptimized sent multi-MB originals.
+    const resolvedUnoptimized = unoptimized;
 
     const handleError = useCallback(() => {
         if (!hasError && imageSrc !== fallbackSrc) {
@@ -75,6 +91,7 @@ const AppImage = memo(function AppImage({
             quality,
             placeholder,
             unoptimized: resolvedUnoptimized,
+            ...(isUnsplash(imageSrc) && !resolvedUnoptimized ? { loader: unsplashLoader } : {}),
             onError: handleError,
             onLoad: handleLoad,
             onClick,

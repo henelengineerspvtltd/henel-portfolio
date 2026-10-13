@@ -4,6 +4,9 @@ import { imageHosts } from './image-hosts.config.mjs';
 const nextConfig = {
   poweredByHeader: false,
   compress: true,
+  async redirects() {
+    return [{ source: '/services', destination: '/products-and-services', permanent: true }];
+  },
   async headers() {
     return [
       {
@@ -12,6 +15,10 @@ const nextConfig = {
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
           { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+          { key: 'Strict-Transport-Security', value: 'max-age=63072000' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=()' },
+          { key: 'X-DNS-Prefetch-Control', value: 'on' },
+          { key: 'Cross-Origin-Opener-Policy', value: 'same-origin' },
         ],
       },
       {
@@ -20,7 +27,8 @@ const nextConfig = {
       },
     ];
   },
-  productionBrowserSourceMaps: true,
+  // Off for production: public source maps expose the full original source code.
+  productionBrowserSourceMaps: false,
   distDir: process.env.DIST_DIR || '.next',
   typescript: {
     ignoreBuildErrors: true,
@@ -30,7 +38,8 @@ const nextConfig = {
   },
   images: {
     remotePatterns: imageHosts,
-    formats: ['image/avif', 'image/webp'],
+    // WebP only: AVIF is smaller but much slower to generate on first request.
+    formats: ['image/webp'],
     minimumCacheTTL: 2592000,
     qualities: [75, 85, 100],
   },

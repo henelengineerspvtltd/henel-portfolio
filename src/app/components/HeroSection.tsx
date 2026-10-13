@@ -52,7 +52,7 @@ export default function HeroSection() {
 </p>
           {/* Body */}
           <p className="text-base sm:text-lg text-white/65 leading-relaxed mb-10 max-w-2xl">
-            For over 25 years, Henel Engineers has delivered reliable engineering services across Tamil Nadu and South India — specialising in complete lightning protection systems and professional windmill operation &amp; maintenance.
+            For over 25 years, Henel Engineers has delivered reliable engineering services across India — specialising in complete lightning protection systems and professional windmill operation &amp; maintenance.
           </p>
 
           {/* CTAs */}

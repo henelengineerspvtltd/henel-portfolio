@@ -67,6 +67,10 @@ const KNOWS_ABOUT = [
   'Wind turbine PCB repair',
   'Windmill erection and installation',
   'Windmill spare parts',
+  'Solar panel installation',
+  'Rooftop solar',
+  'Solar power plant installation',
+  'Solar panel maintenance',
 ];
 
 export const LIGHTNING_SERVICE_OFFERS = [
@@ -76,6 +80,13 @@ export const LIGHTNING_SERVICE_OFFERS = [
   'LPS Design & Engineering',
   'Lightning Protection Supply & Installation',
   'Industrial & Building Lightning Protection',
+];
+
+export const SOLAR_SERVICE_OFFERS = [
+  'Rooftop Solar Panel Installation',
+  'Commercial & Industrial Solar Installation',
+  'Solar Panel Maintenance & Service',
+  'Solar Lightning Protection & Earthing',
 ];
 
 export const WINDMILL_SERVICE_OFFERS = [
@@ -103,10 +114,8 @@ function offerCatalog(name: string, services: string[], url: string) {
   };
 }
 
-const AREA_SERVED = [
-  { '@type': 'State', name: 'Tamil Nadu', containedInPlace: { '@type': 'Country', name: 'India' } },
-  { '@type': 'State', name: 'Karnataka', containedInPlace: { '@type': 'Country', name: 'India' } },
-];
+// Serves clients anywhere in India.
+const AREA_SERVED = [{ '@type': 'Country', name: 'India' }];
 
 /** Root Organization schema — shared across every page via the layout. */
 export function organizationSchema() {
@@ -140,7 +149,7 @@ export function organizationSchema() {
     email: COMPANY_EMAIL,
     telephone: COMPANY_PHONE_1,
     description:
-      'Henel Engineers Pvt. Ltd. supplies and installs lightning protection systems, ESE arresters, earthing solutions and surge protection, and provides windmill operation and maintenance services across Tamil Nadu and Karnataka.',
+      'Henel Engineers Pvt. Ltd. supplies and installs lightning protection systems, ESE arresters, earthing solutions and surge protection, installs and services solar panel systems, and provides windmill operation and maintenance services across India.',
     address: [REGISTERED_OFFICE, BRANCH_OFFICE],
     areaServed: AREA_SERVED,
     knowsAbout: KNOWS_ABOUT,
@@ -164,6 +173,7 @@ export function organizationSchema() {
       itemListElement: [
         offerCatalog('Lightning Protection & Earthing', LIGHTNING_SERVICE_OFFERS, '/lightning-protection'),
         offerCatalog('Windmill Operation & Maintenance', WINDMILL_SERVICE_OFFERS, '/windmill'),
+        offerCatalog('Solar Energy', SOLAR_SERVICE_OFFERS, '/solar-panel-installation'),
       ],
     },
     contactPoint: [
@@ -208,7 +218,7 @@ export function localBusinessSchema() {
     name: COMPANY_NAME,
     alternateName: 'Henel Engineers',
     description:
-      'Lightning protection systems, ESE lightning arresters, earthing, surge protection and windmill operation & maintenance services in Tamil Nadu and Karnataka. Est. 1999.',
+      'Lightning protection systems, ESE lightning arresters, earthing, surge protection, solar panel installation and windmill operation & maintenance services across India. Est. 1999.',
     image: `${SITE_URL}/assets/images/henel-logo.png`,
     logo: `${SITE_URL}/assets/images/henel-logo.png`,
     url: SITE_URL,
@@ -297,11 +307,11 @@ export function serviceSchema(opts: {
       telephone: COMPANY_PHONE_1,
       url: SITE_URL,
     },
-    areaServed: (opts.areaServed || ['Tamil Nadu']).map((a) => ({
-      '@type': 'State',
-      name: a,
-      containedInPlace: { '@type': 'Country', name: 'India' },
-    })),
+    areaServed: (opts.areaServed || ['India']).map((a) =>
+      a === 'India'
+        ? { '@type': 'Country', name: 'India' }
+        : { '@type': 'State', name: a, containedInPlace: { '@type': 'Country', name: 'India' } }
+    ),
     ...(opts.image ? { image: absoluteUrl(opts.image) } : {}),
     ...(opts.offers ? { hasOfferCatalog: offerCatalog(opts.name, opts.offers, opts.url) } : {}),
     url,

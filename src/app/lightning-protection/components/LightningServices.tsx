@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import Icon from '@/components/ui/AppIcon';
 import ScrollReveal from '@/app/components/ScrollReveal';
 
@@ -6,31 +7,37 @@ const services = [
   {
     icon: 'BoltIcon',
     title: 'ESE Lightning Arresters / Air Terminals',
+    href: '/ese-lightning-arrester',
     desc: 'Supply and installation of Early Streamer Emission (ESE) lightning air terminals providing wider protection radii for industrial and commercial structures.',
   },
   {
     icon: 'ShieldExclamationIcon',
     title: 'Surge Protection',
+    href: '/surge-protection-device',
     desc: 'Surge protection devices (SPDs) for electrical panels, data systems, and sensitive equipment to prevent damage from transient overvoltages.',
   },
   {
     icon: 'ArrowDownCircleIcon',
     title: 'Earthing Solutions',
+    href: '/earthing-system',
     desc: 'Design and installation of earthing systems — including chemical earth electrodes and earth pits — to safely dissipate fault and lightning currents.',
   },
   {
     icon: 'DocumentTextIcon',
     title: 'LPS Design & Engineering',
+    href: '/ese-lightning-arrester',
     desc: 'Site-specific lightning protection system design in accordance with applicable standards, including risk assessment and zone-of-protection calculations.',
   },
   {
     icon: 'WrenchScrewdriverIcon',
     title: 'Supply & Installation',
+    href: '/lightning-arrester',
     desc: 'End-to-end supply and professional installation of all lightning protection components — conductors, clamps, test joints, and accessories.',
   },
   {
     icon: 'BuildingOffice2Icon',
     title: 'Industrial & Building Protection',
+    href: '/lightning-arrester',
     desc: 'Tailored lightning protection for factories, warehouses, commercial buildings, communication towers, and infrastructure facilities.',
   },
 ];
@@ -55,11 +62,12 @@ export default function LightningServices() {
             <ScrollReveal
               key={s.title}
               delay={(i % 3) as 0 | 1 | 2 | 3 | 4}
-              className={`p-8 bg-card group hover:bg-background transition-colors ${
+              className={`bg-card hover:bg-background transition-colors ${
                 i < services.length - (services.length % 3 || 3)
                   ? 'border-b border-border' :''
               } ${i % 3 !== 2 ? 'sm:border-r border-border' : ''}`}
             >
+              <Link href={s.href} className="group block p-8 h-full">
               <div
                 className="w-10 h-10 rounded-lg flex items-center justify-center mb-5"
                 style={{ backgroundColor: 'rgba(204,0,0,0.1)' }}
@@ -74,7 +82,12 @@ export default function LightningServices() {
               <div className="feature-border-left">
                 <h3 className="text-sm font-800 text-foreground mb-2">{s.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+                <span className="mt-4 text-xs font-700 inline-flex items-center gap-1" style={{ color: '#CC0000' }}>
+                  Learn more
+                  <Icon name="ArrowRightIcon" size={14} variant="outline" className="group-hover:translate-x-1 transition-transform" />
+                </span>
               </div>
+              </Link>
             </ScrollReveal>
           ))}
         </div>

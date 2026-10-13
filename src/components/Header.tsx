@@ -9,8 +9,9 @@ const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'Lightning Protection', href: '/lightning-protection' },
   { label: 'Wind Energy', href: '/windmill' },
-  { label: 'About Us', href: '/#about' },
-  { label: 'Products & Services', href: '/#products' },
+  { label: 'Solar Energy', href: '/solar-panel-installation' },
+  { label: 'About Us', href: '/about' },
+  { label: 'Products & Services', href: '/products-and-services' },
   { label: 'Contact', href: '/contact' },
 ];
 
@@ -65,7 +66,7 @@ export default function Header() {
             </Link>
 
             {/* Desktop Nav */}
-            <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
+            <nav className="hidden xl:flex items-center gap-1" aria-label="Main navigation">
               {navLinks?.map((link) => (
                 <Link
                   key={link?.href}
@@ -88,7 +89,7 @@ export default function Header() {
               </Link>
               <button
                 onClick={() => setMenuOpen((v) => !v)}
-                className="lg:hidden p-2 rounded-md text-foreground hover:bg-muted/60 transition-colors"
+                className="xl:hidden p-2 rounded-md text-foreground hover:bg-muted/60 transition-colors"
                 aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
                 aria-expanded={menuOpen}
               >

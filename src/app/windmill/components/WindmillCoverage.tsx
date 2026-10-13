@@ -19,7 +19,7 @@ export default function WindmillCoverage() {
             <div className="relative overflow-hidden rounded-xl aspect-square bg-card border border-border">
               <AppImage
                 src="/assets/images/windmill/tn-karnataka-coverage-map.png"
-                alt="Map of Tamil Nadu and Karnataka highlighting Henel Engineers' service coverage regions"
+                alt="Map of Tamil Nadu and Karnataka, Henel Engineers' home wind belt, from where we serve wind farms across India"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-contain p-4"
@@ -30,10 +30,10 @@ export default function WindmillCoverage() {
           <ScrollReveal delay={1}>
             <span className="section-label-green">Our Coverage</span>
             <h2 className="text-section-heading font-800 text-foreground mt-2 mb-5">
-              Service Across Tamil Nadu &amp; Karnataka
+              Service Across India
             </h2>
             <p className="text-sm text-muted-foreground leading-relaxed mb-8">
-              We provide WTG maintenance and breakdown services across Tamil Nadu and Karnataka,
+              From our base in the Tamil Nadu and Karnataka wind belts, we provide WTG maintenance and breakdown services across India,
               supported by experienced technical personnel and the resources required to respond
               quickly and minimize machine downtime.
             </p>

@@ -28,8 +28,7 @@ export default function WindmillHero() {
           </h1>
           <p className="text-base text-white/80 leading-relaxed mb-8 max-w-xl">
             With over 25 years of industry experience, Henel Engineers provides reliable
-            operation, maintenance, and technical support for wind turbines across Tamil Nadu
-            and its neighboring regions.
+            operation, maintenance, and technical support for wind turbines across India.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/contact" className="btn-green">

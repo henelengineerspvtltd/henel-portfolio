@@ -4,35 +4,21 @@ import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
 import ScrollReveal from '@/app/components/ScrollReveal';
 import ProductSpecCard from './ProductSpecCard';
+import {
+  siriusSpecs,
+  umbraEcoSpecs,
+  spdSpecs,
+  copperEarthRodSpecs,
+  giEarthRodSpecs,
+  carbomaxxSpecs,
+  conventionalArresterSpecs,
+  earthPitCoverSpecs,
+  frpEarthPitCoverSpecs,
+  productHref,
+} from '@/lib/products';
 
-const specs = [
-{ label: 'Technology', value: 'Non-electronic Early Streamer Emission (ESE)' },
-{ label: 'Advance Time (ΔT)', value: '60 μs' },
-{ label: 'Material', value: '304L Stainless Steel' },
-{ label: 'Protection Radius', value: 'Up to 107 m (5 m mast, Level IV)' },
-{ label: 'Lightning Impulse Current', value: '200 kA tested (10/350 μs)' },
-{ label: 'Standards', value: 'NF C 17-102 · UNE 21186 · TS EN 62561' }];
-
-const umbraEcoFeatures = [
-  { label: 'Type', value: 'Non-Electronic ESE' },
-  { label: 'Standard', value: 'NF C 17-102 (2011)' },
-  { label: 'Certification', value: 'CE Certified' },
-  { label: 'Delta T (ΔT)', value: '10 µSec (Triggering Time Advance)' },
-  { label: 'Protection Radius', value: 'Up to 51 meters (Level IV)' },
-  { label: 'Power Source', value: 'No battery or external power source required' },
-];
-
-const spdSpecs = [
-  { label: 'Model', value: 'TB7K320T12L' },
-  { label: 'Protection Type', value: 'Type 1 + 2 (Class B + C)' },
-  { label: 'Phase', value: 'Three Phase' },
-  { label: 'Rated Voltage (Uc)', value: '320 VAC' },
-  { label: 'Voltage Protection Level (Up)', value: '1.6 kV' },
-  { label: 'Impulse Current (Iimp)', value: '7 kA' },
-  { label: 'Nominal Discharge Current (In)', value: '30 kA' },
-  { label: 'IP Rating', value: 'IP20' },
-  { label: 'Poles Number', value: '3 Pole + N' },
-];
+const specs = siriusSpecs;
+const umbraEcoFeatures = umbraEcoSpecs;
 
 export default function TopbasSection() {
   return (
@@ -114,6 +100,9 @@ export default function TopbasSection() {
                 Request a Quote
                 <Icon name="ArrowRightIcon" size={16} variant="outline" />
               </Link>
+              <Link href={productHref('topbas-sirius-ese-lightning-arrester')} className="btn-outline-dark">
+                View Full Details
+              </Link>
               <a href="tel:+919443282312" className="contact-info-link">
                 <Icon name="PhoneIcon" size={16} variant="solid" style={{ color: '#CC0000' }} />
                 +91 94432 82312
@@ -179,6 +168,9 @@ export default function TopbasSection() {
               <Link href="/contact" className="btn-primary">
                 Request a Quote
                 <Icon name="ArrowRightIcon" size={16} variant="outline" />
+              </Link>
+              <Link href={productHref('umbraeco-ese-lightning-arrester')} className="btn-outline-dark">
+                View Full Details
               </Link>
               <a href="tel:+919443282312" className="contact-info-link">
                 <Icon name="PhoneIcon" size={16} variant="solid" style={{ color: '#CC0000' }} />
@@ -253,6 +245,9 @@ export default function TopbasSection() {
                 Request a Quote
                 <Icon name="ArrowRightIcon" size={16} variant="outline" />
               </Link>
+              <Link href={productHref('type-1-2-surge-protection-device')} className="btn-outline-dark">
+                View Full Details
+              </Link>
               <a href="tel:+919443282312" className="contact-info-link">
                 <Icon name="PhoneIcon" size={16} variant="solid" style={{ color: '#CC0000' }} />
                 +91 94432 82312
@@ -281,12 +276,8 @@ export default function TopbasSection() {
           productLine="Copper Bonded Earth Rod"
           tagline="Earthing Electrode"
           specsSubtitle="Copper Bonded Earth Rod"
-          specs={[
-            { label: 'Minimum Order Quantity', value: '1 Piece' },
-            { label: 'Usage/Application', value: 'Earthing' },
-            { label: 'Length', value: '1 meter, 2 meter and 3 meter' },
-            { label: 'Diameter', value: '17.2 mm' },
-          ]}
+          specs={copperEarthRodSpecs}
+          detailsHref={productHref('copper-bonded-earth-rod')}
         />
 
         {/* GI Earth Rod */}
@@ -298,12 +289,8 @@ export default function TopbasSection() {
           productLine="GI Earth Rod"
           tagline="Earthing Electrode"
           specsSubtitle="GI Earth Rod"
-          specs={[
-            { label: 'Length', value: '1 m, 2 m, 3 m' },
-            { label: 'Diameter', value: '48 mm' },
-            { label: 'Wall Thickness', value: '3 mm' },
-            { label: 'Material', value: 'Class B GI Pipe' },
-          ]}
+          specs={giEarthRodSpecs}
+          detailsHref={productHref('gi-earth-rod')}
         />
 
         {/* Earthing Compound Subheading */}
@@ -322,13 +309,8 @@ export default function TopbasSection() {
           productLine="Earthing Compound"
           tagline="TOPBAS Earthing Compound"
           specsSubtitle="CARBOMAXX Earthing Compound"
-          specs={[
-            { label: 'Physical State', value: 'Powder' },
-            { label: 'Brand', value: 'TOPBAS' },
-            { label: 'Packaging Type', value: 'Bag' },
-            { label: 'Packaging Size', value: '10 kgs, 25 kgs' },
-            { label: 'Country of Origin', value: 'Made in India' },
-          ]}
+          specs={carbomaxxSpecs}
+          detailsHref={productHref('carbomaxx-earthing-compound')}
         />
 
         {/* Conventional Lightning Arresters Subheading */}
@@ -347,16 +329,8 @@ export default function TopbasSection() {
           productLine="Copper Bonded Conventional Lightning Arrester"
           tagline="External Lightning Protection"
           specsSubtitle="Copper Bonded Conventional Lightning Arrester"
-          specs={[
-            { label: 'Lightning Protection Material', value: 'Copper' },
-            { label: 'Current Rating', value: '100 kA' },
-            { label: 'Phase', value: 'Single Phase' },
-            { label: 'No. of Poles', value: 'External' },
-            { label: 'Type', value: 'External' },
-            { label: 'Highest Voltage Protection', value: 'External' },
-            { label: 'Protection Radius', value: '5 meters' },
-            { label: 'Country of Origin', value: 'Made in India' },
-          ]}
+          specs={conventionalArresterSpecs}
+          detailsHref={productHref('copper-bonded-conventional-lightning-arrester')}
         />
 
         {/* Earth Pit Chambers Subheading */}
@@ -374,15 +348,8 @@ export default function TopbasSection() {
           productLine="Earth Pit Chamber Cover"
           tagline="Earthing Pit Cover"
           specsSubtitle="Earth Pit Cover"
-          specs={[
-            { label: 'Size', value: '6 Inch' },
-            { label: 'Material', value: 'Polyplastic' },
-            { label: 'Finishing', value: 'Polished' },
-            { label: 'Color', value: 'Black' },
-            { label: 'Equipment Type', value: 'Earthing Pit Cover' },
-            { label: 'Country of Origin', value: 'Made in India' },
-            { label: 'Dimension', value: 'Top (Dia) 155 mm x Bottom (Dia) 210 mm x Height 240 mm' },
-          ]}
+          specs={earthPitCoverSpecs}
+          detailsHref={productHref('earth-pit-cover')}
         />
 
         {/* FRP Earth Pit Cover */}
@@ -394,15 +361,8 @@ export default function TopbasSection() {
           productLine="Earth Pit Chamber Cover"
           tagline="Earthing Pit Cover"
           specsSubtitle="FRP Earth Pit Cover"
-          specs={[
-            { label: 'Size', value: '10 Inch' },
-            { label: 'Material', value: 'FRP' },
-            { label: 'Color', value: 'Black' },
-            { label: 'Dimensions', value: 'Top (Dia) 254 mm x Bottom (Dia) 210 mm x Height 240 mm' },
-            { label: 'Features', value: 'Corrosion Resistant' },
-            { label: 'Equipment Type', value: 'Earthing Pit Cover' },
-            { label: 'Country of Origin', value: 'Made in India' },
-          ]}
+          specs={frpEarthPitCoverSpecs}
+          detailsHref={productHref('frp-earth-pit-cover')}
         />
 
       </div>

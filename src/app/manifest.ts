@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: 'Henel Engineers Pvt. Ltd. — Lightning Protection & Windmill Maintenance',
     short_name: 'Henel Engineers',
     description:
-      'Lightning protection systems, ESE lightning arresters, earthing, surge protection and windmill operation & maintenance in Tamil Nadu and Karnataka. Est. 1999.',
+      'Lightning protection systems, ESE lightning arresters, earthing, surge protection and windmill operation & maintenance across India. Est. 1999.',
     start_url: '/',
     display: 'standalone',
     background_color: '#FFFFFF',
