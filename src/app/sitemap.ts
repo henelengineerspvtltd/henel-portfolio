@@ -72,6 +72,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       images: Object.values(SOLAR_IMAGES),
     },
     {
+      url: `${SITE_URL}/service-areas`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: `${SITE_URL}/about`,
       lastModified,
       changeFrequency: 'monthly',

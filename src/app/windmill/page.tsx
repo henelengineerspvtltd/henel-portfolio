@@ -18,9 +18,9 @@ import { serviceSchema, webPageSchema, WINDMILL_SERVICE_OFFERS } from '@/lib/str
 import { windmillPageFaqs } from '@/lib/faqs';
 
 export const metadata: Metadata = {
-  title: 'Windmill & Wind Turbine Maintenance, TN & Karnataka',
+  title: 'Windmill & Wind Turbine Maintenance, India',
   description:
-    'Henel Engineers provides windmill operation and maintenance, gearbox repair, blade patching, generator rewinding, hydraulic servicing, erection and 24x7 breakdown support across Tamil Nadu & Karnataka. Call +91 94432 82312 or +91 94436 92711.',
+    'Henel Engineers provides windmill operation and maintenance, gearbox repair, blade patching, generator rewinding, hydraulic servicing, erection and 24x7 breakdown support across India. Call +91 94432 82312 or +91 94436 92711.',
   keywords: [
     'windmill maintenance Tamil Nadu',
     'wind turbine operation and maintenance India',
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
     canonical: '/windmill',
   },
   openGraph: {
-    title: 'Windmill & Wind Turbine Maintenance in Tamil Nadu & Karnataka | Henel Engineers',
+    title: 'Windmill & Wind Turbine Maintenance across India | Henel Engineers',
     description:
-      'Windmill operation & maintenance, gearbox repair, blade patching, generator rewinding, hydraulic servicing and 24x7 breakdown support across Tamil Nadu and Karnataka.',
+      'Windmill operation & maintenance, gearbox repair, blade patching, generator rewinding, hydraulic servicing and 24x7 breakdown support across India.',
     url: '/windmill',
     images: [
       {
@@ -55,9 +55,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Windmill & Wind Turbine Maintenance in Tamil Nadu & Karnataka | Henel Engineers',
+    title: 'Windmill & Wind Turbine Maintenance across India | Henel Engineers',
     description:
-      'Windmill operation & maintenance, gearbox repair, blade patching, generator rewinding and 24x7 breakdown support across Tamil Nadu and Karnataka.',
+      'Windmill operation & maintenance, gearbox repair, blade patching, generator rewinding and 24x7 breakdown support across India.',
     images: ['/assets/images/windmill/hero-green-hills.jpg'],
   },
 };
@@ -93,7 +93,7 @@ export default function WindmillPage() {
 
         <FAQSection
           heading="Windmill Maintenance FAQs"
-          subheading="Common questions about windmill operation, maintenance and breakdown support in Tamil Nadu & Karnataka."
+          subheading="Common questions about windmill operation, maintenance and breakdown support across India."
           items={windmillPageFaqs}
         />
 
@@ -106,17 +106,17 @@ export default function WindmillPage() {
           name: 'Windmill Operation & Maintenance Services',
           serviceType: 'Wind Turbine Operation and Maintenance',
           description:
-            'Windmill operation and maintenance, gearbox repair, blade patching, generator and transformer rewinding, hydraulic servicing, erection and 24x7 breakdown support across Tamil Nadu and Karnataka.',
-          areaServed: ['Tamil Nadu', 'Karnataka'],
+            'Windmill operation and maintenance, gearbox repair, blade patching, generator and transformer rewinding, hydraulic servicing, erection and 24x7 breakdown support across India.',
+          areaServed: ['India'],
           url: '/windmill',
           offers: WINDMILL_SERVICE_OFFERS,
           image: '/assets/images/windmill/hero-green-hills.jpg',
         }),
         webPageSchema({
           path: '/windmill',
-          name: 'Windmill Operation & Maintenance Services — Tamil Nadu & Karnataka',
+          name: 'Windmill Operation & Maintenance Services — India',
           description:
-            'Windmill operation & maintenance, gearbox repair, blade patching, generator rewinding, hydraulic servicing and 24x7 breakdown support across Tamil Nadu and Karnataka.',
+            'Windmill operation & maintenance, gearbox repair, blade patching, generator rewinding, hydraulic servicing and 24x7 breakdown support across India.',
           image: '/assets/images/windmill/hero-green-hills.jpg',
           about: ['Wind turbine maintenance', 'Windmill operation and maintenance', 'Gearbox repair', 'Blade repair'],
         })]}

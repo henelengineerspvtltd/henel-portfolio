@@ -10,34 +10,37 @@ module.exports = {
       padding: '1rem',
     },
     extend: {
+      // Hex values (same as the CSS variables in src/styles/tailwind.css) so Tailwind opacity
+      // modifiers like bg-primary/80 or text-primary-foreground/60 are generated. With var()
+      // colours they silently produced nothing (missing overlays, invisible faded text).
       colors: {
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
+        background: '#F4F6F9',
+        foreground: '#0A1628',
         primary: {
-          DEFAULT: 'var(--primary)',
-          foreground: 'var(--primary-foreground)',
+          DEFAULT: '#0A1628',
+          foreground: '#FFFFFF',
         },
         secondary: {
-          DEFAULT: 'var(--secondary)',
-          foreground: 'var(--secondary-foreground)',
+          DEFAULT: '#1A2B4A',
+          foreground: '#FFFFFF',
         },
         accent: {
-          DEFAULT: 'var(--accent)',
-          foreground: 'var(--accent-foreground)',
-          green: 'var(--accent-green)',
-          'green-foreground': 'var(--accent-green-foreground)',
+          DEFAULT: '#CC0000',
+          foreground: '#FFFFFF',
+          green: '#2D7A2D',
+          'green-foreground': '#FFFFFF',
         },
         muted: {
-          DEFAULT: 'var(--muted)',
-          foreground: 'var(--muted-foreground)',
+          DEFAULT: '#E8ECF2',
+          foreground: '#5A6A7E',
         },
         card: {
-          DEFAULT: 'var(--card)',
-          foreground: 'var(--card-foreground)',
+          DEFAULT: '#FFFFFF',
+          foreground: '#0A1628',
         },
-        border: 'var(--border)',
-        input: 'var(--input)',
-        ring: 'var(--ring)',
+        border: '#D1D9E6',
+        input: '#E8ECF2',
+        ring: '#CC0000',
       },
       borderRadius: {
         DEFAULT: 'var(--radius)',

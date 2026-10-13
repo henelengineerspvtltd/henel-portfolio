@@ -45,7 +45,7 @@ export const companyFaqs: FaqItem[] = [
   {
     question: 'Which regions does Henel Engineers serve?',
     answer:
-      'Henel Engineers supplies and installs lightning protection systems and solar panel systems across Tamil Nadu, and provides windmill (WTG) operation, maintenance and breakdown services across Tamil Nadu and Karnataka.',
+      'Henel Engineers is based in Kanyakumari District, Tamil Nadu, and serves clients anywhere in India — lightning arresters, earthing and surge protection, solar panel installation and maintenance, and windmill (WTG) operation, maintenance and breakdown services.',
   },
   {
     question: 'Who are the directors of Henel Engineers?',
@@ -112,7 +112,7 @@ export const lightningFaqs: FaqItem[] = [
   {
     question: 'Which areas does Henel Engineers serve for lightning protection?',
     answer:
-      'Henel Engineers supplies and installs lightning protection systems for industrial, commercial and infrastructure projects across Tamil Nadu.',
+      'Henel Engineers supplies and installs lightning protection systems for industrial, commercial and infrastructure projects across India.',
   },
   {
     question: 'How do I get a quote for a lightning protection system?',
@@ -173,7 +173,7 @@ export const windmillFaqs: FaqItem[] = [
   {
     question: 'Which regions does Henel Engineers cover for wind turbine maintenance?',
     answer:
-      'Henel Engineers provides WTG operation, maintenance and breakdown services across Tamil Nadu and Karnataka.',
+      'Henel Engineers provides WTG operation, maintenance and breakdown services across India.',
   },
   {
     question: 'Does Henel Engineers offer 24x7 breakdown support for wind turbines?',
@@ -183,7 +183,7 @@ export const windmillFaqs: FaqItem[] = [
   {
     question: 'How much experience does Henel Engineers have in wind energy?',
     answer:
-      'Henel Engineers has more than 25 years of experience in the wind energy sector and currently manages 30+ active Comprehensive Maintenance Contracts (CMC) across Tamil Nadu and Karnataka.',
+      'Henel Engineers has more than 25 years of experience in the wind energy sector and currently manages 30+ active Comprehensive Maintenance Contracts (CMC) across India.',
   },
   {
     question: 'What is a Comprehensive Maintenance Contract (CMC) for a windmill?',
@@ -241,7 +241,7 @@ export const solarFaqs: FaqItem[] = [
   {
     question: 'Does Henel Engineers install solar panels?',
     answer:
-      'Yes. Henel Engineers installs rooftop and commercial solar panel systems in Tamil Nadu — from site survey and design through installation and commissioning — and provides solar panel maintenance and servicing.',
+      'Yes. Henel Engineers installs rooftop and commercial solar panel systems in India — from site survey and design through installation and commissioning — and provides solar panel maintenance and servicing.',
   },
   {
     question: 'What is the difference between on-grid, off-grid and hybrid solar systems?',

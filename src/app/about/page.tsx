@@ -54,7 +54,7 @@ const divisions = [
     image: '/assets/images/lightning-protection/work/install-1.jpg',
     alt: 'Lightning arrester installed on a rooftop mast above a temple building',
     title: 'Lightning Protection & Earthing',
-    desc: 'Supply, design and installation of ESE lightning arresters, earthing systems and surge protection devices across Tamil Nadu. Authorised supplier of TOPBAS products, imported from Turkey.',
+    desc: 'Supply, design and installation of ESE lightning arresters, earthing systems and surge protection devices across India. Authorised supplier of TOPBAS products, imported from Turkey.',
   },
   {
     href: '/windmill',
@@ -64,7 +64,7 @@ const divisions = [
     image: '/assets/images/windmill/nacelle-erection-1.jpg',
     alt: 'Crane erecting a wind turbine tower and rotor during installation',
     title: 'Windmill Operation & Maintenance',
-    desc: 'WTG operation, maintenance, repairs, erection, spare parts and 24x7 breakdown support across Tamil Nadu and Karnataka, with 30+ active Comprehensive Maintenance Contracts.',
+    desc: 'WTG operation, maintenance, repairs, erection, spare parts and 24x7 breakdown support across India, with 30+ active Comprehensive Maintenance Contracts.',
   },
   {
     href: '/solar-panel-installation',

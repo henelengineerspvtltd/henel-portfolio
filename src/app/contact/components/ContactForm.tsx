@@ -32,6 +32,8 @@ const requirementTypes = [
   'Surge Protection',
   'Wind Energy',
   'Windmill Maintenance',
+  'Solar Panel Installation',
+  'Solar Maintenance',
   'Other',
 ];
 
@@ -40,6 +42,9 @@ export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  // Honeypot: hidden from people, usually filled by spam bots. FormSubmit discards
+  // submissions where `_honey` is set; we also skip sending entirely.
+  const [honey, setHoney] = useState('');
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -61,6 +66,16 @@ export default function ContactForm() {
       return;
     }
 
+    if (honey) {
+      setSubmitted(true);
+      return;
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) {
+      setError('Please enter a valid email address.');
+      return;
+    }
+
     setLoading(true);
 
     try {
@@ -75,6 +90,7 @@ export default function ContactForm() {
           body: JSON.stringify({
             _subject: `New Quote Request from ${form.name.trim()}`,
             _captcha: 'false',
+            _honey: honey,
             _replyto: form.email.trim(),
 
             'Full Name': form.name.trim(),
@@ -171,12 +187,25 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-card border border-border rounded-xl p-8"
+      className="relative bg-card border border-border rounded-xl p-8"
       aria-label="Contact and quote request form"
     >
       <h3 className="text-base font-800 text-foreground mb-6">
         Send Us an Enquiry
       </h3>
+
+      <div aria-hidden="true" style={{ position: 'absolute', left: '-10000px', width: 1, height: 1, overflow: 'hidden' }}>
+        <label htmlFor="website">Leave this field empty</label>
+        <input
+          id="website"
+          name="website"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          value={honey}
+          onChange={(e) => setHoney(e.target.value)}
+        />
+      </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
         <div>
@@ -187,6 +216,8 @@ export default function ContactForm() {
           <input
             id="name"
             name="name"
+            maxLength={100}
+            autoComplete="name"
             type="text"
             required
             value={form.name}
@@ -204,6 +235,8 @@ export default function ContactForm() {
           <input
             id="company"
             name="company"
+            maxLength={120}
+            autoComplete="organization"
             type="text"
             value={form.company}
             onChange={handleChange}
@@ -222,6 +255,8 @@ export default function ContactForm() {
           <input
             id="email"
             name="email"
+            maxLength={150}
+            autoComplete="email"
             type="email"
             required
             value={form.email}
@@ -239,6 +274,8 @@ export default function ContactForm() {
           <input
             id="phone"
             name="phone"
+            maxLength={20}
+            autoComplete="tel"
             type="tel"
             required
             value={form.phone}
@@ -280,6 +317,7 @@ export default function ContactForm() {
           <input
             id="projectLocation"
             name="projectLocation"
+            maxLength={150}
             type="text"
             value={form.projectLocation}
             onChange={handleChange}
@@ -296,6 +334,7 @@ export default function ContactForm() {
           <input
             id="buildingType"
             name="buildingType"
+            maxLength={120}
             type="text"
             value={form.buildingType}
             onChange={handleChange}
@@ -313,6 +352,7 @@ export default function ContactForm() {
         <textarea
           id="message"
           name="message"
+          maxLength={3000}
           rows={4}
           value={form.message}
           onChange={handleChange}

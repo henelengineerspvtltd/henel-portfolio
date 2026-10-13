@@ -14,6 +14,7 @@ import HomeCTA from '@/app/components/HomeCTA';
 import { getProduct, products, productHref } from '@/lib/products';
 import { getLandingPage } from '@/lib/landing-pages';
 import { webPageSchema } from '@/lib/structured-data';
+import { withIndiaKeywords } from '@/lib/keywords';
 
 export const dynamicParams = false;
 
@@ -31,7 +32,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   return {
     title: product.metaTitle,
     description: product.metaDescription,
-    keywords: product.keywords,
+    keywords: withIndiaKeywords(product.keywords),
     alternates: { canonical: url },
     openGraph: {
       title: `${product.name} | Henel Engineers`,
@@ -148,7 +149,7 @@ export default async function ProductPage({ params }: Params) {
                     <h2 className="text-xl font-800 text-foreground mb-5">Supply &amp; installation</h2>
                     <p className="text-sm text-muted-foreground leading-relaxed mb-5">
                       Henel Engineers supplies this product and installs it as part of a complete lightning protection and
-                      earthing system across Tamil Nadu — from site assessment and design to installation.
+                      earthing system across India — from site assessment and design to installation.
                     </p>
                     <Link href={`/${service.slug}`} className="btn-outline-dark inline-flex">
                       {service.h1}

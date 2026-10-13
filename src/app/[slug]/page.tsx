@@ -14,6 +14,7 @@ import HomeCTA from '@/app/components/HomeCTA';
 import WindmillFinalCTA from '@/app/windmill/components/WindmillFinalCTA';
 import { getLandingPage, landingPages, type Division } from '@/lib/landing-pages';
 import { serviceSchema, webPageSchema } from '@/lib/structured-data';
+import { withIndiaKeywords } from '@/lib/keywords';
 
 export const dynamicParams = false;
 
@@ -31,7 +32,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   return {
     title: page.metaTitle,
     description: page.metaDescription,
-    keywords: page.keywords,
+    keywords: withIndiaKeywords(page.keywords),
     alternates: { canonical: url },
     openGraph: {
       title: `${page.metaTitle} | Henel Engineers`,
@@ -110,6 +111,11 @@ export default async function LandingPageRoute({ params }: Params) {
               <span className="inline-block text-xs font-800 uppercase tracking-widest text-white/60 mb-3">{page.eyebrow}</span>
               <h1 className="text-3xl md:text-5xl font-800 text-white mb-5 leading-tight">{page.h1}</h1>
               <p className="text-base md:text-lg text-white/80 leading-relaxed mb-8">{page.intro}</p>
+              {page.alsoKnownAs && (
+                <p className="text-xs text-white/60 -mt-4 mb-8">
+                  Also known as: {page.alsoKnownAs.join(' · ')}
+                </p>
+              )}
               <div className="flex flex-wrap gap-4">
                 <Link href="/contact" className={theme.btn}>
                   Request a Quote

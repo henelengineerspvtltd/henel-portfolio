@@ -17,10 +17,10 @@ const AMBER = '#B45309';
 const AMBER_TINT = 'rgba(180,83,9,0.1)';
 
 const description =
-  'Solar panel installation and services in Tamil Nadu: rooftop solar for homes and businesses, commercial & industrial solar plants, solar panel maintenance and cleaning, with built-in earthing and lightning protection. Henel Engineers, est. 1999. Call +91 94432 82312.';
+  'Solar panel installation and services across India: rooftop solar for homes and businesses, commercial & industrial solar plants, solar panel maintenance and cleaning, with built-in earthing and lightning protection. Henel Engineers, est. 1999. Call +91 94432 82312.';
 
 export const metadata: Metadata = {
-  title: 'Solar Panel Installation & Services in Tamil Nadu',
+  title: 'Solar Panel Installation & Services in India',
   description,
   keywords: [
     'solar panel installation',
@@ -46,14 +46,14 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: '/solar-panel-installation' },
   openGraph: {
-    title: 'Solar Panel Installation & Services in Tamil Nadu | Henel Engineers',
+    title: 'Solar Panel Installation & Services in India | Henel Engineers',
     description,
     url: '/solar-panel-installation',
     images: [{ url: SOLAR_IMAGES.field, alt: 'Ground-mounted solar panels on a green field under a blue sky' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Solar Panel Installation & Services in Tamil Nadu | Henel Engineers',
+    title: 'Solar Panel Installation & Services in India | Henel Engineers',
     description,
     images: [SOLAR_IMAGES.field],
   },
@@ -141,7 +141,7 @@ export default function SolarPage() {
               </div>
               <h1 className="text-4xl md:text-6xl font-800 text-white mb-5 leading-tight">Solar Panel Installation &amp; Services</h1>
               <p className="text-base md:text-lg text-white/80 leading-relaxed mb-8">
-                Henel Engineers Pvt. Ltd. installs and services solar panel systems across Tamil Nadu — rooftop solar for homes
+                Henel Engineers Pvt. Ltd. installs and services solar panel systems across India — rooftop solar for homes
                 and businesses, commercial and industrial solar plants, and solar maintenance — with earthing and lightning
                 protection engineered in from day one.
               </p>
@@ -351,7 +351,7 @@ export default function SolarPage() {
             <Link href="/windmill" className="group bg-card border border-border rounded-xl p-6 card-hover">
               <span className="section-label-green">Wind Energy</span>
               <h3 className="text-lg font-800 text-foreground mt-2 mb-2">Windmill Operation &amp; Maintenance</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-4">25+ years, 30+ active CMCs and 24x7 breakdown support across Tamil Nadu &amp; Karnataka.</p>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">25+ years, 30+ active CMCs and 24x7 breakdown support across India.</p>
               <span className="text-xs font-700 inline-flex items-center gap-1" style={{ color: '#2D7A2D' }}>
                 Explore wind energy <Icon name="ArrowRightIcon" size={14} variant="outline" className="group-hover:translate-x-1 transition-transform" />
               </span>
@@ -359,7 +359,7 @@ export default function SolarPage() {
             <Link href="/lightning-protection" className="group bg-card border border-border rounded-xl p-6 card-hover">
               <span className="section-label">Lightning Protection</span>
               <h3 className="text-lg font-800 text-foreground mt-2 mb-2">Lightning Arresters &amp; Earthing</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-4">Authorised TOPBAS supplier — ESE arresters, earthing and surge protection across Tamil Nadu.</p>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">Authorised TOPBAS supplier — ESE arresters, earthing and surge protection across India.</p>
               <span className="text-xs font-700 inline-flex items-center gap-1" style={{ color: '#CC0000' }}>
                 Explore lightning protection <Icon name="ArrowRightIcon" size={14} variant="outline" className="group-hover:translate-x-1 transition-transform" />
               </span>
@@ -402,14 +402,14 @@ export default function SolarPage() {
             name: 'Solar Panel Installation & Services',
             serviceType: 'Solar Panel Installation',
             description,
-            areaServed: ['Tamil Nadu'],
+            areaServed: ['India'],
             url: '/solar-panel-installation',
             offers: solarLandingPages.map((p) => p.navLabel),
             image: SOLAR_IMAGES.field,
           }),
           webPageSchema({
             path: '/solar-panel-installation',
-            name: 'Solar Panel Installation & Services in Tamil Nadu',
+            name: 'Solar Panel Installation & Services in India',
             description,
             image: SOLAR_IMAGES.field,
             about: ['Solar panel installation', 'Rooftop solar', 'Solar power plant', 'Solar panel maintenance'],

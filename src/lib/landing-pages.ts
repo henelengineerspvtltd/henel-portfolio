@@ -37,6 +37,8 @@ export interface LandingPage {
   eyebrow: string;
   h1: string;
   intro: string;
+  /** Other names people search for (incl. Hindi / Tamil), shown as an "Also known as" line. */
+  alsoKnownAs?: string[];
   heroImage: string;
   heroAlt: string;
   /** Optional product photo shown in the sidebar (white-background product shots). */
@@ -51,9 +53,10 @@ export interface LandingPage {
   serviceType: string;
 }
 
-const LP_AREAS = ['Tamil Nadu'];
-const WIND_AREAS = ['Tamil Nadu', 'Karnataka'];
-const SOLAR_AREAS = ['Tamil Nadu'];
+// Henel Engineers serves clients anywhere in India (based in Kanyakumari District, Tamil Nadu).
+const LP_AREAS = ['India'];
+const WIND_AREAS = ['India'];
+const SOLAR_AREAS = ['India'];
 
 /** Free-licence Unsplash stock photos used until Henel's own solar project photos are available. */
 const unsplash = (id: string) => `https://images.unsplash.com/photo-${id}`;
@@ -77,9 +80,9 @@ export const landingPages: LandingPage[] = [
     slug: 'lightning-arrester',
     division: 'lightning',
     navLabel: 'Lightning Arrester',
-    metaTitle: 'Lightning Arrester Supply & Installation, Tamil Nadu',
+    metaTitle: 'Lightning Arrester Supply & Installation, India',
     metaDescription:
-      'Lightning arrester supply and installation for homes, industries, commercial buildings, temples, churches and towers across Tamil Nadu. ESE and copper conventional lightning arresters with earthing and surge protection. Est. 1999. Call +91 94432 82312.',
+      'Lightning arrester supply and installation for homes, industries, commercial buildings, temples, churches and towers across India. ESE and copper conventional lightning arresters with earthing and surge protection. Est. 1999. Call +91 94432 82312.',
     keywords: [
       'lightning arrester',
       'lightning arrester installation',
@@ -89,7 +92,7 @@ export const landingPages: LandingPage[] = [
       'lightning conductor',
       'lightning rod installation',
       'copper lightning arrester',
-      'lightning arrester dealers in Tamil Nadu',
+      'lightning arrester dealers in India',
       'lightning arrester supplier India',
       'lightning arrester Kanyakumari',
       'lightning arrester Nagercoil',
@@ -98,9 +101,10 @@ export const landingPages: LandingPage[] = [
       'lightning arrester near me',
     ],
     eyebrow: 'Lightning Protection',
-    h1: 'Lightning Arrester Supply & Installation in Tamil Nadu',
+    h1: 'Lightning Arrester Supply & Installation in India',
     intro:
-      'Henel Engineers Pvt. Ltd. supplies and installs lightning arresters for homes, factories, warehouses, commercial buildings, temples, churches, communication towers and infrastructure across Tamil Nadu — both ESE (Early Streamer Emission) and copper conventional lightning arresters, complete with down conductors, earthing and surge protection.',
+      'Henel Engineers Pvt. Ltd. supplies and installs lightning arresters for homes, factories, warehouses, commercial buildings, temples, churches, communication towers and infrastructure across India — both ESE (Early Streamer Emission) and copper conventional lightning arresters, complete with down conductors, earthing and surge protection.',
+    alsoKnownAs: ['lightning conductor','lightning rod','air terminal','तड़ित चालक (tadit chalak)','மின்னல் தாங்கி (minnal thaangi)'],
     heroImage: '/assets/images/lightning-protection/work/install-new-4.jpg',
     heroAlt: 'Technician installing a lightning arrester mast on a building rooftop',
     productImage: {
@@ -171,7 +175,7 @@ export const landingPages: LandingPage[] = [
       {
         question: 'Does my house need a lightning arrester?',
         answer:
-          'Buildings that are tall, isolated, on high ground, or that contain sensitive electronics or many people benefit most from lightning protection. A lightning risk assessment decides whether protection is required and which level is needed. Henel Engineers installs lightning arresters on residential buildings as well as industrial and commercial sites across Tamil Nadu.',
+          'Buildings that are tall, isolated, on high ground, or that contain sensitive electronics or many people benefit most from lightning protection. A lightning risk assessment decides whether protection is required and which level is needed. Henel Engineers installs lightning arresters on residential buildings as well as industrial and commercial sites across India.',
       },
       {
         question: 'What is the difference between a lightning arrester and a surge protection device?',
@@ -200,7 +204,7 @@ export const landingPages: LandingPage[] = [
     navLabel: 'ESE Lightning Arrester',
     metaTitle: 'ESE Lightning Arrester Supplier — TOPBAS SIRIUS',
     metaDescription:
-      'Authorised TOPBAS supplier of ESE (Early Streamer Emission) lightning arresters — TOPBAS SIRIUS (up to 107 m radius, ΔT 60 μs) and UMBRAECO (up to 51 m). NF C 17-102. Supply, design and installation across Tamil Nadu. Call +91 94432 82312.',
+      'Authorised TOPBAS supplier of ESE (Early Streamer Emission) lightning arresters — TOPBAS SIRIUS (up to 107 m radius, ΔT 60 μs) and UMBRAECO (up to 51 m). NF C 17-102. Supply, design and installation across India. Call +91 94432 82312.',
     keywords: [
       'ESE lightning arrester',
       'early streamer emission lightning arrester',
@@ -220,7 +224,8 @@ export const landingPages: LandingPage[] = [
     eyebrow: 'Authorised TOPBAS Supplier',
     h1: 'ESE Lightning Arrester Supplier & Installer',
     intro:
-      'Henel Engineers Pvt. Ltd. is an authorised supplier of TOPBAS ESE (Early Streamer Emission) lightning arresters, imported from Turkey. We supply, design and install ESE lightning protection for industrial, commercial and infrastructure projects across Tamil Nadu.',
+      'Henel Engineers Pvt. Ltd. is an authorised supplier of TOPBAS ESE (Early Streamer Emission) lightning arresters, imported from Turkey. We supply, design and install ESE lightning protection for industrial, commercial and infrastructure projects across India.',
+    alsoKnownAs: ['early streamer emission air terminal','ESE lightning conductor','ESE lightning rod'],
     heroImage: '/assets/images/lightning-protection/work/install-1.jpg',
     heroAlt: 'Lightning arrester installed on a rooftop mast above a temple building',
     productImage: {
@@ -307,9 +312,9 @@ export const landingPages: LandingPage[] = [
     slug: 'earthing-system',
     division: 'lightning',
     navLabel: 'Earthing System',
-    metaTitle: 'Earthing Contractor & Chemical Earthing, Tamil Nadu',
+    metaTitle: 'Earthing Contractor & Chemical Earthing, India',
     metaDescription:
-      'Earthing system design and installation in Tamil Nadu: chemical earth electrodes, copper bonded and GI earth rods, CARBOMAXX earthing compound and polyplastic / FRP earth pit covers. Supply and installation by Henel Engineers, est. 1999.',
+      'Earthing system design and installation across India: chemical earth electrodes, copper bonded and GI earth rods, CARBOMAXX earthing compound and polyplastic / FRP earth pit covers. Supply and installation by Henel Engineers, est. 1999.',
     keywords: [
       'earthing contractor Tamil Nadu',
       'earthing system installation',
@@ -332,6 +337,7 @@ export const landingPages: LandingPage[] = [
     h1: 'Earthing System Installation & Earthing Materials',
     intro:
       'Henel Engineers Pvt. Ltd. designs and installs earthing systems — including chemical earth electrodes and earth pits — that safely dissipate fault and lightning currents, and supplies earthing materials: copper bonded and GI earth rods, earthing compound and earth pit covers.',
+    alsoKnownAs: ['grounding system','earth pit','अर्थिंग (earthing)','எர்த்திங் (earthing)'],
     heroImage: '/assets/images/lightning-protection/work/install-5.jpg',
     heroAlt: 'Lightning arrester mast installed on a building under construction',
     productImage: {
@@ -416,7 +422,7 @@ export const landingPages: LandingPage[] = [
     navLabel: 'Surge Protection Device (SPD)',
     metaTitle: 'Surge Protection Device (SPD) — Type 1 + 2 Supplier',
     metaDescription:
-      'Type 1 + 2 (Class B + C) three-phase surge protection devices for electrical panels, data systems and sensitive equipment. TOPBAS TB7K320T12L: Uc 320 VAC, Iimp 7 kA, In 30 kA, Up 1.6 kV. Supply and installation by Henel Engineers, Tamil Nadu.',
+      'Type 1 + 2 (Class B + C) three-phase surge protection devices for electrical panels, data systems and sensitive equipment. TOPBAS TB7K320T12L: Uc 320 VAC, Iimp 7 kA, In 30 kA, Up 1.6 kV. Supply and installation by Henel Engineers across India.',
     keywords: [
       'surge protection device',
       'SPD',
@@ -435,6 +441,7 @@ export const landingPages: LandingPage[] = [
     h1: 'Surge Protection Devices (SPD) — Supply & Installation',
     intro:
       'Henel Engineers Pvt. Ltd. supplies and installs surge protection devices (SPDs) for electrical panels, data systems and sensitive equipment, preventing damage from transient overvoltages caused by lightning and switching.',
+    alsoKnownAs: ['surge arrester','surge protector','surge suppressor','lightning surge protection'],
     heroImage: '/assets/images/lightning-protection/hero-storm.jpg',
     heroAlt: 'Lightning storm over a city with a lightning arrester installed on a rooftop',
     productImage: {
@@ -518,7 +525,7 @@ export const landingPages: LandingPage[] = [
     navLabel: 'Solar Lightning Protection & Earthing',
     metaTitle: 'Solar Earthing & Lightning Arrester for Solar Panels',
     metaDescription:
-      'Lightning arresters, earthing and surge protection for rooftop solar panels and solar power installations in Tamil Nadu. ESE and conventional lightning arresters, earth rods, earthing compound and SPDs from Henel Engineers.',
+      'Lightning arresters, earthing and surge protection for rooftop solar panels and solar power installations in India. ESE and conventional lightning arresters, earth rods, earthing compound and SPDs from Henel Engineers.',
     keywords: [
       'solar earthing',
       'solar panel earthing',
@@ -612,7 +619,7 @@ export const landingPages: LandingPage[] = [
     navLabel: 'Renewable Energy Services',
     metaTitle: 'Renewable Energy Services — Wind O&M & Solar Protection',
     metaDescription:
-      'Renewable energy engineering from Kanyakumari District, Tamil Nadu: wind turbine operation & maintenance across Tamil Nadu and Karnataka, plus lightning protection and earthing for solar installations. 25+ years, 30+ active CMCs.',
+      'Renewable energy engineering from Kanyakumari District, Tamil Nadu: wind turbine operation & maintenance across India, plus lightning protection and earthing for solar installations. 25+ years, 30+ active CMCs.',
     keywords: [
       'renewable energy services Tamil Nadu',
       'renewable energy company Tamil Nadu',
@@ -628,7 +635,7 @@ export const landingPages: LandingPage[] = [
     eyebrow: 'Renewable Energy',
     h1: 'Renewable Energy Engineering Services',
     intro:
-      'From its base in Kanyakumari District — home to some of India’s most active wind energy infrastructure — Henel Engineers Pvt. Ltd. keeps renewable energy assets productive and protected: wind turbine operation & maintenance across Tamil Nadu and Karnataka, and solar panel installation, maintenance, lightning protection and earthing.',
+      'From its base in Kanyakumari District — home to some of India’s most active wind energy infrastructure — Henel Engineers Pvt. Ltd. keeps renewable energy assets productive and protected: wind turbine operation & maintenance across India, and solar panel installation, maintenance, lightning protection and earthing.',
     heroImage: '/assets/images/windmill/hero-green-hills.jpg',
     heroAlt: 'Wind turbines on green rolling hills under a blue sky',
     highlights: [
@@ -650,7 +657,7 @@ export const landingPages: LandingPage[] = [
       {
         heading: 'Wind energy: operation & maintenance',
         paragraphs: [
-          'Henel Engineers is an experienced wind energy service provider specialising in Wind Turbine Generator (WTG) operation, maintenance, breakdown services and technical support. With more than 25 years in the industry, we manage 30+ active Comprehensive Maintenance Contracts and support 7+ WTG makes across Tamil Nadu and Karnataka.',
+          'Henel Engineers is an experienced wind energy service provider specialising in Wind Turbine Generator (WTG) operation, maintenance, breakdown services and technical support. With more than 25 years in the industry, we manage 30+ active Comprehensive Maintenance Contracts and support 7+ WTG makes across India.',
         ],
         bullets: [
           'Gearbox repair & overhaul',
@@ -664,7 +671,7 @@ export const landingPages: LandingPage[] = [
       {
         heading: 'Solar: installation, maintenance & protection',
         paragraphs: [
-          'Henel Engineers installs and services rooftop and commercial solar panel systems across Tamil Nadu. Our lightning protection division protects solar installations with ESE and conventional lightning arresters, earthing systems and surge protection devices — the same engineering we have delivered for industrial and commercial buildings across Tamil Nadu since 1999.',
+          'Henel Engineers installs and services rooftop and commercial solar panel systems across India. Our lightning protection division protects solar installations with ESE and conventional lightning arresters, earthing systems and surge protection devices — the same engineering we have delivered for industrial and commercial buildings across India since 1999.',
         ],
       },
       {
@@ -678,7 +685,7 @@ export const landingPages: LandingPage[] = [
       {
         question: 'What renewable energy services does Henel Engineers provide?',
         answer:
-          'Henel Engineers provides wind turbine (WTG) operation & maintenance, repairs, erection, spare parts and 24x7 breakdown support across Tamil Nadu and Karnataka, and lightning protection, earthing and surge protection for solar installations in Tamil Nadu.',
+          'Henel Engineers provides wind turbine (WTG) operation & maintenance, repairs, erection, spare parts and 24x7 breakdown support across India, and lightning protection, earthing and surge protection for solar installations in India.',
       },
       {
         question: 'Where is Henel Engineers based?',
@@ -704,7 +711,7 @@ export const landingPages: LandingPage[] = [
     navLabel: 'Windmill AMC / CMC',
     metaTitle: 'Windmill Maintenance Contract (CMC / AMC)',
     metaDescription:
-      'Comprehensive Maintenance Contracts (CMC) for windmills and wind turbines across Tamil Nadu and Karnataka. Scheduled and corrective maintenance, 24x7 breakdown support, 7+ WTG makes. 30+ active CMCs, 25+ years. Call +91 94432 82312.',
+      'Comprehensive Maintenance Contracts (CMC) for windmills and wind turbines across India. Scheduled and corrective maintenance, 24x7 breakdown support, 7+ WTG makes. 30+ active CMCs, 25+ years. Call +91 94432 82312.',
     keywords: [
       'windmill maintenance contract',
       'windmill AMC',
@@ -722,7 +729,8 @@ export const landingPages: LandingPage[] = [
     eyebrow: 'Wind Energy Division',
     h1: 'Windmill Maintenance Contracts (CMC / AMC)',
     intro:
-      'Henel Engineers Pvt. Ltd. manages 30+ active Comprehensive Maintenance Contracts (CMC) for wind turbines across Tamil Nadu and Karnataka, keeping windmills generating with scheduled and corrective maintenance, 24x7 breakdown support and a multi-disciplinary team under one roof.',
+      'Henel Engineers Pvt. Ltd. manages 30+ active Comprehensive Maintenance Contracts (CMC) for wind turbines across India, keeping windmills generating with scheduled and corrective maintenance, 24x7 breakdown support and a multi-disciplinary team under one roof.',
+    alsoKnownAs: ['wind turbine generator (WTG) maintenance','पवन चक्की (pawan chakki)','காற்றாலை (kaatraalai)'],
     heroImage: '/assets/images/windmill/tower-technician.jpg',
     heroAlt: 'Technician on a wind turbine tower carrying out maintenance against a cloudy sky',
     highlights: [
@@ -759,9 +767,9 @@ export const landingPages: LandingPage[] = [
         ],
       },
       {
-        heading: 'Coverage across Tamil Nadu and Karnataka',
+        heading: 'Coverage across India',
         paragraphs: [
-          'We provide WTG maintenance and breakdown services across Tamil Nadu and Karnataka, supported by experienced technical personnel and the resources required to respond quickly and minimise machine downtime.',
+          'We provide WTG maintenance and breakdown services across India, supported by experienced technical personnel and the resources required to respond quickly and minimise machine downtime.',
         ],
       },
     ],
@@ -769,7 +777,7 @@ export const landingPages: LandingPage[] = [
       {
         question: 'What is a windmill CMC?',
         answer:
-          'A Comprehensive Maintenance Contract (CMC) is an ongoing agreement under which a service provider takes care of a wind turbine’s operation and maintenance. Henel Engineers currently manages 30+ active CMCs across Tamil Nadu and Karnataka.',
+          'A Comprehensive Maintenance Contract (CMC) is an ongoing agreement under which a service provider takes care of a wind turbine’s operation and maintenance. Henel Engineers currently manages 30+ active CMCs across India.',
       },
       {
         question: 'Is a windmill AMC the same as a CMC?',
@@ -798,7 +806,7 @@ export const landingPages: LandingPage[] = [
     navLabel: 'Gearbox Repair',
     metaTitle: 'Wind Turbine Gearbox Repair & Overhaul',
     metaDescription:
-      'Windmill gearbox repair and overhaul with quick turnaround: replacement of bearings, shafts and gears for a range of WTG makes using hydraulic installation methods. Henel Engineers, Tamil Nadu & Karnataka. Call +91 94432 82312.',
+      'Windmill gearbox repair and overhaul with quick turnaround: replacement of bearings, shafts and gears for a range of WTG makes using hydraulic installation methods. Henel Engineers, India. Call +91 94432 82312.',
     keywords: [
       'wind turbine gearbox repair',
       'windmill gearbox repair',
@@ -881,7 +889,7 @@ export const landingPages: LandingPage[] = [
     navLabel: 'Blade Repair',
     metaTitle: 'Wind Turbine Blade Repair & Lightning Damage Repair',
     metaDescription:
-      'Windmill blade patching, lightning damage repair and on-site blade restoration across Tamil Nadu and Karnataka. Keep wind turbine rotors running safely with Henel Engineers. Call +91 94432 82312.',
+      'Windmill blade patching, lightning damage repair and on-site blade restoration across India. Keep wind turbine rotors running safely with Henel Engineers. Call +91 94432 82312.',
     keywords: [
       'wind turbine blade repair',
       'windmill blade repair',
@@ -895,7 +903,7 @@ export const landingPages: LandingPage[] = [
     eyebrow: 'Wind Energy Division',
     h1: 'Wind Turbine Blade Repair & Patching',
     intro:
-      'Henel Engineers Pvt. Ltd. undertakes wind turbine blade patching, lightning damage repair and on-site blade restoration to keep rotors running safely across Tamil Nadu and Karnataka.',
+      'Henel Engineers Pvt. Ltd. undertakes wind turbine blade patching, lightning damage repair and on-site blade restoration to keep rotors running safely across India.',
     heroImage: '/assets/images/windmill/blade-patching.jpg',
     heroAlt: 'Technician working inside a wind turbine hub during blade patching and repair work',
     highlights: [
@@ -952,7 +960,7 @@ export const landingPages: LandingPage[] = [
     navLabel: 'Generator Rewinding',
     metaTitle: 'Windmill Generator Rewinding & Bearing Replacement',
     metaDescription:
-      'Windmill generator and transformer rewinding, bearing replacement and sleeve ring replacement — carried out without dismantling the generator from the nacelle wherever possible. Henel Engineers, Tamil Nadu & Karnataka.',
+      'Windmill generator and transformer rewinding, bearing replacement and sleeve ring replacement — carried out without dismantling the generator from the nacelle wherever possible. Henel Engineers, India.',
     keywords: [
       'wind turbine generator rewinding',
       'windmill generator repair',
@@ -1032,7 +1040,7 @@ export const landingPages: LandingPage[] = [
     navLabel: 'Hydraulic & PCB Repair',
     metaTitle: 'Wind Turbine Hydraulic Servicing & PCB Repair',
     metaDescription:
-      'Windmill hydraulic unit, pump, pitch cylinder and brake servicing, plus wind turbine control PCB repair with a standby PCB to cut downtime. Henel Engineers, Tamil Nadu & Karnataka. Call +91 94432 82312.',
+      'Windmill hydraulic unit, pump, pitch cylinder and brake servicing, plus wind turbine control PCB repair with a standby PCB to cut downtime. Henel Engineers, India. Call +91 94432 82312.',
     keywords: [
       'wind turbine hydraulic repair',
       'windmill hydraulic unit service',
@@ -1105,7 +1113,7 @@ export const landingPages: LandingPage[] = [
     navLabel: 'Windmill Spare Parts',
     metaTitle: 'Windmill Spare Parts Supplier — Tamil Nadu',
     metaDescription:
-      'Sourcing and supply of all types of windmill spare parts — gearbox, generator, hydraulic and electrical system components — for wind turbines across Tamil Nadu and Karnataka. Henel Engineers. Call +91 94432 82312.',
+      'Sourcing and supply of all types of windmill spare parts — gearbox, generator, hydraulic and electrical system components — for wind turbines across India. Henel Engineers. Call +91 94432 82312.',
     keywords: [
       'windmill spare parts',
       'wind turbine spare parts supplier',
@@ -1119,7 +1127,7 @@ export const landingPages: LandingPage[] = [
     eyebrow: 'Wind Energy Division',
     h1: 'Windmill Spare Parts Supply',
     intro:
-      'Henel Engineers Pvt. Ltd. sources and supplies all types of windmill spare parts — including gearbox, generator, hydraulic and electrical system components — for wind turbines across Tamil Nadu and Karnataka.',
+      'Henel Engineers Pvt. Ltd. sources and supplies all types of windmill spare parts — including gearbox, generator, hydraulic and electrical system components — for wind turbines across India.',
     heroImage: '/assets/images/windmill/nacelle-components.jpg',
     heroAlt: 'Wind turbine nacelle components laid out for maintenance',
     highlights: [
@@ -1153,7 +1161,7 @@ export const landingPages: LandingPage[] = [
       {
         question: 'Can you install the spare parts you supply?',
         answer:
-          'Yes. Henel Engineers’ field teams carry out repairs and component replacement as part of its windmill maintenance services across Tamil Nadu and Karnataka.',
+          'Yes. Henel Engineers’ field teams carry out repairs and component replacement as part of its windmill maintenance services across India.',
       },
       { question: 'How do I request windmill spare parts?', answer: QUOTE_ANSWER },
     ],
@@ -1167,7 +1175,7 @@ export const landingPages: LandingPage[] = [
     navLabel: 'Windmill Erection',
     metaTitle: 'Windmill Erection & Wind Turbine Installation',
     metaDescription:
-      'End-to-end windmill erection and installation: tower erection, nacelle, hub and component installation, start-up and commissioning support, heavy-duty crane arrangement. Henel Engineers, Tamil Nadu & Karnataka.',
+      'End-to-end windmill erection and installation: tower erection, nacelle, hub and component installation, start-up and commissioning support, heavy-duty crane arrangement. Henel Engineers, India.',
     keywords: [
       'windmill erection',
       'wind turbine installation',
@@ -1246,7 +1254,7 @@ export const landingPages: LandingPage[] = [
     navLabel: 'Rooftop Solar Installation',
     metaTitle: 'Rooftop Solar Panel Installation for Homes & Businesses',
     metaDescription:
-      'Rooftop solar panel installation for homes, shops, offices and factories in Tamil Nadu — site survey, system design, installation and commissioning, with lightning protection and earthing from an engineering company established in 1999. Call +91 94432 82312.',
+      'Rooftop solar panel installation for homes, shops, offices and factories in India — site survey, system design, installation and commissioning, with lightning protection and earthing from an engineering company established in 1999. Call +91 94432 82312.',
     keywords: [
       'rooftop solar installation',
       'solar panel installation for home',
@@ -1264,7 +1272,8 @@ export const landingPages: LandingPage[] = [
     eyebrow: 'Solar Energy Division',
     h1: 'Rooftop Solar Panel Installation',
     intro:
-      'Henel Engineers Pvt. Ltd. installs rooftop solar panel systems for homes, shops, offices and factories across Tamil Nadu — from site survey and system design to installation and commissioning — backed by more than 25 years of engineering experience in power, lightning protection and earthing.',
+      'Henel Engineers Pvt. Ltd. installs rooftop solar panel systems for homes, shops, offices and factories across India — from site survey and system design to installation and commissioning — backed by more than 25 years of engineering experience in power, lightning protection and earthing.',
+    alsoKnownAs: ['rooftop solar system','solar rooftop','सोलर पैनल (solar panel)','சோலார் பேனல் (solar panel)'],
     heroImage: SOLAR_IMAGES.installer,
     heroAlt: 'Installer placing a solar panel on a house roof under a clear blue sky (representative image)',
     highlights: [
@@ -1318,7 +1327,7 @@ export const landingPages: LandingPage[] = [
       {
         question: 'Does Henel Engineers install solar panels?',
         answer:
-          'Yes. Henel Engineers installs rooftop solar panel systems for homes, shops, offices and factories in Tamil Nadu, from site survey and design through installation, commissioning and ongoing servicing.',
+          'Yes. Henel Engineers installs rooftop solar panel systems for homes, shops, offices and factories in India, from site survey and design through installation, commissioning and ongoing servicing.',
       },
       {
         question: 'How much roof space does a solar system need?',
@@ -1347,7 +1356,7 @@ export const landingPages: LandingPage[] = [
     navLabel: 'Commercial & Industrial Solar',
     metaTitle: 'Commercial & Industrial Solar Power Plant Installation',
     metaDescription:
-      'Solar power plant installation for factories, warehouses, commercial buildings and open land in Tamil Nadu — design, structures, panels, inverters, earthing and lightning protection by Henel Engineers, est. 1999. Call +91 94432 82312.',
+      'Solar power plant installation for factories, warehouses, commercial buildings and open land in India — design, structures, panels, inverters, earthing and lightning protection by Henel Engineers, est. 1999. Call +91 94432 82312.',
     keywords: [
       'commercial solar installation',
       'industrial solar installation',
@@ -1363,7 +1372,7 @@ export const landingPages: LandingPage[] = [
     eyebrow: 'Solar Energy Division',
     h1: 'Commercial & Industrial Solar Installation',
     intro:
-      'Henel Engineers Pvt. Ltd. installs solar power systems for factories, warehouses, commercial buildings and open land across Tamil Nadu — engineered for high output, safe operation and long life, with earthing and lightning protection designed in.',
+      'Henel Engineers Pvt. Ltd. installs solar power systems for factories, warehouses, commercial buildings and open land across India — engineered for high output, safe operation and long life, with earthing and lightning protection designed in.',
     heroImage: SOLAR_IMAGES.industrialRoof,
     heroAlt: 'Rows of solar panels installed on a large industrial sheet roof (representative image)',
     highlights: [
@@ -1411,7 +1420,7 @@ export const landingPages: LandingPage[] = [
       {
         question: 'Does Henel Engineers install commercial and industrial solar plants?',
         answer:
-          'Yes. Henel Engineers installs rooftop and ground-mounted solar power systems for factories, warehouses, commercial buildings and open land in Tamil Nadu.',
+          'Yes. Henel Engineers installs rooftop and ground-mounted solar power systems for factories, warehouses, commercial buildings and open land in India.',
       },
       {
         question: 'Can solar be installed on a metal sheet roof?',
@@ -1435,7 +1444,7 @@ export const landingPages: LandingPage[] = [
     navLabel: 'Solar Panel Maintenance & Service',
     metaTitle: 'Solar Panel Maintenance, Cleaning & Service',
     metaDescription:
-      'Solar panel cleaning, inspection, maintenance, troubleshooting and repair for home, commercial and industrial solar systems in Tamil Nadu. Keep your solar plant at peak output with Henel Engineers. Call +91 94432 82312.',
+      'Solar panel cleaning, inspection, maintenance, troubleshooting and repair for home, commercial and industrial solar systems in India. Keep your solar plant at peak output with Henel Engineers. Call +91 94432 82312.',
     keywords: [
       'solar panel maintenance',
       'solar panel cleaning',
@@ -1451,7 +1460,7 @@ export const landingPages: LandingPage[] = [
     eyebrow: 'Solar Energy Division',
     h1: 'Solar Panel Maintenance & Service',
     intro:
-      'Dust, bird droppings, loose connections and weather all reduce what a solar system produces. Henel Engineers Pvt. Ltd. keeps home, commercial and industrial solar systems in Tamil Nadu performing with cleaning, inspection, maintenance and troubleshooting.',
+      'Dust, bird droppings, loose connections and weather all reduce what a solar system produces. Henel Engineers Pvt. Ltd. keeps home, commercial and industrial solar systems in India performing with cleaning, inspection, maintenance and troubleshooting.',
     heroImage: SOLAR_IMAGES.hardHat,
     heroAlt: 'White safety helmet resting on blue solar panels during maintenance (representative image)',
     highlights: [

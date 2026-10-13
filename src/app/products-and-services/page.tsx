@@ -70,7 +70,7 @@ const groups: {
     division: {
       name: 'Solar Energy — overview',
       href: '/solar-panel-installation',
-      desc: 'Rooftop and commercial solar installation, maintenance and protection across Tamil Nadu.',
+      desc: 'Rooftop and commercial solar installation, maintenance and protection across India.',
     },
     pages: solarLandingPages,
   },
@@ -82,7 +82,7 @@ const groups: {
     division: {
       name: 'Windmill Operation & Maintenance — overview',
       href: '/windmill',
-      desc: '25+ years, 30+ active CMCs, 7+ WTG makes and 24x7 breakdown support across Tamil Nadu & Karnataka.',
+      desc: '25+ years, 30+ active CMCs, 7+ WTG makes and 24x7 breakdown support across India.',
     },
     pages: [...windLandingPages, ...renewableLandingPages],
   },
@@ -111,6 +111,7 @@ export default function ProductsAndServicesPage() {
                 ['#lightning-services', 'Lightning Protection'],
                 ['#solar-services', 'Solar Energy'],
                 ['#wind-services', 'Wind Energy'],
+                ['/service-areas', 'Service Areas (All India)'],
               ].map(([href, label]) => (
                 <a
                   key={href}
