@@ -124,9 +124,7 @@ export default function AboutPage() {
             <Breadcrumbs items={[{ name: 'About Us', href: '/about' }]} light className="mb-8" />
             <div className="max-w-3xl">
               <div className="flex items-center gap-4 mb-6">
-                <span className="inline-flex bg-white rounded-lg px-3 py-2">
-                  <HenelLogo size={40} />
-                </span>
+                <HenelLogo size={56} />
                 <span className="text-xs font-800 uppercase tracking-widest text-white/70">
                   About Us · Est. 1999 · Kanyakumari, Tamil Nadu
                 </span>
