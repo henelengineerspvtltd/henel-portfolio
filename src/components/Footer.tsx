@@ -20,7 +20,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
           {/* Brand */}
           <div className="md:col-span-1">
-            <Link href="/" className="flex items-center gap-3 mb-4" aria-label="Henel Engineers home">
+            <Link href="/" className="flex items-center gap-3 mb-4">
               <HenelLogo size={52} />
               <div>
                 <span className="block text-base font-800 tracking-wide text-primary-foreground leading-tight">
@@ -38,7 +38,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xs font-800 uppercase tracking-widest text-primary-foreground/40 mb-5">
+            <h3 className="text-xs font-800 uppercase tracking-widest text-primary-foreground/70 mb-5">
               Quick Links
             </h3>
             <ul className="space-y-3">
@@ -57,7 +57,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-xs font-800 uppercase tracking-widest text-primary-foreground/40 mb-5">
+            <h3 className="text-xs font-800 uppercase tracking-widest text-primary-foreground/70 mb-5">
               Contact
             </h3>
             <ul className="space-y-3">
@@ -92,7 +92,7 @@ export default function Footer() {
                 <address className="not-italic text-sm text-primary-foreground/60 leading-relaxed flex items-start gap-2">
                   <span className="mt-0.5 opacity-50">📍</span>
                   <span>
-                    <span className="block text-primary-foreground/40 text-xs uppercase tracking-wide mb-1">Registered Office</span>
+                    <span className="block text-primary-foreground/70 text-xs uppercase tracking-wide mb-1">Registered Office</span>
                     Aralvaimozhi, Kanyakumari District,<br />
                     Tamil Nadu — 629 301
                   </span>
@@ -102,7 +102,7 @@ export default function Footer() {
                 <address className="not-italic text-sm text-primary-foreground/60 leading-relaxed flex items-start gap-2">
                   <span className="mt-0.5 opacity-50">📍</span>
                   <span>
-                    <span className="block text-primary-foreground/40 text-xs uppercase tracking-wide mb-1">Branch Office</span>
+                    <span className="block text-primary-foreground/70 text-xs uppercase tracking-wide mb-1">Branch Office</span>
                     Kalluthotti - Marthandam Rd,<br />
                     Marthandam, Unnamalaikadai,<br />
                     Tamil Nadu — 629 165
@@ -114,7 +114,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-primary-foreground/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-primary-foreground/40 font-500">
+          <p className="text-xs text-primary-foreground/70 font-500">
             © {new Date()?.getFullYear()} HENEL ENGINEERS PVT. LTD. All Rights Reserved.
           </p>
           <div className="flex items-center gap-6">

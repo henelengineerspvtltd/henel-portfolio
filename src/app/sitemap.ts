@@ -3,10 +3,14 @@ import { SITE_URL } from '@/lib/structured-data';
 import { landingPages, SOLAR_IMAGES } from '@/lib/landing-pages';
 import { products, productHref } from '@/lib/products';
 
+const SITE_CONTENT_UPDATED = '2026-10-15';
+
 const img = (path: string) => (path.startsWith('http') ? path : `${SITE_URL}${path}`);
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
+  // Fixed date: update SITE_CONTENT_UPDATED when page content changes. Using the build time
+  // marks every page as changed on each deploy, which teaches Google to ignore lastmod.
+  const lastModified = new Date(SITE_CONTENT_UPDATED);
 
   return [
     {
