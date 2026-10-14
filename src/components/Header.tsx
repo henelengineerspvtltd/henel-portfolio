@@ -52,7 +52,6 @@ export default function Header() {
             <Link
               href="/"
               className="flex items-center gap-3 flex-shrink-0"
-              aria-label="Henel Engineers — Home"
             >
               <HenelLogo size={44} />
               <div className="hidden sm:block">

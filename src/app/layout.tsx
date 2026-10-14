@@ -181,9 +181,6 @@ export default function RootLayout({
           </>
         )}
 
-        {/* Site-builder scripts: loaded after the page is idle so they never delay first paint. */}
-        <Script type="module" strategy="lazyOnload" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fhenelengin8645back.builtwithrocket.new&_be=https%3A%2F%2Fappanalytics.rocket.new&_v=0.1.20" />
-        <Script type="module" strategy="lazyOnload" src="https://static.rocket.new/rocket-shot.js?v=0.0.2" />
       </body>
     </html>
   );

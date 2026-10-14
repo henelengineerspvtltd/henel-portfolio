@@ -29,6 +29,19 @@ export default function ScrollReveal({
     const el = ref.current;
     if (!el) return;
 
+    // Already on screen (first paint, or arriving via a #anchor link): show immediately.
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.add('active');
+      return;
+    }
+
+    // No IntersectionObserver (very old browsers): never leave content hidden.
+    if (typeof IntersectionObserver === 'undefined') {
+      el.classList.add('active');
+      return;
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {

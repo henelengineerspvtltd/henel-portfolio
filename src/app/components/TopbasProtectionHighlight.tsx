@@ -94,6 +94,45 @@ const windmillServices = [
   },
 ];
 
+const solarServices = [
+  {
+    icon: 'SunIcon',
+    title: 'Rooftop Solar Panel Installation',
+    desc: 'Solar panel systems for homes, shops and offices — site survey, design, installation and commissioning.',
+    href: '/rooftop-solar-installation',
+  },
+  {
+    icon: 'BuildingOffice2Icon',
+    title: 'Commercial & Industrial Solar',
+    desc: 'Rooftop and ground-mounted solar power plants for factories, warehouses and open land.',
+    href: '/commercial-solar-power-plant',
+  },
+  {
+    icon: 'WrenchScrewdriverIcon',
+    title: 'Solar Panel Maintenance & Service',
+    desc: 'Cleaning, inspection and troubleshooting to keep solar systems at peak output.',
+    href: '/solar-panel-maintenance',
+  },
+  {
+    icon: 'ShieldCheckIcon',
+    title: 'Solar Lightning Protection & Earthing',
+    desc: 'Lightning arresters, earthing and surge protection for solar panels and inverters.',
+    href: '/solar-lightning-protection-earthing',
+  },
+  {
+    icon: 'ArrowPathIcon',
+    title: 'On-Grid, Off-Grid & Hybrid Systems',
+    desc: 'The right system for your grid supply and backup needs — we assess and recommend.',
+    href: '/solar-panel-installation',
+  },
+  {
+    icon: 'ClipboardDocumentCheckIcon',
+    title: 'Site Survey & System Design',
+    desc: 'Roof or land assessment, shading study and system sizing for your electricity use.',
+    href: '/rooftop-solar-installation',
+  },
+];
+
 export default function TopbasProductHighlight() {
   return (
     <section className="py-20 bg-card border-t border-border" id="products" aria-label="Products and services">
@@ -104,7 +143,7 @@ export default function TopbasProductHighlight() {
             Products &amp; Services
           </h2>
           <p className="text-base text-muted-foreground mt-3 max-w-xl mx-auto leading-relaxed">
-            Henel Engineers supplies and installs lightning protection and earthing products, and provides windmill operation, maintenance, and engineering services.
+            Henel Engineers supplies and installs lightning protection and earthing products, installs and services solar panel systems, and provides windmill operation, maintenance, and engineering services.
           </p>
         </ScrollReveal>
 
@@ -188,6 +227,45 @@ export default function TopbasProductHighlight() {
         <ScrollReveal className="mt-8 flex justify-center">
           <Link href="/windmill" className="btn-green">
             View Windmill Services
+            <Icon name="ArrowRightIcon" size={16} variant="outline" />
+          </Link>
+        </ScrollReveal>
+
+        {/* Solar Energy Services */}
+        <ScrollReveal className="mb-8 mt-16">
+          <h3 className="text-lg font-800 text-foreground border-b border-border pb-3">
+            Solar Energy Services
+          </h3>
+        </ScrollReveal>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 border border-border rounded-xl overflow-hidden">
+          {solarServices.map((s, i) => (
+            <ScrollReveal
+              key={s.title}
+              delay={(i % 3) as 0 | 1 | 2 | 3 | 4}
+              className={`bg-background hover:bg-card transition-colors ${
+                i < solarServices.length - (solarServices.length % 2 || 2) ? 'border-b border-border' : ''
+              } ${i % 2 === 0 ? 'sm:border-r border-border' : ''}`}
+            >
+              <Link href={s.href} className="group p-6 flex gap-4 items-start h-full">
+                <div
+                  className="flex-shrink-0 w-9 h-9 rounded-md flex items-center justify-center"
+                  style={{ backgroundColor: 'rgba(180,83,9,0.1)' }}
+                >
+                  <Icon name={s.icon} size={18} variant="outline" style={{ color: '#B45309' }} />
+                </div>
+                <div>
+                  <p className="text-sm font-800 text-foreground group-hover:underline">{s.title}</p>
+                  <p className="text-xs text-muted-foreground leading-relaxed mt-0.5">{s.desc}</p>
+                </div>
+              </Link>
+            </ScrollReveal>
+          ))}
+        </div>
+
+        <ScrollReveal className="mt-8 flex justify-center">
+          <Link href="/solar-panel-installation" className="btn-solar">
+            View Solar Services
             <Icon name="ArrowRightIcon" size={16} variant="outline" />
           </Link>
         </ScrollReveal>

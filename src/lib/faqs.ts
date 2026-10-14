@@ -303,17 +303,6 @@ export const faqCategories: FaqCategory[] = [
   },
 ];
 
-/** Short FAQ set shown on the home page. */
-export const homeFaqs: FaqItem[] = [
-  companyFaqs[0],
-  companyFaqs[1],
-  companyFaqs[4],
-  lightningFaqs[0],
-  lightningFaqs[3],
-  lightningFaqs[1],
-  windmillFaqs[0],
-  windmillFaqs[2],
-];
 
 /** FAQ set shown on the lightning protection page. */
 export const lightningPageFaqs: FaqItem[] = [
@@ -337,4 +326,18 @@ export const contactFaqs: FaqItem[] = [
   companyFaqs[3],
   companyFaqs[4],
   companyFaqs[2],
+];
+
+/** Short FAQ set shown on the home page. */
+export const homeFaqs: FaqItem[] = [
+  companyFaqs[0],
+  companyFaqs[1],
+  companyFaqs[4],
+  lightningFaqs[0],
+  lightningFaqs[3],
+  lightningFaqs[1],
+  windmillFaqs[0],
+  windmillFaqs[2],
+  solarFaqs[0],
+  solarFaqs[2],
 ];
