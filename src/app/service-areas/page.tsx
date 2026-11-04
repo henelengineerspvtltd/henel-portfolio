@@ -12,6 +12,7 @@ import ScrollReveal from '@/app/components/ScrollReveal';
 import HomeCTA from '@/app/components/HomeCTA';
 import { regions, allStates, cityKeywords } from '@/lib/service-areas';
 import { webPageSchema, serviceSchema } from '@/lib/structured-data';
+import { locationPages, locationHref } from '@/lib/locations';
 
 const description =
   'Henel Engineers serves clients anywhere in India — lightning arresters, ESE lightning protection, earthing, surge protection devices, solar panel installation and windmill maintenance in Tamil Nadu, Kerala, Karnataka, Andhra Pradesh, Telangana, Gujarat, Maharashtra, Rajasthan, Delhi NCR and every other state.';
@@ -111,6 +112,35 @@ export default function ServiceAreasPage() {
                 earthing, surge protection, solar energy and windmill services anywhere in India — {allStates.length}+ states and
                 regions, from Kanyakumari to Kashmir.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Local pages near our offices */}
+        <section className="py-16 bg-card border-b border-border" aria-label="Local service areas near our offices">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ScrollReveal className="text-center mb-10">
+              <span className="section-label">Near Our Offices</span>
+              <h2 className="text-section-heading font-800 text-foreground mt-2">Southern Tamil Nadu &amp; Kerala</h2>
+              <p className="text-sm text-muted-foreground mt-3 max-w-2xl mx-auto leading-relaxed">
+                Our home region around Aralvaimozhi and Marthandam — the Muppandal, Kayathar and Palakkad Gap wind belts and the
+                cities nearby.
+              </p>
+            </ScrollReveal>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {locationPages.map((l) => (
+                <Link key={l.slug} href={locationHref(l.slug)} className="group bg-background border border-border rounded-xl p-5 card-hover">
+                  <h3 className="text-base font-800 text-foreground mb-1 flex items-center gap-2">
+                    <Icon name="MapPinIcon" size={16} variant="solid" style={{ color: '#CC0000' }} />
+                    {l.name}
+                  </h3>
+                  <p className="text-xs text-muted-foreground mb-3">{l.state}</p>
+                  <p className="text-xs text-foreground leading-relaxed line-clamp-2">{l.localities.slice(0, 5).join(' · ')}</p>
+                  <span className="text-xs font-700 inline-flex items-center gap-1 mt-3" style={{ color: '#CC0000' }}>
+                    View services <Icon name="ArrowRightIcon" size={14} variant="outline" className="group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
+              ))}
             </div>
           </div>
         </section>

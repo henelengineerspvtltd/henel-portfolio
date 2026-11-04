@@ -2,8 +2,10 @@ import { MetadataRoute } from 'next';
 import { SITE_URL } from '@/lib/structured-data';
 import { landingPages, SOLAR_IMAGES } from '@/lib/landing-pages';
 import { products, productHref } from '@/lib/products';
+import { locationPages, locationHref } from '@/lib/locations';
 
 const SITE_CONTENT_UPDATED = '2026-10-15';
+const LOCATIONS_ADDED = '2026-11-04';
 
 const img = (path: string) => (path.startsWith('http') ? path : `${SITE_URL}${path}`);
 
@@ -88,6 +90,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
       images: [img('/assets/images/director-rajesh.jpg'), img('/assets/images/director-raajadhas.jpg')],
     },
+    ...locationPages.map((l) => ({
+      url: `${SITE_URL}${locationHref(l.slug)}`,
+      lastModified: new Date(LOCATIONS_ADDED),
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+      images: [img(l.heroImage)],
+    })),
     ...products.map((p) => ({
       url: `${SITE_URL}${productHref(p.slug)}`,
       lastModified,

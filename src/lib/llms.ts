@@ -9,6 +9,7 @@ import { faqCategories } from './faqs';
 import { landingPages } from './landing-pages';
 import { products, productHref } from './products';
 import { regions } from './service-areas';
+import { locationPages, locationHref } from './locations';
 
 const u = (path: string) => `${SITE_URL}${path}`;
 
@@ -45,6 +46,10 @@ Key facts:
 ## Service pages
 
 ${landingPages.map((p) => `- [${p.h1}](${u(`/${p.slug}`)}): ${p.metaDescription}`).join('\n')}
+
+## Local service pages (near our offices)
+
+${locationPages.map((l) => `- [${l.h1}](${u(locationHref(l.slug))}): ${l.metaDescription}`).join('\n')}
 
 ## Product pages
 
