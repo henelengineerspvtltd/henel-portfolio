@@ -9,7 +9,7 @@
  */
 
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.henelengineers.com').replace(/\/+$/, '');
 
 export const COMPANY_NAME = 'Henel Engineers Pvt. Ltd.';
 export const COMPANY_PHONE_1 = '+919443282312';
