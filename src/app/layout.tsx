@@ -15,7 +15,8 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   display: 'swap',
 });
 
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+// GA4 measurement ID (public by design). Only live production builds report, so previews and local runs don't skew the data.
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || (process.env.VERCEL_ENV === 'production' ? 'G-WELJVNRDWP' : undefined);
 
 export const viewport: Viewport = {
   width: 'device-width',
