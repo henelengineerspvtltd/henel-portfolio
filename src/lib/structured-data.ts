@@ -291,6 +291,8 @@ export function serviceSchema(opts: {
   /** Individual services offered under this division (all must already be listed on the page). */
   offers?: string[];
   image?: string;
+  /** Explicit schema.org places (e.g. a City); overrides `areaServed` when set. */
+  areaServedPlaces?: Record<string, unknown>[];
 }) {
   const url = absoluteUrl(opts.url);
   return {
@@ -307,7 +309,7 @@ export function serviceSchema(opts: {
       telephone: COMPANY_PHONE_1,
       url: SITE_URL,
     },
-    areaServed: (opts.areaServed || ['India']).map((a) =>
+    areaServed: opts.areaServedPlaces || (opts.areaServed || ['India']).map((a) =>
       a === 'India'
         ? { '@type': 'Country', name: 'India' }
         : { '@type': 'State', name: a, containedInPlace: { '@type': 'Country', name: 'India' } }

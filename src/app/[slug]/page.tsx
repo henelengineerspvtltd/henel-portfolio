@@ -15,6 +15,7 @@ import WindmillFinalCTA from '@/app/windmill/components/WindmillFinalCTA';
 import { getLandingPage, landingPages, type Division } from '@/lib/landing-pages';
 import { serviceSchema, webPageSchema } from '@/lib/structured-data';
 import { withIndiaKeywords } from '@/lib/keywords';
+import { locationPages, locationHref } from '@/lib/locations';
 
 export const dynamicParams = false;
 
@@ -209,6 +210,18 @@ export default async function LandingPageRoute({ params }: Params) {
                   Request a Quote
                 </Link>
               </div>
+              <nav aria-label="Local service areas" className="bg-card border border-border rounded-xl p-6">
+                <h2 className="text-xs font-800 uppercase tracking-widest text-muted-foreground mb-4">Near our offices</h2>
+                <ul className="flex flex-wrap gap-x-3 gap-y-2">
+                  {locationPages.map((l) => (
+                    <li key={l.slug}>
+                      <Link href={locationHref(l.slug)} className="text-sm font-600 text-foreground hover:underline">
+                        {l.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
             </aside>
           </div>
         </section>
