@@ -15,9 +15,9 @@ export default function ContactInfo() {
       {/* Directors */}
       <ScrollReveal>
         <div className="bg-card border border-border rounded-xl p-6">
-          <h3 className="text-xs font-800 uppercase tracking-widest text-muted-foreground mb-5">
+          <h2 className="text-xs font-800 uppercase tracking-widest text-muted-foreground mb-5">
             Company Directors
-          </h3>
+          </h2>
           <div className="flex flex-col gap-4">
             {directors?.map((d) => (
               <div key={d?.name} className="flex items-center gap-4">
@@ -42,9 +42,9 @@ export default function ContactInfo() {
       {/* Contact Methods */}
       <ScrollReveal delay={1}>
         <div className="bg-card border border-border rounded-xl p-6">
-          <h3 className="text-xs font-800 uppercase tracking-widest text-muted-foreground mb-5">
+          <h2 className="text-xs font-800 uppercase tracking-widest text-muted-foreground mb-5">
             Get in Touch
-          </h3>
+          </h2>
           <div className="flex flex-col gap-3">
             <a
               href="tel:+919443282312"
@@ -115,9 +115,9 @@ export default function ContactInfo() {
       {/* Address */}
       <ScrollReveal delay={2}>
         <div className="bg-card border border-border rounded-xl p-6">
-          <h3 className="text-xs font-800 uppercase tracking-widest text-muted-foreground mb-4">
+          <h2 className="text-xs font-800 uppercase tracking-widest text-muted-foreground mb-4">
             Office Address
-          </h3>
+          </h2>
           <div className="flex flex-col gap-5">
             <div>
               <p className="text-xs font-700 text-muted-foreground uppercase tracking-wide mb-1">Registered Office</p>
@@ -146,7 +146,7 @@ export default function ContactInfo() {
       {/* Quote shortcut */}
       <ScrollReveal delay={3}>
         <div className="bg-primary rounded-xl p-6 text-primary-foreground">
-          <h4 className="text-sm font-800 mb-2">Need a Quote?</h4>
+          <h3 className="text-sm font-800 mb-2">Need a Quote?</h3>
           <p className="text-xs text-primary-foreground/65 mb-4 leading-relaxed">
             Use our quote request form for lightning protection, earthing, surge protection, or wind energy requirements.
           </p>

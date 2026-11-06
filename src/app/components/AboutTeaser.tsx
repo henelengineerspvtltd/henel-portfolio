@@ -38,7 +38,7 @@ export default function AboutTeaser() {
               <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
                 <AppImage
                   src="/assets/images/home/engineer-reviewing-documents.webp"
-                  alt="Engineering professional in industrial facility reviewing technical documents, bright well-lit industrial workspace"
+                  alt="Engineering professional reviewing technical documents in an industrial facility"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover object-center" />

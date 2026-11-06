@@ -19,7 +19,7 @@ export default function WindmillCoverage() {
             <div className="relative overflow-hidden rounded-xl aspect-square bg-card border border-border">
               <AppImage
                 src="/assets/images/windmill/tn-karnataka-coverage-map.png"
-                alt="Map of Tamil Nadu and Karnataka, Henel Engineers' home wind belt, from where we serve wind farms across India"
+                alt="Map of Tamil Nadu and Karnataka, Henel Engineers' home wind belt"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-contain p-4"

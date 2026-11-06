@@ -18,7 +18,7 @@ const description =
   'Lightning arresters, earthing, surge protection, solar and windmill services anywhere in India, including Tamil Nadu, Kerala, Karnataka and Gujarat.';
 
 export const metadata: Metadata = {
-  title: 'Lightning, Solar & Windmill Service Areas, India',
+  title: 'Service Areas: Lightning, Solar & Windmill',
   description,
   keywords: [
     'lightning arrester all over India',

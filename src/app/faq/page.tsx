@@ -14,7 +14,7 @@ const description =
   'Answers on ESE lightning arresters, earthing, surge protection devices and windmill maintenance from Henel Engineers Pvt. Ltd., Tamil Nadu, India.';
 
 export const metadata: Metadata = {
-  title: 'FAQ — Lightning Arresters, Earthing & Windmills',
+  title: 'FAQ — Lightning, Earthing & Windmills',
   description,
   alternates: {
     canonical: '/faq',

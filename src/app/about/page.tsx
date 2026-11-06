@@ -19,7 +19,7 @@ const description =
   'Henel Engineers Pvt. Ltd., incorporated 1999 in Aralvaimozhi, Tamil Nadu. Lightning protection, windmill maintenance and solar. TOPBAS supplier.';
 
 export const metadata: Metadata = {
-  title: 'About Us — Engineering Since 1999, Kanyakumari',
+  title: 'About Us — Engineering Since 1999',
   description,
   keywords: [
     'Henel Engineers',

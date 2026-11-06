@@ -12,7 +12,7 @@ import { localBusinessSchema, webPageSchema } from '@/lib/structured-data';
 import { contactFaqs } from '@/lib/faqs';
 
 export const metadata: Metadata = {
-  title: 'Contact Us — Lightning Arrester & Windmill Quotes',
+  title: 'Contact Us — Lightning & Windmill Quotes',
   description:
     'Contact Henel Engineers for lightning protection, earthing, solar and windmill maintenance across India. Call +91 94432 82312 or +91 94436 92711.',
   alternates: {
