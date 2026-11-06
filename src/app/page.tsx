@@ -23,6 +23,18 @@ export const metadata: Metadata = {
     absolute: 'Henel Engineers | Lightning Arresters & Windmill Services',
   },
   description,
+  keywords: [
+    'Henel Engineers',
+    'lightning arrester',
+    'ESE lightning arrester',
+    'earthing contractor',
+    'surge protection device',
+    'solar panel installation',
+    'windmill maintenance',
+    'wind turbine maintenance',
+    'lightning arrester Tamil Nadu',
+    'windmill maintenance India',
+  ],
   alternates: {
     canonical: '/',
   },
