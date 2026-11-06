@@ -14,7 +14,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0">
         <AppImage
           src="https://images.unsplash.com/photo-1598803040994-834a13691764"
-          alt="Wind turbines at golden hour in a vast wind farm, aerial view with dramatic warm sky and long shadows across green fields"
+          alt="Wind turbines at golden hour in a large wind farm, aerial view"
           fill
           priority
           sizes="100vw"

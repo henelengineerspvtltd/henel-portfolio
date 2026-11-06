@@ -26,7 +26,7 @@ export default function ServicePathways() {
                 <div className="absolute inset-0 z-0">
                   <AppImage
                     src="/assets/images/home/lightning-protection-rooftop.webp"
-                    alt="Lightning protection system on industrial building rooftop, steel grounding rods against overcast sky, dark metallic industrial environment"
+                    alt="Lightning protection system with steel grounding rods on an industrial rooftop"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-700" />
@@ -65,7 +65,7 @@ export default function ServicePathways() {
                 <div className="absolute inset-0 z-0">
                   <AppImage
                     src="https://images.unsplash.com/photo-1705079509121-f92c52573b31"
-                    alt="Aerial view of large wind farm with dozens of wind turbines over green hills, bright daylight, expansive blue sky"
+                    alt="Aerial view of a large wind farm with wind turbines over green hills"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-700" />

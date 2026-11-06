@@ -20,7 +20,7 @@ const description =
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Henel Engineers | Lightning Arrester, Earthing & Windmill Services',
+    absolute: 'Henel Engineers | Lightning Arresters & Windmill Services',
   },
   description,
   alternates: {

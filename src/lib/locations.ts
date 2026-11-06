@@ -54,7 +54,7 @@ export const locationPages: LocationPage[] = [
     name: 'Kanyakumari & Nagercoil',
     district: 'Kanyakumari',
     state: 'Tamil Nadu',
-    metaTitle: 'Lightning Arrester & Windmill Service, Nagercoil',
+    metaTitle: 'Lightning Arrester & Windmill, Nagercoil',
     metaDescription:
       'Lightning arresters, earthing, solar and windmill maintenance in Kanyakumari District: Nagercoil, Aralvaimozhi, Muppandal, Marthandam. Since 1999.',
     keywords: [
@@ -69,7 +69,7 @@ export const locationPages: LocationPage[] = [
       'rooftop solar Kanyakumari',
       'lightning protection Marthandam',
     ],
-    h1: 'Lightning Protection, Earthing, Solar & Windmill Services in Kanyakumari District',
+    h1: 'Lightning Arrester, Earthing, Solar & Windmill Services in Kanyakumari',
     intro:
       'Kanyakumari District is home. Henel Engineers was founded in Aralvaimozhi in 1999, next to the Muppandal wind belt, and has a branch office in Marthandam — so sites across Nagercoil, Thuckalay, Kuzhithurai, Colachel and Kanyakumari town are close to our teams.',
     heroImage: '/assets/images/windmill/hero-green-hills.jpg',
@@ -168,7 +168,7 @@ export const locationPages: LocationPage[] = [
     name: 'Tirunelveli',
     district: 'Tirunelveli',
     state: 'Tamil Nadu',
-    metaTitle: 'Lightning Arrester & Windmill Service, Tirunelveli',
+    metaTitle: 'Lightning Arrester & Windmill, Tirunelveli',
     metaDescription:
       'Lightning arresters, earthing, solar and windmill maintenance in Tirunelveli: Palayamkottai, Radhapuram, Panagudi, Valliyoor. Est. 1999.',
     keywords: [
@@ -182,7 +182,7 @@ export const locationPages: LocationPage[] = [
       'surge protection device Tirunelveli',
       'lightning protection Palayamkottai',
     ],
-    h1: 'Lightning Protection, Earthing, Solar & Windmill Services in Tirunelveli',
+    h1: 'Lightning Arrester, Earthing, Solar & Windmill Services in Tirunelveli',
     intro:
       'Tirunelveli is our nearest major city — the Aralvaimozhi pass and our registered office sit at the southern edge of the district’s wind country. We serve Tirunelveli city, Palayamkottai, the Radhapuram–Panagudi–Valliyoor wind belt and industries at SIPCOT Gangaikondan.',
     heroImage: '/assets/images/windmill/tower-technician.jpg',
@@ -279,7 +279,7 @@ export const locationPages: LocationPage[] = [
     name: 'Thoothukudi',
     district: 'Thoothukudi',
     state: 'Tamil Nadu',
-    metaTitle: 'Lightning Arrester & Windmill Service, Thoothukudi',
+    metaTitle: 'Lightning Arrester & Windmill, Thoothukudi',
     metaDescription:
       'Lightning protection, corrosion-resistant earthing, solar and windmill maintenance in Thoothukudi (Tuticorin): Kayathar, Ottapidaram, Kovilpatti.',
     keywords: [
@@ -293,7 +293,7 @@ export const locationPages: LocationPage[] = [
       'solar panel installation Thoothukudi',
       'surge protection Tuticorin',
     ],
-    h1: 'Lightning Protection, Earthing, Solar & Windmill Services in Thoothukudi',
+    h1: 'Lightning Arrester, Earthing, Solar & Windmill Services in Thoothukudi',
     intro:
       'Thoothukudi (Tuticorin) combines a major wind belt around Kayathar, Ottapidaram and Ettayapuram with port-side industry, thermal power and salt pans along the coast. Henel Engineers serves wind farms and industries across the district from our Aralvaimozhi office.',
     heroImage: '/assets/images/windmill/nacelle-erection-1.jpg',
@@ -383,7 +383,7 @@ export const locationPages: LocationPage[] = [
     name: 'Madurai',
     district: 'Madurai',
     state: 'Tamil Nadu',
-    metaTitle: 'Lightning Arrester & Earthing Contractor, Madurai',
+    metaTitle: 'Lightning Arrester & Earthing, Madurai',
     metaDescription:
       'Lightning arresters, chemical earthing, surge protection, solar and windmill services in Madurai, Theni, Dindigul and Virudhunagar. Est. 1999.',
     keywords: [
@@ -493,7 +493,7 @@ export const locationPages: LocationPage[] = [
     name: 'Coimbatore',
     district: 'Coimbatore',
     state: 'Tamil Nadu',
-    metaTitle: 'Lightning Arrester & Windmill Service, Coimbatore',
+    metaTitle: 'Lightning Arrester & Windmill, Coimbatore',
     metaDescription:
       'Windmill maintenance in the Palakkad Gap wind belt, plus lightning arresters, earthing and solar for Coimbatore industries. Pollachi, Kinathukadavu.',
     keywords: [
@@ -507,7 +507,7 @@ export const locationPages: LocationPage[] = [
       'solar panel installation Coimbatore',
       'industrial earthing Coimbatore',
     ],
-    h1: 'Lightning Protection, Earthing, Solar & Windmill Services in Coimbatore',
+    h1: 'Lightning Arrester, Earthing, Solar & Windmill Services in Coimbatore',
     intro:
       'Coimbatore sits at the mouth of the Palakkad Gap, the break in the Western Ghats that drives one of India’s strongest wind belts, and is one of South India’s biggest engineering and manufacturing hubs. Henel Engineers serves wind farms around Pollachi and Kinathukadavu and industries across the city.',
     heroImage: '/assets/images/windmill/gearbox-repair.jpg',
@@ -603,7 +603,7 @@ export const locationPages: LocationPage[] = [
     name: 'Tiruppur',
     district: 'Tiruppur',
     state: 'Tamil Nadu',
-    metaTitle: 'Windmill Maintenance & Lightning Arrester, Tiruppur',
+    metaTitle: 'Windmill & Lightning Arrester, Tiruppur',
     metaDescription:
       'Windmill O&M, CMC, gearbox and blade repair in Palladam, Udumalpet, Dharapuram and Kangeyam, plus lightning protection and solar for Tiruppur mills.',
     keywords: [
@@ -617,7 +617,7 @@ export const locationPages: LocationPage[] = [
       'solar panel installation Tiruppur',
       'textile mill lightning protection',
     ],
-    h1: 'Windmill Maintenance, Lightning Protection & Solar Services in Tiruppur',
+    h1: 'Windmill Maintenance, Lightning Arrester & Solar Services in Tiruppur',
     intro:
       'Tiruppur District holds one of the densest concentrations of wind turbines in India — around Palladam, Udumalpet, Dharapuram and Kangeyam — many of them owned by textile and knitwear mills for captive power. Henel Engineers keeps those turbines running and protects the mills they power.',
     heroImage: '/assets/images/windmill/blade-patching.jpg',
@@ -712,7 +712,7 @@ export const locationPages: LocationPage[] = [
     name: 'Thiruvananthapuram',
     district: 'Thiruvananthapuram',
     state: 'Kerala',
-    metaTitle: 'Lightning Arrester & Earthing, Thiruvananthapuram',
+    metaTitle: 'Lightning Arrester, Thiruvananthapuram',
     metaDescription:
       'Lightning arresters, chemical earthing, surge protection and rooftop solar in Thiruvananthapuram (Trivandrum), about 45 km from our Marthandam branch.',
     keywords: [
@@ -726,7 +726,7 @@ export const locationPages: LocationPage[] = [
       'solar panel installation Trivandrum',
       'ESE lightning arrester Kerala',
     ],
-    h1: 'Lightning Arrester, Earthing, Surge Protection & Solar in Thiruvananthapuram',
+    h1: 'Lightning Arrester, Earthing & Solar in Thiruvananthapuram',
     intro:
       'Kerala sees some of the most intense lightning in India, especially in the pre-monsoon months and the October–November thunderstorm season. Our Marthandam branch is about 45 km from Thiruvananthapuram, so Henel Engineers can reach sites across Trivandrum, Neyyattinkara, Kazhakkoottam and Vizhinjam easily.',
     heroImage: '/assets/images/lightning-protection/hero-storm.jpg',

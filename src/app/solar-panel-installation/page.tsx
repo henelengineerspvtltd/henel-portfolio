@@ -20,7 +20,7 @@ const description =
   'Solar panel installation across India: rooftop and commercial plants, maintenance and cleaning, with earthing and lightning protection. Est. 1999.';
 
 export const metadata: Metadata = {
-  title: 'Solar Panel Installation & Services in India',
+  title: 'Solar Panel Installation & Services',
   description,
   keywords: [
     'solar panel installation',

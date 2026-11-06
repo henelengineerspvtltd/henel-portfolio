@@ -129,7 +129,7 @@ export const products: Product[] = [
     brand: 'TOPBAS',
     image: '/assets/images/sirius-ese-lightning-arrester.webp',
     imageAlt: 'TOPBAS SIRIUS ESE lightning arrester, stainless steel early streamer emission air terminal',
-    metaTitle: 'TOPBAS SIRIUS ESE Lightning Arrester — 107 m',
+    metaTitle: 'TOPBAS SIRIUS ESE Lightning Arrester',
     metaDescription:
       'TOPBAS SIRIUS non-electronic ESE lightning arrester: ΔT 60 μs, up to 107 m radius (5 m mast, Level IV), 200 kA tested, NF C 17-102. Supplied across India.',
     keywords: [
@@ -170,8 +170,8 @@ export const products: Product[] = [
     name: 'UMBRAECO ESE Lightning Arrester',
     category: 'ESE Lightning Arrester',
     image: '/assets/images/lyra-ese-lightning-arrester.webp',
-    imageAlt: 'UMBRAECO ESE lightning arrester device, non-electronic early streamer emission type for lightning protection',
-    metaTitle: 'UMBRAECO ESE Lightning Arrester — 51 m Radius',
+    imageAlt: 'UMBRAECO non-electronic ESE lightning arrester',
+    metaTitle: 'UMBRAECO ESE Lightning Arrester',
     metaDescription:
       'UMBRAECO non-electronic ESE lightning arrester: ΔT 10 µs, up to 51 m radius (Level IV), NF C 17-102, CE certified, no battery. Supplied across India.',
     keywords: [
@@ -323,7 +323,7 @@ export const products: Product[] = [
     brand: 'TOPBAS',
     image: '/assets/images/carbomaxx-earthing-compound.webp',
     imageAlt: 'CARBOMAXX earthing compound bag, backfill compound for earthing pits',
-    metaTitle: 'CARBOMAXX Earthing Compound — 10 kg & 25 kg',
+    metaTitle: 'CARBOMAXX Earthing Compound',
     metaDescription:
       'CARBOMAXX earthing compound by TOPBAS: powder backfill for earth pits in 10 kg and 25 kg bags, made in India. Available across India.',
     keywords: ['CARBOMAXX earthing compound', 'earthing compound', 'earthing backfill compound', 'chemical earthing compound', 'TOPBAS earthing compound'],
@@ -353,7 +353,7 @@ export const products: Product[] = [
     category: 'Conventional Lightning Arrester',
     image: '/assets/images/copper-spike-lightning-arrester.webp',
     imageAlt: 'Copper bonded conventional lightning arrester with mounting base',
-    metaTitle: 'Copper Conventional Lightning Arrester — 100 kA',
+    metaTitle: 'Copper Conventional Lightning Arrester',
     metaDescription:
       'Copper bonded conventional lightning arrester: 100 kA rating, 5 m protection radius, made in India. Supplied and installed across India.',
     keywords: [
@@ -423,7 +423,7 @@ export const products: Product[] = [
     category: 'Earth Pit Chamber',
     image: '/assets/images/frp-earth-pit-cover.webp',
     imageAlt: 'FRP earth pit cover chamber, corrosion resistant earthing pit cover with green lid',
-    metaTitle: 'FRP Earth Pit Cover — 10 Inch, Corrosion Resistant',
+    metaTitle: 'FRP Earth Pit Cover — 10 Inch',
     metaDescription:
       '10-inch FRP earth pit cover, corrosion resistant: top 254 mm, bottom 210 mm, height 240 mm, made in India. Supplied by Henel Engineers across India.',
     keywords: ['FRP earth pit cover', 'FRP earthing chamber', '10 inch earth pit cover', 'corrosion resistant earth pit cover', 'earth pit cover supplier'],

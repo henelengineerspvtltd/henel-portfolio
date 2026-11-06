@@ -81,7 +81,7 @@ export default function WindEnergySection() {
             <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
               <AppImage
                 src="https://images.unsplash.com/photo-1678147947028-b8f1cc00fd0c"
-                alt="Row of modern wind turbines on rolling green hills under clear blue sky, wind farm in Tamil Nadu region"
+                alt="Row of modern wind turbines on rolling green hills in Tamil Nadu"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center" />

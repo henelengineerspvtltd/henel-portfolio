@@ -23,7 +23,7 @@ const description =
   'TOPBAS ESE lightning arresters, SPDs, earth rods and earthing compound, plus solar installation and windmill O&M, repairs and spare parts in India.';
 
 export const metadata: Metadata = {
-  title: 'Products & Services: Lightning, Solar & Windmill',
+  title: 'Products & Services: Lightning & Windmill',
   description,
   keywords: [
     'lightning arrester products',

@@ -145,9 +145,9 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <h3 className="text-lg font-800 text-foreground mb-2">
+          <h2 className="text-lg font-800 text-foreground mb-2">
             Enquiry Received
-          </h3>
+          </h2>
 
           <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
             Thank you, <strong>{form.name}</strong>. We have received your
@@ -190,9 +190,9 @@ export default function ContactForm() {
       className="relative bg-card border border-border rounded-xl p-8"
       aria-label="Contact and quote request form"
     >
-      <h3 className="text-base font-800 text-foreground mb-6">
+      <h2 className="text-base font-800 text-foreground mb-6">
         Send Us an Enquiry
-      </h3>
+      </h2>
 
       <div aria-hidden="true" style={{ position: 'absolute', left: '-10000px', width: 1, height: 1, overflow: 'hidden' }}>
         <label htmlFor="website">Leave this field empty</label>

@@ -80,7 +80,7 @@ export const landingPages: LandingPage[] = [
     slug: 'lightning-arrester',
     division: 'lightning',
     navLabel: 'Lightning Arrester',
-    metaTitle: 'Lightning Arrester Supply & Installation, India',
+    metaTitle: 'Lightning Arrester Supply & Installation',
     metaDescription:
       'Lightning arrester supply and installation for homes, factories, temples and towers across India. ESE and copper arresters with earthing. Est. 1999.',
     keywords: [
@@ -202,7 +202,7 @@ export const landingPages: LandingPage[] = [
     slug: 'ese-lightning-arrester',
     division: 'lightning',
     navLabel: 'ESE Lightning Arrester',
-    metaTitle: 'ESE Lightning Arrester Supplier — TOPBAS SIRIUS',
+    metaTitle: 'ESE Lightning Arrester — TOPBAS SIRIUS',
     metaDescription:
       'Authorised TOPBAS supplier of ESE lightning arresters: SIRIUS (up to 107 m radius) and UMBRAECO (up to 51 m). NF C 17-102. Supplied across India.',
     keywords: [
@@ -312,7 +312,7 @@ export const landingPages: LandingPage[] = [
     slug: 'earthing-system',
     division: 'lightning',
     navLabel: 'Earthing System',
-    metaTitle: 'Earthing Contractor & Chemical Earthing, India',
+    metaTitle: 'Earthing Contractor & Chemical Earthing',
     metaDescription:
       'Earthing design and installation across India: chemical earthing, copper bonded and GI earth rods, CARBOMAXX compound and earth pit covers. Est. 1999.',
     keywords: [
@@ -420,7 +420,7 @@ export const landingPages: LandingPage[] = [
     slug: 'surge-protection-device',
     division: 'lightning',
     navLabel: 'Surge Protection Device (SPD)',
-    metaTitle: 'Surge Protection Device (SPD) — Type 1 + 2 Supplier',
+    metaTitle: 'Surge Protection Device (SPD), Type 1 + 2',
     metaDescription:
       'Type 1 + 2 three-phase surge protection devices for panels and sensitive equipment. TOPBAS TB7K320T12L: Iimp 7 kA, In 30 kA. Supplied across India.',
     keywords: [
@@ -523,7 +523,7 @@ export const landingPages: LandingPage[] = [
     slug: 'solar-lightning-protection-earthing',
     division: 'solar',
     navLabel: 'Solar Lightning Protection & Earthing',
-    metaTitle: 'Solar Earthing & Lightning Arrester for Solar Panels',
+    metaTitle: 'Solar Earthing & Lightning Arresters',
     metaDescription:
       'Lightning arresters, earthing and surge protection for rooftop solar panels and solar power plants in India. Arresters, earth rods and SPDs.',
     keywords: [
@@ -617,7 +617,7 @@ export const landingPages: LandingPage[] = [
     slug: 'renewable-energy-services',
     division: 'renewable',
     navLabel: 'Renewable Energy Services',
-    metaTitle: 'Renewable Energy Services: Wind O&M & Solar',
+    metaTitle: 'Renewable Energy Services: Wind & Solar',
     metaDescription:
       'Wind turbine O&M across India, plus lightning protection and earthing for solar plants. 25+ years, 30+ active CMCs. Henel Engineers, Tamil Nadu.',
     keywords: [
@@ -709,7 +709,7 @@ export const landingPages: LandingPage[] = [
     slug: 'windmill-maintenance-contract',
     division: 'wind',
     navLabel: 'Windmill AMC / CMC',
-    metaTitle: 'Windmill Maintenance Contract (CMC / AMC)',
+    metaTitle: 'Windmill AMC / CMC Maintenance',
     metaDescription:
       'Windmill maintenance contracts (CMC / AMC) across India: scheduled and corrective work, 24x7 breakdown support, 7+ WTG makes. 30+ active CMCs.',
     keywords: [
@@ -887,7 +887,7 @@ export const landingPages: LandingPage[] = [
     slug: 'wind-turbine-blade-repair',
     division: 'wind',
     navLabel: 'Blade Repair',
-    metaTitle: 'Wind Turbine Blade & Lightning Damage Repair',
+    metaTitle: 'Wind Turbine Blade & Lightning Repair',
     metaDescription:
       'Windmill blade patching, lightning damage repair and on-site blade restoration across India. Henel Engineers. Call +91 94432 82312.',
     keywords: [
@@ -1038,7 +1038,7 @@ export const landingPages: LandingPage[] = [
     slug: 'wind-turbine-hydraulic-pcb-repair',
     division: 'wind',
     navLabel: 'Hydraulic & PCB Repair',
-    metaTitle: 'Wind Turbine Hydraulic Servicing & PCB Repair',
+    metaTitle: 'Wind Turbine Hydraulic & PCB Repair',
     metaDescription:
       'Windmill hydraulic unit, pump, pitch cylinder and brake servicing, plus control PCB repair with a standby PCB. Call +91 94432 82312.',
     keywords: [
@@ -1111,7 +1111,7 @@ export const landingPages: LandingPage[] = [
     slug: 'windmill-spare-parts',
     division: 'wind',
     navLabel: 'Windmill Spare Parts',
-    metaTitle: 'Windmill Spare Parts Supplier — Tamil Nadu',
+    metaTitle: 'Windmill Spare Parts, Tamil Nadu',
     metaDescription:
       'All types of windmill spare parts: gearbox, generator, hydraulic and electrical components for wind turbines across India. Call +91 94432 82312.',
     keywords: [
@@ -1173,7 +1173,7 @@ export const landingPages: LandingPage[] = [
     slug: 'windmill-erection',
     division: 'wind',
     navLabel: 'Windmill Erection',
-    metaTitle: 'Windmill Erection & Wind Turbine Installation',
+    metaTitle: 'Windmill Erection & Turbine Installation',
     metaDescription:
       'End-to-end windmill erection: tower, nacelle and hub installation, commissioning support and heavy-duty crane arrangement. Henel Engineers, India.',
     keywords: [
@@ -1252,7 +1252,7 @@ export const landingPages: LandingPage[] = [
     slug: 'rooftop-solar-installation',
     division: 'solar',
     navLabel: 'Rooftop Solar Installation',
-    metaTitle: 'Rooftop Solar Installation, Homes & Businesses',
+    metaTitle: 'Rooftop Solar for Homes & Businesses',
     metaDescription:
       'Rooftop solar for homes, shops, offices and factories in India: survey, design, installation and commissioning, with lightning protection and earthing.',
     keywords: [
@@ -1442,7 +1442,7 @@ export const landingPages: LandingPage[] = [
     slug: 'solar-panel-maintenance',
     division: 'solar',
     navLabel: 'Solar Panel Maintenance & Service',
-    metaTitle: 'Solar Panel Maintenance, Cleaning & Service',
+    metaTitle: 'Solar Panel Maintenance & Cleaning',
     metaDescription:
       'Solar panel cleaning, inspection, troubleshooting and repair for home, commercial and industrial systems in India. Call +91 94432 82312.',
     keywords: [

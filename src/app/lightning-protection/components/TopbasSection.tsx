@@ -122,7 +122,7 @@ export default function TopbasSection() {
             <div className="relative overflow-hidden rounded-xl aspect-square bg-muted flex items-center justify-center">
               <AppImage
                 src="/assets/images/lyra-ese-lightning-arrester.webp"
-                alt="UMBRAECO ESE lightning arrester device, non-electronic early streamer emission type for lightning protection"
+                alt="UMBRAECO non-electronic ESE lightning arrester"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-contain p-4" />

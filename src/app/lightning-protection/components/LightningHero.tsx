@@ -12,7 +12,7 @@ export default function LightningHero() {
       <div className="absolute inset-0 z-0">
         <AppImage
           src="/assets/images/lightning-protection/hero-storm.jpg"
-          alt="Lightning storm over a city with a lightning arrester installed on a rooftop, multiple lightning strikes visible in the sky"
+          alt="Lightning storm over a city with a lightning arrester on a rooftop"
           fill
           priority
           sizes="100vw"

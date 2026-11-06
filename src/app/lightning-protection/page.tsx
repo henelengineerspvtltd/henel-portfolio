@@ -16,7 +16,7 @@ import { serviceSchema, webPageSchema, LIGHTNING_SERVICE_OFFERS } from '@/lib/st
 import { lightningPageFaqs } from '@/lib/faqs';
 
 export const metadata: Metadata = {
-  title: 'Lightning Protection & ESE Lightning Arresters, India',
+  title: 'Lightning Protection & ESE Arresters India',
   description:
     'Complete lightning protection across India: TOPBAS SIRIUS and UMBRAECO ESE arresters, earth rods, earthing compound and SPDs. Call +91 94432 82312.',
   keywords: [

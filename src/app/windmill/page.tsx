@@ -18,7 +18,7 @@ import { serviceSchema, webPageSchema, WINDMILL_SERVICE_OFFERS } from '@/lib/str
 import { windmillPageFaqs } from '@/lib/faqs';
 
 export const metadata: Metadata = {
-  title: 'Windmill & Wind Turbine Maintenance, India',
+  title: 'Windmill & Wind Turbine Maintenance',
   description:
     'Windmill operation and maintenance, gearbox repair, blade patching, generator rewinding and 24x7 breakdown support across India. Call +91 94432 82312.',
   keywords: [
