@@ -20,7 +20,7 @@ import { windmillPageFaqs } from '@/lib/faqs';
 export const metadata: Metadata = {
   title: 'Windmill & Wind Turbine Maintenance, India',
   description:
-    'Henel Engineers provides windmill operation and maintenance, gearbox repair, blade patching, generator rewinding, hydraulic servicing, erection and 24x7 breakdown support across India. Call +91 94432 82312 or +91 94436 92711.',
+    'Windmill operation and maintenance, gearbox repair, blade patching, generator rewinding and 24x7 breakdown support across India. Call +91 94432 82312.',
   keywords: [
     'windmill maintenance Tamil Nadu',
     'wind turbine operation and maintenance India',

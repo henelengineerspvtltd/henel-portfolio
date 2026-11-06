@@ -17,7 +17,7 @@ const AMBER = '#B45309';
 const AMBER_TINT = 'rgba(180,83,9,0.1)';
 
 const description =
-  'Solar panel installation and services across India: rooftop solar for homes and businesses, commercial & industrial solar plants, solar panel maintenance and cleaning, with built-in earthing and lightning protection. Henel Engineers, est. 1999. Call +91 94432 82312.';
+  'Solar panel installation across India: rooftop and commercial plants, maintenance and cleaning, with earthing and lightning protection. Est. 1999.';
 
 export const metadata: Metadata = {
   title: 'Solar Panel Installation & Services in India',

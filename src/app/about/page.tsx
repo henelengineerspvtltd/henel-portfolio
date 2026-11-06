@@ -16,7 +16,7 @@ import { SOLAR_IMAGES } from '@/lib/landing-pages';
 import { webPageSchema } from '@/lib/structured-data';
 
 const description =
-  'About Henel Engineers Pvt. Ltd. — incorporated on 17 August 1999 in Aralvaimozhi, Kanyakumari District, Tamil Nadu. Lightning protection, windmill operation & maintenance and solar energy services. Authorised TOPBAS supplier. CIN U45207TN1999PTC043025.';
+  'Henel Engineers Pvt. Ltd., incorporated 1999 in Aralvaimozhi, Tamil Nadu. Lightning protection, windmill maintenance and solar. TOPBAS supplier.';
 
 export const metadata: Metadata = {
   title: 'About Us — Engineering Since 1999, Kanyakumari',
@@ -35,6 +35,13 @@ export const metadata: Metadata = {
     title: 'About Henel Engineers Pvt. Ltd. — Engineering Since 1999',
     description,
     url: '/about',
+    images: [{ url: '/assets/images/windmill/hero-green-hills.jpg', alt: 'Wind turbines on green rolling hills' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Henel Engineers Pvt. Ltd. — Engineering Since 1999',
+    description,
+    images: ['/assets/images/windmill/hero-green-hills.jpg'],
   },
 };
 

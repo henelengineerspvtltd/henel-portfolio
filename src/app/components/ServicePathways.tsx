@@ -25,7 +25,7 @@ export default function ServicePathways() {
               <div className="relative overflow-hidden rounded-xl bg-card border border-border card-hover h-full min-h-[400px]">
                 <div className="absolute inset-0 z-0">
                   <AppImage
-                    src="https://img.rocket.new/generatedImages/rocket_gen_img_1920e9fcd-1766500911885.png"
+                    src="/assets/images/home/lightning-protection-rooftop.webp"
                     alt="Lightning protection system on industrial building rooftop, steel grounding rods against overcast sky, dark metallic industrial environment"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"

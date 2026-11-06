@@ -129,9 +129,9 @@ export const products: Product[] = [
     brand: 'TOPBAS',
     image: '/assets/images/sirius-ese-lightning-arrester.webp',
     imageAlt: 'TOPBAS SIRIUS ESE lightning arrester, stainless steel early streamer emission air terminal',
-    metaTitle: 'TOPBAS SIRIUS ESE Lightning Arrester — 107 m Radius',
+    metaTitle: 'TOPBAS SIRIUS ESE Lightning Arrester — 107 m',
     metaDescription:
-      'TOPBAS SIRIUS non-electronic ESE lightning arrester: ΔT 60 μs, 304L stainless steel, protection radius up to 107 m (5 m mast, Level IV), 200 kA tested, NF C 17-102. Imported from Turkey. Supplied and installed by Henel Engineers across India.',
+      'TOPBAS SIRIUS non-electronic ESE lightning arrester: ΔT 60 μs, up to 107 m radius (5 m mast, Level IV), 200 kA tested, NF C 17-102. Supplied across India.',
     keywords: [
       'TOPBAS SIRIUS',
       'TOPBAS SIRIUS ESE lightning arrester',
@@ -171,9 +171,9 @@ export const products: Product[] = [
     category: 'ESE Lightning Arrester',
     image: '/assets/images/lyra-ese-lightning-arrester.webp',
     imageAlt: 'UMBRAECO ESE lightning arrester device, non-electronic early streamer emission type for lightning protection',
-    metaTitle: 'UMBRAECO ESE Lightning Arrester — 51 m Radius, NF C 17-102',
+    metaTitle: 'UMBRAECO ESE Lightning Arrester — 51 m Radius',
     metaDescription:
-      'UMBRAECO non-electronic ESE lightning arrester: ΔT 10 µs, protection radius up to 51 m (Level IV), designed and tested to NF C 17-102 (2011), CE certified, no battery required. Supplied and installed by Henel Engineers across India.',
+      'UMBRAECO non-electronic ESE lightning arrester: ΔT 10 µs, up to 51 m radius (Level IV), NF C 17-102, CE certified, no battery. Supplied across India.',
     keywords: [
       'UMBRAECO ESE lightning arrester',
       'UMBRAECO lightning arrester',
@@ -212,9 +212,9 @@ export const products: Product[] = [
     brand: 'TOPBAS',
     image: '/assets/images/type-1-2-spd.webp',
     imageAlt: 'Type 1 + 2 three-phase surge protection device for electrical panels',
-    metaTitle: 'Type 1 + 2 Three Phase SPD — TOPBAS TB7K320T12L',
+    metaTitle: 'Type 1 + 2 SPD — TOPBAS TB7K320T12L',
     metaDescription:
-      'TOPBAS TB7K320T12L Type 1 + 2 (Class B + C) three-phase surge protection device: 3 pole + N, Uc 320 VAC, Up 1.6 kV, Iimp 7 kA, In 30 kA, IP20. Supplied and installed by Henel Engineers across India.',
+      'TOPBAS TB7K320T12L Type 1 + 2 three-phase SPD: 3 pole + N, Uc 320 VAC, Up 1.6 kV, Iimp 7 kA, In 30 kA, IP20. Supplied and installed across India.',
     keywords: [
       'TB7K320T12L',
       'TOPBAS SPD',
@@ -253,9 +253,9 @@ export const products: Product[] = [
     category: 'Earth Rod',
     image: '/assets/images/copper-earth-rod.webp',
     imageAlt: 'Copper bonded earth rod for earthing and grounding installations',
-    metaTitle: 'Copper Bonded Earth Rod — 17.2 mm, 1 m / 2 m / 3 m',
+    metaTitle: 'Copper Bonded Earth Rod — 17.2 mm',
     metaDescription:
-      'Copper bonded earth rod for earthing: 17.2 mm diameter, available in 1 m, 2 m and 3 m lengths, minimum order 1 piece. Supplied and installed by Henel Engineers across India.',
+      'Copper bonded earth rod: 17.2 mm diameter, 1 m, 2 m and 3 m lengths, minimum order 1 piece. Supplied and installed by Henel Engineers across India.',
     keywords: [
       'copper bonded earth rod',
       'copper earth rod',
@@ -293,9 +293,9 @@ export const products: Product[] = [
     category: 'Earth Rod',
     image: '/assets/images/gi-earth-rod.webp',
     imageAlt: 'GI earth rod, galvanised iron earthing rod for grounding installations',
-    metaTitle: 'GI Earth Rod — Class B GI Pipe, 48 mm, 1 m / 2 m / 3 m',
+    metaTitle: 'GI Earth Rod — Class B GI Pipe, 48 mm',
     metaDescription:
-      'GI earth rod made from Class B GI pipe: 48 mm diameter, 3 mm wall thickness, available in 1 m, 2 m and 3 m lengths. Supplied and installed by Henel Engineers across India.',
+      'GI earth rod from Class B GI pipe: 48 mm diameter, 3 mm wall, 1 m, 2 m and 3 m lengths. Supplied and installed by Henel Engineers across India.',
     keywords: ['GI earth rod', 'GI pipe earthing', 'GI earthing electrode', 'Class B GI pipe earth rod', 'GI earth rod supplier Tamil Nadu'],
     summary:
       'A GI (galvanised iron) earth rod is a zinc-coated steel pipe electrode widely used for economical earthing. Henel Engineers supplies GI earth rods made from Class B GI pipe — 48 mm diameter, 3 mm wall thickness — in 1 m, 2 m and 3 m lengths.',
@@ -323,9 +323,9 @@ export const products: Product[] = [
     brand: 'TOPBAS',
     image: '/assets/images/carbomaxx-earthing-compound.webp',
     imageAlt: 'CARBOMAXX earthing compound bag, backfill compound for earthing pits',
-    metaTitle: 'CARBOMAXX Earthing Compound — 10 kg & 25 kg Bags',
+    metaTitle: 'CARBOMAXX Earthing Compound — 10 kg & 25 kg',
     metaDescription:
-      'CARBOMAXX earthing compound by TOPBAS: powder backfill for earthing pits, supplied in 10 kg and 25 kg bags, made in India. Available from Henel Engineers across India.',
+      'CARBOMAXX earthing compound by TOPBAS: powder backfill for earth pits in 10 kg and 25 kg bags, made in India. Available across India.',
     keywords: ['CARBOMAXX earthing compound', 'earthing compound', 'earthing backfill compound', 'chemical earthing compound', 'TOPBAS earthing compound'],
     summary:
       'CARBOMAXX is a powdered earthing compound by TOPBAS, used as a backfill around earth electrodes in earthing pits to help achieve and maintain low earth resistance. Henel Engineers supplies it in 10 kg and 25 kg bags; it is made in India.',
@@ -355,7 +355,7 @@ export const products: Product[] = [
     imageAlt: 'Copper bonded conventional lightning arrester with mounting base',
     metaTitle: 'Copper Conventional Lightning Arrester — 100 kA',
     metaDescription:
-      'Copper bonded conventional lightning arrester: copper, 100 kA current rating, 5-metre protection radius, made in India. Supplied and installed by Henel Engineers across India.',
+      'Copper bonded conventional lightning arrester: 100 kA rating, 5 m protection radius, made in India. Supplied and installed across India.',
     keywords: [
       'copper lightning arrester',
       'conventional lightning arrester',
@@ -394,9 +394,9 @@ export const products: Product[] = [
     category: 'Earth Pit Chamber',
     image: '/assets/images/earth-pit-cover.webp',
     imageAlt: 'Earth pit cover chamber, polyplastic earthing pit cover with lid',
-    metaTitle: 'Earth Pit Cover — 6 Inch Polyplastic Earthing Chamber',
+    metaTitle: 'Earth Pit Cover — 6 Inch Polyplastic',
     metaDescription:
-      '6-inch black polyplastic earth pit chamber cover, polished finish: top 155 mm, bottom 210 mm, height 240 mm, made in India. Supplied by Henel Engineers across India.',
+      'Black polyplastic 6-inch earth pit cover: top 155 mm, bottom 210 mm, height 240 mm, made in India. Supplied by Henel Engineers across India.',
     keywords: ['earth pit cover', 'earth pit chamber', 'earthing pit cover', 'polyplastic earth pit cover', '6 inch earth pit cover'],
     summary:
       'A 6-inch black polyplastic earth pit chamber cover with a polished finish. It protects the top of the earth electrode and its connections, and gives easy access for inspection and testing.',

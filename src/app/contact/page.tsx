@@ -14,7 +14,7 @@ import { contactFaqs } from '@/lib/faqs';
 export const metadata: Metadata = {
   title: 'Contact Us — Lightning Arrester & Windmill Quotes',
   description:
-    'Contact Henel Engineers Pvt. Ltd. for lightning protection systems, ESE arresters, earthing solutions, surge protection, and windmill operation & maintenance across India. Call +91 94432 82312 or +91 94436 92711.',
+    'Contact Henel Engineers for lightning protection, earthing, solar and windmill maintenance across India. Call +91 94432 82312 or +91 94436 92711.',
   alternates: {
     canonical: '/contact',
   },
@@ -23,6 +23,11 @@ export const metadata: Metadata = {
     description:
       'Reach our team for lightning protection systems, ESE air terminals, earthing solutions, or windmill operation and maintenance services across India.',
     url: '/contact',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact Henel Engineers Pvt. Ltd.',
+    description: 'Reach our team for lightning protection, earthing, solar and windmill maintenance across India.',
   },
 };
 
