@@ -15,6 +15,15 @@ export const metadata: Metadata = {
   title: 'Contact Us — Lightning & Windmill Quotes',
   description:
     'Contact Henel Engineers for lightning protection, earthing, solar and windmill maintenance across India. Call +91 94432 82312 or +91 94436 92711.',
+  keywords: [
+    'contact Henel Engineers',
+    'lightning arrester quote',
+    'earthing contractor contact',
+    'windmill maintenance quote',
+    'solar installation enquiry',
+    'Henel Engineers Aralvaimozhi',
+    'Henel Engineers Marthandam',
+  ],
   alternates: {
     canonical: '/contact',
   },

@@ -16,6 +16,14 @@ const description =
 export const metadata: Metadata = {
   title: 'FAQ — Lightning, Earthing & Windmills',
   description,
+  keywords: [
+    'lightning arrester FAQ',
+    'lightning protection questions',
+    'earthing system FAQ',
+    'surge protection device FAQ',
+    'windmill maintenance FAQ',
+    'solar panel FAQ',
+  ],
   alternates: {
     canonical: '/faq',
   },
