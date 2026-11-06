@@ -11,7 +11,7 @@ import { faqCategories } from '@/lib/faqs';
 import { faqPageSchema, webPageSchema } from '@/lib/structured-data';
 
 const description =
-  'Answers to common questions about ESE lightning arresters, lightning protection systems, earthing, surge protection devices (SPD) and windmill / wind turbine maintenance from Henel Engineers Pvt. Ltd., Tamil Nadu, India.';
+  'Answers on ESE lightning arresters, earthing, surge protection devices and windmill maintenance from Henel Engineers Pvt. Ltd., Tamil Nadu, India.';
 
 export const metadata: Metadata = {
   title: 'FAQ — Lightning Arresters, Earthing & Windmills',

@@ -10,15 +10,15 @@ import Icon from '@/components/ui/AppIcon';
 import AppImage from '@/components/ui/AppImage';
 import ScrollReveal from '@/app/components/ScrollReveal';
 import HomeCTA from '@/app/components/HomeCTA';
-import { regions, allStates, cityKeywords } from '@/lib/service-areas';
+import { regions, allStates } from '@/lib/service-areas';
 import { webPageSchema, serviceSchema } from '@/lib/structured-data';
 import { locationPages, locationHref } from '@/lib/locations';
 
 const description =
-  'Henel Engineers serves clients anywhere in India — lightning arresters, ESE lightning protection, earthing, surge protection devices, solar panel installation and windmill maintenance in Tamil Nadu, Kerala, Karnataka, Andhra Pradesh, Telangana, Gujarat, Maharashtra, Rajasthan, Delhi NCR and every other state.';
+  'Lightning arresters, earthing, surge protection, solar and windmill services anywhere in India, including Tamil Nadu, Kerala, Karnataka and Gujarat.';
 
 export const metadata: Metadata = {
-  title: 'Service Areas — Lightning, Earthing, Solar & Windmill Services Across India',
+  title: 'Lightning, Solar & Windmill Service Areas, India',
   description,
   keywords: [
     'lightning arrester all over India',
@@ -27,13 +27,19 @@ export const metadata: Metadata = {
     'solar installation across India',
     'windmill maintenance across India',
     'pan India lightning protection company',
-    ...cityKeywords(),
   ],
   alternates: { canonical: '/service-areas' },
   openGraph: {
     title: 'Service Areas Across India | Henel Engineers',
     description,
     url: '/service-areas',
+    images: [{ url: '/assets/images/windmill/hero-green-hills.jpg', alt: 'Wind turbines on green rolling hills' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Service Areas Across India | Henel Engineers',
+    description,
+    images: ['/assets/images/windmill/hero-green-hills.jpg'],
   },
 };
 

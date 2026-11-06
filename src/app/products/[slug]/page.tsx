@@ -15,6 +15,7 @@ import { getProduct, products, productHref } from '@/lib/products';
 import { getLandingPage } from '@/lib/landing-pages';
 import { webPageSchema } from '@/lib/structured-data';
 import { withIndiaKeywords } from '@/lib/keywords';
+import { productDescriptions } from '@/lib/product-descriptions';
 
 export const dynamicParams = false;
 
@@ -57,6 +58,7 @@ export default async function ProductPage({ params }: Params) {
   const service = getLandingPage(product.servicePage);
   const related = product.related.map(getProduct).filter((p): p is NonNullable<typeof p> => Boolean(p));
   const href = productHref(product.slug);
+  const description = productDescriptions[product.slug] ?? [];
 
   return (
     <>
@@ -131,6 +133,17 @@ export default async function ProductPage({ params }: Params) {
                     +91 94436 92711
                   </a>
                 </div>
+
+                {description.length > 0 && (
+                  <div className="mt-12 pt-10 border-t border-border">
+                    <h2 className="text-xl font-800 text-foreground mb-5">About the {product.name}</h2>
+                    {description.map((p) => (
+                      <p key={p.slice(0, 40)} className="text-base text-muted-foreground leading-relaxed mb-4">
+                        {p}
+                      </p>
+                    ))}
+                  </div>
+                )}
 
                 {/* Typical uses + installation service (in this column so the image stays alongside) */}
                 <div className="mt-12 pt-10 border-t border-border">

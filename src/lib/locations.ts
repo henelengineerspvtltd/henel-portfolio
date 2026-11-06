@@ -56,7 +56,7 @@ export const locationPages: LocationPage[] = [
     state: 'Tamil Nadu',
     metaTitle: 'Lightning Arrester & Windmill Service, Nagercoil',
     metaDescription:
-      'Lightning arresters, earthing, surge protection, solar installation and windmill maintenance in Kanyakumari District — Nagercoil, Aralvaimozhi, Muppandal, Marthandam. Local offices since 1999.',
+      'Lightning arresters, earthing, solar and windmill maintenance in Kanyakumari District: Nagercoil, Aralvaimozhi, Muppandal, Marthandam. Since 1999.',
     keywords: [
       'lightning arrester Nagercoil',
       'lightning arrester Kanyakumari',
@@ -170,7 +170,7 @@ export const locationPages: LocationPage[] = [
     state: 'Tamil Nadu',
     metaTitle: 'Lightning Arrester & Windmill Service, Tirunelveli',
     metaDescription:
-      'Lightning arrester installation, earthing, SPD, solar and windmill maintenance in Tirunelveli — Palayamkottai, Radhapuram, Panagudi, Valliyoor, Gangaikondan. From our Aralvaimozhi office, est. 1999.',
+      'Lightning arresters, earthing, solar and windmill maintenance in Tirunelveli: Palayamkottai, Radhapuram, Panagudi, Valliyoor. Est. 1999.',
     keywords: [
       'lightning arrester Tirunelveli',
       'earthing contractor Tirunelveli',
@@ -281,7 +281,7 @@ export const locationPages: LocationPage[] = [
     state: 'Tamil Nadu',
     metaTitle: 'Lightning Arrester & Windmill Service, Thoothukudi',
     metaDescription:
-      'Lightning protection, corrosion-resistant earthing, SPD, solar and windmill maintenance in Thoothukudi (Tuticorin) — Kayathar, Ottapidaram, Ettayapuram, Kovilpatti and port-area industries.',
+      'Lightning protection, corrosion-resistant earthing, solar and windmill maintenance in Thoothukudi (Tuticorin): Kayathar, Ottapidaram, Kovilpatti.',
     keywords: [
       'lightning arrester Thoothukudi',
       'lightning arrester Tuticorin',
@@ -385,7 +385,7 @@ export const locationPages: LocationPage[] = [
     state: 'Tamil Nadu',
     metaTitle: 'Lightning Arrester & Earthing Contractor, Madurai',
     metaDescription:
-      'Lightning arrester supply and installation, chemical earthing, surge protection, solar installation and windmill services in Madurai and nearby Theni, Dindigul and Virudhunagar. Henel Engineers, est. 1999.',
+      'Lightning arresters, chemical earthing, surge protection, solar and windmill services in Madurai, Theni, Dindigul and Virudhunagar. Est. 1999.',
     keywords: [
       'lightning arrester Madurai',
       'ESE lightning arrester Madurai',
@@ -495,7 +495,7 @@ export const locationPages: LocationPage[] = [
     state: 'Tamil Nadu',
     metaTitle: 'Lightning Arrester & Windmill Service, Coimbatore',
     metaDescription:
-      'Windmill maintenance in the Palakkad Gap wind belt, plus lightning arresters, chemical earthing, surge protection and solar for Coimbatore industries — Pollachi, Kinathukadavu, Mettupalayam. Est. 1999.',
+      'Windmill maintenance in the Palakkad Gap wind belt, plus lightning arresters, earthing and solar for Coimbatore industries. Pollachi, Kinathukadavu.',
     keywords: [
       'lightning arrester Coimbatore',
       'earthing contractor Coimbatore',
@@ -605,7 +605,7 @@ export const locationPages: LocationPage[] = [
     state: 'Tamil Nadu',
     metaTitle: 'Windmill Maintenance & Lightning Arrester, Tiruppur',
     metaDescription:
-      'Windmill operation & maintenance, CMC, gearbox and blade repair for wind turbines in Palladam, Udumalpet, Dharapuram and Kangeyam, plus lightning protection, earthing and solar for Tiruppur mills.',
+      'Windmill O&M, CMC, gearbox and blade repair in Palladam, Udumalpet, Dharapuram and Kangeyam, plus lightning protection and solar for Tiruppur mills.',
     keywords: [
       'windmill maintenance Tiruppur',
       'windmill service Palladam',
@@ -714,7 +714,7 @@ export const locationPages: LocationPage[] = [
     state: 'Kerala',
     metaTitle: 'Lightning Arrester & Earthing, Thiruvananthapuram',
     metaDescription:
-      'Lightning arrester installation, chemical earthing, surge protection and rooftop solar in Thiruvananthapuram (Trivandrum), Neyyattinkara, Kazhakkoottam and Vizhinjam — about 45 km from our Marthandam branch.',
+      'Lightning arresters, chemical earthing, surge protection and rooftop solar in Thiruvananthapuram (Trivandrum), about 45 km from our Marthandam branch.',
     keywords: [
       'lightning arrester Thiruvananthapuram',
       'lightning arrester Trivandrum',

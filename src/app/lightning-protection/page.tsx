@@ -18,7 +18,7 @@ import { lightningPageFaqs } from '@/lib/faqs';
 export const metadata: Metadata = {
   title: 'Lightning Protection & ESE Lightning Arresters, India',
   description:
-    'Henel Engineers supplies and installs complete lightning protection systems in India, India — TOPBAS SIRIUS & UMBRAECO ESE lightning arresters (up to 107 m radius), copper bonded & GI earth rods, earthing compound and Type 1+2 surge protection devices. Call +91 94432 82312.',
+    'Complete lightning protection across India: TOPBAS SIRIUS and UMBRAECO ESE arresters, earth rods, earthing compound and SPDs. Call +91 94432 82312.',
   keywords: [
     'ESE lightning arrester',
     'TOPBAS SIRIUS ESE lightning arrester',

@@ -82,7 +82,7 @@ export const landingPages: LandingPage[] = [
     navLabel: 'Lightning Arrester',
     metaTitle: 'Lightning Arrester Supply & Installation, India',
     metaDescription:
-      'Lightning arrester supply and installation for homes, industries, commercial buildings, temples, churches and towers across India. ESE and copper conventional lightning arresters with earthing and surge protection. Est. 1999. Call +91 94432 82312.',
+      'Lightning arrester supply and installation for homes, factories, temples and towers across India. ESE and copper arresters with earthing. Est. 1999.',
     keywords: [
       'lightning arrester',
       'lightning arrester installation',
@@ -204,7 +204,7 @@ export const landingPages: LandingPage[] = [
     navLabel: 'ESE Lightning Arrester',
     metaTitle: 'ESE Lightning Arrester Supplier — TOPBAS SIRIUS',
     metaDescription:
-      'Authorised TOPBAS supplier of ESE (Early Streamer Emission) lightning arresters — TOPBAS SIRIUS (up to 107 m radius, ΔT 60 μs) and UMBRAECO (up to 51 m). NF C 17-102. Supply, design and installation across India. Call +91 94432 82312.',
+      'Authorised TOPBAS supplier of ESE lightning arresters: SIRIUS (up to 107 m radius) and UMBRAECO (up to 51 m). NF C 17-102. Supplied across India.',
     keywords: [
       'ESE lightning arrester',
       'early streamer emission lightning arrester',
@@ -314,7 +314,7 @@ export const landingPages: LandingPage[] = [
     navLabel: 'Earthing System',
     metaTitle: 'Earthing Contractor & Chemical Earthing, India',
     metaDescription:
-      'Earthing system design and installation across India: chemical earth electrodes, copper bonded and GI earth rods, CARBOMAXX earthing compound and polyplastic / FRP earth pit covers. Supply and installation by Henel Engineers, est. 1999.',
+      'Earthing design and installation across India: chemical earthing, copper bonded and GI earth rods, CARBOMAXX compound and earth pit covers. Est. 1999.',
     keywords: [
       'earthing contractor Tamil Nadu',
       'earthing system installation',
@@ -422,7 +422,7 @@ export const landingPages: LandingPage[] = [
     navLabel: 'Surge Protection Device (SPD)',
     metaTitle: 'Surge Protection Device (SPD) — Type 1 + 2 Supplier',
     metaDescription:
-      'Type 1 + 2 (Class B + C) three-phase surge protection devices for electrical panels, data systems and sensitive equipment. TOPBAS TB7K320T12L: Uc 320 VAC, Iimp 7 kA, In 30 kA, Up 1.6 kV. Supply and installation by Henel Engineers across India.',
+      'Type 1 + 2 three-phase surge protection devices for panels and sensitive equipment. TOPBAS TB7K320T12L: Iimp 7 kA, In 30 kA. Supplied across India.',
     keywords: [
       'surge protection device',
       'SPD',
@@ -525,7 +525,7 @@ export const landingPages: LandingPage[] = [
     navLabel: 'Solar Lightning Protection & Earthing',
     metaTitle: 'Solar Earthing & Lightning Arrester for Solar Panels',
     metaDescription:
-      'Lightning arresters, earthing and surge protection for rooftop solar panels and solar power installations in India. ESE and conventional lightning arresters, earth rods, earthing compound and SPDs from Henel Engineers.',
+      'Lightning arresters, earthing and surge protection for rooftop solar panels and solar power plants in India. Arresters, earth rods and SPDs.',
     keywords: [
       'solar earthing',
       'solar panel earthing',
@@ -617,9 +617,9 @@ export const landingPages: LandingPage[] = [
     slug: 'renewable-energy-services',
     division: 'renewable',
     navLabel: 'Renewable Energy Services',
-    metaTitle: 'Renewable Energy Services — Wind O&M & Solar Protection',
+    metaTitle: 'Renewable Energy Services: Wind O&M & Solar',
     metaDescription:
-      'Renewable energy engineering from Kanyakumari District, Tamil Nadu: wind turbine operation & maintenance across India, plus lightning protection and earthing for solar installations. 25+ years, 30+ active CMCs.',
+      'Wind turbine O&M across India, plus lightning protection and earthing for solar plants. 25+ years, 30+ active CMCs. Henel Engineers, Tamil Nadu.',
     keywords: [
       'renewable energy services Tamil Nadu',
       'renewable energy company Tamil Nadu',
@@ -711,7 +711,7 @@ export const landingPages: LandingPage[] = [
     navLabel: 'Windmill AMC / CMC',
     metaTitle: 'Windmill Maintenance Contract (CMC / AMC)',
     metaDescription:
-      'Comprehensive Maintenance Contracts (CMC) for windmills and wind turbines across India. Scheduled and corrective maintenance, 24x7 breakdown support, 7+ WTG makes. 30+ active CMCs, 25+ years. Call +91 94432 82312.',
+      'Windmill maintenance contracts (CMC / AMC) across India: scheduled and corrective work, 24x7 breakdown support, 7+ WTG makes. 30+ active CMCs.',
     keywords: [
       'windmill maintenance contract',
       'windmill AMC',
@@ -806,7 +806,7 @@ export const landingPages: LandingPage[] = [
     navLabel: 'Gearbox Repair',
     metaTitle: 'Wind Turbine Gearbox Repair & Overhaul',
     metaDescription:
-      'Windmill gearbox repair and overhaul with quick turnaround: replacement of bearings, shafts and gears for a range of WTG makes using hydraulic installation methods. Henel Engineers, India. Call +91 94432 82312.',
+      'Windmill gearbox repair and overhaul with quick turnaround: bearings, shafts and gears replaced for a range of WTG makes. Call +91 94432 82312.',
     keywords: [
       'wind turbine gearbox repair',
       'windmill gearbox repair',
@@ -887,9 +887,9 @@ export const landingPages: LandingPage[] = [
     slug: 'wind-turbine-blade-repair',
     division: 'wind',
     navLabel: 'Blade Repair',
-    metaTitle: 'Wind Turbine Blade Repair & Lightning Damage Repair',
+    metaTitle: 'Wind Turbine Blade & Lightning Damage Repair',
     metaDescription:
-      'Windmill blade patching, lightning damage repair and on-site blade restoration across India. Keep wind turbine rotors running safely with Henel Engineers. Call +91 94432 82312.',
+      'Windmill blade patching, lightning damage repair and on-site blade restoration across India. Henel Engineers. Call +91 94432 82312.',
     keywords: [
       'wind turbine blade repair',
       'windmill blade repair',
@@ -958,9 +958,9 @@ export const landingPages: LandingPage[] = [
     slug: 'windmill-generator-rewinding',
     division: 'wind',
     navLabel: 'Generator Rewinding',
-    metaTitle: 'Windmill Generator Rewinding & Bearing Replacement',
+    metaTitle: 'Windmill Generator Rewinding & Bearings',
     metaDescription:
-      'Windmill generator and transformer rewinding, bearing replacement and sleeve ring replacement — carried out without dismantling the generator from the nacelle wherever possible. Henel Engineers, India.',
+      'Windmill generator and transformer rewinding, bearing and sleeve ring replacement, in the nacelle wherever possible. Henel Engineers, India.',
     keywords: [
       'wind turbine generator rewinding',
       'windmill generator repair',
@@ -1040,7 +1040,7 @@ export const landingPages: LandingPage[] = [
     navLabel: 'Hydraulic & PCB Repair',
     metaTitle: 'Wind Turbine Hydraulic Servicing & PCB Repair',
     metaDescription:
-      'Windmill hydraulic unit, pump, pitch cylinder and brake servicing, plus wind turbine control PCB repair with a standby PCB to cut downtime. Henel Engineers, India. Call +91 94432 82312.',
+      'Windmill hydraulic unit, pump, pitch cylinder and brake servicing, plus control PCB repair with a standby PCB. Call +91 94432 82312.',
     keywords: [
       'wind turbine hydraulic repair',
       'windmill hydraulic unit service',
@@ -1113,7 +1113,7 @@ export const landingPages: LandingPage[] = [
     navLabel: 'Windmill Spare Parts',
     metaTitle: 'Windmill Spare Parts Supplier — Tamil Nadu',
     metaDescription:
-      'Sourcing and supply of all types of windmill spare parts — gearbox, generator, hydraulic and electrical system components — for wind turbines across India. Henel Engineers. Call +91 94432 82312.',
+      'All types of windmill spare parts: gearbox, generator, hydraulic and electrical components for wind turbines across India. Call +91 94432 82312.',
     keywords: [
       'windmill spare parts',
       'wind turbine spare parts supplier',
@@ -1175,7 +1175,7 @@ export const landingPages: LandingPage[] = [
     navLabel: 'Windmill Erection',
     metaTitle: 'Windmill Erection & Wind Turbine Installation',
     metaDescription:
-      'End-to-end windmill erection and installation: tower erection, nacelle, hub and component installation, start-up and commissioning support, heavy-duty crane arrangement. Henel Engineers, India.',
+      'End-to-end windmill erection: tower, nacelle and hub installation, commissioning support and heavy-duty crane arrangement. Henel Engineers, India.',
     keywords: [
       'windmill erection',
       'wind turbine installation',
@@ -1252,9 +1252,9 @@ export const landingPages: LandingPage[] = [
     slug: 'rooftop-solar-installation',
     division: 'solar',
     navLabel: 'Rooftop Solar Installation',
-    metaTitle: 'Rooftop Solar Panel Installation for Homes & Businesses',
+    metaTitle: 'Rooftop Solar Installation, Homes & Businesses',
     metaDescription:
-      'Rooftop solar panel installation for homes, shops, offices and factories in India — site survey, system design, installation and commissioning, with lightning protection and earthing from an engineering company established in 1999. Call +91 94432 82312.',
+      'Rooftop solar for homes, shops, offices and factories in India: survey, design, installation and commissioning, with lightning protection and earthing.',
     keywords: [
       'rooftop solar installation',
       'solar panel installation for home',
@@ -1354,9 +1354,9 @@ export const landingPages: LandingPage[] = [
     slug: 'commercial-solar-power-plant',
     division: 'solar',
     navLabel: 'Commercial & Industrial Solar',
-    metaTitle: 'Commercial & Industrial Solar Power Plant Installation',
+    metaTitle: 'Commercial & Industrial Solar Power Plants',
     metaDescription:
-      'Solar power plant installation for factories, warehouses, commercial buildings and open land in India — design, structures, panels, inverters, earthing and lightning protection by Henel Engineers, est. 1999. Call +91 94432 82312.',
+      'Solar power plants for factories, warehouses and open land in India: design, installation, earthing and lightning protection. Est. 1999.',
     keywords: [
       'commercial solar installation',
       'industrial solar installation',
@@ -1444,7 +1444,7 @@ export const landingPages: LandingPage[] = [
     navLabel: 'Solar Panel Maintenance & Service',
     metaTitle: 'Solar Panel Maintenance, Cleaning & Service',
     metaDescription:
-      'Solar panel cleaning, inspection, maintenance, troubleshooting and repair for home, commercial and industrial solar systems in India. Keep your solar plant at peak output with Henel Engineers. Call +91 94432 82312.',
+      'Solar panel cleaning, inspection, troubleshooting and repair for home, commercial and industrial systems in India. Call +91 94432 82312.',
     keywords: [
       'solar panel maintenance',
       'solar panel cleaning',

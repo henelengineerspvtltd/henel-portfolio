@@ -82,10 +82,3 @@ export const regions: Region[] = [
 ];
 
 export const allStates = regions.flatMap((r) => r.states.map((s) => s.state));
-
-/** A compact set of city × service keywords for metadata (top cities only). */
-export function cityKeywords() {
-  const topCities = ['Chennai', 'Bengaluru', 'Hyderabad', 'Mumbai', 'Pune', 'Delhi', 'Ahmedabad', 'Kolkata', 'Coimbatore', 'Kochi', 'Madurai', 'Jaipur'];
-  const services = ['lightning arrester', 'earthing contractor', 'solar panel installation', 'windmill maintenance'];
-  return topCities.flatMap((c) => services.map((s) => `${s} in ${c}`));
-}

@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og';
 import { ogCard, OG_SIZE } from '@/lib/og';
 
 export const alt =
-  'Henel Engineers Pvt. Ltd. — Lightning Protection & Windmill Maintenance across India, India';
+  'Henel Engineers Pvt. Ltd. — Lightning Protection & Windmill Maintenance across India';
 export const size = OG_SIZE;
 export const contentType = 'image/png';
 

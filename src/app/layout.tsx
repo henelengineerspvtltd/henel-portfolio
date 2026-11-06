@@ -6,7 +6,6 @@ import '../styles/tailwind.css';
 import JsonLd from '@/components/JsonLd';
 import FloatingContact from '@/components/FloatingContact';
 import { organizationSchema, websiteSchema, SITE_URL } from '@/lib/structured-data';
-import { INDIA_KEYWORDS } from '@/lib/keywords';
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -27,75 +26,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Henel Engineers Pvt. Ltd. | Lightning Protection & Windmill Maintenance, India, India',
+    default: 'Henel Engineers Pvt. Ltd. | Lightning Protection & Windmill Maintenance, India',
     template: '%s | Henel Engineers',
   },
   description:
-    'Henel Engineers Pvt. Ltd., est. 1999, supplies and installs lightning protection systems, ESE lightning arresters, earthing and surge protection, installs and services solar panel systems, and provides windmill operation & maintenance services across India, India. TOPBAS authorised supplier. Call +91 94432 82312.',
-  keywords: [
-    ...INDIA_KEYWORDS,
-    // Brand
-    'Henel Engineers',
-    'Henel Engineers Pvt Ltd',
-    'Henel Engineers Aralvaimozhi',
-    // Lightning protection
-    'lightning protection system',
-    'lightning protection system India',
-    'lightning protection system Tamil Nadu',
-    'lightning arrester',
-    'lightning arrester for building',
-    'lightning arrester installation',
-    'ESE lightning arrester',
-    'ESE lightning arrester supplier India',
-    'ESE lightning arrester Tamil Nadu',
-    'early streamer emission lightning arrester',
-    'NF C 17-102 lightning arrester',
-    'TOPBAS lightning arrester',
-    'TOPBAS lightning arrester dealer India',
-    'TOPBAS SIRIUS ESE',
-    'conventional lightning arrester',
-    'copper lightning arrester',
-    'lightning arrester Kanyakumari',
-    'lightning arrester Nagercoil',
-    // Earthing & surge
-    'earthing contractor Tamil Nadu',
-    'earthing system installation',
-    'chemical earthing',
-    'copper bonded earth rod',
-    'GI earth rod',
-    'earthing compound',
-    'earth pit cover',
-    'FRP earth pit cover',
-    'surge protection device',
-    'surge protection device Tamil Nadu',
-    'Type 1 + 2 SPD',
-    // Solar energy
-    'solar panel installation',
-    'solar panel installation Tamil Nadu',
-    'rooftop solar installation',
-    'solar installation company',
-    'solar power plant installation',
-    'solar panel maintenance',
-    'solar panel cleaning',
-    'solar company Kanyakumari',
-    'renewable energy company Tamil Nadu',
-    // Wind energy
-    'windmill maintenance',
-    'windmill maintenance Tamil Nadu',
-    'windmill operation and maintenance',
-    'wind turbine maintenance India',
-    'wind turbine maintenance Karnataka',
-    'WTG O&M services',
-    'wind turbine gearbox repair',
-    'wind turbine blade repair',
-    'wind turbine generator rewinding',
-    'windmill spare parts',
-    'windmill erection',
-    'wind turbine breakdown service',
-    'windmill CMC contract',
-    'Aralvaimozhi windmill',
-    'Muppandal windmill maintenance',
-  ],
+    'Henel Engineers, est. 1999: lightning arresters, earthing, surge protection, solar installation and windmill maintenance across India. TOPBAS supplier.',
   applicationName: 'Henel Engineers',
   authors: [{ name: 'Henel Engineers Pvt. Ltd.', url: SITE_URL }],
   creator: 'Henel Engineers Pvt. Ltd.',
@@ -124,14 +59,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_IN',
     siteName: 'Henel Engineers Pvt. Ltd.',
-    title: 'Henel Engineers Pvt. Ltd. | Lightning Protection & Windmill Maintenance, India, India',
+    title: 'Henel Engineers Pvt. Ltd. | Lightning Protection & Windmill Maintenance, India',
     description:
       'Lightning protection systems, ESE arresters, earthing & surge protection, and windmill operation & maintenance across India. Est. 1999. TOPBAS authorised supplier.',
     url: '/',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Henel Engineers Pvt. Ltd. | Lightning Protection & Windmill Maintenance, India, India',
+    title: 'Henel Engineers Pvt. Ltd. | Lightning Protection & Windmill Maintenance, India',
     description:
       'Lightning protection systems, ESE arresters, earthing & surge protection, and windmill operation & maintenance across India.',
   },
@@ -166,6 +101,7 @@ export default function RootLayout({
       <head>
         {/* Marks JS as available before paint so scroll-reveal content is only hidden when it can be revealed. */}
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
+        <link rel="preconnect" href="https://images.unsplash.com" />
         <link rel="alternate" type="text/plain" title="LLM-readable site summary" href="/llms.txt" />
       </head>
       <body className={plusJakartaSans.className}>

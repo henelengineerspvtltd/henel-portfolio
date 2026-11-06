@@ -20,10 +20,10 @@ import { products, productHref } from '@/lib/products';
 import { webPageSchema, absoluteUrl } from '@/lib/structured-data';
 
 const description =
-  'Henel Engineers products and services: TOPBAS ESE lightning arresters, surge protection devices, earth rods, earthing compound and earth pit covers; lightning protection and earthing; solar panel installation and maintenance; windmill operation & maintenance, repairs, spare parts and erection.';
+  'TOPBAS ESE lightning arresters, SPDs, earth rods and earthing compound, plus solar installation and windmill O&M, repairs and spare parts in India.';
 
 export const metadata: Metadata = {
-  title: 'Products & Services — Lightning Protection, Solar & Windmill',
+  title: 'Products & Services: Lightning, Solar & Windmill',
   description,
   keywords: [
     'lightning arrester products',
@@ -39,6 +39,13 @@ export const metadata: Metadata = {
     title: 'Products & Services | Henel Engineers',
     description,
     url: '/products-and-services',
+    images: [{ url: '/assets/images/lightning-protection/hero-storm.jpg', alt: 'Lightning storm over a city with a lightning arrester on a rooftop' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Products & Services | Henel Engineers',
+    description,
+    images: ['/assets/images/lightning-protection/hero-storm.jpg'],
   },
 };
 
