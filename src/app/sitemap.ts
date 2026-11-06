@@ -6,6 +6,7 @@ import { locationPages, locationHref } from '@/lib/locations';
 
 const SITE_CONTENT_UPDATED = '2026-10-15';
 const LOCATIONS_ADDED = '2026-11-04';
+const PRODUCTS_UPDATED = '2026-11-06';
 
 const img = (path: string) => (path.startsWith('http') ? path : `${SITE_URL}${path}`);
 
@@ -99,7 +100,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...products.map((p) => ({
       url: `${SITE_URL}${productHref(p.slug)}`,
-      lastModified,
+      lastModified: new Date(PRODUCTS_UPDATED),
       changeFrequency: 'monthly' as const,
       priority: 0.8,
       images: [img(p.image)],
