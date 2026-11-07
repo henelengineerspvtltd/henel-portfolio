@@ -84,6 +84,11 @@ export const landingPages: LandingPage[] = [
     metaDescription:
       'Lightning arrester supply and installation for homes, factories, temples and towers across India. ESE and copper arresters with earthing. Est. 1999.',
     keywords: [
+      'lightning arrester for building',
+      'lightning arrester for home',
+      'lightning arrester for high rise building',
+      'lightning arrester near me',
+      'lightning arrester installation near me',
       'lightning arrester',
       'lightning arrester installation',
       'lightning arrester for home',
@@ -165,6 +170,13 @@ export const landingPages: LandingPage[] = [
           'Surge protection devices at electrical panels',
         ],
       },
+      {
+        heading: 'Lightning arresters for buildings, homes and high-rise structures',
+        paragraphs: [
+          'The right lightning arrester for a building depends on its height, roof area, location and what is inside it. A lightning arrester for home use is often a simpler job, and a conventional arrester with a 5-metre protection radius can be enough for a small house or a single point on a roof.',
+          'Larger roofs and taller structures usually need more coverage. A lightning arrester for a high-rise building, factory or school is often an ESE type, because one mast can protect a much larger radius than a conventional rod. Whatever the building, we recommend the type and number of arresters after a site-specific risk assessment.',
+        ],
+      },
     ],
     faqs: [
       {
@@ -191,6 +203,16 @@ export const landingPages: LandingPage[] = [
         question: 'Can a lightning arrester be installed on a temple or church?',
         answer:
           'Yes. Henel Engineers’ field installations include lightning arresters on a temple building and on a church steeple, as well as on residential rooftops and buildings under construction.',
+      },
+      {
+        question: 'Which lightning arrester is best for a home?',
+        answer:
+          'For a small house, a conventional lightning arrester can be enough, while a larger home may suit an ESE arrester. A lightning risk assessment shows which type and how many you need.',
+      },
+      {
+        question: 'Which lightning arrester is used for high-rise buildings?',
+        answer:
+          'High-rise buildings often use an ESE lightning arrester, because it protects a larger radius from a single mast. The final choice depends on a site-specific risk assessment and zone-of-protection calculation.',
       },
       { question: 'How do I get a lightning arrester quote?', answer: QUOTE_ANSWER },
     ],
@@ -424,6 +446,8 @@ export const landingPages: LandingPage[] = [
     metaDescription:
       'Type 1 + 2 three-phase surge protection devices for panels and sensitive equipment. TOPBAS TB7K320T12L: Iimp 7 kA, In 30 kA. Supplied across India.',
     keywords: [
+      'SPD supplier India',
+      'surge protection device supplier',
       'surge protection device',
       'SPD',
       'Type 1 + 2 SPD',
@@ -709,10 +733,14 @@ export const landingPages: LandingPage[] = [
     slug: 'windmill-maintenance-contract',
     division: 'wind',
     navLabel: 'Windmill AMC / CMC',
-    metaTitle: 'Windmill AMC / CMC Maintenance',
+    metaTitle: 'Wind Turbine Maintenance: AMC & CMC',
     metaDescription:
       'Windmill maintenance contracts (CMC / AMC) across India: scheduled and corrective work, 24x7 breakdown support, 7+ WTG makes. 30+ active CMCs.',
     keywords: [
+      'wind turbine maintenance services',
+      'wind turbine maintenance company',
+      'windmill service companies',
+      'WTG repair and services',
       'windmill maintenance contract',
       'windmill AMC',
       'windmill CMC',
@@ -730,7 +758,7 @@ export const landingPages: LandingPage[] = [
     h1: 'Windmill Maintenance Contracts (CMC / AMC)',
     intro:
       'Henel Engineers Pvt. Ltd. manages 30+ active Comprehensive Maintenance Contracts (CMC) for wind turbines across India, keeping windmills generating with scheduled and corrective maintenance, 24x7 breakdown support and a multi-disciplinary team under one roof.',
-    alsoKnownAs: ['wind turbine generator (WTG) maintenance','पवन चक्की (pawan chakki)','காற்றாலை (kaatraalai)'],
+    alsoKnownAs: ['wind turbine generator (WTG) maintenance', 'wind turbine maintenance services', 'WTG repair and services','पवन चक्की (pawan chakki)','காற்றாலை (kaatraalai)'],
     heroImage: '/assets/images/windmill/tower-technician.jpg',
     heroAlt: 'Technician on a wind turbine tower carrying out maintenance against a cloudy sky',
     highlights: [
@@ -772,6 +800,21 @@ export const landingPages: LandingPage[] = [
           'We provide WTG maintenance and breakdown services across India, supported by experienced technical personnel and the resources required to respond quickly and minimise machine downtime.',
         ],
       },
+      {
+        heading: 'Wind turbine maintenance services we provide',
+        paragraphs: [
+          'As a wind turbine maintenance company, Henel Engineers covers routine service and major repairs under one roof. Our multi-disciplinary team looks after the mechanical, electrical and technical sides of the turbine, so you deal with one provider rather than several.',
+        ],
+        bullets: [
+          'Scheduled and corrective maintenance',
+          '24x7 breakdown support',
+          'Gearbox repair and overhaul',
+          'Generator rewinding and bearing replacement',
+          'Blade patching and lightning damage repair',
+          'Hydraulic servicing and PCB repair',
+          'Spare parts supply',
+        ],
+      },
     ],
     faqs: [
       {
@@ -794,6 +837,11 @@ export const landingPages: LandingPage[] = [
         answer:
           'Henel Engineers provides 24x7 breakdown support — field teams are available round the clock to respond to windmill breakdowns and restore machines as quickly as possible.',
       },
+      {
+        question: 'What wind turbine maintenance services do you provide?',
+        answer:
+          'Henel Engineers provides scheduled and corrective maintenance, 24x7 breakdown support, major component repair, spare parts supply, and performance monitoring and reporting for wind turbines across India.',
+      },
       { question: 'How do I request a windmill maintenance contract?', answer: QUOTE_ANSWER },
     ],
     related: ['wind-turbine-gearbox-repair', 'wind-turbine-blade-repair', 'windmill-generator-rewinding', 'windmill-spare-parts'],
@@ -808,6 +856,10 @@ export const landingPages: LandingPage[] = [
     metaDescription:
       'Windmill gearbox repair and overhaul with quick turnaround: bearings, shafts and gears replaced for a range of WTG makes. Call +91 94432 82312.',
     keywords: [
+      'wind gearbox repair',
+      'wind gearbox service',
+      'wind turbine gearbox replacement',
+      'wind turbine gearbox maintenance',
       'wind turbine gearbox repair',
       'windmill gearbox repair',
       'wind turbine gearbox overhaul',
@@ -821,6 +873,7 @@ export const landingPages: LandingPage[] = [
     h1: 'Wind Turbine Gearbox Repair & Overhaul',
     intro:
       'Henel Engineers Pvt. Ltd. repairs and overhauls wind turbine gearboxes with quick turnaround time — including replacement of bearings, shafts and gears for a range of WTG makes — to reduce downtime and improve reliability.',
+    alsoKnownAs: ['WTG gearbox repair', 'wind gearbox repair', 'wind gearbox service', 'wind turbine gearbox maintenance'],
     heroImage: '/assets/images/windmill/gearbox-repair.jpg',
     heroAlt: 'Wind turbine gearbox and generator assembly lifted by crane during repair and overhaul',
     highlights: [
@@ -860,6 +913,25 @@ export const landingPages: LandingPage[] = [
           'Gearbox work is often combined with generator, hydraulic and electrical servicing. Our multi-disciplinary team and heavy-duty crane arrangement let us handle the whole job, and we can source gearbox spare parts when replacement is needed.',
         ],
       },
+      {
+        heading: 'Gearbox repair, overhaul or replacement?',
+        paragraphs: [
+          'A wind turbine gearbox replacement is a major expense, so it pays to find out exactly what has failed before deciding. Many gearbox problems trace back to specific worn parts, which is why every wind gearbox repair we take on starts with inspection and fault diagnosis.',
+          'Where the damage is limited, we replace the affected bearings, shafts or gears. Where wear is more widespread, a complete overhaul may be the better choice. When the gearbox has to be taken down, our team handles removal and refitting with a crane arrangement, and we can source gearbox spare parts if they are needed.',
+        ],
+      },
+      {
+        heading: 'Wind turbine gearbox maintenance that prevents failures',
+        paragraphs: [
+          'Regular wind turbine gearbox maintenance helps catch small faults before they become breakdowns. Major component repair is part of our windmill maintenance contracts, so gearbox work can be planned alongside scheduled service. Contact us early if you notice any of these warning signs:',
+        ],
+        bullets: [
+          'Unusual noise from the gearbox',
+          'Increased vibration',
+          'Rising oil temperature',
+          'Metal particles in the gearbox oil',
+        ],
+      },
     ],
     faqs: [
       {
@@ -877,6 +949,21 @@ export const landingPages: LandingPage[] = [
         answer:
           'Yes. Henel Engineers sources and supplies all types of windmill spare parts, including gearbox components.',
       },
+      {
+        question: 'Should a wind turbine gearbox be repaired or replaced?',
+        answer:
+          'It depends on what has failed. Worn bearings, shafts or gears can often be replaced individually, and a complete overhaul can restore a gearbox with wider wear. Henel Engineers inspects the gearbox first and advises on the most suitable option.',
+      },
+      {
+        question: 'What are the signs of a wind turbine gearbox problem?',
+        answer:
+          'Common warning signs are unusual noise, increased vibration, rising oil temperature and metal particles in the oil. Early inspection can help prevent a bigger failure and longer downtime.',
+      },
+      {
+        question: 'Can you remove and refit a WTG gearbox?',
+        answer:
+          'Yes. Henel Engineers carries out gearbox removal and refitting with a crane arrangement as part of its wind turbine gearbox repair work.',
+      },
       { question: 'How do I request gearbox repair?', answer: QUOTE_ANSWER },
     ],
     related: ['windmill-maintenance-contract', 'windmill-generator-rewinding', 'windmill-spare-parts', 'windmill-erection'],
@@ -887,10 +974,14 @@ export const landingPages: LandingPage[] = [
     slug: 'wind-turbine-blade-repair',
     division: 'wind',
     navLabel: 'Blade Repair',
-    metaTitle: 'Wind Turbine Blade & Lightning Repair',
+    metaTitle: 'Wind Turbine Blade Repair Services',
     metaDescription:
       'Windmill blade patching, lightning damage repair and on-site blade restoration across India. Henel Engineers. Call +91 94432 82312.',
     keywords: [
+      'wind blade repair',
+      'wind turbine blade repair companies',
+      'WTG rotor blade services',
+      'wind turbine blade maintenance',
       'wind turbine blade repair',
       'windmill blade repair',
       'blade patching',
@@ -904,6 +995,7 @@ export const landingPages: LandingPage[] = [
     h1: 'Wind Turbine Blade Repair & Patching',
     intro:
       'Henel Engineers Pvt. Ltd. undertakes wind turbine blade patching, lightning damage repair and on-site blade restoration to keep rotors running safely across India.',
+    alsoKnownAs: ['wind blade repair', 'WTG rotor blade service', 'rotor blade repair', 'wind turbine blade maintenance'],
     heroImage: '/assets/images/windmill/blade-patching.jpg',
     heroAlt: 'Technician working inside a wind turbine hub during blade patching and repair work',
     highlights: [
@@ -931,6 +1023,25 @@ export const landingPages: LandingPage[] = [
         paragraphs: [],
         bullets: ['Blade patching & repair', 'Lightning damage repair', 'On-site blade restoration'],
       },
+      {
+        heading: 'What wind blade repair involves',
+        paragraphs: [
+          'Wind blade repair starts with finding the damage and understanding how far it has spread. Surface cracks, erosion and lightning strikes all weaken a blade over time, and each one reduces how efficiently the rotor turns wind into power.',
+          'Henel Engineers patches damaged areas, repairs lightning damage and restores blades on site, which reduces the time and cost of bringing a turbine back into service.',
+        ],
+        bullets: [
+          'Blade patching and repair',
+          'Lightning damage repair',
+          'On-site blade restoration',
+          'Blade installation support',
+        ],
+      },
+      {
+        heading: 'Choosing a wind turbine blade repair company',
+        paragraphs: [
+          'A good wind turbine blade repair company should be able to work on site and understand why the damage happened. Henel Engineers has a dedicated lightning protection division as well as a wind energy division, so we understand lightning damage from both sides, and we bring more than 25 years of wind experience to the job.',
+        ],
+      },
     ],
     faqs: [
       {
@@ -948,6 +1059,11 @@ export const landingPages: LandingPage[] = [
         answer:
           'Small cracks and erosion reduce aerodynamic efficiency and can grow into larger structural damage. Early patching keeps the rotor running safely and avoids bigger repairs later.',
       },
+      {
+        question: 'What wind turbine blade damage can you repair?',
+        answer:
+          'Henel Engineers undertakes blade patching for cracks and erosion, lightning damage repair and on-site blade restoration for wind turbine rotors across India.',
+      },
       { question: 'How do I request blade repair?', answer: QUOTE_ANSWER },
     ],
     related: ['windmill-maintenance-contract', 'wind-turbine-gearbox-repair', 'windmill-erection', 'renewable-energy-services'],
@@ -958,10 +1074,14 @@ export const landingPages: LandingPage[] = [
     slug: 'windmill-generator-rewinding',
     division: 'wind',
     navLabel: 'Generator Rewinding',
-    metaTitle: 'Windmill Generator Rewinding & Bearings',
+    metaTitle: 'Wind Turbine Generator Repair',
     metaDescription:
       'Windmill generator and transformer rewinding, bearing and sleeve ring replacement, in the nacelle wherever possible. Henel Engineers, India.',
     keywords: [
+      'wind turbine generator repair',
+      'wind generator repair',
+      'windmill generator bearing',
+      'wind turbine generator replacement',
       'wind turbine generator rewinding',
       'windmill generator repair',
       'windmill generator rewinding',
@@ -972,9 +1092,10 @@ export const landingPages: LandingPage[] = [
       'wind turbine generator service',
     ],
     eyebrow: 'Wind Energy Division',
-    h1: 'Generator & Transformer Rewinding',
+    h1: 'Wind Turbine Generator Repair & Rewinding',
     intro:
       'Henel Engineers Pvt. Ltd. carries out wind turbine generator and transformer rewinding, bearing replacement and sleeve ring replacement — without dismantling the generator from the nacelle wherever possible.',
+    alsoKnownAs: ['wind generator repair', 'WTG generator repair', 'windmill generator bearing replacement'],
     heroImage: '/assets/images/windmill/generator-rewinding.jpg',
     heroAlt: 'Wind turbine generator being serviced on site during rewinding work',
     highlights: [
@@ -1013,6 +1134,13 @@ export const landingPages: LandingPage[] = [
           'Our team brings together mechanical, electrical and technical professionals, supported by dedicated field manpower and service vehicles — so generator work can be combined with gearbox, hydraulic and control-system servicing in a single visit.',
         ],
       },
+      {
+        heading: 'Wind generator repair or generator replacement?',
+        paragraphs: [
+          'A wind turbine generator replacement does not have to be the first step. Electrical fault diagnosis shows whether the problem lies in the windings, the bearings or the sleeve rings, and each of these can often be put right without changing the whole machine.',
+          'Henel Engineers carries out wind generator repair including rewinding, bearing replacement and sleeve ring replacement, without dismantling the generator from the nacelle wherever possible. That helps to reduce crane costs and time out of service.',
+        ],
+      },
     ],
     faqs: [
       {
@@ -1027,6 +1155,16 @@ export const landingPages: LandingPage[] = [
       {
         question: 'Do you carry out sleeve ring replacement?',
         answer: 'Yes. Sleeve ring replacement is carried out as part of Henel Engineers’ windmill maintenance services.',
+      },
+      {
+        question: 'What are the signs that a wind turbine generator needs repair?',
+        answer:
+          'Common signs include repeated tripping, overheating, unusual noise or vibration, and worn bearings. Fault diagnosis identifies the cause so the right repair can be planned.',
+      },
+      {
+        question: 'Should a wind generator be repaired or replaced?',
+        answer:
+          'That depends on the fault. Henel Engineers diagnoses the generator first, and rewinding, bearing replacement or sleeve ring replacement can often return it to service.',
       },
       { question: 'How do I request generator rewinding?', answer: QUOTE_ANSWER },
     ],
@@ -1177,6 +1315,11 @@ export const landingPages: LandingPage[] = [
     metaDescription:
       'End-to-end windmill erection: tower, nacelle and hub installation, commissioning support and heavy-duty crane arrangement. Henel Engineers, India.',
     keywords: [
+      'WTG erection',
+      'WTG rotor erection',
+      'WTG hub erection',
+      'wind turbine nacelle installation services',
+      'wind turbine erection contractor',
       'windmill erection',
       'wind turbine installation',
       'wind turbine erection services',
@@ -1191,6 +1334,7 @@ export const landingPages: LandingPage[] = [
     h1: 'Windmill Erection & Installation',
     intro:
       'From tower erection to commissioning, Henel Engineers Pvt. Ltd. provides end-to-end windmill erection and installation services — nacelle, hub and component installation, start-up and commissioning support, and heavy-duty crane arrangement.',
+    alsoKnownAs: ['WTG erection', 'WTG rotor erection', 'WTG hub erection', 'wind turbine installation'],
     heroImage: '/assets/images/windmill/nacelle-erection-1.jpg',
     heroAlt: 'Crane erecting a wind turbine tower and rotor during installation',
     highlights: [
@@ -1224,6 +1368,20 @@ export const landingPages: LandingPage[] = [
           'Our field work includes erection of Vestas RRB wind turbines, nacelle lifts, rotor installation and blade rigging. The same lifting capability supports major component replacement such as gearbox and generator exchanges.',
         ],
       },
+      {
+        heading: 'WTG tower, nacelle, hub and rotor erection',
+        paragraphs: [
+          'WTG erection is carried out in stages, and each lift needs careful planning and experienced rigging. Henel Engineers provides wind turbine nacelle installation services alongside tower erection, hub and rotor installation and blade rigging, with a heavy-duty crane arrangement for the lifts.',
+          'Our field work includes erection of Vestas RRB wind turbines. The same crane arrangement and rigging experience also support component lifting for major repairs on turbines that are already running.',
+        ],
+        bullets: [
+          'Tower erection',
+          'Nacelle lifts and installation',
+          'Hub and rotor installation',
+          'Blade rigging',
+          'Start-up and commissioning support',
+        ],
+      },
     ],
     faqs: [
       {
@@ -1240,6 +1398,16 @@ export const landingPages: LandingPage[] = [
         question: 'Which turbines have you erected?',
         answer:
           'Henel Engineers’ field work includes erection of Vestas RRB wind turbines, and the company supports 7+ WTG makes.',
+      },
+      {
+        question: 'Do you handle WTG rotor and hub erection?',
+        answer:
+          'Yes. Henel Engineers carries out WTG hub and rotor installation, nacelle lifts and blade rigging as part of its windmill erection services.',
+      },
+      {
+        question: 'Can you lift components for repairs on an existing wind turbine?',
+        answer:
+          'Yes. Our heavy-duty crane arrangement and rigging experience support component lifting for major repairs as well as new erection work.',
       },
       { question: 'How do I request windmill erection services?', answer: QUOTE_ANSWER },
     ],

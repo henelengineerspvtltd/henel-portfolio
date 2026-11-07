@@ -257,6 +257,7 @@ export const products: Product[] = [
     metaDescription:
       'Copper bonded earth rod: 17.2 mm diameter, 1 m, 2 m and 3 m lengths, minimum order 1 piece. Supplied and installed by Henel Engineers across India.',
     keywords: [
+      '17.2 mm copper bonded electrode',
       'copper bonded earth rod',
       'copper earth rod',
       'copper bonded earthing electrode',
@@ -293,10 +294,10 @@ export const products: Product[] = [
     category: 'Earth Rod',
     image: '/assets/images/gi-earth-rod.webp',
     imageAlt: 'GI earth rod, galvanised iron earthing rod for grounding installations',
-    metaTitle: 'GI Earth Rod — Class B GI Pipe, 48 mm',
+    metaTitle: 'GI Rod for Earthing — Class B, 48 mm',
     metaDescription:
       'GI earth rod from Class B GI pipe: 48 mm diameter, 3 mm wall, 1 m, 2 m and 3 m lengths. Supplied and installed by Henel Engineers across India.',
-    keywords: ['GI earth rod', 'GI pipe earthing', 'GI earthing electrode', 'Class B GI pipe earth rod', 'GI earth rod supplier Tamil Nadu'],
+    keywords: ['gi rod', 'gi rod for earthing', 'gi earthing rod', 'GI earth rod', 'GI pipe earthing', 'GI earthing electrode', 'Class B GI pipe earth rod', 'GI earth rod supplier Tamil Nadu'],
     summary:
       'A GI (galvanised iron) earth rod is a zinc-coated steel pipe electrode widely used for economical earthing. Henel Engineers supplies GI earth rods made from Class B GI pipe — 48 mm diameter, 3 mm wall thickness — in 1 m, 2 m and 3 m lengths.',
     specsTitle: 'Product Details',
@@ -310,6 +311,11 @@ export const products: Product[] = [
       {
         question: 'What material is the GI earth rod made from?',
         answer: 'It is made from Class B GI (galvanised iron) pipe.',
+      },
+      {
+        question: 'What is a GI rod used for in earthing?',
+        answer:
+          'A GI rod is a galvanised iron earth electrode driven into the ground to give fault and lightning current a safe path to earth. This GI earth rod is made from Class B GI pipe, with a 48 mm diameter and 3 mm wall thickness.',
       },
       { question: 'How do I buy GI earth rods?', answer: QUOTE },
     ],
@@ -357,6 +363,8 @@ export const products: Product[] = [
     metaDescription:
       'Copper bonded conventional lightning arrester: 100 kA rating, 5 m protection radius, made in India. Supplied and installed across India.',
     keywords: [
+      'conventional type lightning arrester',
+      'conventional lightning arrester supplier',
       'copper lightning arrester',
       'conventional lightning arrester',
       'copper bonded lightning arrester',
@@ -383,6 +391,11 @@ export const products: Product[] = [
         answer:
           'Conventional arresters suit small structures or single points. For large areas, an ESE arrester such as the TOPBAS SIRIUS covers up to 107 m (5 m mast, Level IV) from one mast. The choice is made from a risk assessment.',
       },
+      {
+        question: 'What is a conventional type lightning arrester?',
+        answer:
+          'A conventional type lightning arrester, also called a Franklin rod, is a metal air terminal fixed at a high point to intercept a lightning strike and carry the current to earth through down conductors. This copper bonded model is rated at 100 kA with a 5-metre protection radius.',
+      },
       { question: 'How do I buy this lightning arrester?', answer: QUOTE },
     ],
     servicePage: 'lightning-arrester',
@@ -394,10 +407,10 @@ export const products: Product[] = [
     category: 'Earth Pit Chamber',
     image: '/assets/images/earth-pit-cover.webp',
     imageAlt: 'Earth pit cover chamber, polyplastic earthing pit cover with lid',
-    metaTitle: 'Earth Pit Cover — 6 Inch Polyplastic',
+    metaTitle: 'Earth Pit Chamber Cover — 6 Inch',
     metaDescription:
       'Black polyplastic 6-inch earth pit cover: top 155 mm, bottom 210 mm, height 240 mm, made in India. Supplied by Henel Engineers across India.',
-    keywords: ['earth pit cover', 'earth pit chamber', 'earthing pit cover', 'polyplastic earth pit cover', '6 inch earth pit cover'],
+    keywords: ['earth pit chamber cover', 'earthing chamber cover', 'earth pit cover supplier', '6 inch earth pit cover', 'earth pit cover', 'earth pit chamber', 'earthing pit cover', 'polyplastic earth pit cover', '6 inch earth pit cover'],
     summary:
       'A 6-inch black polyplastic earth pit chamber cover with a polished finish. It protects the top of the earth electrode and its connections, and gives easy access for inspection and testing.',
     specsTitle: 'Product Details',
@@ -412,6 +425,11 @@ export const products: Product[] = [
         question: 'Why use an earth pit cover?',
         answer: 'It protects the earth electrode connection and gives easy access for periodic inspection and earth resistance testing.',
       },
+      {
+        question: 'What is an earth pit chamber cover?',
+        answer:
+          'An earth pit chamber cover, also called an earthing chamber cover, sits over the top of an earth pit. It protects the electrode connection and marks the pit, while keeping it accessible for inspection and testing.',
+      },
       { question: 'How do I buy earth pit covers?', answer: QUOTE },
     ],
     servicePage: 'earthing-system',
@@ -423,10 +441,10 @@ export const products: Product[] = [
     category: 'Earth Pit Chamber',
     image: '/assets/images/frp-earth-pit-cover.webp',
     imageAlt: 'FRP earth pit cover chamber, corrosion resistant earthing pit cover with green lid',
-    metaTitle: 'FRP Earth Pit Cover — 10 Inch',
+    metaTitle: 'FRP Earth Pit Cover Supplier — 10 Inch',
     metaDescription:
       '10-inch FRP earth pit cover, corrosion resistant: top 254 mm, bottom 210 mm, height 240 mm, made in India. Supplied by Henel Engineers across India.',
-    keywords: ['FRP earth pit cover', 'FRP earthing chamber', '10 inch earth pit cover', 'corrosion resistant earth pit cover', 'earth pit cover supplier'],
+    keywords: ['frp earth pit cover supplier', 'frp earth pit chamber cover', 'FRP earth pit cover', 'FRP earthing chamber', '10 inch earth pit cover', 'corrosion resistant earth pit cover', 'earth pit cover supplier'],
     summary:
       'A 10-inch earth pit cover made from FRP (fibre reinforced plastic) for corrosion resistance. It protects the earth electrode connection and allows easy inspection and testing.',
     specsTitle: 'Product Details',
