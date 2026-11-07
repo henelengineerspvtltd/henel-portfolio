@@ -10,7 +10,7 @@ const panels = [
     alt: 'Wind turbine gearbox and generator assembly lifted by crane during repair and overhaul',
     title: 'Gearbox Repair & Overhauling',
     href: '/wind-turbine-gearbox-repair',
-    desc: 'We repair and overhaul gearboxes with quick turnaround time, including replacement of bearings, shafts and gears for a range of WTG makes.',
+    desc: 'We repair, overhaul and replace gearboxes with quick turnaround time, including in-tower service and replacement of bearings, shafts and gears for a range of WTG makes.',
     bullets: [
       'Replacement of bearings, shafts and gears',
       'Hydraulic methods for accurate installation',
@@ -27,6 +27,7 @@ const panels = [
       'Generator & transformer rewinding',
       'Bearing replacement',
       'Sleeve ring replacement',
+      'Slip ring repair',
     ],
   },
   {

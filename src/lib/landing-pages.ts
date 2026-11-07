@@ -808,8 +808,8 @@ export const landingPages: LandingPage[] = [
         bullets: [
           'Scheduled and corrective maintenance',
           '24x7 breakdown support',
-          'Gearbox repair and overhaul',
-          'Generator rewinding and bearing replacement',
+          'Gearbox repair, overhaul and replacement',
+          'Generator rewinding, slip ring repair and bearing replacement',
           'Blade patching and lightning damage repair',
           'Hydraulic servicing and PCB repair',
           'Spare parts supply',
@@ -852,10 +852,13 @@ export const landingPages: LandingPage[] = [
     slug: 'wind-turbine-gearbox-repair',
     division: 'wind',
     navLabel: 'Gearbox Repair',
-    metaTitle: 'Wind Turbine Gearbox Repair & Overhaul',
+    metaTitle: 'Wind Turbine Gearbox Repair',
     metaDescription:
-      'Windmill gearbox repair and overhaul with quick turnaround: bearings, shafts and gears replaced for a range of WTG makes. Call +91 94432 82312.',
+      'Wind turbine gearbox repair, overhaul and complete replacement, with in-tower service where possible, for a range of WTG makes. Call +91 94432 82312.',
     keywords: [
+      'in-tower gearbox repair',
+      'wind gearbox service in tower',
+      'complete gearbox replacement',
       'wind gearbox repair',
       'wind gearbox service',
       'wind turbine gearbox replacement',
@@ -870,10 +873,10 @@ export const landingPages: LandingPage[] = [
       'windmill gearbox overhauling',
     ],
     eyebrow: 'Wind Energy Division',
-    h1: 'Wind Turbine Gearbox Repair & Overhaul',
+    h1: 'Wind Turbine Gearbox Repair, Overhaul & Replacement',
     intro:
       'Henel Engineers Pvt. Ltd. repairs and overhauls wind turbine gearboxes with quick turnaround time — including replacement of bearings, shafts and gears for a range of WTG makes — to reduce downtime and improve reliability.',
-    alsoKnownAs: ['WTG gearbox repair', 'wind gearbox repair', 'wind gearbox service', 'wind turbine gearbox maintenance'],
+    alsoKnownAs: ['WTG gearbox repair', 'in-tower gearbox service', 'wind gearbox repair', 'wind gearbox service', 'wind turbine gearbox maintenance'],
     heroImage: '/assets/images/windmill/gearbox-repair.jpg',
     heroAlt: 'Wind turbine gearbox and generator assembly lifted by crane during repair and overhaul',
     highlights: [
@@ -887,6 +890,8 @@ export const landingPages: LandingPage[] = [
       'Bearing replacement',
       'Shaft & gear replacement',
       'Complete gearbox overhaul',
+      'Complete gearbox replacement',
+      'In-tower gearbox repair & service',
       'Gearbox removal & refitting with crane arrangement',
     ],
     sections: [
@@ -917,7 +922,7 @@ export const landingPages: LandingPage[] = [
         heading: 'Gearbox repair, overhaul or replacement?',
         paragraphs: [
           'A wind turbine gearbox replacement is a major expense, so it pays to find out exactly what has failed before deciding. Many gearbox problems trace back to specific worn parts, which is why every wind gearbox repair we take on starts with inspection and fault diagnosis.',
-          'Where the damage is limited, we replace the affected bearings, shafts or gears. Where wear is more widespread, a complete overhaul may be the better choice. When the gearbox has to be taken down, our team handles removal and refitting with a crane arrangement, and we can source gearbox spare parts if they are needed.',
+          'Where the damage is limited, we replace the affected bearings, shafts or gears. Where wear is more widespread, a complete overhaul may be the better choice, and where repair is not worthwhile we carry out a complete gearbox replacement. When the gearbox has to be taken down, our team handles removal and refitting with a crane arrangement, and we can source gearbox spare parts if they are needed.',
         ],
       },
       {
@@ -930,6 +935,13 @@ export const landingPages: LandingPage[] = [
           'Increased vibration',
           'Rising oil temperature',
           'Metal particles in the gearbox oil',
+        ],
+      },
+      {
+        heading: 'In-tower gearbox service',
+        paragraphs: [
+          'Bringing a gearbox down from the nacelle needs a large crane and adds time and cost to a repair. Where the fault allows it, Henel Engineers carries out in-tower gearbox repair and service with the gearbox still in place, which can reduce crane costs and time out of service.',
+          'If the work cannot be done in the tower, we arrange removal and refitting with a crane, so you deal with one team from inspection through to restart.',
         ],
       },
     ],
@@ -952,7 +964,7 @@ export const landingPages: LandingPage[] = [
       {
         question: 'Should a wind turbine gearbox be repaired or replaced?',
         answer:
-          'It depends on what has failed. Worn bearings, shafts or gears can often be replaced individually, and a complete overhaul can restore a gearbox with wider wear. Henel Engineers inspects the gearbox first and advises on the most suitable option.',
+          'It depends on what has failed. Worn bearings, shafts or gears can often be replaced individually, a complete overhaul can restore a gearbox with wider wear, and a complete replacement is available when repair is not worthwhile. Henel Engineers inspects the gearbox first and advises on the most suitable option.',
       },
       {
         question: 'What are the signs of a wind turbine gearbox problem?',
@@ -963,6 +975,16 @@ export const landingPages: LandingPage[] = [
         question: 'Can you remove and refit a WTG gearbox?',
         answer:
           'Yes. Henel Engineers carries out gearbox removal and refitting with a crane arrangement as part of its wind turbine gearbox repair work.',
+      },
+      {
+        question: 'Can a wind turbine gearbox be repaired in the tower?',
+        answer:
+          'Yes, where the fault allows it. Henel Engineers provides in-tower gearbox repair and service with the gearbox still in place. If the job needs the gearbox taken down, we arrange removal and refitting with a crane.',
+      },
+      {
+        question: 'Do you carry out complete wind turbine gearbox replacement?',
+        answer:
+          'Yes. Henel Engineers carries out complete gearbox replacement as well as repair and overhaul, including crane arrangement for removal and refitting.',
       },
       { question: 'How do I request gearbox repair?', answer: QUOTE_ANSWER },
     ],
@@ -1076,8 +1098,11 @@ export const landingPages: LandingPage[] = [
     navLabel: 'Generator Rewinding',
     metaTitle: 'Wind Turbine Generator Repair',
     metaDescription:
-      'Windmill generator and transformer rewinding, bearing and sleeve ring replacement, in the nacelle wherever possible. Henel Engineers, India.',
+      'Wind turbine generator repair: rewinding, slip ring repair, bearing and sleeve ring replacement, in the nacelle wherever possible. Henel Engineers.',
     keywords: [
+      'wind turbine slip ring repair',
+      'wind slip ring repair India',
+      'WTG slip ring repair',
       'wind turbine generator repair',
       'wind generator repair',
       'windmill generator bearing',
@@ -1095,7 +1120,7 @@ export const landingPages: LandingPage[] = [
     h1: 'Wind Turbine Generator Repair & Rewinding',
     intro:
       'Henel Engineers Pvt. Ltd. carries out wind turbine generator and transformer rewinding, bearing replacement and sleeve ring replacement — without dismantling the generator from the nacelle wherever possible.',
-    alsoKnownAs: ['wind generator repair', 'WTG generator repair', 'windmill generator bearing replacement'],
+    alsoKnownAs: ['wind generator repair', 'wind turbine slip ring repair', 'WTG generator repair', 'windmill generator bearing replacement'],
     heroImage: '/assets/images/windmill/generator-rewinding.jpg',
     heroAlt: 'Wind turbine generator being serviced on site during rewinding work',
     highlights: [
@@ -1109,6 +1134,7 @@ export const landingPages: LandingPage[] = [
       'Transformer rewinding',
       'Generator bearing replacement',
       'Sleeve ring replacement',
+      'Slip ring repair',
       'Electrical fault diagnosis',
     ],
     sections: [
@@ -1137,8 +1163,15 @@ export const landingPages: LandingPage[] = [
       {
         heading: 'Wind generator repair or generator replacement?',
         paragraphs: [
-          'A wind turbine generator replacement does not have to be the first step. Electrical fault diagnosis shows whether the problem lies in the windings, the bearings or the sleeve rings, and each of these can often be put right without changing the whole machine.',
-          'Henel Engineers carries out wind generator repair including rewinding, bearing replacement and sleeve ring replacement, without dismantling the generator from the nacelle wherever possible. That helps to reduce crane costs and time out of service.',
+          'A wind turbine generator replacement does not have to be the first step. Electrical fault diagnosis shows whether the problem lies in the windings, the bearings, the slip rings or the sleeve rings, and each of these can often be put right without changing the whole machine.',
+          'Henel Engineers carries out wind generator repair including rewinding, slip ring repair, bearing replacement and sleeve ring replacement, without dismantling the generator from the nacelle wherever possible. That helps to reduce crane costs and time out of service.',
+        ],
+      },
+      {
+        heading: 'Wind turbine slip ring repair',
+        paragraphs: [
+          'Slip rings carry electrical current between the rotating and stationary parts of a wind turbine generator. Wear and poor contact can cause faults and unplanned stops, so they need attention before they lead to a bigger failure.',
+          'Henel Engineers provides wind slip ring repair across India as part of its generator services, alongside rewinding, bearing replacement and electrical fault diagnosis.',
         ],
       },
     ],
@@ -1165,6 +1198,11 @@ export const landingPages: LandingPage[] = [
         question: 'Should a wind generator be repaired or replaced?',
         answer:
           'That depends on the fault. Henel Engineers diagnoses the generator first, and rewinding, bearing replacement or sleeve ring replacement can often return it to service.',
+      },
+      {
+        question: 'Do you repair wind turbine slip rings?',
+        answer:
+          'Yes. Henel Engineers provides slip ring repair for wind turbine generators across India, as part of its generator repair services.',
       },
       { question: 'How do I request generator rewinding?', answer: QUOTE_ANSWER },
     ],
