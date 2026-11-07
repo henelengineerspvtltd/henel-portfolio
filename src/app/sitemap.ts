@@ -4,9 +4,9 @@ import { landingPages, SOLAR_IMAGES } from '@/lib/landing-pages';
 import { products, productHref } from '@/lib/products';
 import { locationPages, locationHref } from '@/lib/locations';
 
-const SITE_CONTENT_UPDATED = '2026-10-15';
+const SITE_CONTENT_UPDATED = '2026-11-07';
 const LOCATIONS_ADDED = '2026-11-04';
-const PRODUCTS_UPDATED = '2026-11-06';
+const PRODUCTS_UPDATED = '2026-11-07';
 
 const img = (path: string) => (path.startsWith('http') ? path : `${SITE_URL}${path}`);
 
