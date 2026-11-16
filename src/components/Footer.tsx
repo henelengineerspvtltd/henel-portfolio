@@ -93,24 +93,46 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <address className="not-italic text-sm text-primary-foreground/60 leading-relaxed flex items-start gap-2">
-                  <span className="mt-0.5 opacity-50">📍</span>
-                  <span>
-                    <span className="block text-primary-foreground/70 text-xs uppercase tracking-wide mb-1">Registered Office</span>
-                    Aralvaimozhi, Kanyakumari District,<br />
-                    Tamil Nadu — 629 301
-                  </span>
+                <address className="not-italic text-sm leading-relaxed">
+                  <a
+                    href="https://maps.app.goo.gl/eG8yo7BKjg6gK9xe8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Get directions to the Henel Engineers registered office in Aralvaimozhi on Google Maps"
+                    className="group flex items-start gap-2 text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+                  >
+                    <span className="mt-0.5 opacity-50">📍</span>
+                    <span>
+                      <span className="block text-primary-foreground/70 text-xs uppercase tracking-wide mb-1">Registered Office</span>
+                      Aralvaimozhi, Kanyakumari District,<br />
+                      Tamil Nadu — 629 301
+                      <span className="block mt-1 text-xs font-700 text-primary-foreground/80 underline underline-offset-2 group-hover:text-primary-foreground">
+                        Get directions →
+                      </span>
+                    </span>
+                  </a>
                 </address>
               </li>
               <li>
-                <address className="not-italic text-sm text-primary-foreground/60 leading-relaxed flex items-start gap-2">
-                  <span className="mt-0.5 opacity-50">📍</span>
-                  <span>
-                    <span className="block text-primary-foreground/70 text-xs uppercase tracking-wide mb-1">Branch Office</span>
-                    Kalluthotti - Marthandam Rd,<br />
-                    Marthandam, Unnamalaikadai,<br />
-                    Tamil Nadu — 629 165
-                  </span>
+                <address className="not-italic text-sm leading-relaxed">
+                  <a
+                    href="https://maps.app.goo.gl/2whf2eEDufEqSfZw9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Get directions to the Henel Engineers branch office in Marthandam on Google Maps"
+                    className="group flex items-start gap-2 text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+                  >
+                    <span className="mt-0.5 opacity-50">📍</span>
+                    <span>
+                      <span className="block text-primary-foreground/70 text-xs uppercase tracking-wide mb-1">Branch Office</span>
+                      Kalluthotti - Marthandam Rd,<br />
+                      Marthandam, Unnamalaikadai,<br />
+                      Tamil Nadu — 629 165
+                      <span className="block mt-1 text-xs font-700 text-primary-foreground/80 underline underline-offset-2 group-hover:text-primary-foreground">
+                        Get directions →
+                      </span>
+                    </span>
+                  </a>
                 </address>
               </li>
             </ul>
