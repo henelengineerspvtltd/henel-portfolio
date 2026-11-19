@@ -126,11 +126,11 @@ export default function ServiceAreasPage() {
         <section className="py-16 bg-card border-b border-border" aria-label="Local service areas near our offices">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal className="text-center mb-10">
-              <span className="section-label">Near Our Offices</span>
-              <h2 className="text-section-heading font-800 text-foreground mt-2">Southern Tamil Nadu &amp; Kerala</h2>
+              <span className="section-label">Local Service Areas</span>
+              <h2 className="text-section-heading font-800 text-foreground mt-2">Tamil Nadu &amp; Kerala</h2>
               <p className="text-sm text-muted-foreground mt-3 max-w-2xl mx-auto leading-relaxed">
-                Our home region around Aralvaimozhi and Marthandam — the Muppandal, Kayathar and Palakkad Gap wind belts and the
-                cities nearby.
+                Our home region around Aralvaimozhi and Marthandam, the Muppandal, Kayathar, Shencottah and Palakkad Gap wind belts, and
+                the cities where we work across Tamil Nadu and Kerala.
               </p>
             </ScrollReveal>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">

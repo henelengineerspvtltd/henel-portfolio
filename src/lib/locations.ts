@@ -6,9 +6,11 @@
  * reach easily from its Aralvaimozhi and Marthandam offices.
  *
  * IMPORTANT: Company-specific statements must only restate facts already
- * published on this site (services, products, offices, experience). Do not
- * add project names, client names, response times or reviews unless they are
- * real and published. Local context (geography, wind belts, industry, climate)
+ * published on this site (services, products, offices, experience) or work the
+ * owner has confirmed (2026-11: windmill work in Tenkasi; lightning arrester work
+ * in Virudhunagar, Madurai and Chennai; Dindigul and Trichy are enquiries only).
+ * Do not add project names, client names, response times or reviews unless they
+ * are real and published. Local context (geography, wind belts, industry, climate)
  * must stay general and accurate.
  */
 
@@ -270,7 +272,7 @@ export const locationPages: LocationPage[] = [
       },
       { question: 'How do I get a quote in Tirunelveli?', answer: QUOTE('Tirunelveli') },
     ],
-    nearby: ['kanyakumari', 'thoothukudi', 'madurai'],
+    nearby: ['kanyakumari', 'tenkasi', 'thoothukudi', 'madurai'],
   },
 
   // ─────────────────────────────────────── Thoothukudi ───────────────────────────────────────
@@ -399,7 +401,7 @@ export const locationPages: LocationPage[] = [
     ],
     h1: 'Lightning Arrester, Earthing, Solar & Windmill Services in Madurai',
     intro:
-      'Madurai is southern Tamil Nadu’s largest city, with hospitals, colleges, temples, high-rise buildings and industrial estates such as Kappalur that all need sound lightning protection and earthing. Henel Engineers serves Madurai and the surrounding Theni, Dindigul and Virudhunagar districts.',
+      'Madurai is southern Tamil Nadu’s largest city, with hospitals, colleges, temples, high-rise buildings and industrial estates such as Kappalur that all need sound lightning protection and earthing. Henel Engineers has carried out lightning arrester work in Madurai and serves the city and the surrounding Theni, Dindigul and Virudhunagar districts.',
     heroImage: '/assets/images/lightning-protection/work/install-1.jpg',
     heroAlt: 'Lightning arrester installed on a rooftop mast above a temple building',
     highlights: [
@@ -465,7 +467,7 @@ export const locationPages: LocationPage[] = [
       {
         question: 'Do you install lightning arresters in Madurai?',
         answer:
-          'Yes. Henel Engineers supplies and installs ESE and conventional lightning arresters, with complete earthing and surge protection, for homes, temples, hospitals, institutions, commercial buildings and factories in Madurai.',
+          'Yes. Henel Engineers has carried out lightning arrester work in Madurai and supplies and installs ESE and conventional lightning arresters, with complete earthing and surge protection, for homes, temples, hospitals, institutions, commercial buildings and factories.',
       },
       {
         question: 'Which lightning arrester is best for a temple or tall building?',
@@ -484,7 +486,7 @@ export const locationPages: LocationPage[] = [
       },
       { question: 'How do I get a quote in Madurai?', answer: QUOTE('Madurai') },
     ],
-    nearby: ['tirunelveli', 'thoothukudi', 'coimbatore'],
+    nearby: ['virudhunagar', 'dindigul', 'tiruchirappalli', 'tirunelveli'],
   },
 
   // ─────────────────────────────────────── Coimbatore ───────────────────────────────────────
@@ -594,7 +596,7 @@ export const locationPages: LocationPage[] = [
       },
       { question: 'How do I get a quote in Coimbatore?', answer: QUOTE('Coimbatore') },
     ],
-    nearby: ['tiruppur', 'madurai', 'thiruvananthapuram'],
+    nearby: ['tiruppur', 'dindigul', 'madurai'],
   },
 
   // ──────────────────────────────────────── Tiruppur ────────────────────────────────────────
@@ -808,6 +810,483 @@ export const locationPages: LocationPage[] = [
       { question: 'How do I get a quote in Thiruvananthapuram?', answer: QUOTE('Thiruvananthapuram') },
     ],
     nearby: ['kanyakumari', 'tirunelveli', 'coimbatore'],
+  },
+  // ─────────────────────────────────────── Tenkasi ───────────────────────────────────────
+  {
+    slug: 'tenkasi',
+    name: 'Tenkasi',
+    district: 'Tenkasi',
+    state: 'Tamil Nadu',
+    metaTitle: 'Windmill & Lightning Arrester, Tenkasi',
+    metaDescription:
+      'Windmill maintenance, repairs and spare parts, plus lightning arresters and earthing, in Tenkasi, Sengottai and Sankarankovil. Est. 1999.',
+    keywords: [
+      'windmill maintenance Tenkasi',
+      'wind turbine service Tenkasi',
+      'windmill repair Sankarankovil',
+      'WTG maintenance Tenkasi',
+      'lightning arrester Tenkasi',
+      'earthing contractor Tenkasi',
+      'windmill spare parts Tenkasi',
+    ],
+    h1: 'Windmill Maintenance, Lightning Arrester & Earthing in Tenkasi',
+    intro:
+      'Tenkasi District sits below the Western Ghats, where the Shencottah gap funnels wind onto the plains and wind turbines are part of the landscape. Henel Engineers has carried out windmill work in Tenkasi District and serves turbine owners, factories, institutions and homes across the district.',
+    heroImage: '/assets/images/windmill/hub-maintenance.jpg',
+    heroAlt: 'Crane erecting a wind turbine nacelle onto a tower',
+    highlights: [
+      { value: '25+ yrs', label: 'Wind energy experience' },
+      { value: '7+', label: 'WTG makes supported' },
+      { value: '24x7', label: 'Breakdown support' },
+      { value: 'Since 1999', label: 'Engineering experience' },
+    ],
+    localities: [
+      'Tenkasi',
+      'Sengottai (Shencottah)',
+      'Kadayanallur',
+      'Sankarankovil',
+      'Alangulam',
+      'Puliyangudi',
+      'Surandai',
+      'Sivagiri',
+      'Courtallam',
+    ],
+    services: [
+      'windmill-maintenance-contract',
+      'wind-turbine-gearbox-repair',
+      'windmill-generator-rewinding',
+      'wind-turbine-blade-repair',
+      'windmill-spare-parts',
+      'lightning-arrester',
+    ],
+    sections: [
+      {
+        heading: 'Windmill work in Tenkasi District',
+        paragraphs: [
+          'Henel Engineers has carried out windmill work in Tenkasi District. We provide operation and maintenance, repairs, spare parts and 24x7 breakdown support for wind turbines across the district, from the Shencottah gap side to the Sankarankovil area.',
+          'Our wind team covers the whole turbine: gearbox repair, overhaul and replacement, including in-tower service where the fault allows; generator rewinding, slip ring repair and bearing replacement; blade patching and lightning damage repair; and hydraulic and PCB servicing.',
+        ],
+        bullets: [
+          'Windmill maintenance contracts (CMC / AMC)',
+          'Gearbox repair, overhaul and replacement',
+          'Generator rewinding and slip ring repair',
+          'Blade patching and lightning damage repair',
+          'Windmill spare parts supply',
+        ],
+      },
+      {
+        heading: 'Lightning protection for turbines and buildings',
+        paragraphs: [
+          'Turbines on open ground and ridges are frequent lightning targets, and a strike can damage blades, electronics and control systems. Because we also run a lightning protection division, we can check a turbine’s earthing and surge protection as well as repair the damage.',
+          'For factories, schools, hospitals, temples and homes in Tenkasi, we supply and install ESE and conventional lightning arresters with complete earthing and surge protection.',
+        ],
+      },
+      {
+        heading: 'Within reach of our Aralvaimozhi base',
+        paragraphs: [
+          OFFICES +
+            ' Our teams already travel through Tirunelveli and the Kayathar wind belt to reach Tenkasi District.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: 'Do you maintain windmills in Tenkasi District?',
+        answer:
+          'Yes. Henel Engineers has carried out windmill work in Tenkasi District and provides operation and maintenance, repairs, spare parts and 24x7 breakdown support for wind turbines across the district.',
+      },
+      {
+        question: 'Can you repair wind turbine gearboxes and generators in Tenkasi?',
+        answer:
+          'Yes. We carry out gearbox repair, overhaul and replacement, including in-tower service where the fault allows, as well as generator rewinding, slip ring repair and bearing replacement.',
+      },
+      {
+        question: 'Do you install lightning arresters in Tenkasi?',
+        answer:
+          'Yes. We supply and install ESE and conventional lightning arresters, earthing systems and surge protection devices for buildings, factories and institutions in Tenkasi District.',
+      },
+      { question: 'How do I get a quote in Tenkasi?', answer: QUOTE('Tenkasi District') },
+    ],
+    nearby: ['tirunelveli', 'kanyakumari', 'virudhunagar'],
+  },
+
+  // ───────────────────────────────── Virudhunagar & Sivakasi ─────────────────────────────────
+  {
+    slug: 'virudhunagar',
+    name: 'Virudhunagar & Sivakasi',
+    district: 'Virudhunagar',
+    state: 'Tamil Nadu',
+    metaTitle: 'Lightning Arrester in Virudhunagar',
+    metaDescription:
+      'Lightning arresters, earthing and surge protection in Virudhunagar, Sivakasi, Rajapalayam and Sattur, for factories, mills and buildings. Est. 1999.',
+    keywords: [
+      'lightning arrester Virudhunagar',
+      'lightning arrester Sivakasi',
+      'lightning protection Sivakasi',
+      'lightning arrester Rajapalayam',
+      'earthing contractor Virudhunagar',
+      'chemical earthing Sivakasi',
+      'surge protection Virudhunagar',
+    ],
+    h1: 'Lightning Arrester, Earthing & Surge Protection in Virudhunagar',
+    intro:
+      'Virudhunagar District is one of Tamil Nadu’s busiest industrial areas, with fireworks, match and printing units in Sivakasi, spinning mills in Rajapalayam and trading towns such as Virudhunagar, Aruppukottai and Sattur. Henel Engineers has carried out lightning arrester work in Virudhunagar District and serves sites across the district.',
+    heroImage: '/assets/images/lightning-protection/work/install-new-4.jpg',
+    heroAlt: 'Technician installing a lightning arrester mast on a building rooftop',
+    highlights: [
+      { value: 'Since 1999', label: 'Engineering experience' },
+      { value: '107 m', label: 'Max. ESE protection radius' },
+      { value: '200 kA', label: 'SIRIUS impulse test' },
+      { value: 'Type 1 + 2', label: 'Surge protection' },
+    ],
+    localities: [
+      'Virudhunagar',
+      'Sivakasi',
+      'Rajapalayam',
+      'Sattur',
+      'Aruppukottai',
+      'Srivilliputhur',
+      'Tiruchuli',
+      'Watrap',
+    ],
+    services: [
+      'lightning-arrester',
+      'ese-lightning-arrester',
+      'earthing-system',
+      'surge-protection-device',
+      'solar-lightning-protection-earthing',
+    ],
+    sections: [
+      {
+        heading: 'Lightning arrester work in Virudhunagar District',
+        paragraphs: [
+          'Henel Engineers has carried out lightning arrester work in Virudhunagar District. We design the whole system rather than fixing a single rod: the air terminal, down conductors, test joints, earthing and surge protection at the electrical panel.',
+          'Large factory roofs and sheds are often best covered by an ESE lightning arrester on a mast. The TOPBAS SIRIUS protects up to 107 m and the UMBRAECO up to 51 m (Level IV, 5 m mast). For smaller buildings, copper bonded conventional arresters remain a cost-effective option.',
+        ],
+      },
+      {
+        heading: 'Lightning protection for Sivakasi’s industries',
+        paragraphs: [
+          'Fireworks and match units handle materials where a lightning strike can be especially dangerous, and printing presses and spinning mills run machines and electronics that surges can damage. Each site should be designed to the applicable standards and to any licensing conditions that apply to it.',
+          'We assess the site, recommend the arrester type, number and mast height, and install earthing and surge protection to suit the buildings and equipment.',
+        ],
+        bullets: [
+          'Lightning risk assessment and system design',
+          'ESE and conventional lightning arresters',
+          'Chemical earthing with copper bonded or GI rods',
+          'Type 1 + 2 surge protection devices',
+        ],
+      },
+      {
+        heading: 'Earthing and rooftop solar',
+        paragraphs: [
+          'Many mills and factories in the district now run rooftop solar. We earth the array, structures and inverters and add lightning protection that does not shade the panels, using earth rods, CARBOMAXX earthing compound and earth pit covers.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: 'Do you install lightning arresters in Sivakasi and Virudhunagar?',
+        answer:
+          'Yes. Henel Engineers has carried out lightning arrester work in Virudhunagar District and supplies and installs ESE and conventional lightning arresters, earthing and surge protection in Sivakasi, Virudhunagar, Rajapalayam, Sattur and nearby towns.',
+      },
+      {
+        question: 'Can you provide lightning protection for fireworks and match units?',
+        answer:
+          'Yes. We assess each site and design lightning protection, earthing and surge protection to the applicable standards. Owners should also check any lightning protection conditions in their own licence.',
+      },
+      {
+        question: 'Do you provide earthing for spinning mills in Rajapalayam?',
+        answer:
+          'Yes. We install chemical earthing, earth pits and Type 1 + 2 surge protection devices for spinning mills and other factories in Rajapalayam and across Virudhunagar District.',
+      },
+      { question: 'How do I get a quote in Virudhunagar District?', answer: QUOTE('Virudhunagar District') },
+    ],
+    nearby: ['madurai', 'tenkasi', 'tirunelveli'],
+  },
+
+  // ─────────────────────────────────────── Chennai ───────────────────────────────────────
+  {
+    slug: 'chennai',
+    name: 'Chennai',
+    district: 'Chennai',
+    state: 'Tamil Nadu',
+    metaTitle: 'Lightning Arrester & Earthing, Chennai',
+    metaDescription:
+      'ESE and conventional lightning arresters, chemical earthing and surge protection in Chennai for high-rise buildings, offices and factories. Est. 1999.',
+    keywords: [
+      'lightning arrester Chennai',
+      'ESE lightning arrester Chennai',
+      'lightning arrester installation Chennai',
+      'earthing contractor Chennai',
+      'chemical earthing Chennai',
+      'surge protection device Chennai',
+      'lightning arrester for high rise building Chennai',
+    ],
+    h1: 'Lightning Arrester, Earthing & Surge Protection in Chennai',
+    intro:
+      'Chennai’s apartment towers, IT parks, hospitals and industrial estates are among the tallest and most equipment-heavy buildings in Tamil Nadu. Henel Engineers has carried out lightning arrester work in Chennai and supplies and installs complete lightning protection, earthing and surge protection across the city.',
+    heroImage: '/assets/images/lightning-protection/work/install-new-2.jpg',
+    heroAlt: 'Lightning arrester mast installed on a building under construction',
+    highlights: [
+      { value: 'Since 1999', label: 'Engineering experience' },
+      { value: '107 m', label: 'Max. ESE protection radius' },
+      { value: 'NF C 17-102', label: 'SIRIUS standard' },
+      { value: 'Type 1 + 2', label: 'Surge protection' },
+    ],
+    localities: [
+      'Chennai',
+      'OMR & Sholinganallur',
+      'Guindy',
+      'Ambattur',
+      'Porur',
+      'Tambaram',
+      'Velachery',
+      'Anna Nagar',
+      'Sriperumbudur',
+      'Oragadam',
+    ],
+    services: [
+      'lightning-arrester',
+      'ese-lightning-arrester',
+      'surge-protection-device',
+      'earthing-system',
+      'solar-lightning-protection-earthing',
+    ],
+    sections: [
+      {
+        heading: 'Lightning arresters for Chennai’s high-rise buildings',
+        paragraphs: [
+          'Henel Engineers has carried out lightning arrester work in Chennai. Apartment towers, office blocks and hospitals are usually the tallest points in their area, so they need a complete system: an air terminal above the highest point, dedicated down conductors, a low-resistance earthing system and surge protection at the main panel.',
+          'An ESE lightning arrester can protect a large roof or a whole campus from one mast. The TOPBAS SIRIUS covers up to 107 m and follows NF C 17-102, and the UMBRAECO covers up to 51 m (Level IV, 5 m mast).',
+        ],
+      },
+      {
+        heading: 'Surge protection for offices, IT parks and factories',
+        paragraphs: [
+          'Servers, lifts, drives and building management systems are easily damaged by lightning and switching surges. We install Type 1 + 2 surge protection devices at the main incomer and earthing that keeps those surges away from sensitive equipment, for offices along OMR and factories in Ambattur, Guindy, Sriperumbudur and Oragadam.',
+        ],
+        bullets: [
+          'Type 1 + 2 three-phase SPD (Uc 320 VAC, Iimp 7 kA, In 30 kA)',
+          'Chemical earthing with copper bonded or GI rods',
+          'Earth pits with polyplastic or FRP covers',
+        ],
+      },
+      {
+        heading: 'Earthing near the coast',
+        paragraphs: [
+          'Salt in the air and soil near the coast speeds up corrosion. For coastal sites we often recommend copper bonded earth rods and FRP earth pit covers, with regular earth resistance testing during the north-east monsoon season.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: 'Do you install lightning arresters in Chennai?',
+        answer:
+          'Yes. Henel Engineers has carried out lightning arrester work in Chennai and supplies and installs ESE and conventional lightning arresters, earthing and surge protection for apartments, offices, hospitals, institutions and factories.',
+      },
+      {
+        question: 'Which lightning arrester is used for high-rise buildings in Chennai?',
+        answer:
+          'High-rise buildings often use an ESE lightning arrester on a mast above the roof, because one unit protects a large radius. The final choice depends on a site-specific risk assessment and zone-of-protection calculation.',
+      },
+      {
+        question: 'Your office is in Kanyakumari District. How do you work in Chennai?',
+        answer:
+          'We plan the site visit, design, material supply and installation for your location and confirm the schedule with you, as we do for projects anywhere in India.',
+      },
+      { question: 'How do I get a quote in Chennai?', answer: QUOTE('Chennai') },
+    ],
+    nearby: ['tiruchirappalli', 'madurai', 'coimbatore'],
+  },
+
+  // ─────────────────────────────────────── Dindigul ───────────────────────────────────────
+  {
+    slug: 'dindigul',
+    name: 'Dindigul',
+    district: 'Dindigul',
+    state: 'Tamil Nadu',
+    metaTitle: 'Lightning Arrester & Windmill, Dindigul',
+    metaDescription:
+      'Lightning arresters, earthing, surge protection and windmill maintenance in Dindigul, Palani, Oddanchatram and Kodaikanal. Est. 1999.',
+    keywords: [
+      'lightning arrester Dindigul',
+      'earthing contractor Dindigul',
+      'lightning arrester Kodaikanal',
+      'lightning arrester Palani',
+      'windmill maintenance Dindigul',
+      'wind turbine service Oddanchatram',
+      'surge protection Dindigul',
+    ],
+    h1: 'Lightning Arrester, Earthing & Windmill Services in Dindigul',
+    intro:
+      'Dindigul District runs from the plains around Dindigul town up to the Palani Hills and Kodaikanal, with spinning mills, hospitals, temples, colleges and wind turbine sites in between. Henel Engineers serves the whole district with lightning protection, earthing, surge protection and windmill services.',
+    heroImage: '/assets/images/lightning-protection/work/install-new-3.jpg',
+    heroAlt: 'Lightning arrester mast installed on a residential building rooftop with solar panels',
+    highlights: [
+      { value: 'Since 1999', label: 'Engineering experience' },
+      { value: '107 m', label: 'Max. ESE protection radius' },
+      { value: '25+ yrs', label: 'Wind energy experience' },
+      { value: '24x7', label: 'Windmill breakdown support' },
+    ],
+    localities: [
+      'Dindigul',
+      'Palani',
+      'Oddanchatram',
+      'Kodaikanal',
+      'Vedasandur',
+      'Natham',
+      'Nilakottai',
+      'Batlagundu',
+    ],
+    services: [
+      'lightning-arrester',
+      'earthing-system',
+      'surge-protection-device',
+      'windmill-maintenance-contract',
+      'wind-turbine-gearbox-repair',
+      'rooftop-solar-installation',
+    ],
+    sections: [
+      {
+        heading: 'Lightning protection in the hills and on the plains',
+        paragraphs: [
+          'Buildings on high or exposed ground are struck more often. Hilltop temples around Palani, resorts and towers in Kodaikanal, and tall mills and hospitals on the plains all benefit from a complete lightning protection system: an air terminal, down conductors, earthing and surge protection.',
+          'We recommend ESE or conventional lightning arresters after a site-specific risk assessment. Rocky hill sites can make low earth resistance harder to achieve, so we design the earthing with chemical electrodes and earthing compound to suit the ground.',
+        ],
+      },
+      {
+        heading: 'Earthing and surge protection for mills and institutions',
+        paragraphs: [
+          'Spinning mills and factories around Dindigul and Vedasandur, and hospitals and colleges across the district, run equipment that surges can damage. We install chemical earthing, earth pits and Type 1 + 2 surge protection devices at the main incomer.',
+        ],
+        bullets: [
+          'Chemical earth electrodes and earth pits',
+          'Copper bonded and Class B GI earth rods',
+          'CARBOMAXX earthing compound',
+          'Type 1 + 2 surge protection devices',
+        ],
+      },
+      {
+        heading: 'Wind turbine services near Palani and Oddanchatram',
+        paragraphs: [
+          'Parts of Dindigul District have wind turbine sites. We provide windmill maintenance contracts, gearbox and generator repair, blade repair, spare parts and 24x7 breakdown support for turbine owners there.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: 'Do you install lightning arresters in Dindigul and Kodaikanal?',
+        answer:
+          'Yes. Henel Engineers supplies and installs ESE and conventional lightning arresters, earthing and surge protection for homes, temples, resorts, hospitals, institutions and factories across Dindigul District, including Palani and Kodaikanal.',
+      },
+      {
+        question: 'Can you get good earthing on rocky hill sites?',
+        answer:
+          'Rocky ground makes low earth resistance harder to reach, so we design the earthing for the site, using chemical earth electrodes and earthing compound, and test the result.',
+      },
+      {
+        question: 'Do you maintain windmills in Dindigul District?',
+        answer:
+          'Yes. We provide windmill operation and maintenance, gearbox and generator repair, blade repair, spare parts and 24x7 breakdown support for wind turbines in Dindigul District.',
+      },
+      { question: 'How do I get a quote in Dindigul?', answer: QUOTE('Dindigul District') },
+    ],
+    nearby: ['madurai', 'coimbatore', 'tiruchirappalli'],
+  },
+
+  // ───────────────────────────────────── Tiruchirappalli ─────────────────────────────────────
+  {
+    slug: 'tiruchirappalli',
+    name: 'Tiruchirappalli (Trichy)',
+    district: 'Tiruchirappalli',
+    state: 'Tamil Nadu',
+    metaTitle: 'Lightning Arrester & Earthing, Trichy',
+    metaDescription:
+      'Lightning arresters, chemical earthing and surge protection in Trichy, Srirangam and Thiruverumbur for factories, temples and institutions. Est. 1999.',
+    keywords: [
+      'lightning arrester Trichy',
+      'lightning arrester Tiruchirappalli',
+      'earthing contractor Trichy',
+      'chemical earthing Trichy',
+      'surge protection device Trichy',
+      'lightning arrester Srirangam',
+      'lightning protection Thiruverumbur',
+    ],
+    h1: 'Lightning Arrester, Earthing & Surge Protection in Tiruchirappalli',
+    intro:
+      'Tiruchirappalli is a major industrial and educational centre, with the engineering and fabrication belt around Thiruverumbur and Thuvakudi, large colleges and hospitals, and landmark temples such as Srirangam. Henel Engineers serves Trichy and the surrounding district with lightning protection, earthing and surge protection.',
+    heroImage: '/assets/images/lightning-protection/work/install-5.jpg',
+    heroAlt: 'Lightning arrester mast installed on a building under construction',
+    highlights: [
+      { value: 'Since 1999', label: 'Engineering experience' },
+      { value: '107 m', label: 'Max. ESE protection radius' },
+      { value: '100 kA', label: 'Conventional arrester rating' },
+      { value: 'Type 1 + 2', label: 'Surge protection' },
+    ],
+    localities: [
+      'Tiruchirappalli',
+      'Srirangam',
+      'Thiruverumbur',
+      'Thuvakudi',
+      'Samayapuram',
+      'Manapparai',
+      'Lalgudi',
+      'Musiri',
+    ],
+    services: [
+      'lightning-arrester',
+      'ese-lightning-arrester',
+      'earthing-system',
+      'surge-protection-device',
+      'commercial-solar-power-plant',
+    ],
+    sections: [
+      {
+        heading: 'Earthing and surge protection for Trichy’s industries',
+        paragraphs: [
+          'Fabrication and engineering units around Thiruverumbur and Thuvakudi run welding sets, drives, cranes and control panels that need a reliable earthing system. We design and install chemical earthing with copper bonded or GI electrodes, earth pits, and Type 1 + 2 surge protection devices at the main incomer.',
+        ],
+        bullets: [
+          'Chemical earth electrodes and earth pits',
+          'Copper bonded and Class B GI earth rods',
+          'CARBOMAXX earthing compound',
+          'Type 1 + 2 three-phase SPD',
+        ],
+      },
+      {
+        heading: 'Lightning protection for temples, colleges and hospitals',
+        paragraphs: [
+          'Temple towers, college blocks and hospitals are usually the tallest structures nearby. We protect them with a complete system: an ESE or conventional lightning arrester, down conductors, test joints and a low-resistance earthing system.',
+          'An ESE arrester such as the TOPBAS SIRIUS can cover up to 107 m from one mast (Level IV, 5 m mast), which suits large campuses. For single points or smaller buildings, our copper bonded conventional arrester (100 kA, 5 m radius) can be enough.',
+        ],
+      },
+      {
+        heading: 'Solar plants with proper protection',
+        paragraphs: [
+          'For rooftop and commercial solar plants, we earth the array, structures and inverters and add lightning protection that does not shade the panels.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: 'Do you install lightning arresters in Trichy?',
+        answer:
+          'Yes. Henel Engineers supplies and installs ESE and conventional lightning arresters, earthing and surge protection for factories, temples, colleges, hospitals and homes in Tiruchirappalli and nearby towns.',
+      },
+      {
+        question: 'Do you provide earthing for fabrication units in Thiruverumbur?',
+        answer:
+          'Yes. We design and install chemical earthing, earth pits and surge protection for fabrication and engineering units around Thiruverumbur, Thuvakudi and the rest of Tiruchirappalli District.',
+      },
+      {
+        question: 'Can you protect a temple tower from lightning?',
+        answer:
+          'Yes. We assess the structure and recommend an ESE or conventional lightning arrester, with dedicated down conductors and an earthing system, placed so that it does not spoil the tower.',
+      },
+      { question: 'How do I get a quote in Trichy?', answer: QUOTE('Tiruchirappalli') },
+    ],
+    nearby: ['madurai', 'dindigul', 'chennai'],
   },
 ];
 
