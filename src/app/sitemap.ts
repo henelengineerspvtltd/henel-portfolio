@@ -5,7 +5,7 @@ import { products, productHref } from '@/lib/products';
 import { locationPages, locationHref } from '@/lib/locations';
 
 const SITE_CONTENT_UPDATED = '2026-11-07';
-const LOCATIONS_ADDED = '2026-11-04';
+const LOCATIONS_ADDED = '2026-11-19';
 const PRODUCTS_UPDATED = '2026-11-07';
 
 const img = (path: string) => (path.startsWith('http') ? path : `${SITE_URL}${path}`);
