@@ -4,10 +4,8 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import HeroSection from './components/HeroSection';
-import ServicePathways from './components/ServicePathways';
+import HomeServices from './components/HomeServices';
 import AboutTeaser from './components/AboutTeaser';
-import WindEnergySection from './components/WindEnergySection';
-import TopbasProductHighlight from './components/TopbasProtectionHighlight';
 import HomeCTA from './components/HomeCTA';
 import GoogleReviews from './components/GoogleReviews';
 import JsonLd from '@/components/JsonLd';
@@ -53,10 +51,8 @@ export default function HomePage() {
       <Header />
       <main>
         <HeroSection />
-        <ServicePathways />
+        <HomeServices />
         <AboutTeaser />
-        <WindEnergySection />
-        <TopbasProductHighlight />
         <FAQSection
           heading="Frequently Asked Questions"
           subheading="Quick answers about Henel Engineers, lightning protection, solar energy and windmill maintenance."
