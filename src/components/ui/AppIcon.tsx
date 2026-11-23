@@ -9,6 +9,7 @@ import {
   ArrowLeftIcon,
   ArrowPathIcon,
   ArrowRightIcon,
+  ArrowTopRightOnSquareIcon,
   ArrowUpCircleIcon,
   Bars3Icon,
   BeakerIcon,
@@ -39,6 +40,7 @@ import {
   ShieldCheckIcon,
   ShieldExclamationIcon,
   SparklesIcon,
+  StarIcon,
   SunIcon,
   UserGroupIcon,
   UsersIcon,
@@ -58,6 +60,7 @@ import {
   PaperAirplaneIcon as PaperAirplaneSolid,
   PhoneIcon as PhoneSolid,
   ShieldCheckIcon as ShieldCheckSolid,
+  StarIcon as StarSolid,
   SunIcon as SunSolid,
 } from '@heroicons/react/24/solid';
 
@@ -69,6 +72,7 @@ const OUTLINE: Record<string, IconComponent> = {
   ArrowLeftIcon,
   ArrowPathIcon,
   ArrowRightIcon,
+  ArrowTopRightOnSquareIcon,
   ArrowUpCircleIcon,
   Bars3Icon,
   BeakerIcon,
@@ -98,6 +102,7 @@ const OUTLINE: Record<string, IconComponent> = {
   ShieldCheckIcon,
   ShieldExclamationIcon,
   SparklesIcon,
+  StarIcon,
   SunIcon,
   UserGroupIcon,
   UsersIcon,
@@ -118,6 +123,7 @@ const SOLID: Record<string, IconComponent> = {
   PaperAirplaneIcon: PaperAirplaneSolid,
   PhoneIcon: PhoneSolid,
   ShieldCheckIcon: ShieldCheckSolid,
+  StarIcon: StarSolid,
   SunIcon: SunSolid,
 };
 

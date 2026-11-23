@@ -9,6 +9,7 @@ import AboutTeaser from './components/AboutTeaser';
 import WindEnergySection from './components/WindEnergySection';
 import TopbasProductHighlight from './components/TopbasProtectionHighlight';
 import HomeCTA from './components/HomeCTA';
+import GoogleReviews from './components/GoogleReviews';
 import JsonLd from '@/components/JsonLd';
 import FAQSection from '@/components/FAQSection';
 import Icon from '@/components/ui/AppIcon';
@@ -67,6 +68,7 @@ export default function HomePage() {
             </Link>
           }
         />
+        <GoogleReviews />
         <HomeCTA />
       </main>
       <Footer />
