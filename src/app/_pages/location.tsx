@@ -16,6 +16,7 @@ import { getLandingPage, type Division } from '@/lib/landing-pages';
 import { serviceSchema, webPageSchema } from '@/lib/structured-data';
 import type { Locale } from '@/i18n/config';
 import { t, tr } from '@/i18n/translate';
+import { withNativeKeywords } from '@/i18n/keywords';
 import { alternatesFor, localizePath, OG_LOCALE } from '@/i18n/config';
 
 export function locationStaticParams() {
@@ -27,7 +28,7 @@ export function locationMetadata(city: string, locale: Locale): Metadata {
   if (!pageEn) return {};
   const page = tr(pageEn, locale);
   const alternates = alternatesFor(locationHref(page.slug), locale);
-  return {
+  return withNativeKeywords({
     title: page.metaTitle,
     description: page.metaDescription,
     keywords: pageEn.keywords,
@@ -45,7 +46,7 @@ export function locationMetadata(city: string, locale: Locale): Metadata {
       description: page.metaDescription,
       images: [page.heroImage],
     },
-  };
+  }, `/service-areas/${city}`, locale, pageEn.name);
 }
 
 const DIVISION_COLOR: Record<Division, string> = {

@@ -1,4 +1,4 @@
-import GuidePage, { guideMetadata, guideStaticParams } from '../../../_pages/guide';
+import GuidePage, { guideMetadata, guideStaticParams } from '@/app/_pages/guide';
 
 export const dynamicParams = false;
 

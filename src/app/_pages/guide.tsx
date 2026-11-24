@@ -15,6 +15,7 @@ import { articleSchema, webPageSchema } from '@/lib/structured-data';
 import type { Locale } from '@/i18n/config';
 import { alternatesFor, HTML_LANG, OG_LOCALE } from '@/i18n/config';
 import { t, tr } from '@/i18n/translate';
+import { withNativeKeywords } from '@/i18n/keywords';
 
 export function guideStaticParams() {
   return guides.map((g) => ({ slug: g.slug }));
@@ -25,7 +26,7 @@ export function guideMetadata(slug: string, locale: Locale): Metadata {
   if (!gEn) return {};
   const g = tr(gEn, locale);
   const alternates = alternatesFor(guideHref(gEn.slug), locale);
-  return {
+  return withNativeKeywords({
     title: g.metaTitle,
     description: g.metaDescription,
     alternates,
@@ -45,7 +46,7 @@ export function guideMetadata(slug: string, locale: Locale): Metadata {
       description: g.metaDescription,
       images: [gEn.image],
     },
-  };
+  }, `/guides/${slug}`, locale);
 }
 
 const formatDate = (d: string, locale: Locale) =>

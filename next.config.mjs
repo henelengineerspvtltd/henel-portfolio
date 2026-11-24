@@ -3,6 +3,8 @@ import { imageHosts } from './image-hosts.config.mjs';
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   poweredByHeader: false,
+  // Each language has its own root layout, so unmatched URLs need a standalone 404 page.
+  experimental: { globalNotFound: true },
   compress: true,
   async redirects() {
     return [{ source: '/services', destination: '/products-and-services', permanent: true }];

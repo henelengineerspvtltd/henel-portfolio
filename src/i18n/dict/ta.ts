@@ -141,7 +141,7 @@ export const ta: Record<string, string> = {
   "Windmill reviews": "காற்றாலை மதிப்புரைகள்",
 
   // ───────────── Home: metadata and FAQ intro ─────────────
-  "Henel Engineers | Lightning Arresters & Windmill Services": "ஹெனல் இன்ஜினியர்ஸ் | மின்னல் தடுப்பான் & காற்றாலை சேவைகள்",
+  "Henel Engineers | Lightning Arresters & Windmill Services": "ஹெனல் இன்ஜினியர்ஸ் | இடிதாங்கி, எர்த்திங் & காற்றாலை சேவைகள்",
   "Henel Engineers, est. 1999: lightning arresters, earthing, surge protection, solar installation and windmill maintenance across India. TOPBAS supplier.": "ஹெனல் இன்ஜினியர்ஸ், 1999 முதல்: மின்னல் தடுப்பான்கள், எர்த்திங், சர்ஜ் பாதுகாப்பு, சோலார் நிறுவல் மற்றும் காற்றாலை பராமரிப்பு — இந்தியா முழுவதும். TOPBAS விநியோகஸ்தர்.",
   "Henel Engineers Pvt. Ltd. | Lightning Protection & Windmill Maintenance, India": "ஹெனல் இன்ஜினியர்ஸ் | மின்னல் பாதுகாப்பு & காற்றாலை பராமரிப்பு, இந்தியா",
   "Lightning protection systems, ESE arresters, earthing & surge protection, and windmill operation & maintenance across India. Est. 1999. TOPBAS authorised supplier.": "மின்னல் பாதுகாப்பு அமைப்புகள், ESE தடுப்பான்கள், எர்த்திங் & சர்ஜ் பாதுகாப்பு, மற்றும் காற்றாலை இயக்கம் & பராமரிப்பு — இந்தியா முழுவதும். 1999 முதல். அங்கீகாரம் பெற்ற TOPBAS விநியோகஸ்தர்.",

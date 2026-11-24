@@ -141,7 +141,7 @@ export const hi: Record<string, string> = {
   "Windmill reviews": "पवनचक्की समीक्षाएँ",
 
   // ───────────── Home: metadata and FAQ intro ─────────────
-  "Henel Engineers | Lightning Arresters & Windmill Services": "हेनेल इंजीनियर्स | लाइटनिंग अरेस्टर और पवनचक्की सेवाएँ",
+  "Henel Engineers | Lightning Arresters & Windmill Services": "हेनेल इंजीनियर्स | लाइटनिंग अरेस्टर (तड़ित चालक) और पवनचक्की सेवाएँ",
   "Henel Engineers, est. 1999: lightning arresters, earthing, surge protection, solar installation and windmill maintenance across India. TOPBAS supplier.": "हेनेल इंजीनियर्स, स्थापना 1999: पूरे भारत में लाइटनिंग अरेस्टर, अर्थिंग, सर्ज प्रोटेक्शन, सोलर इंस्टॉलेशन और पवनचक्की रखरखाव। TOPBAS सप्लायर।",
   "Henel Engineers Pvt. Ltd. | Lightning Protection & Windmill Maintenance, India": "हेनेल इंजीनियर्स | लाइटनिंग प्रोटेक्शन और पवनचक्की रखरखाव, भारत",
   "Lightning protection systems, ESE arresters, earthing & surge protection, and windmill operation & maintenance across India. Est. 1999. TOPBAS authorised supplier.": "पूरे भारत में लाइटनिंग प्रोटेक्शन सिस्टम, ESE अरेस्टर, अर्थिंग और सर्ज प्रोटेक्शन, तथा पवनचक्की संचालन व रखरखाव। स्थापना 1999। अधिकृत TOPBAS सप्लायर।",

@@ -242,8 +242,8 @@ const dict: Record<string, string> = {
   "Less downtime by working in the nacelle": "நாசெல்லுக்குள்ளேயே பணியாற்றுவதால் குறைந்த நிறுத்த நேரம்",
   "Lightning": "மின்னல்",
   "Lightning Arrester": "மின்னல் தடுப்பான்",
-  "Lightning Arrester Supply & Installation": "மின்னல் தடுப்பான் விநியோகம் & நிறுவல்",
-  "Lightning Arrester Supply & Installation in India": "இந்தியாவில் மின்னல் தடுப்பான் விநியோகம் & நிறுவல்",
+  "Lightning Arrester Supply & Installation": "இடிதாங்கி (மின்னல் தடுப்பான்) விநியோகம் & நிறுவல்",
+  "Lightning Arrester Supply & Installation in India": "இந்தியாவில் இடிதாங்கி (மின்னல் தடுப்பான்) விநியோகம் & நிறுவல்",
   "Lightning Arrester — FAQs": "மின்னல் தடுப்பான் — கேள்வி-பதில்கள்",
 };
 export default dict;

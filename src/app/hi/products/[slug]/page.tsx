@@ -1,4 +1,4 @@
-import ProductPage, { productMetadata, productStaticParams } from '../../../_pages/product';
+import ProductPage, { productMetadata, productStaticParams } from '@/app/_pages/product';
 
 export const dynamicParams = false;
 

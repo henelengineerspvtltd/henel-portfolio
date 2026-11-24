@@ -11,13 +11,14 @@ import Icon from '@/components/ui/AppIcon';
 import AppImage from '@/components/ui/AppImage';
 import ScrollReveal from '@/app/components/ScrollReveal';
 import HomeCTA from '@/app/components/HomeCTA';
-import WindmillFinalCTA from '@/app/windmill/components/WindmillFinalCTA';
+import WindmillFinalCTA from '@/app/(en)/windmill/components/WindmillFinalCTA';
 import { getLandingPage, landingPages, type Division } from '@/lib/landing-pages';
 import { serviceSchema, webPageSchema } from '@/lib/structured-data';
 import { withIndiaKeywords } from '@/lib/keywords';
 import { locationPages, locationHref } from '@/lib/locations';
 import type { Locale } from '@/i18n/config';
 import { t, tr } from '@/i18n/translate';
+import { withNativeKeywords } from '@/i18n/keywords';
 import { alternatesFor, localizePath, OG_LOCALE } from '@/i18n/config';
 
 export function landingStaticParams() {
@@ -29,7 +30,7 @@ export function landingMetadata(slug: string, locale: Locale): Metadata {
   if (!pageEn) return {};
   const page = tr(pageEn, locale);
   const alternates = alternatesFor(`/${page.slug}`, locale);
-  return {
+  return withNativeKeywords({
     title: page.metaTitle,
     description: page.metaDescription,
     keywords: withIndiaKeywords(pageEn.keywords),
@@ -47,7 +48,7 @@ export function landingMetadata(slug: string, locale: Locale): Metadata {
       description: page.metaDescription,
       images: [page.heroImage],
     },
-  };
+  }, `/${slug}`, locale);
 }
 
 const THEME: Record<Division, { color: string; tint: string; label: string; btn: string; parent: { name: string; href: string } }> = {

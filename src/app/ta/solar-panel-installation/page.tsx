@@ -1,4 +1,4 @@
-import SolarPage, { solarMetadata } from '../../_pages/solar-panel-installation';
+import SolarPage, { solarMetadata } from '@/app/_pages/solar-panel-installation';
 
 export const metadata = solarMetadata('ta');
 

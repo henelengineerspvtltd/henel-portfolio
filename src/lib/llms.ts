@@ -36,6 +36,28 @@ Key facts:
 
 Every page is available in English, Tamil and Hindi. English pages are at the root (for example ${u('/windmill')}); the Tamil version adds /ta (${u('/ta/windmill')}) and the Hindi version adds /hi (${u('/hi/windmill')}). The three versions carry the same facts.
 
+### தமிழ் (Tamil)
+
+ஹெனல் இன்ஜினியர்ஸ் பிரைவேட் லிமிடெட் — 1999 முதல், கன்னியாகுமரி மாவட்டம் ஆரல்வாய்மொழியில் இயங்கும் பொறியியல் நிறுவனம். இடிதாங்கி (மின்னல் தடுப்பான் — ESE மற்றும் சாதாரண), கெமிக்கல் எர்த்திங், சர்ஜ் பாதுகாப்புச் சாதனங்கள், சோலார் பேனல் நிறுவல் மற்றும் காற்றாலை பராமரிப்பு (கியர்பாக்ஸ், பிளேடு, ஜெனரேட்டர் பழுதுநீக்கம், 24x7 பழுது உதவி) — இந்தியா முழுவதும். TOPBAS தயாரிப்புகளின் அங்கீகரிக்கப்பட்ட விநியோகஸ்தர். தொலைபேசி: +91 94432 82312, +91 94436 92711. மின்னஞ்சல்: henelkkla@gmail.com.
+
+- [முகப்பு](${u('/ta')})
+- [இடிதாங்கி & மின்னல் பாதுகாப்பு](${u('/ta/lightning-protection')})
+- [காற்றாலை பராமரிப்பு](${u('/ta/windmill')})
+- [சோலார் பேனல் நிறுவல்](${u('/ta/solar-panel-installation')})
+- [சேவைப் பகுதிகள்](${u('/ta/service-areas')})
+- [தொடர்புகொள்ள](${u('/ta/contact')})
+
+### हिन्दी (Hindi)
+
+हेनेल इंजीनियर्स प्रा. लि. — 1999 से आरलवाइमोझी, कन्याकुमारी ज़िला, तमिलनाडु की इंजीनियरिंग कंपनी। लाइटनिंग अरेस्टर (तड़ित चालक — ESE और साधारण), केमिकल अर्थिंग, सर्ज प्रोटेक्शन डिवाइस, सोलर पैनल इंस्टॉलेशन और पवनचक्की रखरखाव (गियरबॉक्स, ब्लेड, जनरेटर मरम्मत, 24x7 ब्रेकडाउन सहायता) — पूरे भारत में। TOPBAS उत्पादों के अधिकृत आपूर्तिकर्ता। फ़ोन: +91 94432 82312, +91 94436 92711। ईमेल: henelkkla@gmail.com।
+
+- [होम](${u('/hi')})
+- [लाइटनिंग अरेस्टर और प्रोटेक्शन](${u('/hi/lightning-protection')})
+- [पवनचक्की रखरखाव](${u('/hi/windmill')})
+- [सोलर पैनल इंस्टॉलेशन](${u('/hi/solar-panel-installation')})
+- [सेवा क्षेत्र](${u('/hi/service-areas')})
+- [संपर्क](${u('/hi/contact')})
+
 ## Pages
 
 - [Home](${u('/')}): Company overview, the lightning protection, windmill and solar divisions, customer reviews and FAQs

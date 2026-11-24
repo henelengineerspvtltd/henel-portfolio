@@ -1,4 +1,4 @@
-import LightningProtectionPage, { lightningProtectionMetadata } from '../../_pages/lightning-protection';
+import LightningProtectionPage, { lightningProtectionMetadata } from '@/app/_pages/lightning-protection';
 
 export const metadata = lightningProtectionMetadata('ta');
 
