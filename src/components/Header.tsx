@@ -12,14 +12,6 @@ import { UI } from '@/i18n/ui-client';
 export default function Header() {
   const locale = localeFromPath(usePathname() || '/');
   const ui = UI[locale];
-  // The full desktop menu only appears once it fits next to the language switcher and
-  // the quote button; below that the menu button is used. Tamil words are longest.
-  // (Tailwind needs the class names written out in full.)
-  const MENU_AT = {
-    en: { nav: '2xl:flex', burger: '2xl:hidden' },
-    ta: { nav: 'min-[1700px]:flex', burger: 'min-[1700px]:hidden' },
-    hi: { nav: 'xl:flex', burger: 'xl:hidden' },
-  }[locale];
   const navLinks = [
     { label: ui.nav.home, href: '/' },
     { label: ui.nav.lightning, href: '/lightning-protection' },
@@ -67,7 +59,8 @@ export default function Header() {
               className="flex items-center gap-3 flex-shrink-0"
             >
               <HenelLogo size={44} />
-              <div className="hidden sm:block">
+              {/* Company name: hidden while the full menu is shown on mid-size screens, to make room for it. */}
+              <div className="hidden sm:block xl:hidden min-[1700px]:block">
                 <span className="block text-sm font-800 tracking-tight text-foreground leading-tight">
                   HENEL ENGINEERS
                 </span>
@@ -78,12 +71,12 @@ export default function Header() {
             </Link>
 
             {/* Desktop Nav */}
-            <nav className={`hidden ${MENU_AT.nav} items-center gap-1`} aria-label={ui.mainNav}>
+            <nav className={`hidden xl:flex items-center`} aria-label={ui.mainNav}>
               {navLinks?.map((link) => (
                 <Link
                   key={link?.href}
                   href={link?.href}
-                  className="px-3 py-2 text-sm font-600 text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/60 whitespace-nowrap"
+                  className="px-2.5 2xl:px-3 py-2 text-[13px] 2xl:text-sm font-600 text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/60 whitespace-nowrap"
                 >
                   {link?.label}
                 </Link>
@@ -92,7 +85,7 @@ export default function Header() {
 
             {/* CTA + Hamburger */}
             <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
-              <LanguageSwitcher className="hidden lg:flex" />
+              <LanguageSwitcher compact className="hidden lg:block" />
               <Link
                 href="/contact"
                 className="hidden sm:inline-flex btn-primary text-xs whitespace-nowrap max-[400px]:!px-3 max-[400px]:!tracking-normal"
@@ -102,7 +95,7 @@ export default function Header() {
               </Link>
               <button
                 onClick={() => setMenuOpen((v) => !v)}
-                className={`${MENU_AT.burger} p-2 rounded-md text-foreground hover:bg-muted/60 transition-colors`}
+                className={`xl:hidden p-2 rounded-md text-foreground hover:bg-muted/60 transition-colors`}
                 aria-label={menuOpen ? ui.closeMenu : ui.openMenu}
                 aria-expanded={menuOpen}
               >
