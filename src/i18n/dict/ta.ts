@@ -1,5 +1,9 @@
 /** Tamil phrasebook: English text → Tamil. Keys must match the English in the code exactly. */
+import divisions1 from './ta.divisions-1';
+import divisions2 from './ta.divisions-2';
 export const ta: Record<string, string> = {
+  ...divisions1,
+  ...divisions2,
   // ───────────── Shared: navigation, footer, buttons ─────────────
   "Home": "முகப்பு",
   "Breadcrumb": "வழித்தடம்",

@@ -1,5 +1,7 @@
 import React from 'react';
 import ScrollReveal from '@/app/components/ScrollReveal';
+import type { Locale } from '@/i18n/config';
+import { t, tr } from '@/i18n/translate';
 
 const reasons = [
   {
@@ -28,19 +30,20 @@ const reasons = [
   },
 ];
 
-export default function WindmillWhyChooseUs() {
+export default function WindmillWhyChooseUs({ locale = 'en' }: { locale?: Locale }) {
+  const _ = (text: string) => t(locale, text);
   return (
-    <section className="py-20 bg-card border-t border-border" aria-label="Why choose Henel Engineers">
+    <section className="py-20 bg-card border-t border-border" aria-label={_("Why choose Henel Engineers")}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal className="text-center mb-14">
           <h2 className="text-section-heading font-800 text-foreground inline-block relative">
-            <span className="relative z-10 px-4 bg-card">Why Choose Henel Engineers?</span>
+            <span className="relative z-10 px-4 bg-card">{_("Why Choose Henel Engineers?")}</span>
             <span className="absolute left-0 right-0 top-1/2 h-px bg-border -z-0" />
           </h2>
         </ScrollReveal>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {reasons.map((r, i) => (
+          {tr(reasons, locale).map((r, i) => (
             <ScrollReveal key={r.title} delay={(i % 3) as 0 | 1 | 2 | 3 | 4}>
               <div className="bg-background border border-border rounded-xl p-6 text-center h-full">
                 <h3 className="text-sm font-800 text-foreground mb-2">{r.title}</h3>

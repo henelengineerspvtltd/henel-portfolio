@@ -16,23 +16,26 @@ import {
   frpEarthPitCoverSpecs,
   productHref,
 } from '@/lib/products';
+import type { Locale } from '@/i18n/config';
+import { t, tr } from '@/i18n/translate';
 
 const specs = siriusSpecs;
 const umbraEcoFeatures = umbraEcoSpecs;
 
-export default function TopbasSection() {
+export default function TopbasSection({ locale = 'en' }: { locale?: Locale }) {
+  const _ = (text: string) => t(locale, text);
   return (
-    <section className="py-20 bg-card border-t border-border" aria-label="TOPBAS products">
+    <section className="py-20 bg-card border-t border-border" aria-label={_("TOPBAS products")}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal className="mb-14">
           <div className="flex items-start gap-4">
             <div>
-              <span className="section-label">Authorised Supplier</span>
+              <span className="section-label">{_("Authorised Supplier")}</span>
               <h2 className="text-section-heading font-800 text-foreground mt-2">
-                TOPBAS Lightning Protection Products
+                {_("TOPBAS Lightning Protection Products")}
               </h2>
               <p className="text-base text-muted-foreground mt-3 max-w-2xl leading-relaxed">
-                Henel Engineers is an authorised supplier of TOPBAS lightning protection products, imported from Turkey. TOPBAS manufactures a range of ESE lightning arresters and lightning protection accessories for global markets.
+                {_("Henel Engineers is an authorised supplier of TOPBAS lightning protection products, imported from Turkey. TOPBAS manufactures a range of ESE lightning arresters and lightning protection accessories for global markets.")}
               </p>
             </div>
           </div>
@@ -41,7 +44,7 @@ export default function TopbasSection() {
         {/* ESE Lightning Arresters Subheading */}
         <ScrollReveal className="mb-10">
           <h3 className="text-xl font-800 text-foreground border-b border-border pb-3">
-            ESE Lightning Arresters
+            {_("ESE Lightning Arresters")}
           </h3>
         </ScrollReveal>
 
@@ -52,7 +55,7 @@ export default function TopbasSection() {
             <div className="relative overflow-hidden rounded-xl aspect-square bg-muted flex items-center justify-center">
               <AppImage
                 src="/assets/images/sirius-ese-lightning-arrester.webp"
-                alt="TOPBAS SIRIUS ESE lightning arrester, stainless steel early streamer emission air terminal"
+                alt={_("TOPBAS SIRIUS ESE lightning arrester, stainless steel early streamer emission air terminal")}
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-contain p-4" />
@@ -61,10 +64,10 @@ export default function TopbasSection() {
                 <span
                   className="inline-block px-3 py-1 rounded-sm text-xs font-800 uppercase tracking-widest mb-2"
                   style={{ backgroundColor: '#CC0000', color: '#FFFFFF' }}>
-                  TOPBAS SIRIUS
+                  {_("TOPBAS SIRIUS")}
                 </span>
-                <p className="text-white font-700 text-base">ESE Lightning Arrester</p>
-                <p className="text-white/70 text-xs mt-1">Imported from Turkey</p>
+                <p className="text-white font-700 text-base">{_("ESE Lightning Arrester")}</p>
+                <p className="text-white/70 text-xs mt-1">{_("Imported from Turkey")}</p>
               </div>
             </div>
           </ScrollReveal>
@@ -73,11 +76,11 @@ export default function TopbasSection() {
           <ScrollReveal delay={2} className="lg:col-span-3">
             <div className="bg-card border border-border rounded-xl overflow-hidden">
               <div className="px-6 py-4 border-b border-border bg-muted/40">
-                <h3 className="text-base font-800 text-foreground">Technical Specifications</h3>
-                <p className="text-xs text-muted-foreground mt-0.5">TOPBAS SIRIUS ESE Lightning Arrester</p>
+                <h3 className="text-base font-800 text-foreground">{_("Technical Specifications")}</h3>
+                <p className="text-xs text-muted-foreground mt-0.5">{_("TOPBAS SIRIUS ESE Lightning Arrester")}</p>
               </div>
               <div className="px-6 py-2">
-                {specs?.map((spec) =>
+                {tr(specs, locale)?.map((spec) =>
                 <div key={spec?.label} className="spec-row">
                     <span className="text-xs font-700 uppercase tracking-wider text-muted-foreground w-2/5 flex-shrink-0">
                       {spec?.label}
@@ -90,18 +93,18 @@ export default function TopbasSection() {
               </div>
               <div className="px-6 py-4 border-t border-border bg-muted/20">
                 <p className="text-xs text-muted-foreground italic leading-relaxed">
-                  Specifications are sourced from TOPBAS product documentation. Consult the official TOPBAS datasheet and a qualified engineer for project-specific design decisions. Henel Engineers does not independently certify these specifications.
+                  {_("Specifications are sourced from TOPBAS product documentation. Consult the official TOPBAS datasheet and a qualified engineer for project-specific design decisions. Henel Engineers does not independently certify these specifications.")}
                 </p>
               </div>
             </div>
 
             <div className="mt-6 flex flex-wrap gap-4">
               <Link href="/contact" className="btn-primary">
-                Request a Quote
+                {_("Request a Quote")}
                 <Icon name="ArrowRightIcon" size={16} variant="outline" />
               </Link>
               <Link href={productHref('topbas-sirius-ese-lightning-arrester')} className="btn-outline-dark">
-                View Full Details
+                {_("View Full Details")}
               </Link>
               <a href="tel:+919443282312" className="contact-info-link">
                 <Icon name="PhoneIcon" size={16} variant="solid" style={{ color: '#CC0000' }} />
@@ -122,7 +125,7 @@ export default function TopbasSection() {
             <div className="relative overflow-hidden rounded-xl aspect-square bg-muted flex items-center justify-center">
               <AppImage
                 src="/assets/images/lyra-ese-lightning-arrester.webp"
-                alt="UMBRAECO non-electronic ESE lightning arrester"
+                alt={_("UMBRAECO non-electronic ESE lightning arrester")}
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-contain p-4" />
@@ -130,10 +133,10 @@ export default function TopbasSection() {
                 <span
                   className="inline-block px-3 py-1 rounded-sm text-xs font-800 uppercase tracking-widest mb-2"
                   style={{ backgroundColor: '#CC0000', color: '#FFFFFF' }}>
-                  UMBRAECO
+                  {_("UMBRAECO")}
                 </span>
-                <p className="text-white font-700 text-base">ESE Lightning Arrester</p>
-                <p className="text-white/70 text-xs mt-1">Non-Electronic ESE</p>
+                <p className="text-white font-700 text-base">{_("ESE Lightning Arrester")}</p>
+                <p className="text-white/70 text-xs mt-1">{_("Non-Electronic ESE")}</p>
               </div>
             </div>
           </ScrollReveal>
@@ -142,11 +145,11 @@ export default function TopbasSection() {
           <ScrollReveal delay={2} className="lg:col-span-3">
             <div className="bg-card border border-border rounded-xl overflow-hidden">
               <div className="px-6 py-4 border-b border-border bg-muted/40">
-                <h3 className="text-base font-800 text-foreground">Features</h3>
-                <p className="text-xs text-muted-foreground mt-0.5">UMBRAECO ESE Lightning Arrester</p>
+                <h3 className="text-base font-800 text-foreground">{_("Features")}</h3>
+                <p className="text-xs text-muted-foreground mt-0.5">{_("UMBRAECO ESE Lightning Arrester")}</p>
               </div>
               <div className="px-6 py-2">
-                {umbraEcoFeatures?.map((feature) =>
+                {tr(umbraEcoFeatures, locale)?.map((feature) =>
                   <div key={feature?.label} className="spec-row">
                     <span className="text-xs font-700 uppercase tracking-wider text-muted-foreground w-2/5 flex-shrink-0">
                       {feature?.label}
@@ -159,18 +162,18 @@ export default function TopbasSection() {
               </div>
               <div className="px-6 py-4 border-t border-border bg-muted/20">
                 <p className="text-xs text-muted-foreground italic leading-relaxed">
-                  Designed and tested as per NF C 17-102 (2011) Standard. Consult a qualified engineer for project-specific design decisions.
+                  {_("Designed and tested as per NF C 17-102 (2011) Standard. Consult a qualified engineer for project-specific design decisions.")}
                 </p>
               </div>
             </div>
 
             <div className="mt-6 flex flex-wrap gap-4">
               <Link href="/contact" className="btn-primary">
-                Request a Quote
+                {_("Request a Quote")}
                 <Icon name="ArrowRightIcon" size={16} variant="outline" />
               </Link>
               <Link href={productHref('umbraeco-ese-lightning-arrester')} className="btn-outline-dark">
-                View Full Details
+                {_("View Full Details")}
               </Link>
               <a href="tel:+919443282312" className="contact-info-link">
                 <Icon name="PhoneIcon" size={16} variant="solid" style={{ color: '#CC0000' }} />
@@ -187,7 +190,7 @@ export default function TopbasSection() {
         {/* Surge Protection Devices (SPD) Subheading */}
         <ScrollReveal className="mt-16 mb-10">
           <h3 className="text-xl font-800 text-foreground border-b border-border pb-3">
-            Surge Protection Devices (SPD)
+            {_("Surge Protection Devices (SPD)")}
           </h3>
         </ScrollReveal>
 
@@ -198,7 +201,7 @@ export default function TopbasSection() {
             <div className="relative overflow-hidden rounded-xl aspect-square bg-muted flex items-center justify-center">
               <AppImage
                 src="/assets/images/type-1-2-spd.webp"
-                alt="Surge Protection Device (SPD) Type 2 single phase unit for electrical surge protection"
+                alt={_("Surge Protection Device (SPD) Type 2 single phase unit for electrical surge protection")}
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-contain p-4" />
@@ -206,10 +209,10 @@ export default function TopbasSection() {
                 <span
                   className="inline-block px-3 py-1 rounded-sm text-xs font-800 uppercase tracking-widest mb-2"
                   style={{ backgroundColor: '#CC0000', color: '#FFFFFF' }}>
-                  SPD
+                  {_("SPD")}
                 </span>
-                <p className="text-white font-700 text-base">Surge Protection Device</p>
-                <p className="text-white/70 text-xs mt-1">Type 1 + 2 SPD, Three Phase</p>
+                <p className="text-white font-700 text-base">{_("Surge Protection Device")}</p>
+                <p className="text-white/70 text-xs mt-1">{_("Type 1 + 2 SPD, Three Phase")}</p>
               </div>
             </div>
           </ScrollReveal>
@@ -218,11 +221,11 @@ export default function TopbasSection() {
           <ScrollReveal delay={2} className="lg:col-span-3">
             <div className="bg-card border border-border rounded-xl overflow-hidden">
               <div className="px-6 py-4 border-b border-border bg-muted/40">
-                <h3 className="text-base font-800 text-foreground">Technical Specifications</h3>
-                <p className="text-xs text-muted-foreground mt-0.5">Surge Protection Device (SPD)</p>
+                <h3 className="text-base font-800 text-foreground">{_("Technical Specifications")}</h3>
+                <p className="text-xs text-muted-foreground mt-0.5">{_("Surge Protection Device (SPD)")}</p>
               </div>
               <div className="px-6 py-2">
-                {spdSpecs?.map((spec) =>
+                {tr(spdSpecs, locale)?.map((spec) =>
                   <div key={spec?.label} className="spec-row">
                     <span className="text-xs font-700 uppercase tracking-wider text-muted-foreground w-2/5 flex-shrink-0">
                       {spec?.label}
@@ -235,18 +238,18 @@ export default function TopbasSection() {
               </div>
               <div className="px-6 py-4 border-t border-border bg-muted/20">
                 <p className="text-xs text-muted-foreground italic leading-relaxed">
-                  Consult a qualified engineer for project-specific design decisions.
+                  {_("Consult a qualified engineer for project-specific design decisions.")}
                 </p>
               </div>
             </div>
 
             <div className="mt-6 flex flex-wrap gap-4">
               <Link href="/contact" className="btn-primary">
-                Request a Quote
+                {_("Request a Quote")}
                 <Icon name="ArrowRightIcon" size={16} variant="outline" />
               </Link>
               <Link href={productHref('type-1-2-surge-protection-device')} className="btn-outline-dark">
-                View Full Details
+                {_("View Full Details")}
               </Link>
               <a href="tel:+919443282312" className="contact-info-link">
                 <Icon name="PhoneIcon" size={16} variant="solid" style={{ color: '#CC0000' }} />
@@ -263,12 +266,12 @@ export default function TopbasSection() {
         {/* Earth Rods Subheading */}
         <ScrollReveal className="mt-4 mb-10">
           <h3 className="text-xl font-800 text-foreground border-b border-border pb-3">
-            Earth Rods
+            {_("Earth Rods")}
           </h3>
         </ScrollReveal>
 
         {/* Copper Bonded Earth Rod */}
-        <ProductSpecCard
+        <ProductSpecCard locale={locale}
           className="mb-16"
           imageSrc="/assets/images/copper-earth-rod.webp"
           imageAlt="Copper bonded earth rod for earthing and grounding installations"
@@ -281,7 +284,7 @@ export default function TopbasSection() {
         />
 
         {/* GI Earth Rod */}
-        <ProductSpecCard
+        <ProductSpecCard locale={locale}
           className="mb-16"
           imageSrc="/assets/images/gi-earth-rod.webp"
           imageAlt="GI earth rod, galvanised iron earthing rod for grounding installations"
@@ -296,12 +299,12 @@ export default function TopbasSection() {
         {/* Earthing Compound Subheading */}
         <ScrollReveal className="mt-4 mb-10">
           <h3 className="text-xl font-800 text-foreground border-b border-border pb-3">
-            Earthing Compound
+            {_("Earthing Compound")}
           </h3>
         </ScrollReveal>
 
         {/* CARBOMAXX Earthing Compound */}
-        <ProductSpecCard
+        <ProductSpecCard locale={locale}
           className="mb-16"
           imageSrc="/assets/images/carbomaxx-earthing-compound.webp"
           imageAlt="CARBOMAXX earthing compound bag, backfill compound for earthing pits"
@@ -316,12 +319,12 @@ export default function TopbasSection() {
         {/* Conventional Lightning Arresters Subheading */}
         <ScrollReveal className="mt-4 mb-10">
           <h3 className="text-xl font-800 text-foreground border-b border-border pb-3">
-            Conventional Lightning Arresters
+            {_("Conventional Lightning Arresters")}
           </h3>
         </ScrollReveal>
 
         {/* Copper Bonded Conventional Lightning Arrester */}
-        <ProductSpecCard
+        <ProductSpecCard locale={locale}
           className="mb-16"
           imageSrc="/assets/images/copper-spike-lightning-arrester.webp"
           imageAlt="Copper bonded conventional lightning arrester with mounting base"
@@ -336,12 +339,12 @@ export default function TopbasSection() {
         {/* Earth Pit Chambers Subheading */}
         <ScrollReveal className="mt-4 mb-10">
           <h3 className="text-xl font-800 text-foreground border-b border-border pb-3">
-            Earth Pit Chambers
+            {_("Earth Pit Chambers")}
           </h3>
         </ScrollReveal>
 
         {/* Earth Pit Cover */}
-        <ProductSpecCard
+        <ProductSpecCard locale={locale}
           imageSrc="/assets/images/earth-pit-cover.webp"
           imageAlt="Earth pit cover chamber, polyplastic earthing pit cover with lid"
           badge="Earth Pit Cover"
@@ -353,7 +356,7 @@ export default function TopbasSection() {
         />
 
         {/* FRP Earth Pit Cover */}
-        <ProductSpecCard
+        <ProductSpecCard locale={locale}
           className="mt-16"
           imageSrc="/assets/images/frp-earth-pit-cover.webp"
           imageAlt="FRP earth pit cover chamber, corrosion resistant earthing pit cover with green lid"

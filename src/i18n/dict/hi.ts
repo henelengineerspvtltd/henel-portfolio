@@ -1,5 +1,9 @@
 /** Hindi phrasebook: English text → Hindi. Keys must match the English in the code exactly. */
+import divisions1 from './hi.divisions-1';
+import divisions2 from './hi.divisions-2';
 export const hi: Record<string, string> = {
+  ...divisions1,
+  ...divisions2,
   // ───────────── Shared: navigation, footer, buttons ─────────────
   "Home": "होम",
   "Breadcrumb": "पथ",

@@ -3,6 +3,8 @@ import Link from '@/components/LocaleLink';
 import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
 import ScrollReveal from '@/app/components/ScrollReveal';
+import type { Locale } from '@/i18n/config';
+import { t, tr } from '@/i18n/translate';
 
 interface Spec {
   label: string;
@@ -22,21 +24,32 @@ interface ProductSpecCardProps {
   className?: string;
   /** Link to the product's own page. */
   detailsHref?: string;
+  locale?: Locale;
 }
 
 export default function ProductSpecCard({
   imageSrc,
-  imageAlt,
-  badge,
-  productLine,
-  tagline,
-  specsHeading = 'Product Details',
-  specsSubtitle,
-  specs,
-  note,
+  imageAlt: imageAltEn,
+  badge: badgeEn,
+  productLine: productLineEn,
+  tagline: taglineEn,
+  specsHeading: specsHeadingEn = 'Product Details',
+  specsSubtitle: specsSubtitleEn,
+  specs: specsEn,
+  note: noteEn,
   className = '',
   detailsHref,
+  locale = 'en',
 }: ProductSpecCardProps) {
+  const _ = (text: string) => t(locale, text);
+  const imageAlt = _(imageAltEn);
+  const badge = _(badgeEn);
+  const productLine = _(productLineEn);
+  const tagline = _(taglineEn);
+  const specsHeading = _(specsHeadingEn);
+  const specsSubtitle = _(specsSubtitleEn);
+  const specs = tr(specsEn, locale);
+  const note = noteEn && _(noteEn);
   return (
     <div className={`grid grid-cols-1 lg:grid-cols-5 gap-10 items-start ${className}`}>
       {/* Product image */}
@@ -90,12 +103,12 @@ export default function ProductSpecCard({
 
         <div className="mt-6 flex flex-wrap gap-4">
           <Link href="/contact" className="btn-primary">
-            Request a Quote
+            {_("Request a Quote")}
             <Icon name="ArrowRightIcon" size={16} variant="outline" />
           </Link>
           {detailsHref && (
             <Link href={detailsHref} className="btn-outline-dark">
-              View Full Details
+              {_("View Full Details")}
             </Link>
           )}
           <a href="tel:+919443282312" className="contact-info-link">

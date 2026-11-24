@@ -1,6 +1,8 @@
 import React from 'react';
 import Icon from '@/components/ui/AppIcon';
 import ScrollReveal from '@/app/components/ScrollReveal';
+import type { Locale } from '@/i18n/config';
+import { t, tr } from '@/i18n/translate';
 
 const services = [
   {
@@ -50,29 +52,28 @@ const services = [
   },
 ];
 
-export default function WindmillServices() {
+export default function WindmillServices({ locale = 'en' }: { locale?: Locale }) {
+  const _ = (text: string) => t(locale, text);
   return (
-    <section className="py-20 bg-card border-t border-border" aria-label="Windmill services">
+    <section className="py-20 bg-card border-t border-border" aria-label={_("Windmill services")}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal className="mb-14 text-center">
-          <span className="section-label-green">Our Services</span>
+          <span className="section-label-green">{_("Our Services")}</span>
           <h2 className="text-section-heading font-800 text-foreground mt-2">
-            Complete Wind Turbine Maintenance Solutions
+            {_("Complete Wind Turbine Maintenance Solutions")}
           </h2>
           <p className="text-base text-muted-foreground mt-3 max-w-2xl mx-auto leading-relaxed">
-            From routine maintenance to major component repair and emergency breakdown support,
-            Henel Engineers provides comprehensive services designed to minimize downtime and
-            maintain reliable WTG performance.
+            {_("From routine maintenance to major component repair and emergency breakdown support, Henel Engineers provides comprehensive services designed to minimize downtime and maintain reliable WTG performance.")}
           </p>
         </ScrollReveal>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border border-border rounded-xl overflow-hidden">
-          {services.map((s, i) => (
+          {tr(services, locale).map((s, i) => (
             <ScrollReveal
               key={s.title}
               delay={(i % 3) as 0 | 1 | 2 | 3 | 4}
               className={`p-8 bg-background group hover:bg-card transition-colors ${
-                i < services.length - (services.length % 3 || 3) ? 'border-b border-border' : ''
+                i < tr(services, locale).length - (tr(services, locale).length % 3 || 3) ? 'border-b border-border' : ''
               } ${i % 3 !== 2 ? 'sm:border-r border-border' : ''}`}
             >
               <div

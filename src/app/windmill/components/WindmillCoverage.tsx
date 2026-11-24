@@ -2,6 +2,8 @@ import React from 'react';
 import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
 import ScrollReveal from '@/app/components/ScrollReveal';
+import type { Locale } from '@/i18n/config';
+import { t, tr } from '@/i18n/translate';
 
 const points = [
   { icon: 'MapPinIcon', label: 'Wide Coverage Across Regions' },
@@ -10,16 +12,17 @@ const points = [
   { icon: 'ClockIcon', label: 'Minimized Downtime' },
 ];
 
-export default function WindmillCoverage() {
+export default function WindmillCoverage({ locale = 'en' }: { locale?: Locale }) {
+  const _ = (text: string) => t(locale, text);
   return (
-    <section className="py-20 bg-background" aria-label="Service coverage">
+    <section className="py-20 bg-background" aria-label={_("Service coverage")}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <ScrollReveal>
             <div className="relative overflow-hidden rounded-xl aspect-square bg-card border border-border">
               <AppImage
                 src="/assets/images/windmill/tn-karnataka-coverage-map.png"
-                alt="Map of Tamil Nadu and Karnataka, Henel Engineers' home wind belt"
+                alt={_("Map of Tamil Nadu and Karnataka, Henel Engineers' home wind belt")}
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-contain p-4"
@@ -28,17 +31,15 @@ export default function WindmillCoverage() {
           </ScrollReveal>
 
           <ScrollReveal delay={1}>
-            <span className="section-label-green">Our Coverage</span>
+            <span className="section-label-green">{_("Our Coverage")}</span>
             <h2 className="text-section-heading font-800 text-foreground mt-2 mb-5">
-              Service Across India
+              {_("Service Across India")}
             </h2>
             <p className="text-sm text-muted-foreground leading-relaxed mb-8">
-              From our base in the Tamil Nadu and Karnataka wind belts, we provide WTG maintenance and breakdown services across India,
-              supported by experienced technical personnel and the resources required to respond
-              quickly and minimize machine downtime.
+              {_("From our base in the Tamil Nadu and Karnataka wind belts, we provide WTG maintenance and breakdown services across India, supported by experienced technical personnel and the resources required to respond quickly and minimize machine downtime.")}
             </p>
             <div className="grid grid-cols-2 gap-5">
-              {points.map((p) => (
+              {tr(points, locale).map((p) => (
                 <div key={p.label} className="flex items-center gap-3">
                   <div
                     className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"

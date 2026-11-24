@@ -21,7 +21,7 @@ function ReviewCard({ review, locale }: { review: CustomerReview; locale: Locale
         <Stars locale={locale} />
         <span className="text-[11px] font-700 uppercase tracking-wide text-muted-foreground">Google</span>
       </div>
-      <blockquote className="text-sm text-foreground leading-relaxed flex-1">“{review.text}”</blockquote>
+      <blockquote lang="en" className="text-sm text-foreground leading-relaxed flex-1">“{review.text}”</blockquote>
       <figcaption className="mt-4 pt-3 border-t border-border">
         <span className="block text-sm font-700 text-foreground">{review.name}</span>
         <span className="block text-xs text-muted-foreground mt-0.5">
