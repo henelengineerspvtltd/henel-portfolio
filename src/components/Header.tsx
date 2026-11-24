@@ -10,7 +10,16 @@ import { localeFromPath } from '@/i18n/config';
 import { UI } from '@/i18n/ui-client';
 
 export default function Header() {
-  const ui = UI[localeFromPath(usePathname() || '/')];
+  const locale = localeFromPath(usePathname() || '/');
+  const ui = UI[locale];
+  // The full desktop menu only appears once it fits next to the language switcher and
+  // the quote button; below that the menu button is used. Tamil words are longest.
+  // (Tailwind needs the class names written out in full.)
+  const MENU_AT = {
+    en: { nav: '2xl:flex', burger: '2xl:hidden' },
+    ta: { nav: 'min-[1700px]:flex', burger: 'min-[1700px]:hidden' },
+    hi: { nav: 'xl:flex', burger: 'xl:hidden' },
+  }[locale];
   const navLinks = [
     { label: ui.nav.home, href: '/' },
     { label: ui.nav.lightning, href: '/lightning-protection' },
@@ -69,7 +78,7 @@ export default function Header() {
             </Link>
 
             {/* Desktop Nav */}
-            <nav className="hidden xl:flex items-center gap-1" aria-label={ui.mainNav}>
+            <nav className={`hidden ${MENU_AT.nav} items-center gap-1`} aria-label={ui.mainNav}>
               {navLinks?.map((link) => (
                 <Link
                   key={link?.href}
@@ -82,18 +91,18 @@ export default function Header() {
             </nav>
 
             {/* CTA + Hamburger */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
               <LanguageSwitcher className="hidden lg:flex" />
               <Link
                 href="/contact"
-                className="hidden sm:inline-flex btn-primary text-xs"
+                className="hidden sm:inline-flex btn-primary text-xs whitespace-nowrap max-[400px]:!px-3 max-[400px]:!tracking-normal"
                 aria-label={ui.requestQuoteAria}
               >
                 {ui.requestQuote}
               </Link>
               <button
                 onClick={() => setMenuOpen((v) => !v)}
-                className="xl:hidden p-2 rounded-md text-foreground hover:bg-muted/60 transition-colors"
+                className={`${MENU_AT.burger} p-2 rounded-md text-foreground hover:bg-muted/60 transition-colors`}
                 aria-label={menuOpen ? ui.closeMenu : ui.openMenu}
                 aria-expanded={menuOpen}
               >

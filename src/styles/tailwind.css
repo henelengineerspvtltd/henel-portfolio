@@ -113,37 +113,23 @@ html:lang(hi-IN) * {
     }
   }
 
-  /* Home page Google reviews: scrolls left to right, pauses on hover/focus. */
-  .reviews-track {
-    animation: reviews-scroll 70s linear infinite;
+  /* Home page Google reviews: a swipeable strip (auto-scroll is in ReviewsCarousel.tsx). */
+  .reviews-scroller {
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
   }
 
-  .reviews-marquee:hover .reviews-track,
-  .reviews-marquee:focus-within .reviews-track {
-    animation-play-state: paused;
+  .reviews-scroller::-webkit-scrollbar {
+    display: none;
   }
 
-  .reviews-marquee:focus-visible {
+  .reviews-scroller:focus-visible {
     outline: 2px solid var(--ring, #2563eb);
     outline-offset: 4px;
   }
 
-  @keyframes reviews-scroll {
-    from {
-      transform: translateX(-50%);
-    }
-    to {
-      transform: translateX(0);
-    }
-  }
-
   @media (prefers-reduced-motion: reduce) {
-    .reviews-track {
-      animation: none;
-    }
-    .reviews-marquee {
-      overflow-x: auto;
-    }
     .reviews-duplicate {
       display: none;
     }

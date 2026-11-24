@@ -142,5 +142,8 @@ const dict: Record<string, string> = {
   "Solar Energy — overview": "सौर ऊर्जा — अवलोकन",
   "TOPBAS ESE arresters, SPDs, earth rods, earthing compound and earth pit covers with full specifications.": "पूरे स्पेसिफ़िकेशन के साथ TOPBAS ESE अरेस्टर, SPD, अर्थ रॉड, अर्थिंग कंपाउंड और अर्थ पिट कवर।",
   "Windmill Operation & Maintenance — overview": "पवनचक्की संचालन और रखरखाव — अवलोकन",
+  "Customer reviews. Swipe or use the arrows to see more.": "ग्राहक समीक्षाएँ। और देखने के लिए स्वाइप करें या तीरों का इस्तेमाल करें।",
+  "Previous reviews": "पिछली समीक्षाएँ",
+  "Next reviews": "अगली समीक्षाएँ",
 };
 export default dict;
