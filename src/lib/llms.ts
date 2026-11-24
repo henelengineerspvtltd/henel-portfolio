@@ -32,6 +32,10 @@ Key facts:
 - Based in: Kanyakumari District, Tamil Nadu (home wind belt: Tamil Nadu & Karnataka)
 - Wind energy: 30+ active Comprehensive Maintenance Contracts (CMC), 7+ WTG makes supported, 24x7 breakdown support
 
+## Languages
+
+Every page is available in English, Tamil and Hindi. English pages are at the root (for example ${u('/windmill')}); the Tamil version adds /ta (${u('/ta/windmill')}) and the Hindi version adds /hi (${u('/hi/windmill')}). The three versions carry the same facts.
+
 ## Pages
 
 - [Home](${u('/')}): Company overview, the lightning protection, windmill and solar divisions, customer reviews and FAQs

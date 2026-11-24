@@ -4,6 +4,7 @@ import { landingPages, SOLAR_IMAGES } from '@/lib/landing-pages';
 import { products, productHref } from '@/lib/products';
 import { locationPages, locationHref } from '@/lib/locations';
 import { guides, guideHref } from '@/lib/guides';
+import { HTML_LANG, LOCALES, localizePath } from '@/i18n/config';
 
 const SITE_CONTENT_UPDATED = '2026-11-24';
 const GUIDES_UPDATED = '2026-11-24';
@@ -12,7 +13,7 @@ const PRODUCTS_UPDATED = '2026-11-07';
 
 const img = (path: string) => (path.startsWith('http') ? path : `${SITE_URL}${path}`);
 
-export default function sitemap(): MetadataRoute.Sitemap {
+function englishEntries(): MetadataRoute.Sitemap {
   // Fixed date: update SITE_CONTENT_UPDATED when page content changes. Using the build time
   // marks every page as changed on each deploy, which teaches Google to ignore lastmod.
   const lastModified = new Date(SITE_CONTENT_UPDATED);
@@ -144,4 +145,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ],
     },
   ];
+}
+
+/**
+ * Every page exists in English, Tamil and Hindi. Each URL lists all three versions
+ * (plus x-default) as alternates, which is how search engines pair the translations.
+ */
+export default function sitemap(): MetadataRoute.Sitemap {
+  return englishEntries().flatMap((entry) => {
+    const path = entry.url.slice(SITE_URL.length) || '/';
+    const urlFor = (l: (typeof LOCALES)[number]) => {
+      const p = localizePath(path, l);
+      return p === '/' ? SITE_URL : SITE_URL + p;
+    };
+    const languages: Record<string, string> = Object.fromEntries(LOCALES.map((l) => [HTML_LANG[l], urlFor(l)]));
+    languages['x-default'] = urlFor('en');
+    return LOCALES.map((l) => ({
+      ...entry,
+      url: urlFor(l),
+      priority: l === 'en' ? entry.priority : Math.round((entry.priority ?? 0.5) * 0.9 * 100) / 100,
+      alternates: { languages },
+    }));
+  });
 }

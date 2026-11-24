@@ -9,6 +9,9 @@ import places from './ta.places';
 import locations1 from './ta.locations-1';
 import locations2 from './ta.locations-2';
 import locations3 from './ta.locations-3';
+import pages1 from './ta.pages-1';
+import pages2 from './ta.pages-2';
+import pages3 from './ta.pages-3';
 export const ta: Record<string, string> = {
   ...divisions1,
   ...divisions2,
@@ -20,6 +23,9 @@ export const ta: Record<string, string> = {
   ...locations1,
   ...locations2,
   ...locations3,
+  ...pages1,
+  ...pages2,
+  ...pages3,
   // ───────────── Shared: navigation, footer, buttons ─────────────
   "Home": "முகப்பு",
   "Breadcrumb": "வழித்தடம்",

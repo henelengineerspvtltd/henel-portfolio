@@ -67,7 +67,7 @@ const METADATA: Metadata = {
 };
 
 export function windmillMetadata(locale: Locale): Metadata {
-  return localizeMetadata(METADATA, 'C:/Program Files/Git/windmill', locale);
+  return localizeMetadata(METADATA, '/windmill', locale);
 }
 
 

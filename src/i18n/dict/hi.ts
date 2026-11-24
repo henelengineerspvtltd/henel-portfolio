@@ -9,6 +9,9 @@ import places from './hi.places';
 import locations1 from './hi.locations-1';
 import locations2 from './hi.locations-2';
 import locations3 from './hi.locations-3';
+import pages1 from './hi.pages-1';
+import pages2 from './hi.pages-2';
+import pages3 from './hi.pages-3';
 export const hi: Record<string, string> = {
   ...divisions1,
   ...divisions2,
@@ -20,6 +23,9 @@ export const hi: Record<string, string> = {
   ...locations1,
   ...locations2,
   ...locations3,
+  ...pages1,
+  ...pages2,
+  ...pages3,
   // ───────────── Shared: navigation, footer, buttons ─────────────
   "Home": "होम",
   "Breadcrumb": "पथ",

@@ -40,7 +40,7 @@ export function t(locale: Locale, text: string, vars?: Record<string, string | n
 const SKIP_KEYS = new Set([
   'slug', 'href', 'src', 'url', 'image', 'heroImage', 'icon', 'color', 'tint', 'division',
   'servicePage', 'related', 'nearby', 'services', 'areaServed', 'serviceType', 'datePublished',
-  'dateModified', 'date', 'source', 'id', 'keywords', 'district', 'state', 'btn', 'label_class',
+  'dateModified', 'date', 'source', 'id', 'keywords', 'district', 'state', 'btn', 'label_class', 'labelClass', 'photo',
 ]);
 
 /** Deep-translate every visible string in a data object (page content, FAQs, products). */
