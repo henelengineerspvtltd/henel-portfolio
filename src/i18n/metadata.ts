@@ -2,6 +2,7 @@ import 'server-only';
 import type { Metadata } from 'next';
 import { alternatesFor, OG_LOCALE, type Locale } from './config';
 import { t } from './translate';
+import { withNativeKeywords } from './keywords';
 
 type Title = Metadata['title'];
 
@@ -27,7 +28,7 @@ export function localizeMetadata(meta: Metadata, path: string, locale: Locale): 
       ? images.map((img) => (img && typeof img === 'object' && 'alt' in img ? { ...img, alt: tx((img as { alt: string }).alt) } : img))
       : images;
 
-  return {
+  return withNativeKeywords({
     ...meta,
     title: translateTitle(meta.title, locale),
     description: tx(meta.description) as string | undefined,
@@ -53,5 +54,5 @@ export function localizeMetadata(meta: Metadata, path: string, locale: Locale): 
           },
         }
       : {}),
-  } as Metadata;
+  } as Metadata, path, locale);
 }

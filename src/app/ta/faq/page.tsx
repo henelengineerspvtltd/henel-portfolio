@@ -1,4 +1,4 @@
-import FaqPage, { faqMetadata } from '../../_pages/faq';
+import FaqPage, { faqMetadata } from '@/app/_pages/faq';
 
 export const metadata = faqMetadata('ta');
 

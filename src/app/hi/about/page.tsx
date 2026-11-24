@@ -1,4 +1,4 @@
-import AboutPage, { aboutMetadata } from '../../_pages/about';
+import AboutPage, { aboutMetadata } from '@/app/_pages/about';
 
 export const metadata = aboutMetadata('hi');
 

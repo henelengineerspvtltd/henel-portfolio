@@ -1,4 +1,4 @@
-import ServiceAreasPage, { serviceAreasMetadata } from '../../_pages/service-areas';
+import ServiceAreasPage, { serviceAreasMetadata } from '@/app/_pages/service-areas';
 
 export const metadata = serviceAreasMetadata('ta');
 

@@ -142,7 +142,7 @@ export function organizationSchema() {
     '@id': ORG_ID,
     name: COMPANY_NAME,
     legalName: COMPANY_NAME,
-    alternateName: ['Henel Engineers', 'HENEL ENGINEERS PVT. LTD.', 'Henel Engineers Private Limited'],
+    alternateName: ['Henel Engineers', 'HENEL ENGINEERS PVT. LTD.', 'Henel Engineers Private Limited', 'ஹெனல் இன்ஜினியர்ஸ்', 'हेनेल इंजीनियर्स'],
     url: SITE_URL,
     sameAs: SAME_AS,
     logo: {
@@ -220,9 +220,9 @@ export function websiteSchema() {
     '@type': 'WebSite',
     '@id': WEBSITE_ID,
     name: COMPANY_NAME,
-    alternateName: 'Henel Engineers',
+    alternateName: ['Henel Engineers', 'ஹெனல் இன்ஜினியர்ஸ்', 'हेनेल इंजीनियर्स'],
     url: SITE_URL,
-    inLanguage: 'en-IN',
+    inLanguage: ['en-IN', 'ta-IN', 'hi-IN'],
     publisher: { '@id': ORG_ID },
   };
 }
@@ -234,7 +234,7 @@ export function localBusinessSchema() {
     '@type': 'LocalBusiness',
     '@id': LOCAL_BUSINESS_ID,
     name: COMPANY_NAME,
-    alternateName: 'Henel Engineers',
+    alternateName: ['Henel Engineers', 'ஹெனல் இன்ஜினியர்ஸ்', 'हेनेल इंजीनियर्स'],
     description:
       'Lightning protection systems, ESE lightning arresters, earthing, surge protection, solar panel installation and windmill operation & maintenance services across India. Est. 1999.',
     image: `${SITE_URL}/assets/images/henel-logo.png`,

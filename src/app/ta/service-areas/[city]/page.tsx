@@ -1,4 +1,4 @@
-import LocationPage, { locationMetadata, locationStaticParams } from '../../../_pages/location';
+import LocationPage, { locationMetadata, locationStaticParams } from '@/app/_pages/location';
 
 export const dynamicParams = false;
 

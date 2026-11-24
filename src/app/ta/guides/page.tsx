@@ -1,4 +1,4 @@
-import GuidesPage, { guidesMetadata } from '../../_pages/guides';
+import GuidesPage, { guidesMetadata } from '@/app/_pages/guides';
 
 export const metadata = guidesMetadata('ta');
 

@@ -1,4 +1,4 @@
-import HomePage, { homeMetadata } from '../_pages/home';
+import HomePage, { homeMetadata } from '@/app/_pages/home';
 
 export const metadata = homeMetadata('ta');
 

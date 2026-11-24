@@ -18,6 +18,7 @@ import { withIndiaKeywords } from '@/lib/keywords';
 import { productDescriptions } from '@/lib/product-descriptions';
 import type { Locale } from '@/i18n/config';
 import { t, tr } from '@/i18n/translate';
+import { withNativeKeywords } from '@/i18n/keywords';
 import { alternatesFor, OG_LOCALE } from '@/i18n/config';
 
 export function productStaticParams() {
@@ -29,7 +30,7 @@ export function productMetadata(slug: string, locale: Locale): Metadata {
   if (!productEn) return {};
   const product = tr(productEn, locale);
   const alternates = alternatesFor(productHref(product.slug), locale);
-  return {
+  return withNativeKeywords({
     title: product.metaTitle,
     description: product.metaDescription,
     keywords: withIndiaKeywords(productEn.keywords),
@@ -47,7 +48,7 @@ export function productMetadata(slug: string, locale: Locale): Metadata {
       description: product.metaDescription,
       images: [product.image],
     },
-  };
+  }, `/products/${slug}`, locale);
 }
 
 export default function ProductPage({ slug, locale }: { slug: string; locale: Locale }) {

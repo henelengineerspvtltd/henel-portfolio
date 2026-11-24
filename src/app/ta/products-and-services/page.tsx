@@ -1,4 +1,4 @@
-import ProductsAndServicesPage, { productsAndServicesMetadata } from '../../_pages/products-and-services';
+import ProductsAndServicesPage, { productsAndServicesMetadata } from '@/app/_pages/products-and-services';
 
 export const metadata = productsAndServicesMetadata('ta');
 

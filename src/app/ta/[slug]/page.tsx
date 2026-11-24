@@ -1,4 +1,4 @@
-import LandingPage, { landingMetadata, landingStaticParams } from '../../_pages/landing';
+import LandingPage, { landingMetadata, landingStaticParams } from '@/app/_pages/landing';
 
 export const dynamicParams = false;
 

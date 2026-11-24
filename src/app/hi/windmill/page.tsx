@@ -1,4 +1,4 @@
-import WindmillPage, { windmillMetadata } from '../../_pages/windmill';
+import WindmillPage, { windmillMetadata } from '@/app/_pages/windmill';
 
 export const metadata = windmillMetadata('hi');
 
