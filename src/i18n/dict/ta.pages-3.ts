@@ -142,5 +142,8 @@ const dict: Record<string, string> = {
   "Solar Energy — overview": "சூரிய ஆற்றல் — கண்ணோட்டம்",
   "TOPBAS ESE arresters, SPDs, earth rods, earthing compound and earth pit covers with full specifications.": "முழு விவரக்குறிப்புகளுடன் TOPBAS ESE தடுப்பான்கள், SPD-கள், எர்த் கம்பிகள், எர்த்திங் காம்பவுண்ட் மற்றும் எர்த் பிட் மூடிகள்.",
   "Windmill Operation & Maintenance — overview": "காற்றாலை இயக்கம் & பராமரிப்பு — கண்ணோட்டம்",
+  "Customer reviews. Swipe or use the arrows to see more.": "வாடிக்கையாளர் மதிப்புரைகள். மேலும் பார்க்க ஸ்வைப் செய்யுங்கள் அல்லது அம்புகளைப் பயன்படுத்துங்கள்.",
+  "Previous reviews": "முந்தைய மதிப்புரைகள்",
+  "Next reviews": "அடுத்த மதிப்புரைகள்",
 };
 export default dict;

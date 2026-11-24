@@ -1,5 +1,6 @@
 import React from 'react';
 import Icon from '@/components/ui/AppIcon';
+import ReviewsCarousel from './ReviewsCarousel';
 import { customerReviews, REVIEW_PROFILES, type CustomerReview } from '@/lib/reviews';
 import type { Locale } from '@/i18n/config';
 import { t, tr } from '@/i18n/translate';
@@ -33,9 +34,8 @@ function ReviewCard({ review, locale }: { review: CustomerReview; locale: Locale
 }
 
 /**
- * Home page strip of real Google reviews, scrolling left to right.
- * Pure CSS: pauses on hover or keyboard focus and stays still (scrollable)
- * for visitors who prefer reduced motion.
+ * Home page strip of real Google reviews. It drifts left to right, can be swiped on phones
+ * or moved with the arrows, and stays still for visitors who prefer reduced motion.
  */
 export default function GoogleReviews({ locale = 'en' }: { locale?: Locale }) {
   const _ = (text: string) => t(locale, text);
@@ -53,19 +53,23 @@ export default function GoogleReviews({ locale = 'en' }: { locale?: Locale }) {
         </p>
       </div>
 
-      <div className="reviews-marquee" tabIndex={0} aria-label={_('Customer reviews. Hover or focus to pause.')}>
-        <div className="reviews-track flex gap-5 w-max px-4">
+      <ReviewsCarousel
+        label={_('Customer reviews. Swipe or use the arrows to see more.')}
+        prevLabel={_('Previous reviews')}
+        nextLabel={_('Next reviews')}
+      >
+        <div data-loop-track className="flex gap-5 w-max px-4 sm:px-16 py-1">
           {customerReviews.map((r) => (
             <ReviewCard key={r.name} review={r} locale={locale} />
           ))}
           {/* Second copy makes the loop seamless; hidden from screen readers. */}
-          <div className="reviews-duplicate flex gap-5" aria-hidden="true">
+          <div data-loop-copy className="reviews-duplicate flex gap-5" aria-hidden="true">
             {customerReviews.map((r) => (
               <ReviewCard key={`dup-${r.name}`} review={r} locale={locale} />
             ))}
           </div>
         </div>
-      </div>
+      </ReviewsCarousel>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 flex flex-wrap gap-3 justify-center">
         {(Object.keys(REVIEW_PROFILES) as (keyof typeof REVIEW_PROFILES)[]).map((k) => (

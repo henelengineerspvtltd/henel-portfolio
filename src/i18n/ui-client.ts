@@ -30,11 +30,11 @@ export type UiStrings = typeof en;
 const ta: UiStrings = {
   nav: {
     home: 'முகப்பு',
-    lightning: 'மின்னல் பாதுகாப்பு',
+    lightning: 'இடிதாங்கி',
     wind: 'காற்றாலை',
-    solar: 'சூரிய ஆற்றல்',
+    solar: 'சோலார்',
     about: 'எங்களைப் பற்றி',
-    products: 'தயாரிப்புகள் & சேவைகள்',
+    products: 'தயாரிப்புகள்',
     contact: 'தொடர்பு',
   },
   requestQuote: 'விலை கேட்க',
