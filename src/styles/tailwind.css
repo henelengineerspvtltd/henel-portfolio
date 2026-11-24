@@ -47,6 +47,14 @@
   }
 }
 
+/* Tamil and Devanagari: wide letter-spacing (made for English capitals) splits up
+   conjunct letters and hurts readability, and these scripts have no capitals. */
+html:lang(ta-IN) *,
+html:lang(hi-IN) * {
+  letter-spacing: normal !important;
+  text-transform: none !important;
+}
+
 @layer utilities {
   .text-hero-display {
     font-size: clamp(2.2rem, 5vw, 4.5rem);

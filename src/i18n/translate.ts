@@ -24,7 +24,10 @@ export function t(locale: Locale, text: string, vars?: Record<string, string | n
   if (locale !== 'en') {
     const hit = DICTS[locale][text];
     if (hit !== undefined) out = hit;
-    else if (isWords(text)) missing[locale].add(text);
+    else if (isWords(text) && !missing[locale].has(text)) {
+      missing[locale].add(text);
+      reportMissing(locale, text);
+    }
   }
   if (vars) for (const [k, v] of Object.entries(vars)) out = out.split(`{${k}}`).join(String(v));
   return out;
@@ -57,14 +60,12 @@ export function missingTranslations() {
   return { ta: [...missing.ta].sort(), hi: [...missing.hi].sort() };
 }
 
-// `I18N_REPORT=<file> next build` appends every missing string to <file> (one JSON line per
-// build worker) so scripts/i18n-check.mjs can list what still needs translating.
-if (process.env.I18N_REPORT) {
+// `I18N_REPORT=<file> next build` appends each missing string to <file> as it is found (one
+// JSON line each; build workers are killed without an exit event, so this can't wait until
+// the end). scripts/i18n-check.mjs collects the file into a list of what needs translating.
+function reportMissing(locale: Locale, text: string) {
   const file = process.env.I18N_REPORT;
-  process.on('exit', () => {
-    const m = missingTranslations();
-    if (!m.ta.length && !m.hi.length) return;
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    require('fs').appendFileSync(file, JSON.stringify(m) + '\n');
-  });
+  if (!file) return;
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  require('fs').appendFileSync(file, JSON.stringify({ l: locale, s: text }) + '\n');
 }

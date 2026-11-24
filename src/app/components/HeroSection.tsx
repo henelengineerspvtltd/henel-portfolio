@@ -76,7 +76,7 @@ export default function HeroSection({ locale = 'en' }: { locale?: Locale }) {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 opacity-50">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 hidden sm:flex flex-col items-center gap-2 opacity-50">
         <span className="text-xs font-700 uppercase tracking-widest text-white">{_('Scroll')}</span>
         <div className="w-px h-8 bg-white/40 animate-pulse" />
       </div>

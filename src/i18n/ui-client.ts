@@ -37,7 +37,7 @@ const ta: UiStrings = {
     products: 'தயாரிப்புகள் & சேவைகள்',
     contact: 'தொடர்பு',
   },
-  requestQuote: 'விலைப்புள்ளி கேட்க',
+  requestQuote: 'விலை கேட்க',
   requestQuoteAria: 'ஹெனல் இன்ஜினியர்ஸிடம் விலைப்புள்ளி கேட்க',
   openMenu: 'வழிசெலுத்தல் பட்டியைத் திற',
   closeMenu: 'வழிசெலுத்தல் பட்டியை மூடு',

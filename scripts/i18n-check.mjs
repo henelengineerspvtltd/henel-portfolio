@@ -15,9 +15,8 @@ execSync('npx next build', { stdio: 'inherit', env: { ...process.env, I18N_REPOR
 const all = { ta: new Set(), hi: new Set() };
 if (fs.existsSync(report)) {
   for (const line of fs.readFileSync(report, 'utf8').split('\n').filter(Boolean)) {
-    const m = JSON.parse(line);
-    m.ta.forEach((s) => all.ta.add(s));
-    m.hi.forEach((s) => all.hi.add(s));
+    const { l, s } = JSON.parse(line);
+    all[l]?.add(s);
   }
   fs.unlinkSync(report);
 }
