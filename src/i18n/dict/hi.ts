@@ -3,11 +3,15 @@ import divisions1 from './hi.divisions-1';
 import divisions2 from './hi.divisions-2';
 import services1 from './hi.services-1';
 import services2 from './hi.services-2';
+import products1 from './hi.products-1';
+import products2 from './hi.products-2';
 export const hi: Record<string, string> = {
   ...divisions1,
   ...divisions2,
   ...services1,
   ...services2,
+  ...products1,
+  ...products2,
   // ───────────── Shared: navigation, footer, buttons ─────────────
   "Home": "होम",
   "Breadcrumb": "पथ",
