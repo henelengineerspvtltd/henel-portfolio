@@ -79,7 +79,7 @@ function englishEntries(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: 'monthly',
       priority: 0.9,
-      images: Object.values(SOLAR_IMAGES),
+      images: Object.values(SOLAR_IMAGES).map(img),
     },
     {
       url: `${SITE_URL}/service-areas`,
@@ -160,8 +160,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
     const languages: Record<string, string> = Object.fromEntries(LOCALES.map((l) => [HTML_LANG[l], urlFor(l)]));
     languages['x-default'] = urlFor('en');
+    // Google rejects relative image URLs, so make every image absolute here as a backstop.
+    const images = entry.images?.map(img);
     return LOCALES.map((l) => ({
       ...entry,
+      ...(images ? { images } : {}),
       url: urlFor(l),
       priority: l === 'en' ? entry.priority : Math.round((entry.priority ?? 0.5) * 0.9 * 100) / 100,
       alternates: { languages },
