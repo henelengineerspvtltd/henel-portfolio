@@ -21,7 +21,10 @@ const isWords = (s: string) => /[A-Za-z]{3,}/.test(s);
 /** Translate one string. `{name}` placeholders are filled from `vars` after lookup. */
 export function t(locale: Locale, text: string, vars?: Record<string, string | number>): string {
   let out = text;
-  if (locale !== 'en') {
+  // Already Tamil or Hindi (e.g. a translated name passed into a component that translates
+  // again): leave it alone rather than looking it up and reporting it as missing.
+  const alreadyTranslated = /[஀-௿ऀ-ॿ]/.test(text);
+  if (locale !== 'en' && !alreadyTranslated) {
     const hit = DICTS[locale][text];
     if (hit !== undefined) out = hit;
     else if (isWords(text) && !missing[locale].has(text)) {
