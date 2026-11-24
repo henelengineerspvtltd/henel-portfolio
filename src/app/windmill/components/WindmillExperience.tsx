@@ -2,6 +2,8 @@ import React from 'react';
 import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
 import ScrollReveal from '@/app/components/ScrollReveal';
+import type { Locale } from '@/i18n/config';
+import { t, tr } from '@/i18n/translate';
 
 const stats = [
   { icon: 'CalendarIcon', value: '25+', label: 'Years of Industry Experience' },
@@ -25,29 +27,25 @@ function StatIcon({ icon }: { icon: string }) {
   return <Icon name={icon as 'CalendarIcon'} size={20} variant="outline" style={{ color: '#2D7A2D' }} />;
 }
 
-export default function WindmillExperience() {
+export default function WindmillExperience({ locale = 'en' }: { locale?: Locale }) {
+  const _ = (text: string) => t(locale, text);
   return (
-    <section className="py-16 bg-background" aria-label="Windmill maintenance experience">
+    <section className="py-16 bg-background" aria-label={_("Windmill maintenance experience")}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-10">
           <ScrollReveal>
-            <span className="section-label-green">Our Experience</span>
+            <span className="section-label-green">{_("Our Experience")}</span>
             <h2 className="text-section-heading font-800 text-foreground mt-2 mb-5">
-              25+ Years of Experience in Wind Energy
+              {_("25+ Years of Experience in Wind Energy")}
             </h2>
             <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-              Henel Engineers is an experienced wind energy service provider specializing in
-              Wind Turbine Generator (WTG) operation, maintenance, breakdown services and
-              technical support.
+              {_("Henel Engineers is an experienced wind energy service provider specializing in Wind Turbine Generator (WTG) operation, maintenance, breakdown services and technical support.")}
             </p>
             <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-              With more than 25 years of experience in the industry, our team brings together
-              skilled mechanical, electrical and technical professionals supported by dedicated
-              field manpower and service vehicles.
+              {_("With more than 25 years of experience in the industry, our team brings together skilled mechanical, electrical and technical professionals supported by dedicated field manpower and service vehicles.")}
             </p>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Today, we manage 30+ active Comprehensive Maintenance Contracts (CMC), supporting
-              reliable wind turbine operation and timely maintenance across our service regions.
+              {_("Today, we manage 30+ active Comprehensive Maintenance Contracts (CMC), supporting reliable wind turbine operation and timely maintenance across our service regions.")}
             </p>
           </ScrollReveal>
 
@@ -55,7 +53,7 @@ export default function WindmillExperience() {
             <div className="relative overflow-hidden rounded-xl aspect-[4/3] bg-muted">
               <AppImage
                 src="/assets/images/windmill/nacelle-erection-2.jpg"
-                alt="Technician servicing a wind turbine hub and components on site"
+                alt={_("Technician servicing a wind turbine hub and components on site")}
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center"
@@ -66,7 +64,7 @@ export default function WindmillExperience() {
 
         <ScrollReveal delay={2}>
           <div className="bg-card border border-border rounded-xl grid grid-cols-2 sm:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-border overflow-hidden">
-            {stats.map((s) => (
+            {tr(stats, locale).map((s) => (
               <div key={s.label} className="p-6 flex items-center gap-3">
                 <div
                   className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"

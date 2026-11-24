@@ -1,10 +1,11 @@
 import React from 'react';
 import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
-import { Plus_Jakarta_Sans } from 'next/font/google';
+import { Plus_Jakarta_Sans, Noto_Sans_Tamil, Noto_Sans_Devanagari } from 'next/font/google';
 import '../styles/tailwind.css';
 import JsonLd from '@/components/JsonLd';
 import FloatingContact from '@/components/FloatingContact';
+import LeadTracking from '@/components/LeadTracking';
 import { organizationSchema, websiteSchema, SITE_URL } from '@/lib/structured-data';
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -13,6 +14,27 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   variable: '--font-sans',
   display: 'swap',
 });
+
+// Tamil and Hindi script fonts. Not preloaded: each is split by unicode-range, so a browser
+// only downloads it on pages that contain Tamil or Devanagari text.
+const notoTamil = Noto_Sans_Tamil({
+  subsets: ['tamil'],
+  weight: ['400', '600', '700'],
+  variable: '--font-tamil',
+  display: 'swap',
+  preload: false,
+});
+const notoDevanagari = Noto_Sans_Devanagari({
+  subsets: ['devanagari'],
+  weight: ['400', '600', '700'],
+  variable: '--font-devanagari',
+  display: 'swap',
+  preload: false,
+});
+
+/** Sets <html lang> from the URL before paint: /ta/… is Tamil, /hi/… is Hindi, everything else English. */
+const LANG_SCRIPT =
+  "(function(){var s=location.pathname.split('/')[1];document.documentElement.lang=s==='ta'?'ta-IN':s==='hi'?'hi-IN':'en-IN';document.documentElement.classList.add('js')})()";
 
 // GA4 measurement ID (public by design). Only live production builds report, so previews and local runs don't skew the data.
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID || (process.env.VERCEL_ENV === 'production' ? 'G-WELJVNRDWP' : undefined);
@@ -97,14 +119,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-IN" className={plusJakartaSans.variable} suppressHydrationWarning>
+    <html
+      lang="en-IN"
+      className={`${plusJakartaSans.variable} ${notoTamil.variable} ${notoDevanagari.variable}`}
+      suppressHydrationWarning
+    >
       <head>
-        {/* Marks JS as available before paint so scroll-reveal content is only hidden when it can be revealed. */}
-        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
-        <link rel="preconnect" href="https://images.unsplash.com" />
+        {/* Sets the page language from the URL and marks JS as available before paint, so
+            scroll-reveal content is only hidden when it can be revealed. */}
+        <script dangerouslySetInnerHTML={{ __html: LANG_SCRIPT }} />
         <link rel="alternate" type="text/plain" title="LLM-readable site summary" href="/llms.txt" />
       </head>
-      <body className={plusJakartaSans.className}>
+      <body className="font-sans">
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
         {children}
         <FloatingContact />
@@ -115,6 +141,7 @@ export default function RootLayout({
             <Script id="ga-init" strategy="afterInteractive">
               {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`}
             </Script>
+            <LeadTracking />
           </>
         )}
 

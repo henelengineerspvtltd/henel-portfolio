@@ -2,6 +2,22 @@
 
 import React, { useState } from 'react';
 import Icon from '@/components/ui/AppIcon';
+import { trackEvent } from '@/components/LeadTracking';
+import { REQUIREMENT_TYPES, type ContactFormStrings } from './contact-form-strings';
+
+const phoneLink = (tel: string, label: string) => (
+  <a href={`tel:${tel}`} className="text-accent font-700">
+    {label}
+  </a>
+);
+
+/** Renders a translated sentence, swapping {placeholders} for React nodes. */
+function fill(template: string, parts: Record<string, React.ReactNode>) {
+  return template.split(/(\{\w+\})/).map((piece, i) => {
+    const m = piece.match(/^\{(\w+)\}$/);
+    return <React.Fragment key={i}>{m && m[1] in parts ? parts[m[1]] : piece}</React.Fragment>;
+  });
+}
 
 interface FormState {
   name: string;
@@ -25,19 +41,8 @@ const initialState: FormState = {
   company: '',
 };
 
-const requirementTypes = [
-  'Lightning Protection',
-  'ESE Lightning Arrester',
-  'Earthing',
-  'Surge Protection',
-  'Wind Energy',
-  'Windmill Maintenance',
-  'Solar Panel Installation',
-  'Solar Maintenance',
-  'Other',
-];
-
-export default function ContactForm() {
+export default function ContactForm({ strings = {} }: { strings?: ContactFormStrings }) {
+  const _ = (text: string) => strings[text] ?? text;
   const [form, setForm] = useState<FormState>(initialState);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -61,7 +66,7 @@ export default function ContactForm() {
 
     if (!form.name.trim() || !form.phone.trim() || !form.email.trim()) {
       setError(
-        'Please enter your Full Name, Phone Number, and Email Address.'
+        _('Please enter your Full Name, Phone Number, and Email Address.')
       );
       return;
     }
@@ -72,7 +77,7 @@ export default function ContactForm() {
     }
 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) {
-      setError('Please enter a valid email address.');
+      setError(_('Please enter a valid email address.'));
       return;
     }
 
@@ -111,10 +116,15 @@ export default function ContactForm() {
         throw new Error(
           result.message ||
             result.error ||
-            'Unable to send your request. Please try again.'
+            _('Unable to send your request. Please try again.')
         );
       }
 
+      trackEvent('generate_lead', {
+        form_name: 'quote_request',
+        requirement_type: form.requirementType,
+        page_path: window.location.pathname,
+      });
       setSubmitted(true);
     } catch (err) {
       console.error('Contact form submission error:', err);
@@ -122,7 +132,7 @@ export default function ContactForm() {
       setError(
         err instanceof Error
           ? err.message
-          : 'Unable to send your request. Please try again.'
+          : _('Unable to send your request. Please try again.')
       );
     } finally {
       setLoading(false);
@@ -146,27 +156,15 @@ export default function ContactForm() {
 
         <div>
           <h2 className="text-lg font-800 text-foreground mb-2">
-            Enquiry Received
+            {_("Enquiry Received")}
           </h2>
 
           <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
-            Thank you, <strong>{form.name}</strong>. We have received your
-            enquiry and will contact you shortly. For urgent matters, call us
-            on{' '}
-            <a
-              href="tel:+919443282312"
-              className="text-accent font-700"
-            >
-              +91 94432 82312
-            </a>{' '}
-            or{' '}
-            <a
-              href="tel:+919443692711"
-              className="text-accent font-700"
-            >
-              +91 94436 92711
-            </a>
-            .
+            {fill(_('Thank you, {name}. We have received your enquiry and will contact you shortly. For urgent matters, call us on {phone1} or {phone2}.'), {
+              name: <strong>{form.name}</strong>,
+              phone1: phoneLink('+919443282312', '+91 94432 82312'),
+              phone2: phoneLink('+919443692711', '+91 94436 92711'),
+            })}
           </p>
         </div>
 
@@ -178,7 +176,7 @@ export default function ContactForm() {
           }}
           className="btn-outline-dark text-xs"
         >
-          Submit Another Enquiry
+          {_("Submit Another Enquiry")}
         </button>
       </div>
     );
@@ -188,14 +186,14 @@ export default function ContactForm() {
     <form
       onSubmit={handleSubmit}
       className="relative bg-card border border-border rounded-xl p-8"
-      aria-label="Contact and quote request form"
+      aria-label={_('Contact and quote request form')}
     >
       <h2 className="text-base font-800 text-foreground mb-6">
-        Send Us an Enquiry
+        {_("Send Us an Enquiry")}
       </h2>
 
       <div aria-hidden="true" style={{ position: 'absolute', left: '-10000px', width: 1, height: 1, overflow: 'hidden' }}>
-        <label htmlFor="website">Leave this field empty</label>
+        <label htmlFor="website">{_('Leave this field empty')}</label>
         <input
           id="website"
           name="website"
@@ -210,7 +208,7 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
         <div>
           <label className="form-label" htmlFor="name">
-            Full Name *
+            {_("Full Name *")}
           </label>
 
           <input
@@ -223,13 +221,13 @@ export default function ContactForm() {
             value={form.name}
             onChange={handleChange}
             className="form-input"
-            placeholder="Your name"
+            placeholder={_("Your name")}
           />
         </div>
 
         <div>
           <label className="form-label" htmlFor="company">
-            Company Name
+            {_("Company Name")}
           </label>
 
           <input
@@ -241,7 +239,7 @@ export default function ContactForm() {
             value={form.company}
             onChange={handleChange}
             className="form-input"
-            placeholder="Your company"
+            placeholder={_("Your company")}
           />
         </div>
       </div>
@@ -249,7 +247,7 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
         <div>
           <label className="form-label" htmlFor="email">
-            Email Address *
+            {_("Email Address *")}
           </label>
 
           <input
@@ -268,7 +266,7 @@ export default function ContactForm() {
 
         <div>
           <label className="form-label" htmlFor="phone">
-            Phone Number *
+            {_("Phone Number *")}
           </label>
 
           <input
@@ -288,7 +286,7 @@ export default function ContactForm() {
 
       <div className="mb-5">
         <label className="form-label" htmlFor="requirementType">
-          Requirement Type
+          {_("Requirement Type")}
         </label>
 
         <select
@@ -298,11 +296,11 @@ export default function ContactForm() {
           onChange={handleChange}
           className="form-input"
         >
-          <option value="">— Select requirement —</option>
+          <option value="">{_('— Select requirement —')}</option>
 
-          {requirementTypes.map((r) => (
+          {REQUIREMENT_TYPES.map((r) => (
             <option key={r} value={r}>
-              {r}
+              {_(r)}
             </option>
           ))}
         </select>
@@ -311,7 +309,7 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
         <div>
           <label className="form-label" htmlFor="projectLocation">
-            Project Location
+            {_("Project Location")}
           </label>
 
           <input
@@ -322,13 +320,13 @@ export default function ContactForm() {
             value={form.projectLocation}
             onChange={handleChange}
             className="form-input"
-            placeholder="City / District"
+            placeholder={_("City / District")}
           />
         </div>
 
         <div>
           <label className="form-label" htmlFor="buildingType">
-            Building / Project Type
+            {_("Building / Project Type")}
           </label>
 
           <input
@@ -339,14 +337,14 @@ export default function ContactForm() {
             value={form.buildingType}
             onChange={handleChange}
             className="form-input"
-            placeholder="e.g. Factory, Warehouse, Tower"
+            placeholder={_("e.g. Factory, Warehouse, Tower")}
           />
         </div>
       </div>
 
       <div className="mb-7">
         <label className="form-label" htmlFor="message">
-          Additional Requirements
+          {_("Additional Requirements")}
         </label>
 
         <textarea
@@ -357,7 +355,7 @@ export default function ContactForm() {
           value={form.message}
           onChange={handleChange}
           className="form-input resize-none"
-          placeholder="Describe your requirement, site details, or any specific questions..."
+          placeholder={_("Describe your requirement, site details, or any specific questions...")}
         />
       </div>
 
@@ -383,7 +381,7 @@ export default function ContactForm() {
               variant="outline"
               className="animate-spin"
             />
-            Submitting...
+            {_("Submitting...")}
           </>
         ) : (
           <>
@@ -392,27 +390,16 @@ export default function ContactForm() {
               size={18}
               variant="solid"
             />
-            REQUEST A QUOTE
+            {_("REQUEST A QUOTE")}
           </>
         )}
       </button>
 
       <p className="text-xs text-muted-foreground text-center mt-4">
-        We respond within 1–2 business days. For urgent enquiries, call{' '}
-        <a
-          href="tel:+919443282312"
-          className="text-accent font-700"
-        >
-          +91 94432 82312
-        </a>{' '}
-        or{' '}
-        <a
-          href="tel:+919443692711"
-          className="text-accent font-700"
-        >
-          +91 94436 92711
-        </a>
-        .
+        {fill(_('We respond within 1–2 business days. For urgent enquiries, call {phone1} or {phone2}.'), {
+          phone1: phoneLink('+919443282312', '+91 94432 82312'),
+          phone2: phoneLink('+919443692711', '+91 94436 92711'),
+        })}
       </p>
     </form>
   );

@@ -8,6 +8,8 @@
  * elsewhere on this site.
  */
 
+import { HTML_LANG, localizePath, type Locale } from '@/i18n/config';
+
 export const SITE_URL =
   (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.henelengineers.com').replace(/\/+$/, '');
 
@@ -18,6 +20,21 @@ export const COMPANY_EMAIL = 'henelkkla@gmail.com';
 export const COMPANY_WHATSAPP = 'https://wa.me/919443282312';
 export const COMPANY_CIN = 'U45207TN1999PTC043025';
 export const COMPANY_SLOGAN = 'Engineering Solutions in Lightning Protection & Wind Energy';
+
+/** Official social profiles, shown in the footer. */
+export const SOCIAL_PROFILES = {
+  instagram: 'https://www.instagram.com/henelengineerspvtltd/',
+  // Share link from the Facebook app: it opens the page in a browser but is not the
+  // canonical page URL, so it is left out of sameAs until the real page URL is known.
+  facebook: 'https://www.facebook.com/share/14tzwVtc7Yg/',
+};
+
+/** Profiles that identify the same company, for Organization / LocalBusiness `sameAs`. */
+export const SAME_AS = [
+  SOCIAL_PROFILES.instagram,
+  'https://maps.app.goo.gl/eG8yo7BKjg6gK9xe8',
+  'https://maps.app.goo.gl/2whf2eEDufEqSfZw9',
+];
 
 export const ORG_ID = `${SITE_URL}/#organization`;
 export const LOCAL_BUSINESS_ID = `${SITE_URL}/#localbusiness`;
@@ -127,6 +144,7 @@ export function organizationSchema() {
     legalName: COMPANY_NAME,
     alternateName: ['Henel Engineers', 'HENEL ENGINEERS PVT. LTD.', 'Henel Engineers Private Limited'],
     url: SITE_URL,
+    sameAs: SAME_AS,
     logo: {
       '@type': 'ImageObject',
       url: `${SITE_URL}/assets/images/henel-logo.png`,
@@ -222,6 +240,7 @@ export function localBusinessSchema() {
     image: `${SITE_URL}/assets/images/henel-logo.png`,
     logo: `${SITE_URL}/assets/images/henel-logo.png`,
     url: SITE_URL,
+    sameAs: SAME_AS,
     parentOrganization: { '@id': ORG_ID },
     foundingDate: '1999-08-17',
     telephone: COMPANY_PHONE_1,
@@ -320,6 +339,36 @@ export function serviceSchema(opts: {
   };
 }
 
+/** Article schema for guide pages. Author and publisher are the company. */
+export function articleSchema(opts: {
+  path: string;
+  headline: string;
+  description: string;
+  image: string;
+  datePublished: string;
+  dateModified: string;
+  section?: string;
+  locale?: Locale;
+}) {
+  const locale = opts.locale || 'en';
+  const url = absoluteUrl(localizePath(opts.path, locale));
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    '@id': `${url}#article`,
+    headline: opts.headline,
+    description: opts.description,
+    image: absoluteUrl(opts.image),
+    datePublished: opts.datePublished,
+    dateModified: opts.dateModified,
+    inLanguage: HTML_LANG[locale],
+    ...(opts.section ? { articleSection: opts.section } : {}),
+    author: { '@id': ORG_ID },
+    publisher: { '@id': ORG_ID },
+    mainEntityOfPage: { '@id': `${url}#webpage` },
+  };
+}
+
 /**
  * WebPage schema with `speakable` — tells search engines, voice assistants
  * and AI answer engines which parts of the page best summarise it.
@@ -331,8 +380,10 @@ export function webPageSchema(opts: {
   type?: 'WebPage' | 'ContactPage' | 'AboutPage' | 'CollectionPage';
   image?: string;
   about?: string[];
+  locale?: Locale;
 }) {
-  const url = absoluteUrl(opts.path);
+  const locale = opts.locale || 'en';
+  const url = absoluteUrl(localizePath(opts.path, locale));
   return {
     '@context': 'https://schema.org',
     '@type': opts.type || 'WebPage',
@@ -340,7 +391,7 @@ export function webPageSchema(opts: {
     url,
     name: opts.name,
     description: opts.description,
-    inLanguage: 'en-IN',
+    inLanguage: HTML_LANG[locale],
     isPartOf: { '@id': WEBSITE_ID },
     publisher: { '@id': ORG_ID },
     ...(opts.image

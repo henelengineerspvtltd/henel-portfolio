@@ -1,10 +1,12 @@
 import React from 'react';
-import Link from 'next/link';
+import Link from '@/components/LocaleLink';
 import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
 import ScrollReveal from './ScrollReveal';
+import type { Locale } from '@/i18n/config';
+import { t, tr } from '@/i18n/translate';
 
-const pillars = [
+const PILLARS = [
 {
   icon: 'WrenchScrewdriverIcon',
   label: 'Engineering Expertise',
@@ -27,9 +29,11 @@ const pillars = [
 }];
 
 
-export default function AboutTeaser() {
+export default function AboutTeaser({ locale = 'en' }: { locale?: Locale }) {
+  const _ = (text: string) => t(locale, text);
+  const pillars = tr(PILLARS, locale);
   return (
-    <section className="py-20 bg-card border-t border-border" id="about" aria-label="About Henel Engineers">
+    <section className="py-20 bg-card border-t border-border" id="about" aria-label={_('About Henel Engineers')}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Image side */}
@@ -38,7 +42,7 @@ export default function AboutTeaser() {
               <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
                 <AppImage
                   src="/assets/images/home/engineer-reviewing-documents.webp"
-                  alt="Engineering professional reviewing technical documents in an industrial facility"
+                  alt={_('Engineering professional reviewing technical documents in an industrial facility')}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover object-center" />
@@ -52,7 +56,7 @@ export default function AboutTeaser() {
                   </div>
                   <div>
                     <p className="text-2xl font-800 text-foreground leading-none">25+</p>
-                    <p className="text-xs font-600 text-muted-foreground uppercase tracking-wider mt-0.5">Years Active</p>
+                    <p className="text-xs font-600 text-muted-foreground uppercase tracking-wider mt-0.5">{_('Years Active')}</p>
                   </div>
                 </div>
               </div>
@@ -62,15 +66,15 @@ export default function AboutTeaser() {
           {/* Text side */}
           <div className="flex flex-col justify-between h-full">
             <ScrollReveal>
-              <span className="section-label">About the Company</span>
+              <span className="section-label">{_('About the Company')}</span>
               <h2 className="text-section-heading font-800 text-foreground mt-2 mb-5">
-                Engineering Experience Since 1999
+                {_('Engineering Experience Since 1999')}
               </h2>
               <p className="text-base text-muted-foreground leading-relaxed mb-4">
-                Henel Engineers Pvt. Ltd. was incorporated on 17 August 1999 in Aralvaimozhi, Kanyakumari District, Tamil Nadu. Over more than two decades, we have built a reputation for reliable engineering services in two core sectors: lightning protection systems and wind energy.
+                {_('Henel Engineers Pvt. Ltd. was incorporated on 17 August 1999 in Aralvaimozhi, Kanyakumari District, Tamil Nadu. Over more than two decades, we have built a reputation for reliable engineering services in two core sectors: lightning protection systems and wind energy.')}
               </p>
               <p className="text-base text-muted-foreground leading-relaxed mb-8">
-                Our location in Kanyakumari District — home to some of India&apos;s most active wind energy infrastructure — gives us direct proximity to the projects and clients we serve.
+                {_('Our location in Kanyakumari District — home to some of India’s most active wind energy infrastructure — gives us direct proximity to the projects and clients we serve.')}
               </p>
             </ScrollReveal>
 
@@ -95,7 +99,7 @@ export default function AboutTeaser() {
 
             <ScrollReveal delay={2}>
               <Link href="/about" className="btn-outline-dark self-start">
-                Learn More About Us
+                {_('Learn More About Us')}
                 <Icon name="ArrowRightIcon" size={16} variant="outline" />
               </Link>
             </ScrollReveal>

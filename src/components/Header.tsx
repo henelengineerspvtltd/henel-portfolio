@@ -1,21 +1,25 @@
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
-import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import Link from '@/components/LocaleLink';
 import HenelLogo from './HenelLogo';
 import Icon from '@/components/ui/AppIcon';
-
-const navLinks = [
-  { label: 'Home', href: '/' },
-  { label: 'Lightning Protection', href: '/lightning-protection' },
-  { label: 'Wind Energy', href: '/windmill' },
-  { label: 'Solar Energy', href: '/solar-panel-installation' },
-  { label: 'About Us', href: '/about' },
-  { label: 'Products & Services', href: '/products-and-services' },
-  { label: 'Contact', href: '/contact' },
-];
+import LanguageSwitcher from './LanguageSwitcher';
+import { localeFromPath } from '@/i18n/config';
+import { UI } from '@/i18n/ui-client';
 
 export default function Header() {
+  const ui = UI[localeFromPath(usePathname() || '/')];
+  const navLinks = [
+    { label: ui.nav.home, href: '/' },
+    { label: ui.nav.lightning, href: '/lightning-protection' },
+    { label: ui.nav.wind, href: '/windmill' },
+    { label: ui.nav.solar, href: '/solar-panel-installation' },
+    { label: ui.nav.about, href: '/about' },
+    { label: ui.nav.products, href: '/products-and-services' },
+    { label: ui.nav.contact, href: '/contact' },
+  ];
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -65,7 +69,7 @@ export default function Header() {
             </Link>
 
             {/* Desktop Nav */}
-            <nav className="hidden xl:flex items-center gap-1" aria-label="Main navigation">
+            <nav className="hidden xl:flex items-center gap-1" aria-label={ui.mainNav}>
               {navLinks?.map((link) => (
                 <Link
                   key={link?.href}
@@ -79,17 +83,18 @@ export default function Header() {
 
             {/* CTA + Hamburger */}
             <div className="flex items-center gap-3">
+              <LanguageSwitcher className="hidden lg:flex" />
               <Link
                 href="/contact"
                 className="hidden sm:inline-flex btn-primary text-xs"
-                aria-label="Request a quote from Henel Engineers"
+                aria-label={ui.requestQuoteAria}
               >
-                Request a Quote
+                {ui.requestQuote}
               </Link>
               <button
                 onClick={() => setMenuOpen((v) => !v)}
                 className="xl:hidden p-2 rounded-md text-foreground hover:bg-muted/60 transition-colors"
-                aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+                aria-label={menuOpen ? ui.closeMenu : ui.openMenu}
                 aria-expanded={menuOpen}
               >
                 {menuOpen ? (
@@ -112,7 +117,7 @@ export default function Header() {
       <div
         className={`mobile-menu-panel ${menuOpen ? 'open' : ''}`}
         role="dialog"
-        aria-label="Navigation menu"
+        aria-label={ui.menu}
         aria-modal="true"
       >
         <div className="flex items-center justify-between mb-8">
@@ -126,13 +131,15 @@ export default function Header() {
           <button
             onClick={closeMenu}
             className="p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted/60"
-            aria-label="Close menu"
+            aria-label={ui.close}
           >
             <Icon name="XMarkIcon" size={20} variant="outline" />
           </button>
         </div>
 
-        <nav className="flex flex-col gap-1" aria-label="Mobile navigation">
+        <LanguageSwitcher className="mb-6 text-sm" />
+
+        <nav className="flex flex-col gap-1" aria-label={ui.mobileNav}>
           {navLinks?.map((link) => (
             <Link
               key={link?.href}
@@ -151,7 +158,7 @@ export default function Header() {
             onClick={closeMenu}
             className="btn-primary w-full justify-center"
           >
-            Request a Quote
+            {ui.requestQuote}
           </Link>
           <a
             href="tel:+919443282312"

@@ -1,29 +1,32 @@
 import React from 'react';
-import Link from 'next/link';
+import Link from '@/components/LocaleLink';
 import Icon from '@/components/ui/AppIcon';
 import ScrollReveal from './ScrollReveal';
+import type { Locale } from '@/i18n/config';
+import { t, tr } from '@/i18n/translate';
 
-export default function HomeCTA() {
+export default function HomeCTA({ locale = 'en' }: { locale?: Locale }) {
+  const _ = (text: string) => t(locale, text);
   return (
-    <section className="py-20 bg-primary" aria-label="Call to action">
+    <section className="py-20 bg-primary" aria-label={_('Call to action')}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal className="text-center">
           <span
             className="inline-block text-xs font-800 uppercase tracking-widest mb-4"
             style={{ color: 'rgba(255,255,255,0.5)' }}
           >
-            Get in Touch
+            {_('Get in Touch')}
           </span>
           <h2 className="text-section-heading font-800 text-primary-foreground mb-4">
-            Ready to Protect Your Assets?
+            {_('Ready to Protect Your Assets?')}
           </h2>
           <p className="text-base text-primary-foreground/65 leading-relaxed max-w-xl mx-auto mb-10">
-            Whether you need a complete lightning protection system or professional windmill maintenance, our team is ready to discuss your requirement.
+            {_('Whether you need a complete lightning protection system or professional windmill maintenance, our team is ready to discuss your requirement.')}
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/contact" className="btn-primary">
               <Icon name="EnvelopeIcon" size={18} variant="outline" />
-              Request a Quote
+              {_('Request a Quote')}
             </Link>
             <a
               href="tel:+919443282312"

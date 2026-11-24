@@ -1,18 +1,21 @@
 import React from 'react';
-import Link from 'next/link';
+import Link from '@/components/LocaleLink';
 import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
+import type { Locale } from '@/i18n/config';
+import { t, tr } from '@/i18n/translate';
 
-export default function LightningHero() {
+export default function LightningHero({ locale = 'en' }: { locale?: Locale }) {
+  const _ = (text: string) => t(locale, text);
   return (
     <section
       className="relative min-h-[60vh] flex items-center overflow-hidden pt-20"
-      aria-label="Lightning protection hero">
+      aria-label={_("Lightning protection hero")}>
       
       <div className="absolute inset-0 z-0">
         <AppImage
           src="/assets/images/lightning-protection/hero-storm.jpg"
-          alt="Lightning storm over a city with a lightning arrester on a rooftop"
+          alt={_("Lightning storm over a city with a lightning arrester on a rooftop")}
           fill
           priority
           sizes="100vw"
@@ -31,18 +34,18 @@ export default function LightningHero() {
               <Icon name="BoltIcon" size={18} variant="solid" className="text-white" />
             </div>
             <span className="text-xs font-800 uppercase tracking-widest text-white/60">
-              Lightning Protection Division
+              {_("Lightning Protection Division")}
             </span>
           </div>
           <h1 className="text-3xl md:text-5xl font-800 text-white mb-4 leading-tight">
-            Lightning Protection & Lightning Arrester Services Across India
+            {_("Lightning Protection & Lightning Arrester Services Across India")}
           </h1>
           <p className="text-lg text-white/75 leading-relaxed mb-8">
-            Henel Engineers supplies and installs comprehensive lightning protection systems — from ESE air terminals to full earthing networks — for industrial, commercial, and infrastructure projects across India.
+            {_("Henel Engineers supplies and installs comprehensive lightning protection systems — from ESE air terminals to full earthing networks — for industrial, commercial, and infrastructure projects across India.")}
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/contact" className="btn-primary">
-              Request a Quote
+              {_("Request a Quote")}
               <Icon name="ArrowRightIcon" size={16} variant="outline" />
             </Link>
             <a href="tel:+919443282312" className="btn-outline-dark" style={{ borderColor: 'rgba(255,255,255,0.35)', color: '#FFFFFF' }}>

@@ -1,0 +1,121 @@
+import React from 'react';
+import type { Metadata } from 'next';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import JsonLd from '@/components/JsonLd';
+import FAQSection from '@/components/FAQSection';
+import ScrollReveal from '@/app/components/ScrollReveal';
+import HomeCTA from '@/app/components/HomeCTA';
+import { faqCategories } from '@/lib/faqs';
+import { faqPageSchema, webPageSchema } from '@/lib/structured-data';
+import type { Locale } from '@/i18n/config';
+import { t, tr } from '@/i18n/translate';
+import { localizeMetadata } from '@/i18n/metadata';
+import { localizePath } from '@/i18n/config';
+
+const description =
+  'Answers on ESE lightning arresters, earthing, surge protection devices and windmill maintenance from Henel Engineers Pvt. Ltd., Tamil Nadu, India.';
+
+const METADATA: Metadata = {
+  title: 'FAQ — Lightning, Earthing & Windmills',
+  description,
+  keywords: [
+    'lightning arrester FAQ',
+    'lightning protection questions',
+    'earthing system FAQ',
+    'surge protection device FAQ',
+    'windmill maintenance FAQ',
+    'solar panel FAQ',
+  ],
+  alternates: {
+    canonical: '/faq',
+  },
+  openGraph: {
+    title: 'Lightning Protection & Windmill Maintenance FAQ | Henel Engineers',
+    description,
+    url: '/faq',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Lightning Protection & Windmill Maintenance FAQ | Henel Engineers',
+    description,
+  },
+};
+
+export function faqMetadata(locale: Locale): Metadata {
+  return localizeMetadata(METADATA, '/faq', locale);
+}
+
+export default function FaqPage({ locale = 'en' }: { locale?: Locale }) {
+  const _ = (text: string) => t(locale, text);
+  const allItems = faqCategories.flatMap((c) => c.items);
+
+  return (
+    <>
+      <Header />
+      <main>
+        <section className="pt-28 pb-14 bg-primary" aria-label={_("FAQ page header")}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Breadcrumbs locale={locale} items={[{ name: 'FAQ', href: '/faq' }]} light className="mb-6" />
+            <ScrollReveal>
+              <span className="inline-block text-xs font-800 uppercase tracking-widest text-primary-foreground/50 mb-3">
+                {_("Help Centre")}
+              </span>
+              <h1 className="text-4xl sm:text-5xl font-800 text-primary-foreground mb-4 leading-tight">
+                {_("Frequently Asked Questions")}
+              </h1>
+              <p className="text-base text-primary-foreground/65 leading-relaxed max-w-2xl">
+                {_("Clear answers about ESE lightning arresters, lightning protection systems, earthing, surge protection and windmill operation & maintenance — from the Henel Engineers team.")}
+              </p>
+            </ScrollReveal>
+
+            <nav aria-label={_("FAQ categories")} className="mt-8 flex flex-wrap gap-3">
+              {faqCategories.map((c) => (
+                <a
+                  key={c.id}
+                  href={`#${c.id}`}
+                  className="px-4 py-2 rounded-full text-xs font-700 border transition-colors hover:bg-white/10"
+                  style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#FFFFFF' }}
+                >
+                  {_(c.title)}
+                </a>
+              ))}
+            </nav>
+          </div>
+        </section>
+
+        <div id="faq">
+          {faqCategories.map((c, i) => (
+            <FAQSection locale={locale}
+              key={c.id}
+              id={c.id}
+              label={`${i + 1} / ${faqCategories.length}`}
+              heading={c.title}
+              subheading={c.description}
+              items={c.items}
+              includeSchema={false}
+              className={i % 2 === 1 ? 'bg-card border-t border-border' : 'border-t border-border'}
+            />
+          ))}
+        </div>
+
+        <HomeCTA locale={locale} />
+      </main>
+      <Footer locale={locale} />
+
+      <JsonLd
+        data={[
+          faqPageSchema(tr(allItems, locale)),
+          webPageSchema({
+            path: '/faq',
+            locale,
+            name: _('Frequently Asked Questions — Henel Engineers Pvt. Ltd.'),
+            description: _(description),
+            about: tr(['Lightning protection', 'ESE lightning arrester', 'Earthing', 'Surge protection device', 'Wind turbine maintenance'], locale),
+          }),
+        ]}
+      />
+    </>
+  );
+}

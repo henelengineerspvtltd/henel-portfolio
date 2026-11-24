@@ -1,18 +1,21 @@
 import React from 'react';
-import Link from 'next/link';
+import Link from '@/components/LocaleLink';
 import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
+import type { Locale } from '@/i18n/config';
+import { t, tr } from '@/i18n/translate';
 
-export default function WindmillHero() {
+export default function WindmillHero({ locale = 'en' }: { locale?: Locale }) {
+  const _ = (text: string) => t(locale, text);
   return (
     <section
       className="relative min-h-[55vh] flex items-center overflow-hidden pt-20"
-      aria-label="Windmill operation and maintenance hero">
+      aria-label={_("Windmill operation and maintenance hero")}>
 
       <div className="absolute inset-0 z-0">
         <AppImage
           src="/assets/images/windmill/hero-green-hills.jpg"
-          alt="Wind turbines on green rolling hills under a blue sky"
+          alt={_("Wind turbines on green rolling hills under a blue sky")}
           fill
           priority
           sizes="100vw"
@@ -24,15 +27,14 @@ export default function WindmillHero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16">
         <div className="max-w-2xl">
           <h1 className="text-6xl font-800 text-white mb-4 leading-tight">
-            Windmill Operation &amp; Maintenance Services
+            {_("Windmill Operation & Maintenance Services")}
           </h1>
           <p className="text-base text-white/80 leading-relaxed mb-8 max-w-xl">
-            With over 25 years of industry experience, Henel Engineers provides reliable
-            operation, maintenance, and technical support for wind turbines across India.
+            {_("With over 25 years of industry experience, Henel Engineers provides reliable operation, maintenance, and technical support for wind turbines across India.")}
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/contact" className="btn-green">
-              Request a Quote
+              {_("Request a Quote")}
               <Icon name="ArrowRightIcon" size={16} variant="outline" />
             </Link>
             <a

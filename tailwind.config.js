@@ -51,8 +51,8 @@ module.exports = {
         '2xl': 'calc(var(--radius) + 16px)',
       },
       fontFamily: {
-        sans: ['var(--font-sans)', 'sans-serif'],
-        display: ['var(--font-sans)', 'sans-serif'],
+        sans: ['var(--font-sans)', 'var(--font-tamil)', 'var(--font-devanagari)', 'sans-serif'],
+        display: ['var(--font-sans)', 'var(--font-tamil)', 'var(--font-devanagari)', 'sans-serif'],
       },
     },
   },

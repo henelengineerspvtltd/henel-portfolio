@@ -1,8 +1,10 @@
 import React from 'react';
-import Link from 'next/link';
+import Link from '@/components/LocaleLink';
 import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
 import ScrollReveal from '@/app/components/ScrollReveal';
+import type { Locale } from '@/i18n/config';
+import { t, tr } from '@/i18n/translate';
 
 const panels = [
   {
@@ -80,12 +82,13 @@ const panels = [
   },
 ];
 
-export default function WindmillCapabilities() {
+export default function WindmillCapabilities({ locale = 'en' }: { locale?: Locale }) {
+  const _ = (text: string) => t(locale, text);
   return (
-    <section className="py-20 bg-background" aria-label="Windmill maintenance capabilities">
+    <section className="py-20 bg-background" aria-label={_("Windmill maintenance capabilities")}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
-          {panels.map((p, i) => (
+          {tr(panels, locale).map((p, i) => (
             <ScrollReveal key={p.title} delay={(i % 4) as 0 | 1 | 2 | 3 | 4}>
               <Link href={p.href} className="group flex flex-col sm:flex-row gap-5 h-full rounded-xl p-3 -m-3 hover:bg-card transition-colors">
                 <div className="relative overflow-hidden rounded-xl w-full sm:w-40 aspect-[4/3] sm:aspect-square flex-shrink-0 bg-muted">
@@ -115,7 +118,7 @@ export default function WindmillCapabilities() {
                     ))}
                   </ul>
                   <span className="mt-3 text-xs font-700 inline-flex items-center gap-1" style={{ color: '#2D7A2D' }}>
-                    Learn more
+                    {_("Learn more")}
                     <Icon name="ArrowRightIcon" size={14} variant="outline" className="group-hover:translate-x-1 transition-transform" />
                   </span>
                 </div>

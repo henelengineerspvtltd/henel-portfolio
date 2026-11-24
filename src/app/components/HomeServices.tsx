@@ -1,9 +1,11 @@
 import React from 'react';
-import Link from 'next/link';
+import Link from '@/components/LocaleLink';
 import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
 import ScrollReveal from './ScrollReveal';
 import { SOLAR_IMAGES } from '@/lib/landing-pages';
+import type { Locale } from '@/i18n/config';
+import { t, tr } from '@/i18n/translate';
 
 interface Division {
   label: string;
@@ -17,7 +19,7 @@ interface Division {
 }
 
 /** The four most-searched services per division; the rest live on each division page. */
-const divisions: Division[] = [
+const DIVISIONS: Division[] = [
   {
     label: 'Lightning Protection',
     color: '#CC0000',
@@ -38,7 +40,7 @@ const divisions: Division[] = [
     color: '#2D7A2D',
     title: 'Windmill Operation, Maintenance & Repair',
     desc: '25+ years in wind energy, 30+ active maintenance contracts and 7+ WTG makes supported, with 24x7 breakdown support.',
-    image: 'https://images.unsplash.com/photo-1705079509121-f92c52573b31',
+    image: '/assets/images/stock/wind-farm-aerial.webp',
     imageAlt: 'Aerial view of a large wind farm with wind turbines over green hills',
     items: [
       { title: 'Windmill maintenance contracts (AMC / CMC)', href: '/windmill-maintenance-contract' },
@@ -66,17 +68,19 @@ const divisions: Division[] = [
   },
 ];
 
-export default function HomeServices() {
+export default function HomeServices({ locale = 'en' }: { locale?: Locale }) {
+  const _ = (text: string) => t(locale, text);
+  const divisions = tr(DIVISIONS, locale);
   return (
-    <section className="py-16 md:py-20 bg-background" id="services" aria-label="Our services">
+    <section className="py-16 md:py-20 bg-background" id="services" aria-label={_('Our services')}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal className="text-center mb-10 md:mb-12">
-          <span className="section-label">What We Do</span>
+          <span className="section-label">{_('What We Do')}</span>
           <h2 className="text-section-heading font-800 text-foreground mt-2">
-            Lightning Protection, Windmill &amp; Solar Services
+            {_('Lightning Protection, Windmill & Solar Services')}
           </h2>
           <p className="text-base text-muted-foreground mt-3 max-w-2xl mx-auto leading-relaxed">
-            Three specialist divisions under one roof, serving clients across India since 1999.
+            {_('Three specialist divisions under one roof, serving clients across India since 1999.')}
           </p>
         </ScrollReveal>
 
@@ -139,7 +143,7 @@ export default function HomeServices() {
 
         <ScrollReveal className="mt-10 flex justify-center">
           <Link href="/products-and-services" className="btn-outline-dark inline-flex">
-            View All Products &amp; Services
+            {_('View All Products & Services')}
             <Icon name="ArrowRightIcon" size={16} variant="outline" />
           </Link>
         </ScrollReveal>

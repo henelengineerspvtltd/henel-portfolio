@@ -4,7 +4,8 @@
  * already published on this site.
  */
 
-import { SITE_URL, COMPANY_CIN } from './structured-data';
+import { SITE_URL, COMPANY_CIN, SOCIAL_PROFILES } from './structured-data';
+import { guides, guideHref } from './guides';
 import { faqCategories } from './faqs';
 import { landingPages } from './landing-pages';
 import { products, productHref } from './products';
@@ -31,9 +32,14 @@ Key facts:
 - Based in: Kanyakumari District, Tamil Nadu (home wind belt: Tamil Nadu & Karnataka)
 - Wind energy: 30+ active Comprehensive Maintenance Contracts (CMC), 7+ WTG makes supported, 24x7 breakdown support
 
+## Languages
+
+Every page is available in English, Tamil and Hindi. English pages are at the root (for example ${u('/windmill')}); the Tamil version adds /ta (${u('/ta/windmill')}) and the Hindi version adds /hi (${u('/hi/windmill')}). The three versions carry the same facts.
+
 ## Pages
 
-- [Home](${u('/')}): Company overview, both divisions, product and service list
+- [Home](${u('/')}): Company overview, the lightning protection, windmill and solar divisions, customer reviews and FAQs
+- [Guides](${u('/guides')}): Practical guides on lightning arresters, earthing and wind turbine gearboxes
 - [Lightning Protection](${u('/lightning-protection')}): ESE lightning arresters (TOPBAS SIRIUS, UMBRAECO), surge protection devices, copper bonded and GI earth rods, CARBOMAXX earthing compound, conventional lightning arrester, earth pit covers — with full technical specifications
 - [Windmill Maintenance](${u('/windmill')}): Wind turbine operation & maintenance, gearbox repair, blade patching, generator rewinding, hydraulic servicing, PCB repair, erection, spare parts, security, 24x7 breakdown support
 - [FAQ](${u('/faq')}): Answers about the company, lightning protection, earthing, surge protection and windmill maintenance
@@ -47,7 +53,7 @@ Key facts:
 
 ${landingPages.map((p) => `- [${p.h1}](${u(`/${p.slug}`)}): ${p.metaDescription}`).join('\n')}
 
-## Local service pages (near our offices)
+## Local service pages (Tamil Nadu & Kerala)
 
 ${locationPages.map((l) => `- [${l.h1}](${u(locationHref(l.slug))}): ${l.metaDescription}`).join('\n')}
 
@@ -65,6 +71,16 @@ ${products.map((p) => `- [${p.name}](${u(productHref(p.slug))}): ${p.metaDescrip
 - CARBOMAXX Earthing Compound (TOPBAS): powder, 10 kg and 25 kg bags, made in India
 - Copper Bonded Conventional Lightning Arrester: copper, 100 kA, 5 m protection radius, made in India
 - Earth Pit Cover: 6-inch black polyplastic; FRP Earth Pit Cover: 10-inch, corrosion resistant
+
+## Guides
+
+${guides.map((g) => `- [${g.h1}](${u(guideHref(g.slug))}): ${g.metaDescription}`).join('\n')}
+
+## Official profiles
+
+- Instagram: ${SOCIAL_PROFILES.instagram}
+- Google Maps (registered office, Aralvaimozhi): https://maps.app.goo.gl/eG8yo7BKjg6gK9xe8
+- Google Maps (branch office, Marthandam): https://maps.app.goo.gl/2whf2eEDufEqSfZw9
 
 ## Service areas (anywhere in India)
 
@@ -101,5 +117,18 @@ export function llmsFull() {
         p.faqs.map((f) => `### ${f.question}\n\n${f.answer}\n`).join('\n')
     )
     .join('\n');
-  return `${llmsSummary()}\n---\n\n# Frequently Asked Questions — Henel Engineers Pvt. Ltd.\n\n${faqText}\n${serviceFaqText}\n---\n\n# Products\n\n${productText}`;
+  const guideText = guides
+    .map(
+      (g) =>
+        `## ${g.h1} (${u(guideHref(g.slug))})\n\n${g.intro}\n\nKey points:\n` +
+        g.keyPoints.map((k) => `- ${k}`).join('\n') +
+        '\n\n' +
+        g.sections
+          .map((s) => `### ${s.heading}\n\n${s.paragraphs.join('\n\n')}${s.bullets ? '\n\n' + s.bullets.map((b) => `- ${b}`).join('\n') : ''}\n`)
+          .join('\n') +
+        '\n' +
+        g.faqs.map((f) => `### ${f.question}\n\n${f.answer}\n`).join('\n')
+    )
+    .join('\n');
+  return `${llmsSummary()}\n---\n\n# Frequently Asked Questions — Henel Engineers Pvt. Ltd.\n\n${faqText}\n${serviceFaqText}\n---\n\n# Products\n\n${productText}\n---\n\n# Guides\n\n${guideText}`;
 }
