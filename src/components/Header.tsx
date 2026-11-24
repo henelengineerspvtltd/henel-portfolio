@@ -59,8 +59,8 @@ export default function Header() {
               className="flex items-center gap-3 flex-shrink-0"
             >
               <HenelLogo size={44} />
-              {/* Company name: hidden while the full menu is shown on mid-size screens, to make room for it. */}
-              <div className="hidden sm:block xl:hidden min-[1700px]:block">
+              {/* Company name: always shown next to the logo from tablet size up. */}
+              <div className="hidden sm:block">
                 <span className="block text-sm font-800 tracking-tight text-foreground leading-tight">
                   HENEL ENGINEERS
                 </span>
@@ -71,12 +71,12 @@ export default function Header() {
             </Link>
 
             {/* Desktop Nav */}
-            <nav className={`hidden xl:flex items-center`} aria-label={ui.mainNav}>
+            <nav className="hidden xl:flex items-center mx-3 min-[1440px]:mx-6" aria-label={ui.mainNav}>
               {navLinks?.map((link) => (
                 <Link
                   key={link?.href}
                   href={link?.href}
-                  className="px-2.5 2xl:px-3 py-2 text-[13px] 2xl:text-sm font-600 text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/60 whitespace-nowrap"
+                  className="px-2 min-[1440px]:px-2.5 min-[1700px]:px-3 py-2 text-[13px] min-[1700px]:text-sm font-600 text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/60 whitespace-nowrap"
                 >
                   {link?.label}
                 </Link>
