@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import HenelLogo from './HenelLogo';
+import { SOCIAL_PROFILES } from '@/lib/structured-data';
 
 const quickLinks = [
   { label: 'Lightning Protection', href: '/lightning-protection' },
@@ -13,6 +14,7 @@ const quickLinks = [
   { label: 'About Us', href: '/about' },
   { label: 'Products & Services', href: '/products-and-services' },
   { label: 'Service Areas (All India)', href: '/service-areas' },
+  { label: 'Guides', href: '/guides' },
   { label: 'FAQ', href: '/faq' },
   { label: 'Contact Us', href: '/contact' },
 ];
@@ -38,6 +40,32 @@ export default function Footer() {
             <p className="text-sm text-primary-foreground/60 leading-relaxed max-w-xs mt-4">
               Engineering Solutions in Lightning Protection &amp; Wind Energy. Serving industrial, commercial and residential clients across India since 1999.
             </p>
+            <div className="flex items-center gap-3 mt-6">
+              <a
+                href={SOCIAL_PROFILES.instagram}
+                target="_blank"
+                rel="me noopener noreferrer"
+                aria-label="Henel Engineers on Instagram"
+                className="w-10 h-10 rounded-full border border-primary-foreground/25 flex items-center justify-center text-primary-foreground/70 hover:text-primary-foreground hover:border-primary-foreground/60 transition-colors"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                </svg>
+              </a>
+              <a
+                href={SOCIAL_PROFILES.facebook}
+                target="_blank"
+                rel="me noopener noreferrer"
+                aria-label="Henel Engineers on Facebook"
+                className="w-10 h-10 rounded-full border border-primary-foreground/25 flex items-center justify-center text-primary-foreground/70 hover:text-primary-foreground hover:border-primary-foreground/60 transition-colors"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M14 8.5V6.8c0-.8.5-1.3 1.3-1.3H17V2.2h-2.6C11.6 2.2 10.4 4 10.4 6.5v2H8v3.4h2.4V22H14V11.9h2.7l.4-3.4H14z" />
+                </svg>
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}

@@ -3,8 +3,10 @@ import { SITE_URL } from '@/lib/structured-data';
 import { landingPages, SOLAR_IMAGES } from '@/lib/landing-pages';
 import { products, productHref } from '@/lib/products';
 import { locationPages, locationHref } from '@/lib/locations';
+import { guides, guideHref } from '@/lib/guides';
 
-const SITE_CONTENT_UPDATED = '2026-11-07';
+const SITE_CONTENT_UPDATED = '2026-11-24';
+const GUIDES_UPDATED = '2026-11-24';
 const LOCATIONS_ADDED = '2026-11-19';
 const PRODUCTS_UPDATED = '2026-11-07';
 
@@ -111,6 +113,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.85,
       images: [img(p.heroImage), ...(p.productImage ? [img(p.productImage.src)] : [])],
+    })),
+    {
+      url: `${SITE_URL}/guides`,
+      lastModified: new Date(GUIDES_UPDATED),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    ...guides.map((g) => ({
+      url: `${SITE_URL}${guideHref(g.slug)}`,
+      lastModified: new Date(g.dateModified),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+      images: [img(g.image)],
     })),
     {
       url: `${SITE_URL}/faq`,

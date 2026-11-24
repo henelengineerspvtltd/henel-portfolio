@@ -5,6 +5,7 @@ import { Plus_Jakarta_Sans } from 'next/font/google';
 import '../styles/tailwind.css';
 import JsonLd from '@/components/JsonLd';
 import FloatingContact from '@/components/FloatingContact';
+import LeadTracking from '@/components/LeadTracking';
 import { organizationSchema, websiteSchema, SITE_URL } from '@/lib/structured-data';
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -101,7 +102,6 @@ export default function RootLayout({
       <head>
         {/* Marks JS as available before paint so scroll-reveal content is only hidden when it can be revealed. */}
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
-        <link rel="preconnect" href="https://images.unsplash.com" />
         <link rel="alternate" type="text/plain" title="LLM-readable site summary" href="/llms.txt" />
       </head>
       <body className={plusJakartaSans.className}>
@@ -115,6 +115,7 @@ export default function RootLayout({
             <Script id="ga-init" strategy="afterInteractive">
               {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`}
             </Script>
+            <LeadTracking />
           </>
         )}
 

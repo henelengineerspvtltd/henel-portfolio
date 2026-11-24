@@ -38,7 +38,7 @@ const divisions: Division[] = [
     color: '#2D7A2D',
     title: 'Windmill Operation, Maintenance & Repair',
     desc: '25+ years in wind energy, 30+ active maintenance contracts and 7+ WTG makes supported, with 24x7 breakdown support.',
-    image: 'https://images.unsplash.com/photo-1705079509121-f92c52573b31',
+    image: '/assets/images/stock/wind-farm-aerial.webp',
     imageAlt: 'Aerial view of a large wind farm with wind turbines over green hills',
     items: [
       { title: 'Windmill maintenance contracts (AMC / CMC)', href: '/windmill-maintenance-contract' },

@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Icon from '@/components/ui/AppIcon';
+import { trackEvent } from '@/components/LeadTracking';
 
 interface FormState {
   name: string;
@@ -115,6 +116,11 @@ export default function ContactForm() {
         );
       }
 
+      trackEvent('generate_lead', {
+        form_name: 'quote_request',
+        requirement_type: form.requirementType,
+        page_path: window.location.pathname,
+      });
       setSubmitted(true);
     } catch (err) {
       console.error('Contact form submission error:', err);

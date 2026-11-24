@@ -13,7 +13,7 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <AppImage
-          src="https://images.unsplash.com/photo-1598803040994-834a13691764"
+          src="/assets/images/stock/wind-turbines-golden-hour.webp"
           alt="Wind turbines at golden hour in a large wind farm, aerial view"
           fill
           priority

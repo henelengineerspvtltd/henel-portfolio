@@ -58,17 +58,21 @@ const LP_AREAS = ['India'];
 const WIND_AREAS = ['India'];
 const SOLAR_AREAS = ['India'];
 
-/** Free-licence Unsplash stock photos used until Henel's own solar project photos are available. */
-const unsplash = (id: string) => `https://images.unsplash.com/photo-${id}`;
+/**
+ * Free-licence Unsplash stock photos used until Henel's own solar project photos are
+ * available. Self-hosted (public/assets/images/stock) so pages don't open a second
+ * connection to images.unsplash.com before the hero image can load.
+ */
+const stock = (name: string) => `/assets/images/stock/${name}.webp`;
 export const SOLAR_IMAGES = {
-  field: unsplash('1509391366360-2e959784a276'),
-  installer: unsplash('1624397640148-949b1732bb0a'),
-  technician: unsplash('1668097613572-40b7c11c8727'),
-  hardHat: unsplash('1648135327756-b606e2eb8caa'),
-  house: unsplash('1655300256335-beef51a914fe'),
-  industrialRoof: unsplash('1745187946672-2c1d8cf26a2b'),
-  closeUp: unsplash('1707247111552-aaf74241058b'),
-  wiring: unsplash('1559302504-64aae6ca6b6d'),
+  field: stock('solar-field'),
+  installer: stock('solar-installer'),
+  technician: stock('solar-technician'),
+  hardHat: stock('solar-hard-hat'),
+  house: stock('solar-house'),
+  industrialRoof: stock('solar-industrial-roof'),
+  closeUp: stock('solar-close-up'),
+  wiring: stock('solar-wiring'),
 };
 
 const QUOTE_ANSWER =
