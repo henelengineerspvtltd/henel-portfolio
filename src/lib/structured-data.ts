@@ -8,6 +8,8 @@
  * elsewhere on this site.
  */
 
+import { HTML_LANG, localizePath, type Locale } from '@/i18n/config';
+
 export const SITE_URL =
   (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.henelengineers.com').replace(/\/+$/, '');
 
@@ -337,10 +339,6 @@ export function serviceSchema(opts: {
   };
 }
 
-/**
- * WebPage schema with `speakable` — tells search engines, voice assistants
- * and AI answer engines which parts of the page best summarise it.
- */
 /** Article schema for guide pages. Author and publisher are the company. */
 export function articleSchema(opts: {
   path: string;
@@ -350,8 +348,10 @@ export function articleSchema(opts: {
   datePublished: string;
   dateModified: string;
   section?: string;
+  locale?: Locale;
 }) {
-  const url = absoluteUrl(opts.path);
+  const locale = opts.locale || 'en';
+  const url = absoluteUrl(localizePath(opts.path, locale));
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -361,7 +361,7 @@ export function articleSchema(opts: {
     image: absoluteUrl(opts.image),
     datePublished: opts.datePublished,
     dateModified: opts.dateModified,
-    inLanguage: 'en-IN',
+    inLanguage: HTML_LANG[locale],
     ...(opts.section ? { articleSection: opts.section } : {}),
     author: { '@id': ORG_ID },
     publisher: { '@id': ORG_ID },
@@ -369,6 +369,10 @@ export function articleSchema(opts: {
   };
 }
 
+/**
+ * WebPage schema with `speakable` — tells search engines, voice assistants
+ * and AI answer engines which parts of the page best summarise it.
+ */
 export function webPageSchema(opts: {
   path: string;
   name: string;
@@ -376,8 +380,10 @@ export function webPageSchema(opts: {
   type?: 'WebPage' | 'ContactPage' | 'AboutPage' | 'CollectionPage';
   image?: string;
   about?: string[];
+  locale?: Locale;
 }) {
-  const url = absoluteUrl(opts.path);
+  const locale = opts.locale || 'en';
+  const url = absoluteUrl(localizePath(opts.path, locale));
   return {
     '@context': 'https://schema.org',
     '@type': opts.type || 'WebPage',
@@ -385,7 +391,7 @@ export function webPageSchema(opts: {
     url,
     name: opts.name,
     description: opts.description,
-    inLanguage: 'en-IN',
+    inLanguage: HTML_LANG[locale],
     isPartOf: { '@id': WEBSITE_ID },
     publisher: { '@id': ORG_ID },
     ...(opts.image

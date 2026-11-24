@@ -33,7 +33,7 @@
   body {
     background-color: var(--background);
     color: var(--foreground);
-    font-family: var(--font-sans);
+    font-family: var(--font-sans), var(--font-tamil), var(--font-devanagari), sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -378,7 +378,7 @@
     border-radius: var(--radius);
     background-color: var(--card);
     color: var(--foreground);
-    font-family: var(--font-sans);
+    font-family: var(--font-sans), var(--font-tamil), var(--font-devanagari), sans-serif;
     font-size: 0.9375rem;
     font-weight: 500;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;

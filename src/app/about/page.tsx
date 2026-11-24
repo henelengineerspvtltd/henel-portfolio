@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import Link from '@/components/LocaleLink';
 import Header from '@/components/Header';
 import HenelLogo from '@/components/HenelLogo';
 import Footer from '@/components/Footer';

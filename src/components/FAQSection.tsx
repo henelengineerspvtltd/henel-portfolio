@@ -3,8 +3,12 @@ import Icon from '@/components/ui/AppIcon';
 import ScrollReveal from '@/app/components/ScrollReveal';
 import JsonLd from '@/components/JsonLd';
 import { faqPageSchema, type FaqItem } from '@/lib/structured-data';
+import type { Locale } from '@/i18n/config';
+import { t, tr } from '@/i18n/translate';
 
 interface FAQSectionProps {
+  /** Page language: heading, labels, questions and answers are translated. */
+  locale?: Locale;
   heading?: string;
   subheading?: string;
   items: FaqItem[];
@@ -44,16 +48,21 @@ function FaqItemRow({ item, index }: { item: FaqItem; index: number }) {
 }
 
 export default function FAQSection({
-  heading = 'Frequently Asked Questions',
-  subheading,
-  items,
+  locale = 'en',
+  heading: headingEn = 'Frequently Asked Questions',
+  subheading: subheadingEn,
+  items: itemsEn,
   className = '',
   id = 'faq',
-  label = 'FAQs',
+  label: labelEn = 'FAQs',
   includeSchema = true,
   footer,
   initialCount,
 }: FAQSectionProps) {
+  const heading = t(locale, headingEn);
+  const subheading = subheadingEn && t(locale, subheadingEn);
+  const label = t(locale, labelEn);
+  const items = tr(itemsEn, locale);
   const visible = initialCount && initialCount < items.length ? items.slice(0, initialCount) : items;
   const more = items.slice(visible.length);
 
@@ -80,9 +89,9 @@ export default function FAQSection({
           <details className="group/more mt-3">
             <summary className="mx-auto flex w-fit items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-700 text-foreground cursor-pointer list-none hover:bg-background transition-colors">
               <span className="group-open/more:hidden">
-                View {more.length} more question{more.length === 1 ? '' : 's'}
+                {t(locale, more.length === 1 ? 'View {n} more question' : 'View {n} more questions', { n: more.length })}
               </span>
-              <span className="hidden group-open/more:inline">Show fewer questions</span>
+              <span className="hidden group-open/more:inline">{t(locale, 'Show fewer questions')}</span>
               <Icon
                 name="ChevronDownIcon"
                 size={16}
