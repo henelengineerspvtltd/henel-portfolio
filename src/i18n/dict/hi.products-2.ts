@@ -79,7 +79,7 @@ const dict: Record<string, string> = {
   "This three-phase SPD has a 3 pole + N configuration, a rated voltage (Uc) of 320 VAC, a voltage protection level (Up) of 1.6 kV, an impulse current (Iimp) of 7 kA and a nominal discharge current (In) of 30 kA. It is rated IP20, so it is intended for mounting inside an electrical panel or enclosure.": "इस थ्री-फ़ेज़ SPD में 3 pole + N कॉन्फ़िगरेशन, 320 VAC रेटेड वोल्टेज (Uc), 1.6 kV वोल्टेज प्रोटेक्शन लेवल (Up), 7 kA इम्पल्स करंट (Iimp) और 30 kA नॉमिनल डिस्चार्ज करंट (In) है। इसकी रेटिंग IP20 है, इसलिए यह इलेक्ट्रिकल पैनल या एनक्लोज़र के अंदर लगाने के लिए है।",
   "Top diameter 155 mm, bottom diameter 210 mm, height 240 mm.": "ऊपरी व्यास 155 मिमी, निचला व्यास 210 मिमी, ऊँचाई 240 मिमी।",
   "Top diameter 254 mm, bottom diameter 210 mm, height 240 mm.": "ऊपरी व्यास 254 मिमी, निचला व्यास 210 मिमी, ऊँचाई 240 मिमी।",
-  "Type 1 + 2 SPD — TOPBAS TB7K320T12L": "Type 1 + 2 SPD — TOPBAS TB7K320T12L",
+  "Type 1 + 2 SPD — TOPBAS TB7K320T12L": "सर्ज प्रोटेक्शन डिवाइस — TOPBAS TB7K320T12L",
   "Typical applications": "आम उपयोग",
   "UMBRAECO non-electronic ESE lightning arrester: ΔT 10 µs, up to 51 m radius (Level IV), NF C 17-102, CE certified, no battery. Supplied across India.": "UMBRAECO नॉन-इलेक्ट्रॉनिक ESE लाइटनिंग अरेस्टर: ΔT 10 µs, 51 मीटर तक दायरा (लेवल IV), NF C 17-102, CE प्रमाणित, बैटरी नहीं। पूरे भारत में आपूर्ति।",
   "View details": "विवरण देखें",

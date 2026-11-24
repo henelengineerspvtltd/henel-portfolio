@@ -5,6 +5,10 @@ import services1 from './ta.services-1';
 import services2 from './ta.services-2';
 import products1 from './ta.products-1';
 import products2 from './ta.products-2';
+import places from './ta.places';
+import locations1 from './ta.locations-1';
+import locations2 from './ta.locations-2';
+import locations3 from './ta.locations-3';
 export const ta: Record<string, string> = {
   ...divisions1,
   ...divisions2,
@@ -12,6 +16,10 @@ export const ta: Record<string, string> = {
   ...services2,
   ...products1,
   ...products2,
+  ...places,
+  ...locations1,
+  ...locations2,
+  ...locations3,
   // ───────────── Shared: navigation, footer, buttons ─────────────
   "Home": "முகப்பு",
   "Breadcrumb": "வழித்தடம்",
